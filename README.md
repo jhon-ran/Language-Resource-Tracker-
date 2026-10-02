@@ -30,7 +30,11 @@ and listed in `unresolved.csv`; they are never silently dropped.
 
 ```
 sources/             one fetch script per source
+tools/               one-off build scripts (crosswalk)
+inali_groups.csv     hand-entered seed: INALI's 68 groups (INALI's exact spelling) and how to find each in Glottolog
+member_overrides.csv hand-entered: single ISO codes taken out of a group, with reasons
 crosswalk.csv        INALI group -> ISO 639-3 -> Glottocode
+crosswalk_members.csv  every ISO code in each group -> its own Glottocode
 unresolved.csv       groups/identifiers that could not be resolved
 snapshots/           one dated folder per run (YYYY-MM-DD/), append-only
 .github/workflows/   weekly snapshot cron
@@ -38,9 +42,27 @@ snapshots/           one dated folder per run (YYYY-MM-DD/), append-only
 
 ### crosswalk.csv
 
-`inali_name, raw_iso639_3, canonical_glottocode, match_type, source`
+`inali_name, raw_iso639_3, canonical_glottocode, match_type, source, collective_code`
 
-`match_type` is one of `exact`, `macrolanguage`, `many-to-one`, `unresolved`.
+One row per INALI group (68 rows). `raw_iso639_3` holds every in-scope ISO
+639-3 code of the group, `;`-separated, or the macrolanguage code.
+`collective_code` is an extra non-ISO-639-3 code some sources tag the whole
+group with (náhuatl: `nah`, ISO 639-2). `match_type`:
+
+| Value | Meaning |
+|---|---|
+| `exact` | One ISO code, one Glottolog language. |
+| `macrolanguage` | An ISO macrolanguage code, matched to the Glottolog subgroup that carries it. |
+| `many-to-one` | Several ISO codes; the Glottocode is their lowest common ancestor in Glottolog. |
+| `unresolved` | No ISO code, or no Glottolog node covers this group without also covering another INALI group. |
+
+`crosswalk_members.csv` lists every ISO code of every group with its own
+language-level Glottocode. Fetchers that query by ISO code read this file
+and skip rows whose `scope` is `out-of-scope` (e.g. Southern Pame, extinct).
+
+`member_overrides.csv` records single codes taken out of a group by hand,
+with the reason: `unresolved` moves the code to `unresolved.csv`,
+`out-of-scope` keeps it in `crosswalk_members.csv` but out of the group.
 
 ### unresolved.csv
 
@@ -48,9 +70,28 @@ snapshots/           one dated folder per run (YYYY-MM-DD/), append-only
 
 One row per language-and-source pair that could not be resolved.
 
+## Pinned upstream releases
+
+| Source | Version | DOI | Git ref |
+|---|---|---|---|
+| Glottolog (glottolog-cldf) | 5.3 | [10.5281/zenodo.18840967](https://doi.org/10.5281/zenodo.18840967) | tag `v5.3`, commit `072ca0d` |
+
+File checksums and how the files were obtained are in `CHANGELOG.md`.
+
+## Rebuilding the crosswalk
+
+```
+python3 tools/build_crosswalk.py
+```
+
+Python 3 standard library only. It reads `inali_groups.csv` and
+`member_overrides.csv` (the two hand-entered files), downloads the pinned
+Glottolog archive from Zenodo into `.cache/`, verifies its checksums, and
+rewrites the three CSVs.
+
 ## Status
 
-Scaffolding only. Fetchers, crosswalk data and the workflow are not built yet.
+Scaffolding and seed crosswalk are done. Fetchers and the workflow are not built yet.
 
 ## License
 

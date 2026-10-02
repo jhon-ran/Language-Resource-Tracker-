@@ -1,1 +1,5 @@
 inali_name,raw_iso639_3,source,reason,first_seen,last_seen
+ku'ahl,,glottolog-cldf v5.3 (doi:10.5281/zenodo.18840967),no ISO 639-3 code for this group,,
+otomí,ote;otl;otm;otn;otq;ots;ott;otx;otz,glottolog-cldf v5.3 (doi:10.5281/zenodo.18840967),common ancestor otom1297 (Otomian) also contains: mazahua,,
+zoque,zoc;zoh;zor;zos,glottolog-cldf v5.3 (doi:10.5281/zenodo.18840967),"common ancestor zoqu1261 (Zoque) also contains: ayapaneco, popoluca de la Sierra, texistepequeño",,
+náhuatl,nci,glottolog-cldf v5.3 (doi:10.5281/zenodo.18840967),"historical variety, not a living INALI variant",,
