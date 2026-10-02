@@ -38,6 +38,21 @@ and listed in `unresolved.csv`; they are never silently dropped.
 | `tool_support_asr` | Omnilingual ASR supported-language list | `sources/omnilingual_asr.py` | active |
 | `speakers_3plus` (reference, static) | INEGI Census 2020 | `sources/inegi.py` | loaded once |
 
+What "nothing found" means differs by source, and each source records it
+with a different state on purpose:
+
+| Source | A group with nothing is | Why |
+|---|---|---|
+| Hugging Face | `measured-zero` | Open-ended: any language can be tagged, so finding nothing is a real zero. |
+| Universal Dependencies | `measured-zero` | Open-ended: UD accepts a treebank for any language, so none is a real zero. |
+| Common Voice | `not-covered` | Fixed, enumerable locale list per release; a variety not on it is outside the source's scope. |
+| Omnilingual ASR | `not-covered` | Fixed, enumerable supported-language list; same reasoning as Common Voice. |
+| Glottolog | `not-covered` | Only if Glottolog assigns no AES value to any of the group's languages (no group today). |
+| INEGI | `not-covered` | The census table has no row for the group (ku'ahl). A row with 0 speakers would be `measured-zero`. |
+
+In every weekly source, a group with no code to look up (ku'ahl) is
+`unresolved`, never zero.
+
 **Dropped: archive records (OLAC).** OLAC's OAI-PMH harvest endpoint no
 longer exists and its replacement search service has no documented public
 API (details in `CHANGELOG.md`, 2026-10-02). It can be re-added if OLAC
@@ -135,6 +150,21 @@ python3 sources/omnilingual_asr.py
 
 Both take `--date YYYY-MM-DD` to choose the folder.
 
+## Weekly run
+
+`.github/workflows/snapshot.yml` runs the five weekly fetchers every Monday
+at 06:17 UTC and commits `snapshots/YYYY-MM-DD/`. It can also be started by
+hand from the Actions tab, with an optional date. INEGI is not part of it.
+
+- It refuses to replace an existing dated folder unless `overwrite` is
+  ticked, so snapshots stay append-only.
+- If a fetcher fails, the others are still committed, the commit message
+  names the failed source, and the run is marked failed.
+- The commit-back uses GitHub Actions' own token; no credential is stored.
+  It needs `main` to accept pushes from GitHub Actions (no branch protection
+  requiring pull requests) and workflow permissions not locked to
+  read-only. An optional `HF_TOKEN` secret raises the Hugging Face limit.
+
 ## Layout
 
 ```
@@ -202,7 +232,7 @@ rewrites the three CSVs.
 
 ## Status
 
-Seed crosswalk, all five weekly fetchers, the INEGI reference layer and the first snapshot are done. The weekly workflow is not built yet.
+Seed crosswalk, all five weekly fetchers, the INEGI reference layer and the first snapshot are done. The weekly workflow is written; its first run has not been confirmed yet.
 
 ## License
 

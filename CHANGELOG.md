@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-10-02 — Weekly workflow
+
+- Added `.github/workflows/snapshot.yml`: Mondays 06:17 UTC plus manual
+  trigger; runs Glottolog, Hugging Face, Common Voice, Universal
+  Dependencies and Omnilingual ASR; INEGI excluded (static loader).
+- README now states, per source, whether "nothing found" is `not-covered`
+  or `measured-zero` and why. Omnilingual ASR stays `not-covered` (fixed,
+  enumerable list, like Common Voice; unlike UD's open-ended scope).
+
 ## 2026-10-02 — Omnilingual ASR tool-support fetcher
 
 - Added `sources/omnilingual_asr.py`.
