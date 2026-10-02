@@ -1,0 +1,11 @@
+LICENSE: TBD
+
+No license has been chosen yet. Until one is, all rights are reserved by
+the author and no reuse permission is granted.
+
+Likely direction (not yet decided):
+  - Code: MIT
+  - Data (crosswalk, snapshots): CC BY 4.0 or CC0
+
+Upstream data keeps its own license (Glottolog, INEGI, Hugging Face,
+Common Voice, UD, OLAC); those terms apply regardless of what is chosen here.
