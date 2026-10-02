@@ -1,0 +1,69 @@
+snapshot_date,measured_at,inali_name,canonical_glottocode,match_type,source,indicator,value,state,detail
+2026-10-09,2026-10-02T23:44:29Z,Akateko,west2635,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,amuzgo,amuz1254,many-to-one,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 3 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,Awakateko,agua1252,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,ayapaneco,taba1264,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,cora,cora1260,many-to-one,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 2 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,cucapá,coco1261,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,cuicateco,cuic1234,many-to-one,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,2,measured,2 of 2 codes covered: cut scripted 27.0: 10.09h validated; cux scripted 27.0: 10.26h validated
+2026-10-09,2026-10-02T23:44:29Z,chatino,core1263,many-to-one,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 6 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,chichimeco jonaz,chic1272,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,chinanteco,chin1484,many-to-one,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 14 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,chocholteco,choc1279,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,chontal de Oaxaca,tequ1244,many-to-one,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 2 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,chontal de Tabasco,taba1266,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,Chuj,chuj1250,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,ch'ol,chol1282,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,guarijío,huar1255,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,1,measured,1 of 1 codes covered: var scripted 27.0: 10.09h validated
+2026-10-09,2026-10-02T23:44:29Z,huasteco,huas1242,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,huave,huav1256,many-to-one,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 4 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,huichol,huic1243,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,1,measured,1 of 1 codes covered: hch spontaneous 5.0: 10.12h validated
+2026-10-09,2026-10-02T23:44:29Z,ixcateco,ixca1245,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,Ixil,ixil1251,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,Jakalteko,popt1235,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,Kaqchikel,kaqc1270,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,Kickapoo,kick1244,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,kiliwa,kili1268,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,kumiai,kumi1248,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,ku'ahl,,unresolved,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,unresolved,no code to match with
+2026-10-09,2026-10-02T23:44:29Z,K'iche',kich1262,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,lacandón,laca1243,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,Mam,mamm1241,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,matlatzinca,sanf1262,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,maya,yuca1254,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,mayo,mayo1264,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,mazahua,maza1293,many-to-one,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,1,measured,1 of 2 codes covered: mmc spontaneous 5.0: 11.23h validated
+2026-10-09,2026-10-02T23:44:29Z,mazateco,maza1295,many-to-one,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,1,measured,1 of 9 codes covered: mau scripted 27.0: 10.42h validated
+2026-10-09,2026-10-02T23:44:29Z,mixe,oaxa1241,many-to-one,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 7 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,mixteco,mixt1427,many-to-one,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,1,measured,1 of 52 codes covered: meh spontaneous 5.0: 10.05h validated
+2026-10-09,2026-10-02T23:44:29Z,náhuatl,azte1234,many-to-one,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,3,measured,3 of 29 codes covered: ncx scripted 27.0: 10.7h validated; nhi scripted 27.0: 0.05h validated; nlv scripted 27.0: 11.61h validated
+2026-10-09,2026-10-02T23:44:29Z,oluteco,olut1240,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,otomí,,unresolved,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 9 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,paipai,paip1241,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,pame,pame1260,many-to-one,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 2 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,pápago,toho1245,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,pima,pima1248,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,popoloca,popo1294,many-to-one,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 7 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,popoluca de la Sierra,high1276,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,qato'k,moch1257,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,Q'anjob'al,qanj1241,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,Q'eqchí',kekc1242,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,sayulteco,sayu1241,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,seri,seri1257,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,1,measured,1 of 1 codes covered: sei scripted 27.0: 10.08h validated
+2026-10-09,2026-10-02T23:44:29Z,tarahumara,tara1321,many-to-one,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,1,measured,1 of 5 codes covered: tar scripted 27.0: 9.97h validated
+2026-10-09,2026-10-02T23:44:29Z,tarasco,tara1323,many-to-one,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,1,measured,1 of 2 codes covered: pua scripted 27.0: 10.22h validated
+2026-10-09,2026-10-02T23:44:29Z,Teko,tekt1235,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,tepehua,tepe1243,many-to-one,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 3 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,tepehuano del norte,nort2959,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,tepehuano del sur,sout2975,many-to-one,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 2 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,texistepequeño,texi1237,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,tlahuica,atzi1235,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,tlapaneco,meph1234,many-to-one,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 4 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,tojolabal,tojo1241,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,totonaco,toto1252,many-to-one,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,1,measured,1 of 9 codes covered: top spontaneous 5.0: 9.94h validated
+2026-10-09,2026-10-02T23:44:29Z,triqui,triq1251,many-to-one,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 3 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,tseltal,tzel1254,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,tsotsil,tzot1259,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 1 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,yaqui,yaqu1251,exact,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,1,measured,1 of 1 codes covered: yaq scripted 27.0: 10.21h validated
+2026-10-09,2026-10-02T23:44:29Z,zapoteco,zapo1437,macrolanguage,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,,not-covered,none of 57 codes is a Common Voice locale
+2026-10-09,2026-10-02T23:44:29Z,zoque,,unresolved,"common-voice scripted 27.0 (2026-09-11), spontaneous 5.0 (2026-09-11)",speech_corpus,1,measured,1 of 4 codes covered: zoc scripted 27.0: 10.07h validated

@@ -1,0 +1,69 @@
+snapshot_date,measured_at,inali_name,canonical_glottocode,match_type,source,indicator,value,state,detail
+2026-10-09,2026-10-02T23:44:38Z,Akateko,west2635,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,1,measured,1 of 1 codes supported: knj_Latn
+2026-10-09,2026-10-02T23:44:38Z,amuzgo,amuz1254,many-to-one,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,2,measured,"2 of 3 codes supported: amu_Latn, azg_Latn"
+2026-10-09,2026-10-02T23:44:38Z,Awakateko,agua1252,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,1,measured,1 of 1 codes supported: agu_Latn
+2026-10-09,2026-10-02T23:44:38Z,ayapaneco,taba1264,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,,not-covered,none of 1 codes is in the supported list
+2026-10-09,2026-10-02T23:44:38Z,cora,cora1260,many-to-one,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,2,measured,"2 of 2 codes supported: cok_Latn, crn_Latn"
+2026-10-09,2026-10-02T23:44:38Z,cucapá,coco1261,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,,not-covered,none of 1 codes is in the supported list
+2026-10-09,2026-10-02T23:44:38Z,cuicateco,cuic1234,many-to-one,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,2,measured,"2 of 2 codes supported: cut_Latn, cux_Latn"
+2026-10-09,2026-10-02T23:44:38Z,chatino,core1263,many-to-one,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,2,measured,"2 of 6 codes supported: cly_Latn, cya_Latn"
+2026-10-09,2026-10-02T23:44:38Z,chichimeco jonaz,chic1272,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,,not-covered,none of 1 codes is in the supported list
+2026-10-09,2026-10-02T23:44:38Z,chinanteco,chin1484,many-to-one,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,11,measured,"11 of 14 codes supported: cco_Latn, chq_Latn, chz_Latn, cle_Latn, cnl_Latn, cnt_Latn, cpa_Latn, cso_Latn, cte_Latn, ctl_Latn, cuc_Latn"
+2026-10-09,2026-10-02T23:44:38Z,chocholteco,choc1279,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,,not-covered,none of 1 codes is in the supported list
+2026-10-09,2026-10-02T23:44:38Z,chontal de Oaxaca,tequ1244,many-to-one,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,,not-covered,none of 2 codes is in the supported list
+2026-10-09,2026-10-02T23:44:38Z,chontal de Tabasco,taba1266,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,1,measured,1 of 1 codes supported: chf_Latn
+2026-10-09,2026-10-02T23:44:38Z,Chuj,chuj1250,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,1,measured,1 of 1 codes supported: cac_Latn
+2026-10-09,2026-10-02T23:44:38Z,ch'ol,chol1282,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,1,measured,1 of 1 codes supported: ctu_Latn
+2026-10-09,2026-10-02T23:44:38Z,guarijío,huar1255,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,1,measured,1 of 1 codes supported: var_Latn
+2026-10-09,2026-10-02T23:44:38Z,huasteco,huas1242,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,1,measured,1 of 1 codes supported: hus_Latn
+2026-10-09,2026-10-02T23:44:38Z,huave,huav1256,many-to-one,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,2,measured,"2 of 4 codes supported: hue_Latn, huv_Latn"
+2026-10-09,2026-10-02T23:44:38Z,huichol,huic1243,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,1,measured,1 of 1 codes supported: hch_Latn
+2026-10-09,2026-10-02T23:44:38Z,ixcateco,ixca1245,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,,not-covered,none of 1 codes is in the supported list
+2026-10-09,2026-10-02T23:44:38Z,Ixil,ixil1251,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,1,measured,1 of 1 codes supported: ixl_Latn
+2026-10-09,2026-10-02T23:44:38Z,Jakalteko,popt1235,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,1,measured,1 of 1 codes supported: jac_Latn
+2026-10-09,2026-10-02T23:44:38Z,Kaqchikel,kaqc1270,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,1,measured,1 of 1 codes supported: cak_Latn
+2026-10-09,2026-10-02T23:44:38Z,Kickapoo,kick1244,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,,not-covered,none of 1 codes is in the supported list
+2026-10-09,2026-10-02T23:44:38Z,kiliwa,kili1268,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,,not-covered,none of 1 codes is in the supported list
+2026-10-09,2026-10-02T23:44:38Z,kumiai,kumi1248,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,,not-covered,none of 1 codes is in the supported list
+2026-10-09,2026-10-02T23:44:38Z,ku'ahl,,unresolved,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,,unresolved,no code to match with
+2026-10-09,2026-10-02T23:44:38Z,K'iche',kich1262,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,1,measured,1 of 1 codes supported: quc_Latn
+2026-10-09,2026-10-02T23:44:38Z,lacandón,laca1243,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,1,measured,1 of 1 codes supported: lac_Latn
+2026-10-09,2026-10-02T23:44:38Z,Mam,mamm1241,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,1,measured,1 of 1 codes supported: mam_Latn
+2026-10-09,2026-10-02T23:44:38Z,matlatzinca,sanf1262,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,,not-covered,none of 1 codes is in the supported list
+2026-10-09,2026-10-02T23:44:38Z,maya,yuca1254,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,1,measured,1 of 1 codes supported: yua_Latn
+2026-10-09,2026-10-02T23:44:38Z,mayo,mayo1264,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,1,measured,1 of 1 codes supported: mfy_Latn
+2026-10-09,2026-10-02T23:44:38Z,mazahua,maza1293,many-to-one,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,2,measured,"2 of 2 codes supported: maz_Latn, mmc_Latn"
+2026-10-09,2026-10-02T23:44:38Z,mazateco,maza1295,many-to-one,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,8,measured,"8 of 9 codes supported: maa_Latn, maj_Latn, maq_Latn, mau_Latn, mzi_Latn, vmp_Latn, vmy_Latn, vmz_Latn"
+2026-10-09,2026-10-02T23:44:38Z,mixe,oaxa1241,many-to-one,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,4,measured,"4 of 7 codes supported: mco_Latn, mto_Latn, mxq_Latn, mzl_Latn"
+2026-10-09,2026-10-02T23:44:38Z,mixteco,mixt1427,many-to-one,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,34,measured,"34 of 52 codes supported: jmx_Latn, mab_Latn, mdv_Latn, meh_Latn, mib_Latn, mie_Latn, mig_Latn, mih_Latn, mil_Latn, mim_Latn, mio_Latn, mip_Latn, mit_Latn, miu_Latn, miy_Latn, miz_Latn, mpm_Latn, mtu_Latn, mtx_Latn, mxb_Latn, mxs_Latn, mxt_Latn, mxv_Latn, mxy_Latn, mza_Latn, vmc_Latn, vmj_Latn, vmm_Latn, xta_Latn, xtd_Latn, xti_Latn, xtm_Latn, xtn_Latn, xtu_Latn"
+2026-10-09,2026-10-02T23:44:38Z,náhuatl,azte1234,many-to-one,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,18,measured,"18 of 29 codes supported: azz_Latn, nch_Latn, ncj_Latn, ncl_Latn, ncx_Latn, ngu_Latn, nhe_Latn, nhg_Latn, nhi_Latn, nhn_Latn, nhq_Latn, nhw_Latn, nhx_Latn, nhy_Latn, nlv_Latn, npl_Latn, nsu_Latn, nuz_Latn"
+2026-10-09,2026-10-02T23:44:38Z,oluteco,olut1240,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,,not-covered,none of 1 codes is in the supported list
+2026-10-09,2026-10-02T23:44:38Z,otomí,,unresolved,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,2,measured,"2 of 9 codes supported: ote_Latn, otq_Latn"
+2026-10-09,2026-10-02T23:44:38Z,paipai,paip1241,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,,not-covered,none of 1 codes is in the supported list
+2026-10-09,2026-10-02T23:44:38Z,pame,pame1260,many-to-one,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,2,measured,"2 of 2 codes supported: pbs_Latn, pmq_Latn"
+2026-10-09,2026-10-02T23:44:38Z,pápago,toho1245,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,1,measured,1 of 1 codes supported: ood_Latn
+2026-10-09,2026-10-02T23:44:38Z,pima,pima1248,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,,not-covered,none of 1 codes is in the supported list
+2026-10-09,2026-10-02T23:44:38Z,popoloca,popo1294,many-to-one,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,4,measured,"4 of 7 codes supported: pls_Latn, poe_Latn, pow_Latn, pps_Latn"
+2026-10-09,2026-10-02T23:44:38Z,popoluca de la Sierra,high1276,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,1,measured,1 of 1 codes supported: poi_Latn
+2026-10-09,2026-10-02T23:44:38Z,qato'k,moch1257,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,,not-covered,none of 1 codes is in the supported list
+2026-10-09,2026-10-02T23:44:38Z,Q'anjob'al,qanj1241,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,1,measured,1 of 1 codes supported: kjb_Latn
+2026-10-09,2026-10-02T23:44:38Z,Q'eqchí',kekc1242,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,1,measured,1 of 1 codes supported: kek_Latn
+2026-10-09,2026-10-02T23:44:38Z,sayulteco,sayu1241,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,,not-covered,none of 1 codes is in the supported list
+2026-10-09,2026-10-02T23:44:38Z,seri,seri1257,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,1,measured,1 of 1 codes supported: sei_Latn
+2026-10-09,2026-10-02T23:44:38Z,tarahumara,tara1321,many-to-one,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,2,measured,"2 of 5 codes supported: tac_Latn, tar_Latn"
+2026-10-09,2026-10-02T23:44:38Z,tarasco,tara1323,many-to-one,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,2,measured,"2 of 2 codes supported: pua_Latn, tsz_Latn"
+2026-10-09,2026-10-02T23:44:38Z,Teko,tekt1235,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,1,measured,1 of 1 codes supported: ttc_Latn
+2026-10-09,2026-10-02T23:44:38Z,tepehua,tepe1243,many-to-one,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,3,measured,"3 of 3 codes supported: tee_Latn, tpp_Latn, tpt_Latn"
+2026-10-09,2026-10-02T23:44:38Z,tepehuano del norte,nort2959,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,,not-covered,none of 1 codes is in the supported list
+2026-10-09,2026-10-02T23:44:38Z,tepehuano del sur,sout2975,many-to-one,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,1,measured,1 of 2 codes supported: stp_Latn
+2026-10-09,2026-10-02T23:44:38Z,texistepequeño,texi1237,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,,not-covered,none of 1 codes is in the supported list
+2026-10-09,2026-10-02T23:44:38Z,tlahuica,atzi1235,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,,not-covered,none of 1 codes is in the supported list
+2026-10-09,2026-10-02T23:44:38Z,tlapaneco,meph1234,many-to-one,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,2,measured,"2 of 4 codes supported: tcf_Latn, tpl_Latn"
+2026-10-09,2026-10-02T23:44:38Z,tojolabal,tojo1241,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,,not-covered,none of 1 codes is in the supported list
+2026-10-09,2026-10-02T23:44:38Z,totonaco,toto1252,many-to-one,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,4,measured,"4 of 9 codes supported: tlp_Latn, toc_Latn, top_Latn, tos_Latn"
+2026-10-09,2026-10-02T23:44:38Z,triqui,triq1251,many-to-one,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,3,measured,"3 of 3 codes supported: trc_Latn, trq_Latn, trs_Latn"
+2026-10-09,2026-10-02T23:44:38Z,tseltal,tzel1254,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,1,measured,1 of 1 codes supported: tzh_Latn
+2026-10-09,2026-10-02T23:44:38Z,tsotsil,tzot1259,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,1,measured,1 of 1 codes supported: tzo_Latn
+2026-10-09,2026-10-02T23:44:38Z,yaqui,yaqu1251,exact,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,1,measured,1 of 1 codes supported: yaq_Latn
+2026-10-09,2026-10-02T23:44:38Z,zapoteco,zapo1437,macrolanguage,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,32,measured,"32 of 57 codes supported: zaa_Latn, zab_Latn, zac_Latn, zad_Latn, zae_Latn, zai_Latn, zam_Latn, zao_Latn, zaq_Latn, zar_Latn, zas_Latn, zav_Latn, zaw_Latn, zca_Latn, zpc_Latn, zpg_Latn, zpi_Latn, zpl_Latn, zpm_Latn, zpo_Latn, zpt_Latn, zpu_Latn, zpv_Latn, zpy_Latn, zpz_Latn, ztg_Latn, ztn_Latn, ztp_Latn, ztq_Latn, zts_Latn, ztu_Latn, zty_Latn"
+2026-10-09,2026-10-02T23:44:38Z,zoque,,unresolved,omnilingual-asr lang_ids.py @ a7fb36017a (2025-11-10),tool_support_asr,4,measured,"4 of 4 codes supported: zoc_Latn, zoh_Latn, zor_Latn, zos_Latn"
