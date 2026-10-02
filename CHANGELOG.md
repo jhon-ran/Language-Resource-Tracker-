@@ -1,5 +1,66 @@
 # Changelog
 
+## 2026-10-02 — Omnilingual ASR tool-support fetcher
+
+- Added `sources/omnilingual_asr.py`.
+- **This changes the PRD's assumption.** The PRD expected a name-only list
+  needing manual review. The published list (`supported_langs` in
+  `lang_ids.py`, 1,672 entries) is coded as `<ISO 639-3>_<script>`, so
+  groups are matched on ISO 639-3 codes like every other source. No name
+  matching is done and nothing needed manual review.
+- The list does not carry Glottocodes in general: only four entries have a
+  third subtag (two Glottocodes, `cypr1249` and `surs1244`, and two other
+  variant tags), none of them for a Mexican language.
+- First result: 48 groups measured, 19 not-covered, 1 unresolved (ku'ahl);
+  173 supported varieties matched, all in Latin script.
+- The fetcher stops if it reads fewer than 1,000 entries, so a moved or
+  reshaped file cannot be recorded as "no language supported".
+
+## 2026-10-02 — INEGI Census 2020 reference layer
+
+- Added `sources/inegi.py`, a **one-time loader, not a weekly fetcher**. It
+  writes to `reference/`, not `snapshots/`, and must not be added to the
+  weekly workflow. Workbook `cpv2020_b_eum_05_etnicidad.xlsx`, sheet 03,
+  sha256 `60d618c4d439bd931c66408c3f2f7be4448b859277ee4b7d983faba205bd5b57`
+  (pinned in the script; a changed file stops the run).
+- Result: 67 groups measured, 0 measured-zero, 1 not-covered (ku'ahl has no
+  census row).
+- Reconciliation: the 67 group rows sum to 7,328,967 and the five other
+  rows to 35,678, which together equal the census national total of
+  7,364,645.
+- Rows that are not one of the 68 groups:
+  - **Unresolved** (in `unresolved.csv`): "Chontal insuficientemente
+    especificado" 1,704; "Popoluca insuficientemente especificado" 8,427;
+    "Tepehuano insuficientemente especificado" 317.
+  - **Excluded, not unresolved**: "Otras lenguas indígenas de América"
+    2,453 and "No especificado" 22,777. These are residual census
+    categories outside INALI's 68 groups and are not crosswalk candidates.
+    They appear only in `reference/inegi_census_2020_other_rows.csv`.
+
+## 2026-10-02 — Universal Dependencies fetcher
+
+- Added `sources/universal_dependencies.py`. Only treebanks in the latest
+  UD release count (2.18, dated 2026-05-15, at the first run); repositories
+  not yet released are named in `detail` at a count of zero. Absence is
+  `measured-zero`, not `not-covered`.
+- First result: 2 groups measured (K'iche' 1, náhuatl 2), 65 measured-zero,
+  1 unresolved (ku'ahl). cuicateco, huave and seri each have a repository
+  that is not in release 2.18.
+- **Classical Nahuatl cross-reference.** UD has a Classical Nahuatl
+  treebank (ISO `nci`). Because `nci` was moved out of the náhuatl group
+  (see the crosswalk corrections entry below), that treebank is not counted
+  toward náhuatl or any other group and does not appear in any snapshot.
+
+## 2026-10-02 — Common Voice fetcher
+
+- Added `sources/common_voice.py`. It reads release metadata from the
+  `common-voice/cv-dataset` GitHub repo and uses the newest full release of
+  each kind: scripted speech 27.0 and spontaneous speech 5.0 (both
+  2026-09-11) at the time of the first run.
+- Matching is per variety, rolled up to the group. First result: 13 groups
+  covered (9 through scripted, 4 through spontaneous), 54 not covered,
+  1 unresolved (ku'ahl).
+
 ## 2026-10-02 — Source spike decisions; Glottolog and Hugging Face fetchers
 
 - **OLAC dropped from the MVP.** The OAI-PMH harvest endpoint

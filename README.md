@@ -33,10 +33,10 @@ and listed in `unresolved.csv`; they are never silently dropped.
 | `endangerment_status` | Glottolog AES | `sources/glottolog.py` | active |
 | `datasets_raw`, `datasets_focused` | Hugging Face | `sources/huggingface.py` | active |
 | `models_raw`, `models_focused` | Hugging Face | `sources/huggingface.py` | active |
-| Speech corpus | Common Voice | not built yet | planned |
-| Treebanks | Universal Dependencies | not built yet | planned |
-| Tool support | one tool's language list | not built yet | planned |
-| Speakers (reference, static) | INEGI Census 2020 | not built yet | planned |
+| `speech_corpus` | Common Voice | `sources/common_voice.py` | active |
+| `treebanks` | Universal Dependencies | `sources/universal_dependencies.py` | active |
+| `tool_support_asr` | Omnilingual ASR supported-language list | `sources/omnilingual_asr.py` | active |
+| `speakers_3plus` (reference, static) | INEGI Census 2020 | `sources/inegi.py` | loaded once |
 
 **Dropped: archive records (OLAC).** OLAC's OAI-PMH harvest endpoint no
 longer exists and its replacement search service has no documented public
@@ -48,6 +48,45 @@ publishes a real API.
 Glottolog assigns AES per language, so a group's value is the status of its
 most endangered in-scope member. `detail` gives the full breakdown and
 `glottolog_members.csv` has one row per member.
+
+### Speech corpus
+
+Common Voice locales are single varieties, so matching is per variety and
+rolled up: `speech_corpus` is the number of a group's varieties present in
+the newest scripted-speech or spontaneous-speech release. A group with none
+is `not-covered`. `common_voice_locales.csv` has one row per matched locale
+with clips, speakers and validated hours.
+
+### Treebanks
+
+`treebanks` counts a group's Universal Dependencies treebanks that are in
+the latest UD release. A treebank that exists only as a GitHub repository is
+not counted; it is named in `detail`. A group with none is `measured-zero`,
+because UD can hold any language. `universal_dependencies_treebanks.csv` has
+one row per treebank with sentence and token counts.
+
+### Speakers (static reference layer)
+
+`reference/inegi_census_2020.csv` holds speakers aged 3 and over per group
+from the 2020 census. It is **loaded once and is not part of the weekly
+snapshot run**: the census table does not change, and the workbook's
+checksum is pinned in `sources/inegi.py`. Re-run it only if that checksum
+fails or a new census is published. Groups are matched by name. A group
+with no census row (ku'ahl) is `not-covered`.
+
+`reference/inegi_census_2020_other_rows.csv` lists the census rows that are
+not one of the 68 groups, so the table reconciles with the national total:
+three "insuficientemente especificado" rows (also in `unresolved.csv`) and
+two residual categories that are excluded.
+
+### Tool support (ASR)
+
+`tool_support_asr` is the number of a group's varieties in Omnilingual
+ASR's supported-language list. The list is published as codes
+(`<ISO 639-3>_<script>`, e.g. `yua_Latn`), so matching is by ISO code, not
+by name. A group with no supported variety is `not-covered`.
+`omnilingual_asr_languages.csv` has one row per supported variety with the
+training hours and character error rate Meta reports for it.
 
 ### Hugging Face counts
 
@@ -72,7 +111,9 @@ Two rules any Hugging Face query must follow:
 ## Snapshots
 
 Each run writes `snapshots/YYYY-MM-DD/` (UTC date). The main files are
-`glottolog.csv` and `huggingface.csv`, one row per group and indicator:
+`glottolog.csv`, `huggingface.csv`, `common_voice.csv`,
+`universal_dependencies.csv` and `omnilingual_asr.csv`, one row per group
+and indicator:
 
 `snapshot_date, measured_at, inali_name, canonical_glottocode, match_type, source, indicator, value, state, detail`
 
@@ -87,6 +128,9 @@ id and the codes it matched).
 ```
 python3 sources/glottolog.py
 python3 sources/huggingface.py      # about 10 minutes; resumes if interrupted
+python3 sources/common_voice.py
+python3 sources/universal_dependencies.py
+python3 sources/omnilingual_asr.py
 ```
 
 Both take `--date YYYY-MM-DD` to choose the folder.
@@ -102,6 +146,7 @@ crosswalk.csv        INALI group -> ISO 639-3 -> Glottocode
 crosswalk_members.csv  every ISO code in each group -> its own Glottocode
 unresolved.csv       groups/identifiers that could not be resolved
 snapshots/           one dated folder per run (YYYY-MM-DD/), append-only
+reference/           static reference data, loaded once (INEGI Census 2020)
 .github/workflows/   weekly snapshot cron
 ```
 
@@ -157,7 +202,7 @@ rewrites the three CSVs.
 
 ## Status
 
-Seed crosswalk, the Glottolog and Hugging Face fetchers and the first snapshot are done. The remaining fetchers and the workflow are not built yet.
+Seed crosswalk, all five weekly fetchers, the INEGI reference layer and the first snapshot are done. The weekly workflow is not built yet.
 
 ## License
 

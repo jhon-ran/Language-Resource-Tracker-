@@ -1,0 +1,69 @@
+reference_period,retrieved_at,inali_name,canonical_glottocode,match_type,source,indicator,value,state,detail
+2020,2026-10-02T21:31:50Z,Akateko,west2635,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,2894,measured,census row: Akateko
+2020,2026-10-02T21:31:50Z,amuzgo,amuz1254,many-to-one,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,59884,measured,census row: Amuzgo
+2020,2026-10-02T21:31:50Z,Awakateko,agua1252,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,20,measured,census row: Awakateko
+2020,2026-10-02T21:31:50Z,ayapaneco,taba1264,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,71,measured,census row: Ayapaneco
+2020,2026-10-02T21:31:50Z,cora,cora1260,many-to-one,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,33226,measured,census row: Cora
+2020,2026-10-02T21:31:50Z,cucapá,coco1261,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,176,measured,census row: Cucapá
+2020,2026-10-02T21:31:50Z,cuicateco,cuic1234,many-to-one,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,12961,measured,census row: Cuicateco
+2020,2026-10-02T21:31:50Z,chatino,core1263,many-to-one,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,52076,measured,census row: Chatino
+2020,2026-10-02T21:31:50Z,chichimeco jonaz,chic1272,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,2364,measured,census row: Chichimeco Jonaz
+2020,2026-10-02T21:31:50Z,chinanteco,chin1484,many-to-one,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,144394,measured,census row: Chinanteco
+2020,2026-10-02T21:31:50Z,chocholteco,choc1279,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,847,measured,census row: Chocholteco
+2020,2026-10-02T21:31:50Z,chontal de Oaxaca,tequ1244,many-to-one,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,5613,measured,census row: Chontal de Oaxaca
+2020,2026-10-02T21:31:50Z,chontal de Tabasco,taba1266,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,60563,measured,census row: Chontal de Tabasco
+2020,2026-10-02T21:31:50Z,Chuj,chuj1250,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,3516,measured,census row: Chuj
+2020,2026-10-02T21:31:50Z,ch'ol,chol1282,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,254715,measured,census row: Ch'ol
+2020,2026-10-02T21:31:50Z,guarijío,huar1255,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,2139,measured,census row: Guarijío
+2020,2026-10-02T21:31:50Z,huasteco,huas1242,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,168729,measured,census row: Huasteco
+2020,2026-10-02T21:31:50Z,huave,huav1256,many-to-one,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,18827,measured,census row: Huave
+2020,2026-10-02T21:31:50Z,huichol,huic1243,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,60263,measured,census row: Huichol
+2020,2026-10-02T21:31:50Z,ixcateco,ixca1245,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,195,measured,census row: Ixcateco
+2020,2026-10-02T21:31:50Z,Ixil,ixil1251,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,117,measured,census row: Ixil
+2020,2026-10-02T21:31:50Z,Jakalteko,popt1235,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,481,measured,census row: Jakalteko
+2020,2026-10-02T21:31:50Z,Kaqchikel,kaqc1270,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,169,measured,census row: Kaqchikel
+2020,2026-10-02T21:31:50Z,Kickapoo,kick1244,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,63,measured,census row: Kickapoo
+2020,2026-10-02T21:31:50Z,kiliwa,kili1268,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,76,measured,census row: Kiliwa
+2020,2026-10-02T21:31:50Z,kumiai,kumi1248,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,495,measured,census row: Kumiai
+2020,2026-10-02T21:31:50Z,ku'ahl,,unresolved,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,,not-covered,no row for this group in the census table
+2020,2026-10-02T21:31:50Z,K'iche',kich1262,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,589,measured,census row: K'iche'
+2020,2026-10-02T21:31:50Z,lacandón,laca1243,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,771,measured,census row: Lacandón
+2020,2026-10-02T21:31:50Z,Mam,mamm1241,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,11369,measured,census row: Mam
+2020,2026-10-02T21:31:50Z,matlatzinca,sanf1262,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,1245,measured,census row: Matlatzinca
+2020,2026-10-02T21:31:50Z,maya,yuca1254,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,774755,measured,census row: Maya
+2020,2026-10-02T21:31:50Z,mayo,mayo1264,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,38507,measured,census row: Mayo
+2020,2026-10-02T21:31:50Z,mazahua,maza1293,many-to-one,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,153797,measured,census row: Mazahua
+2020,2026-10-02T21:31:50Z,mazateco,maza1295,many-to-one,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,237212,measured,census row: Mazateco
+2020,2026-10-02T21:31:50Z,mixe,oaxa1241,many-to-one,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,139760,measured,census row: Mixe
+2020,2026-10-02T21:31:50Z,mixteco,mixt1427,many-to-one,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,526593,measured,census row: Mixteco
+2020,2026-10-02T21:31:50Z,náhuatl,azte1234,many-to-one,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,1651958,measured,census row: Náhuatl
+2020,2026-10-02T21:31:50Z,oluteco,olut1240,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,77,measured,census row: Oluteco
+2020,2026-10-02T21:31:50Z,otomí,,unresolved,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,298861,measured,census row: Otomí
+2020,2026-10-02T21:31:50Z,paipai,paip1241,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,231,measured,census row: Paipai
+2020,2026-10-02T21:31:50Z,pame,pame1260,many-to-one,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,11924,measured,census row: Pame
+2020,2026-10-02T21:31:50Z,pápago,toho1245,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,203,measured,census row: Pápago
+2020,2026-10-02T21:31:50Z,pima,pima1248,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,1037,measured,census row: Pima
+2020,2026-10-02T21:31:50Z,popoloca,popo1294,many-to-one,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,17274,measured,census row: Popoloca
+2020,2026-10-02T21:31:50Z,popoluca de la Sierra,high1276,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,36113,measured,census row: Popoluca de la Sierra
+2020,2026-10-02T21:31:50Z,qato'k,moch1257,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,126,measured,census row: Qato'k
+2020,2026-10-02T21:31:50Z,Q'anjob'al,qanj1241,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,10851,measured,census row: Q'anjob'al
+2020,2026-10-02T21:31:50Z,Q'eqchí',kekc1242,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,1599,measured,census row: Q'eqchi'
+2020,2026-10-02T21:31:50Z,sayulteco,sayu1241,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,4765,measured,census row: Sayulteco
+2020,2026-10-02T21:31:50Z,seri,seri1257,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,723,measured,census row: Seri
+2020,2026-10-02T21:31:50Z,tarahumara,tara1321,many-to-one,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,91554,measured,census row: Tarahumara
+2020,2026-10-02T21:31:50Z,tarasco,tara1323,many-to-one,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,142459,measured,census row: Tarasco
+2020,2026-10-02T21:31:50Z,Teko,tekt1235,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,78,measured,census row: Teko
+2020,2026-10-02T21:31:50Z,tepehua,tepe1243,many-to-one,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,8884,measured,census row: Tepehua
+2020,2026-10-02T21:31:50Z,tepehuano del norte,nort2959,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,9855,measured,census row: Tepehuano del norte
+2020,2026-10-02T21:31:50Z,tepehuano del sur,sout2975,many-to-one,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,44386,measured,census row: Tepehuano del sur
+2020,2026-10-02T21:31:50Z,texistepequeño,texi1237,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,368,measured,census row: Texistepequeño
+2020,2026-10-02T21:31:50Z,tlahuica,atzi1235,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,2238,measured,census row: Tlahuica
+2020,2026-10-02T21:31:50Z,tlapaneco,meph1234,many-to-one,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,147432,measured,census row: Tlapaneco
+2020,2026-10-02T21:31:50Z,tojolabal,tojo1241,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,66953,measured,census row: Tojolabal
+2020,2026-10-02T21:31:50Z,totonaco,toto1252,many-to-one,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,256344,measured,census row: Totonaco
+2020,2026-10-02T21:31:50Z,triqui,triq1251,many-to-one,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,29545,measured,census row: Triqui
+2020,2026-10-02T21:31:50Z,tseltal,tzel1254,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,589144,measured,census row: Tseltal
+2020,2026-10-02T21:31:50Z,tsotsil,tzot1259,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,550274,measured,census row: Tsotsil
+2020,2026-10-02T21:31:50Z,yaqui,yaqu1251,exact,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,19376,measured,census row: Yaqui
+2020,2026-10-02T21:31:50Z,zapoteco,zapo1437,macrolanguage,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,490845,measured,census row: Zapoteco
+2020,2026-10-02T21:31:50Z,zoque,,unresolved,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",speakers_3plus,74018,measured,census row: Zoque
