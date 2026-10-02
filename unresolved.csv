@@ -1,5 +1,8 @@
-inali_name,raw_iso639_3,source,reason,first_seen,last_seen
-ku'ahl,,glottolog-cldf v5.3 (doi:10.5281/zenodo.18840967),no ISO 639-3 code for this group,,
-otomí,ote;otl;otm;otn;otq;ots;ott;otx;otz,glottolog-cldf v5.3 (doi:10.5281/zenodo.18840967),common ancestor otom1297 (Otomian) also contains: mazahua,,
-zoque,zoc;zoh;zor;zos,glottolog-cldf v5.3 (doi:10.5281/zenodo.18840967),"common ancestor zoqu1261 (Zoque) also contains: ayapaneco, popoluca de la Sierra, texistepequeño",,
-náhuatl,nci,glottolog-cldf v5.3 (doi:10.5281/zenodo.18840967),"historical variety, not a living INALI variant",,
+inali_name,raw_iso639_3,raw_name,source,reason,first_seen,last_seen
+ku'ahl,,,glottolog-cldf v5.3 (doi:10.5281/zenodo.18840967),no ISO 639-3 code for this group,,
+otomí,ote;otl;otm;otn;otq;ots;ott;otx;otz,,glottolog-cldf v5.3 (doi:10.5281/zenodo.18840967),common ancestor otom1297 (Otomian) also contains: mazahua,,
+zoque,zoc;zoh;zor;zos,,glottolog-cldf v5.3 (doi:10.5281/zenodo.18840967),"common ancestor zoqu1261 (Zoque) also contains: ayapaneco, popoluca de la Sierra, texistepequeño",,
+náhuatl,nci,,glottolog-cldf v5.3 (doi:10.5281/zenodo.18840967),"historical variety, not a living INALI variant",,
+,,Chontal insuficientemente especificado,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",variant not specified in the census (1704 speakers); belongs to chontal de Oaxaca or chontal de Tabasco,2026-10-02,2026-10-02
+,,Popoluca insuficientemente especificado,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03","variant not specified in the census (8427 speakers); belongs to popoluca de la Sierra, oluteco, sayulteco or texistepequeño",2026-10-02,2026-10-02
+,,Tepehuano insuficientemente especificado,"INEGI Censo de Población y Vivienda 2020, cpv2020_b_eum_05_etnicidad.xlsx sheet 03",variant not specified in the census (317 speakers); belongs to tepehuano del norte or tepehuano del sur,2026-10-02,2026-10-02

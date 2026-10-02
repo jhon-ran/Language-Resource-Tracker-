@@ -1,5 +1,41 @@
 # Changelog
 
+## 2026-10-02 — Source spike decisions; Glottolog and Hugging Face fetchers
+
+- **OLAC dropped from the MVP.** The OAI-PMH harvest endpoint
+  (`www.language-archives.org/cgi-bin/olaca3.pl`) returns 404. The site was
+  relaunched with a search service at `search.language-archives.org`, which
+  has no documented public API or bulk dump. The archive-records indicator
+  is dropped pending a documented alternative. It is not silently missing:
+  no snapshot contains OLAC rows at all, and the README lists it as dropped.
+- **Hugging Face stores two counts per kind:** `datasets_raw` /
+  `datasets_focused` and `models_raw` / `models_focused`. "Focused" means
+  the repo is tagged for at most 3 of the 68 groups.
+  **The cutoff of 3 is a judgment call, not a measured threshold.** It was
+  picked after seeing that most raw counts come from a few massively
+  multilingual repos; no analysis was done to derive it. It is the constant
+  `FOCUSED_MAX_GROUPS` in `sources/huggingface.py` and is written into every
+  `huggingface_repos.json`. Changing it changes the series.
+- **INEGI residual rows** (Census 2020, sheet 03 of
+  `cpv2020_b_eum_05_etnicidad.xlsx`):
+  - In `unresolved.csv`, because each belongs to one of the 68 groups but
+    the variant was not specified: "Chontal insuficientemente especificado"
+    (1,704), "Popoluca insuficientemente especificado" (8,427), "Tepehuano
+    insuficientemente especificado" (317).
+  - Explicitly excluded, and not in `unresolved.csv`, because they are
+    residual census categories outside INALI's 68 groups and not crosswalk
+    candidates: "Otras lenguas indígenas de América" (2,453) and
+    "No especificado" (22,777).
+- `unresolved.csv` gained a `raw_name` column for sources that report a
+  name instead of an ISO code. `tools/build_crosswalk.py` now keeps rows
+  written by other sources when it rebuilds.
+- Added `sources/common.py`, `sources/glottolog.py`,
+  `sources/huggingface.py` and the first snapshot, `snapshots/2026-10-02/`.
+- Spike notes kept for the record: Common Voice's current releases are
+  scripted speech 27.0 and spontaneous speech 5.0 (both 2026-09-11); the
+  per-language INEGI table is the workbook above, not ITER 2020, which only
+  has totals per locality.
+
 ## 2026-10-02 — Zenodo verification and crosswalk corrections
 
 - **Glottolog 5.3 re-fetched from Zenodo and verified.**

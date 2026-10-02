@@ -26,6 +26,71 @@ are never collapsed into a blank or a zero.
 Every row also carries its measurement date. Unresolved languages are kept
 and listed in `unresolved.csv`; they are never silently dropped.
 
+## Indicators
+
+| Indicator | Source | Fetcher | Status |
+|---|---|---|---|
+| `endangerment_status` | Glottolog AES | `sources/glottolog.py` | active |
+| `datasets_raw`, `datasets_focused` | Hugging Face | `sources/huggingface.py` | active |
+| `models_raw`, `models_focused` | Hugging Face | `sources/huggingface.py` | active |
+| Speech corpus | Common Voice | not built yet | planned |
+| Treebanks | Universal Dependencies | not built yet | planned |
+| Tool support | one tool's language list | not built yet | planned |
+| Speakers (reference, static) | INEGI Census 2020 | not built yet | planned |
+
+**Dropped: archive records (OLAC).** OLAC's OAI-PMH harvest endpoint no
+longer exists and its replacement search service has no documented public
+API (details in `CHANGELOG.md`, 2026-10-02). It can be re-added if OLAC
+publishes a real API.
+
+### Endangerment status
+
+Glottolog assigns AES per language, so a group's value is the status of its
+most endangered in-scope member. `detail` gives the full breakdown and
+`glottolog_members.csv` has one row per member.
+
+### Hugging Face counts
+
+- `*_raw`: distinct repos tagged with any of the group's codes (its ISO
+  639-3 codes, plus `zap` for zapoteco and `nah` for náhuatl).
+- `*_focused`: the subset of those repos that are tagged for **at most 3 of
+  the 68 groups**, counted separately for datasets and for models. This
+  removes massively multilingual repos that list hundreds of languages. The
+  cutoff of 3 was picked, not derived.
+
+Two rules any Hugging Face query must follow:
+
+1. **Datasets and models use different filters.** Datasets:
+   `GET /api/datasets?filter=language:<code>` (not `languages:`, which
+   returns nothing). Models: `GET /api/models?filter=<code>`, the bare code
+   (`language:<code>` returns nothing for models).
+2. **Check every model hit against its model card.** The bare filter
+   matches any tag, and several codes are also ordinary tags (`pos`, `mix`,
+   `mit` and others). A model counts only when the code is in the
+   `language` list of its model card (`cardData=true` in the query).
+
+## Snapshots
+
+Each run writes `snapshots/YYYY-MM-DD/` (UTC date). The main files are
+`glottolog.csv` and `huggingface.csv`, one row per group and indicator:
+
+`snapshot_date, measured_at, inali_name, canonical_glottocode, match_type, source, indicator, value, state, detail`
+
+Indicators are measured through a group's individual codes, so a group whose
+`match_type` is `unresolved` only at group level (otomí, zoque) is still
+measured. A group with no code at all (ku'ahl) gets `state = unresolved`.
+
+Supporting files: `glottolog_members.csv` (per language),
+`huggingface_codes.csv` (per code) and `huggingface_repos.json` (every repo
+id and the codes it matched).
+
+```
+python3 sources/glottolog.py
+python3 sources/huggingface.py      # about 10 minutes; resumes if interrupted
+```
+
+Both take `--date YYYY-MM-DD` to choose the folder.
+
 ## Layout
 
 ```
@@ -66,9 +131,10 @@ with the reason: `unresolved` moves the code to `unresolved.csv`,
 
 ### unresolved.csv
 
-`inali_name, raw_iso639_3, source, reason, first_seen, last_seen`
+`inali_name, raw_iso639_3, raw_name, source, reason, first_seen, last_seen`
 
-One row per language-and-source pair that could not be resolved.
+One row per language-and-source pair that could not be resolved. `raw_name`
+is for sources that report a name instead of an ISO code (INEGI).
 
 ## Pinned upstream releases
 
@@ -91,7 +157,7 @@ rewrites the three CSVs.
 
 ## Status
 
-Scaffolding and seed crosswalk are done. Fetchers and the workflow are not built yet.
+Seed crosswalk, the Glottolog and Hugging Face fetchers and the first snapshot are done. The remaining fetchers and the workflow are not built yet.
 
 ## License
 

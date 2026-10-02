@@ -173,15 +173,22 @@ def main():
             for r, scope, why in sorted(rows, key=lambda t: t[0]["Name"]):
                 w.writerow([s["inali_name"], r["ISO639P3code"], r["ID"], r["Name"], node, scope, why])
 
-    with open(ROOT / "unresolved.csv", "w", newline="", encoding="utf-8") as f:
+    # Rows written by other sources (e.g. INEGI) are kept as they are.
+    path = ROOT / "unresolved.csv"
+    others = [r for r in csv.DictReader(open(path, encoding="utf-8"))
+              if not r["source"].startswith("glottolog-cldf")] if path.exists() else []
+    header = ["inali_name", "raw_iso639_3", "raw_name", "source", "reason", "first_seen", "last_seen"]
+    with open(path, "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f, lineterminator="\n")
-        w.writerow(["inali_name", "raw_iso639_3", "source", "reason", "first_seen", "last_seen"])
+        w.writerow(header)
         for s, raw, _, mtype, _, problem in resolved:
             if mtype == "unresolved":
-                w.writerow([s["inali_name"], raw, SOURCE, problem, "", ""])
+                w.writerow([s["inali_name"], raw, "", SOURCE, problem, "", ""])
         for name, r, action, why in set_aside:
             if action == "unresolved":
-                w.writerow([name, r["ISO639P3code"], SOURCE, why, "", ""])
+                w.writerow([name, r["ISO639P3code"], "", SOURCE, why, "", ""])
+        for r in others:
+            w.writerow([r.get(h, "") for h in header])
 
     counts = {}
     for _, _, _, mtype, _, _ in resolved:
