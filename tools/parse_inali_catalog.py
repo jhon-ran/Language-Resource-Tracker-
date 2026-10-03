@@ -4,8 +4,9 @@
 Part 1: Appendix 4 -> variants.csv, one row per (variant, autonym) pair:
   variant, autonym, spanish_name, group, family
 
-`spanish_name`, `autonym` and `family` are exactly as printed, misprints
-included. `variant` is an identifier (lower case, no accents, hyphens) made
+`spanish_name`, `autonym_appendix4` and `family` are exactly as printed in
+Appendix 4, misprints included. `autonym` is the body's spelling where the
+two differ (autonym_overrides.csv), otherwise the same. `variant` is an identifier (lower case, no accents, hyphens) made
 from the Spanish name after correcting known misprints (CORRECTIONS).
 `group` uses the spelling in inali_groups.csv so it joins to crosswalk.csv;
 Appendix 4 prints four group names slightly differently (see CHANGELOG.md).
@@ -149,7 +150,23 @@ def main():
                 problems.append("no split rule for autonym %r of %r" % (autonym, name))
                 continue
             variant += "-" + SPLITS[name][autonym]
-        rows.append([variant, autonym, name, seed.get(fold(group), group), family])
+        rows.append([variant, autonym, name, seed.get(fold(group), group), family, autonym])
+
+    # The body of the catalog is the authority for how an autonym is spelt.
+    # autonym_overrides.csv (written by parse_inali_body.py) lists every
+    # autonym the body prints differently from Appendix 4. `autonym` takes the
+    # body's form; `autonym_appendix4` keeps what Appendix 4 prints.
+    path = ROOT / "autonym_overrides.csv"
+    if path.exists():
+        body = {(o["variant"], o["autonym_appendix4"]): o["autonym_body"]
+                for o in csv.DictReader(open(path, encoding="utf-8"))}
+        hit = set()
+        for r in rows:
+            if (r[0], r[5]) in body:
+                r[1] = body[(r[0], r[5])]
+                hit.add((r[0], r[5]))
+        if set(body) - hit:
+            problems.append("autonym overrides that match nothing: %s" % sorted(set(body) - hit))
 
     found = {"variants": len({r[0] for r in rows}), "autonyms": len(rows),
              "groups": len({r[3] for r in rows}), "families": len({r[4] for r in rows})}
@@ -172,7 +189,7 @@ def main():
     order = list(seed.values())
     with open(ROOT / "variants.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f, lineterminator="\n")
-        w.writerow(["variant", "autonym", "spanish_name", "group", "family"])
+        w.writerow(["variant", "autonym", "spanish_name", "group", "family", "autonym_appendix4"])
         w.writerows(sorted(rows, key=lambda r: (order.index(r[3]), r[0], r[1])))
     print("all checks passed; wrote variants.csv: %d rows" % len(rows))
     print("group names respelled to match inali_groups.csv:", respelled)

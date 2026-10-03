@@ -1,5 +1,88 @@
 # Changelog
 
+## 2026-10-02 — Item 8 part 2: IPA and geography from the catalog body
+
+- `tools/parse_inali_body.py` reads the 364 body entries (PDF pp. 31-212)
+  and joins every one to `variants.csv`. Outputs:
+  - `variant_ipa.csv`: 476 rows, one per variant and autonym, with
+    `ipa_status` = `extracted` (460), `corrected-by-hand` (2) or
+    `in-review` (14, IPA left blank).
+  - `variant_localities.csv`: 43,989 rows, one per variant, state,
+    municipio and locality, with INEGI state code, canonical state, the
+    state as printed, and INEGI municipio code.
+  - `review_list.csv`: 73 rows for a later manual pass.
+  - `autonym_overrides.csv`, `inali_build.json` (source checksum, poppler
+    version, counts), `reference/inegi_municipios_2020.csv`.
+- **The body is the authority for autonym spelling.** 24 autonyms differ
+  from Appendix 4: 16 in accents, ñ, capitals or the bracketed qualifier,
+  8 only in spacing (including seven tlapaneco "me'pha a" forms, an
+  extraction artefact of Appendix 4). `variants.csv` now has `autonym`
+  (body form) and a new column `autonym_appendix4` (as printed there).
+- **Hand corrections** live in `ipa_corrections.csv`. Two entries so far,
+  chocholteco del sur `[ŋ̪g̪i˦wa˨]` and chocholteco del este `[ŋ̪g̪i˦ba˨]`.
+  The under-bridge marks sit under ŋ and g on the page (PDF p. 116), which
+  neither extraction reproduces; their placement was read from the page by
+  Jo. The tone letter after i is U+02E6 (˦), as both extractions give it.
+  (A first hand reading had ˧; it was withdrawn because tone-letter height
+  cannot be told apart reliably in a page crop.)
+- **Municipio check against INEGI's 2020 municipality list** (from the
+  census locality file, ITER 2020, checksum pinned). 57 printed municipio
+  names do not match within their state and are in the review list; their
+  1,827 locality rows have a blank `municipio_code`. They are a mix of
+  misprints ("Guevea de Humbolt", "La Indepedencia"), names changed since
+  2008 ("Temapache", "Allende"), short forms ("Acapulco", "Ocotlán"),
+  municipalities printed under the wrong state ("Tehuipango" under
+  PUEBLA, "Capulhuac" under GUANAJUATO) and one fused pair ("Akil Baca").
+- Still in review: 11 entries with the unconfirmed tone letters
+  (F09A/F091), chocholteco del oeste and zapoteco de la montaña del
+  Istmo, bajo (diacritic placement), one ambiguous word gap, and two
+  geography misprints (Chuj, Mam de la frontera).
+- `.gitignore` now excludes `Claude outputs/`.
+
+## 2026-10-02 — INALI catalog body (item 8 part 2, in progress): IPA extraction notes
+
+Nothing from part 2 is written to the repo yet except the parser
+(`tools/parse_inali_body.py`). These notes are for the methods write-up.
+
+- **Poppler version matters.** Part of the catalog's IPA is set in an
+  older font whose glyphs have no Unicode value; they come out as
+  private-use codes, and different poppler versions expose them
+  differently. The parser runs with **poppler 22.02.0** (`pdftohtml` and
+  `pdftotext` on the build machine). The page crops used to confirm the
+  glyphs were rendered with **poppler 24.02.0**. The parser prints the
+  version it ran with, and the outputs will record it.
+- **Private-use glyphs, confirmed by eye against page crops** (one crop
+  per code; confirmed by Jo, 2026-10-02):
+
+  | Code | Mapped to | Note |
+  |---|---|---|
+  | F03F | ʔ U+0294 | |
+  | F083 | U+0361 tie bar | combining, after the first letter (t͡s) |
+  | F0F6 | ɨ U+0268 | |
+  | F0F9 | ː U+02D0 | |
+  | F067 | ɡ U+0261 | |
+  | F04E | ŋ U+014B | |
+  | F052 | ɾ U+027E | |
+  | F053 | ʃ U+0283 | |
+  | F0C8 | ˈ U+02C8 | |
+  | F0E2 | U+0303 tilde | combining, over the preceding letter (seri) |
+  | F0C3 | ʌ U+028C | geography only (bracketed locality corrections, pp. 169-170); accepted for now, low stakes; the raised form is lost |
+  | F09A, F091 | **not mapped** | tone letters, not confirmed; the 11 entries that use them (8 tlapaneco, 3 amuzgo) stay in the review list |
+
+- **Word spacing in IPA.** The same older font loses word spaces in the
+  extracted text. Spaces are rebuilt from word positions: a gap of at
+  least 1.2 pt between two pieces is a space. Measured gaps are bimodal
+  (124 at 0.5 pt or less, 227 at 2 pt or more). 41 IPA strings in 35
+  entries changed, spaces only. A gap between 0.5 and 2.0 pt is not
+  decided by the rule: the entry goes to the review list (2 entries).
+- **Raised letters are not recoverable from the text.** The page prints
+  pʰ with a raised h; the extraction gives a plain h. These need a manual
+  pass (tlapaneco).
+- **Stacked diacritics.** In three chocholteco entries and one zapoteco
+  entry the two extractions order the under-bridge marks differently and
+  neither matches the page; Unicode normalisation (NFC or NFD) does not
+  reconcile them. They stay in the review list.
+
 ## 2026-10-02 — INALI catalog (CLIN 2008): known quirks, for the methods write-up
 
 Source: `https://www.inali.gob.mx/pdf/CLIN_completo.pdf` (Diario Oficial,

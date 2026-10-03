@@ -1,0 +1,477 @@
+variant,autonym,ipa,ipa_status
+kickapoo,Kickapoo,[kika'pu],extracted
+papago,tohono o’otham,[tohono ʔoʔoðam],extracted
+papago,tohono o’odham,[tohono ʔoʔoðam],extracted
+pima-del-norte,oob no’ok (del norte),[ʔo:b noʔok],extracted
+pima-del-sur,oob no’ok (del sur),[ʔo:b noʔok],extracted
+pima-del-este,obnók (del este),[ʔob'nok],extracted
+tepehuano-del-norte,odami,[ʔˈodami],extracted
+tepehuano-del-sur-alto,au’dam,[ʔauʔdam],extracted
+tepehuano-del-sur-bajo,o’dam (del sur bajo),[ʔoʔdam],extracted
+tepehuano-del-sur-central,o’dam (del sur central),[ʔoʔdam],extracted
+tarahumara-del-oeste,rarómari raicha,[raˈɾomaɾi rait͡ʃa],extracted
+tarahumara-del-norte,ralámuli raicha (del norte),[raˈlamuli rait͡ʃa],extracted
+tarahumara-de-cumbres,ralámuli raicha (de Cumbres),[raˈlamuli rait͡ʃa],extracted
+tarahumara-del-centro,ralámuli raicha (del centro),[raˈlamuli rait͡ʃa],extracted
+tarahumara-del-sur,rarámari raicha,[raˈɾamaɾi rait͡ʃa],extracted
+guarijio-del-norte,warihó,[waɾiˈho],extracted
+guarijio-del-sur,makurawe,[makuɾawe],extracted
+yaqui,hiak-nooki,[hiak noːki],extracted
+mayo,yorem-nokki,[joɾem nokki],extracted
+cora-de-rosarito,rosaríìtu,[ɽosaɽiːtu],extracted
+cora-de-dolores,wachí hapwa,[waˈt͡ʃi hapʷa],extracted
+cora-meseno,yaúhke’ena,[ˈjauhkeʔena],extracted
+cora-de-jesus-maria,chwísita’na,[ˈt͡ʃwisitaʔna],extracted
+cora-francisqueno,kwáaxa’ata,[ˈkʷaːʂaʔata],extracted
+cora-tereseno,kwéimarusa’na,[ˈkʷeimaɽusaʔna],extracted
+cora-presideno,múxata’ana,[ˈmuʂataɁana],extracted
+cora-corapeno,kuráàpa,[kuɽaːpa],extracted
+huichol-del-norte,wixárika (del norte),[wiˈȿaɽika],extracted
+huichol-del-sur,wixárika (del sur),[wiˈȿaɽika],extracted
+huichol-del-este,wixárika (del este),[wiˈȿaɽika],extracted
+huichol-del-oeste,wixárika (del oeste),[wiˈȿaɽika],extracted
+nahuatl-de-la-sierra-noreste-de-puebla,mexicano tlajtol,[mexikano λahtol],extracted
+nahuatl-de-la-sierra-noreste-de-puebla,nauta,[nawta],extracted
+nahuatl-del-noreste-central,mexi’catl,[meʃiʔkaλ],extracted
+nahuatl-del-noreste-central,mexicano (del noroeste central),[mexikano],extracted
+nahuatl-del-noreste-central,maseual tla’tol,[masewal λaʔtol],extracted
+nahuatl-del-istmo,náhuatl (del Istmo),[nawaλ],extracted
+nahuatl-de-la-huasteca-veracruzana,mexicano (de la Huasteca veracruzana),[mexikano],extracted
+nahuatl-de-la-huasteca-veracruzana,náhuatl (de la Huasteca veracruzana),[nawaλ],extracted
+nahuatl-de-la-huasteca-veracruzana,mexcatl,[meʃkaλ],extracted
+nahuatl-de-la-huasteca-potosina,náhuatl (de la Huasteca potosina),[nawaλ],extracted
+nahuatl-de-la-huasteca-potosina,mexicano (de la Huasteca potosina),[mexikano],extracted
+nahuatl-de-la-huasteca-potosina,mexicatl (de la Huasteca potosina),[meʃikaλ],extracted
+nahuatl-de-oaxaca,mexicano (de Oaxaca),[mexikano],extracted
+nahuatl-de-la-sierra-negra-sur,"mexicano (de la Sierra negra, sur)",[mexikano],extracted
+nahuatl-de-la-sierra-negra-sur,"náhuatl (de la Sierra negra, sur)",[nawaλ],extracted
+nahuatl-de-la-sierra-negra-norte,"mexicano (de la Sierra negra, norte)",[mexikano],extracted
+nahuatl-de-la-sierra-negra-norte,"náhuatl (de la Sierra negra, norte)",[nawaλ],extracted
+nahuatl-de-la-sierra-negra-norte,"mexicatl (de la Sierra negra, norte)",[meʃikaλ],extracted
+nahuatl-central-de-veracruz,náhuatl (central de Veracruz),[nawaλ],extracted
+nahuatl-central-de-veracruz,mexicano (central de Veracruz),[mexikano],extracted
+nahuatl-de-la-sierra-oeste-de-puebla,masehual tla’tol,[masewal λaʔtol],extracted
+nahuatl-alto-del-norte-de-puebla,maseual tajtol,[masewal tahtol],extracted
+nahuatl-alto-del-norte-de-puebla,nahuat,[nawat],extracted
+nahuatl-del-istmo-bajo,náhuatl (del Istmo bajo),[nawaλ],extracted
+nahuatl-del-istmo-bajo,mexicano (del Istmo bajo),[mexikano],extracted
+nahuatl-del-centro-de-puebla,mexicano (del centro de Puebla),[mexikano],extracted
+mexicano-bajo-de-occidente,mexicano (bajo de occidente),[mexikano],extracted
+mexicano-del-noroeste,mexicano (del noroeste),[mexikano],extracted
+mexicano-de-guerrero,mexicano (de Guerrero),[mexikano],extracted
+mexicano-de-occidente,mexicano (de occidente),[mexikano],extracted
+mexicano-central-de-occidente,mexicano (central de occidente),[mexikano],extracted
+mexicano-central-bajo,mexicano (central bajo),[mexikano],extracted
+mexicano-de-temixco,mexicano (de Temixco),[mexikano],extracted
+mexicano-de-puente-de-ixtla,mexicano (de Puente de Ixtla),[mexikano],extracted
+mexicano-de-tetela-del-volcan,mexicano (de Tetela del Volcán),[mexikano],extracted
+mexicano-alto-de-occidente,mexicano (alto de occidente),[mexikano],extracted
+mexicano-del-oriente,mexicano (del oriente),[mexikano],extracted
+mexicano-del-oriente-central,mexicano (del oriente central),[mexikano],extracted
+mexicano-del-centro-bajo,mexicano (del centro bajo),[mexikano],extracted
+mexicano-del-centro-alto,mexicano (del centro alto),[mexikano],extracted
+mexicano-del-centro,mexicano (del centro),[mexikano],extracted
+mexicano-del-oriente-de-puebla,mexicano (del oriente de Puebla),[mexikano],extracted
+mexicano-de-la-huasteca-hidalguense,mexicano (de la Huasteca Hidalguense),[mexikano],extracted
+paipai,jaspuy pai,[xaspuj pai],extracted
+ku-ahl,ku’ahl,[kwʔahl],extracted
+cucapa,kuapá,[kuaˈpa],extracted
+kumiai,tipai,[tipai],extracted
+kiliwa,ko’lew,[koʔlew],extracted
+seri,cmiique iitom,[kw̃ĩkʼ iːtom],extracted
+otomi-de-la-sierra,ñuju,[ɲuxu],extracted
+otomi-de-la-sierra,ñoju,[ɲoxu],extracted
+otomi-de-la-sierra,yühu,[jũhu],extracted
+otomi-bajo-del-noroeste,hñäñho,[hɲãɲho],extracted
+otomi-del-oeste,ñathó,[ɲatho˦],extracted
+otomi-del-oeste-del-valle-del-mezquital,ñöhñö,[ɲõhɲõ],extracted
+otomi-del-oeste-del-valle-del-mezquital,ñähñá,[ɲãhɲa˦],extracted
+otomi-del-valle-del-mezquital,hñähñú,[hɲãhɲu˦],extracted
+otomi-del-valle-del-mezquital,ñänhú (del Valle del Mezquital),[ɲãnhu˦],extracted
+otomi-del-valle-del-mezquital,ñandú,[ɲãndu˦],extracted
+otomi-del-valle-del-mezquital,ñóhnño (del Valle del Mezquital),[ɲo˦hnɲo],extracted
+otomi-del-valle-del-mezquital,ñanhmu,[ɲanhmu],extracted
+otomi-de-ixtenco,yühmu,[jũhmu],extracted
+otomi-de-tilapa-o-del-sur,ñü’hü,[ɲũʔhũ],extracted
+otomi-del-noroeste,hñöñho,[hɲõɲho],extracted
+otomi-del-noroeste,ñühú,[ɲũhu˦],extracted
+otomi-del-noroeste,ñanhú,[ɲanhu˦],extracted
+otomi-del-centro,hñähñu (del centro),[hɲãhɲu],extracted
+otomi-del-centro,ñöthó,[ɲõtho˦],extracted
+otomi-del-centro,ñható,[ɲhato˦],extracted
+otomi-del-centro,hñothó,[hɲotho˦],extracted
+otomi-del-centro,ñóhnño (del centro),[ɲo˦hnɲo],extracted
+mazahua-de-oriente,jnatrjo,[hɲatɾho],extracted
+mazahua-de-occidente,jnatjo,[hɲatho],extracted
+matlatzinca,bot’una,[βotʔuna],extracted
+tlahuica,pjiekakjoo,[pʰiekakhoː],extracted
+pame-del-norte,xi’iuy,[ʃiʔiwi],extracted
+pame-del-centro,xi’oi,[ʃiʔoi],extracted
+chichimeco-jonaz,uzá’,[ʔu˦zãʔ],extracted
+chinanteco-del-norte,jujmi (del norte),[huhmi],extracted
+chinanteco-del-norte,jujmi tsa kö ‘w++,[huhmi t͡sa kõ ʔwɨ̃ː],extracted
+chinanteco-del-norte,jmiih kia’ dzä ‘vï ï,[hmiːh kiaʔ dsã vĩː],extracted
+chinanteco-central-bajo,j+g ki tsomän,[hɨɡ ki t͡somãn],extracted
+chinanteco-central-bajo,j+g dsa k+,[hɨɡ dsa kɨ],extracted
+chinanteco-central-bajo,jumi dsa iin+n,[humi dsa iːnɨ̃n],extracted
+chinanteco-del-sureste-alto,jumi dsa mojai,[humi dsa mohai],extracted
+chinanteco-del-sureste-bajo,jujmi dsa maji’i,[huhmi dsa mahiʔi],extracted
+chinanteco-del-sureste-bajo,jujmi dsa m+ta’o,[huhmi dsa mɨtaʔo],extracted
+chinanteco-del-oeste-central-alto,jaú jm,[haw˦ hm˨],extracted
+chinanteco-del-oeste-central-alto,jmiih kia’ dzä jii’,[hmiːh kiaʔ dsã hiːʔ],extracted
+chinanteco-de-la-sierra,jmiih dzä mo’,[hmiːh dsã moʔ],extracted
+chinanteco-del-noroeste,jau jmai,[haw˦ hmaj˨],extracted
+chinanteco-del-oeste,jujma,[huhma],extracted
+chinanteco-del-oeste-central-bajo,jejmei,[hehmei],extracted
+chinanteco-del-oeste-central-bajo,jejmi,[hehmi],extracted
+chinanteco-del-oeste-central-bajo,jajmi dzä kï ï’,[hahmi dsã kĩːʔ],extracted
+chinanteco-del-sureste-medio,jujmi (del sureste medio),[huhmi],extracted
+chinanteco-central,jajme dzä mii,[hahme dsã miː],extracted
+chinanteco-central,jmiih kia’ dzä mii,[hmiːh kiaʔ dsã miː],extracted
+tlapaneco-del-sur,me'phaa tsíndíí,,in-review
+tlapaneco-del-oeste,tlapaneco,[λapaneko],extracted
+tlapaneco-central-bajo,me'phaa xkua ixi ridií,,in-review
+tlapaneco-del-suroeste,me'paa wí'i in,,in-review
+tlapaneco-del-este,me'phaa bátháá,,in-review
+tlapaneco-del-centro,mi'phaa míŋuíí,,in-review
+tlapaneco-del-norte,me'phaa xirágáá,,in-review
+tlapaneco-del-noroeste-alto,me'phaa aguaa,,in-review
+tlapaneco-del-noroeste-bajo,me'phaa xma'íín,,in-review
+mazateco-del-noreste,en naxijen,[ẽ˦ nãʃihẽ],extracted
+mazateco-de-la-presa-bajo,en ningotsie,[ẽ˦ nĩŋgot͡sie],extracted
+mazateco-del-este-bajo,ntaxjo,[ntaʃho˨],extracted
+mazateco-del-sur,nne nangui ngaxni,[nẽ nãŋgi ŋgaʃnĩ],extracted
+mazateco-del-sureste,enre naxinanda nguifi,[ẽɾe nãʃinãnda ŋgifi],extracted
+mazateco-de-eloxochitlan,en ngixo,[ẽ ŋgiʃo],extracted
+mazateco-del-centro,enna (del centro),[ẽnã],extracted
+mazateco-del-suroeste,ienra naxinandana nnandia,[iẽɾa nãʃinãndanã nãndja],extracted
+mazateco-de-huehuetlan,an ndexu,[ã ndeʃu],extracted
+mazateco-de-tecoatl,enna (de Tecóatl),[ẽnã],extracted
+mazateco-de-la-presa-alto,enna (de la presa alto),[ẽnã],extracted
+mazateco-del-oeste,enna (del oeste),[ẽnã],extracted
+mazateco-del-norte,en naxo tota,[ẽ nãʃo tota],extracted
+mazateco-del-norte,en nda xo,[ẽ nda ʃo],extracted
+mazateco-de-ocopetatillo,en ndaja,[ẽ ndaxa],extracted
+mazateco-de-acatepec,en naxi llanazo,[ẽ nãʃi janãʃo],extracted
+mazateco-de-puebla,An xo’boo,[ã ʃoʔboː],extracted
+ixcateco,xwja,[ʃhwa],extracted
+chocholteco-del-oeste,ngiba (del oeste),,in-review
+chocholteco-del-sur,ngigua (del sur),[ŋ̪g̪i˦wa˨],corrected-by-hand
+chocholteco-del-este,ngiba (del este),[ŋ̪g̪i˦ba˨],corrected-by-hand
+popoloca-del-norte,ngiwa (del norte),[ŋgiwa],extracted
+popoloca-del-norte,ngigua (del norte),[ŋgiɣwa],extracted
+popoloca-del-centro,ngiba (del centro),[ŋgiba],extracted
+popoloca-de-oriente,ngiwa (de oriente),[ŋgiwa],extracted
+popoloca-de-oriente,ngigua (de oriente),[ŋgiɣwa],extracted
+popoloca-de-oriente,ngiba (de oriente),[ŋgiba],extracted
+popoloca-del-poniente,ngiba (del poniente),[ŋgiba],extracted
+zapoteco-de-texmelucan,rixhquei,[ɾiʃkei],extracted
+zapoteco-de-la-sierra-sur-noroeste-bajo,rizi,[ɾizi],extracted
+zapoteco-de-la-sierra-sur-noroeste-risna,risna,[ɾiːsna],extracted
+zapoteco-de-la-sierra-sur-noroeste-risna,rixhna,[ɾiːʃna],extracted
+zapoteco-de-san-antonino-el-alto,di’tse’e (de San Antonino el Alto),[diʔt͡seʔe],extracted
+zapoteco-de-la-sierra-sur-oeste-bajo,"di’tse’e (de la Sierra sur, oeste bajo)",[diʔt͡seʔe],extracted
+zapoteco-de-la-sierra-sur-noreste-alto,dialó,[dialo˦],extracted
+zapoteco-de-san-miguel-aloapam,tizha’,[tizhaʔ],extracted
+zapoteco-serrano-del-noroeste,tizhà,[tizha˨],extracted
+zapoteco-serrano-del-oeste,tizáriù,[tiza˦ɾiu˨],extracted
+zapoteco-serrano-del-oeste,xhtisariú,[ʃtisaɾiu˦],extracted
+zapoteco-serrano-bajo,"didzá (serrano, bajo)",[didza˦],extracted
+zapoteco-serrano-del-noroeste-bajo,tidza’,[tidzaʔ],extracted
+zapoteco-de-santa-maria-temaxcalapa,xitzhá,[ʂitzha˦],extracted
+zapoteco-del-oeste-de-tuxtepec,diza shisa’,[diːzaʃisaɁ],extracted
+zapoteco-del-oeste-de-tuxtepec,diza shitsa (del oeste de Tuxtepec),[diːzaʃit͡sa],extracted
+zapoteco-del-oeste-de-tuxtepec,diza shitsá,[diːzaʃit͡sa˦],extracted
+zapoteco-de-santiago-yaveo,di’ shitsa’,[diʔiʃit͡saʔ],extracted
+zapoteco-de-santiago-yaveo,diza shitsa (de Santiago Yaveo),[dizaʃit͡sa],extracted
+zapoteco-serrano-del-este,xitsúa,[ʂitsu˦a],extracted
+zapoteco-serrano-del-sureste,didxa shiza’,[diːʒa ʃizaɁ],extracted
+zapoteco-serrano-del-sureste,"didza shon (serrano, del sureste)",[diːdza ʃon],extracted
+zapoteco-serrano-del-sureste,dilla xidza,[diːʝa dʒiza],extracted
+zapoteco-serrano-del-sureste,dishuràsh,[diʃuɾa˦ʃ],extracted
+zapoteco-serrano-del-sureste,diya xhon,[diʑa ʐon],extracted
+zapoteco-serrano-del-sureste-medio,"didza shon (serrano, del sureste medio)",[diːdza ʃon],extracted
+zapoteco-serrano-del-sureste-medio,"dilla xhon (serrano, del sureste medio)",[diːʝa ʐɔn],extracted
+zapoteco-serrano-del-sureste-medio,dille xhon,[ðiːʝe ʐɔn̥],extracted
+zapoteco-serrano-del-sureste-alto,"dilla xhon (serrano, del sureste alto)",[diːʝa ʐɔn],extracted
+zapoteco-serrano-del-sureste-alto,diya dxon,[diːʑa ʒon],extracted
+zapoteco-de-santiago-laxopa,dilla rhune’,[diːʝa ɻuneʔ],extracted
+zapoteco-de-santiago-laxopa,dishe xun,[diʃe ʂʊn],extracted
+zapoteco-serrano-del-sureste-bajo,ditse’,[dit͡seʔ],extracted
+zapoteco-serrano-del-sureste-bajo,ditse’ hualats,[dit͡seʔ walat͡s],extracted
+zapoteco-serrano-del-oeste-medio,tizha,[tizha],extracted
+zapoteco-de-valles-del-sur,didzé,[didze˦],extracted
+zapoteco-de-san-vicente-coatlan,didxnde,[diʒnde],extracted
+zapoteco-de-la-sierra-sur-del-este-bajo,didxke’,[diʒkeʔ],extracted
+zapoteco-de-la-costa-oeste,diste’ (de la costa oeste),[disteʔ],extracted
+zapoteco-de-la-costa-oeste,dixhque’,[diʃkeʔ],extracted
+zapoteco-de-la-costa-oeste,ristee’,[ɾistḛʔ],extracted
+zapoteco-de-la-costa-central,diste’ (de la costa central),[disteʔ],extracted
+zapoteco-de-la-costa-central,distèe (de la costa central),[distḛ˨],extracted
+zapoteco-de-la-sierra-sur-central,diiste,[dḭste],extracted
+zapoteco-de-la-sierra-sur-noroeste-dizde,ditsë,[dit͡sæ],extracted
+zapoteco-de-la-sierra-sur-noroeste-dizde,"dizde (de la Sierra sur, noroeste)",[dizde],extracted
+zapoteco-de-la-sierra-sur-noroeste-medio,distse’,[dist͡seʔ],extracted
+zapoteco-de-la-sierra-sur-noroeste-medio,"ditsè (de la Sierra sur, noroeste medio)",[dit͡se˨],extracted
+zapoteco-de-la-sierra-sur-noroeste-medio,ditsëë,,in-review
+zapoteco-de-quiavicuzas,ditsere’,[dit͡seɾeɁ],extracted
+zapoteco-de-quiavicuzas,dixhtiò,[diʃtio˨],extracted
+zapoteco-de-la-sierra-sur-del-norte,"dizde (de la Sierra sur, del norte)",[dizde],extracted
+zapoteco-de-la-sierra-sur-del-norte,"dizè (de la Sierra sur, del norte)",[dize˨],extracted
+zapoteco-de-la-costa-noreste,desté,[deste˦],extracted
+zapoteco-de-la-costa-noreste,distèe (de la costa noreste),[distḛ˨],extracted
+zapoteco-de-mixtepec,dizde (de Mixtepec),[dizde],extracted
+zapoteco-de-la-sierra-sur-del-sureste-bajo,"diste’ (de la Sierra sur, del sureste bajo)",[disteʔ],extracted
+zapoteco-de-la-sierra-sur-del-sureste-bajo,distse’e,[dist͡seʔe],extracted
+zapoteco-de-la-sierra-sur-del-sureste-alto,didsé,[didse˦],extracted
+zapoteco-de-la-sierra-sur-del-sureste-alto,ditsa,[dit͡sa],extracted
+zapoteco-de-la-sierra-sur-del-sureste-alto,"ditsè (de la Sierra sur, del sureste alto)",[dit͡se˨],extracted
+zapoteco-de-santa-maria-quiegolani,disà,[disa˨],extracted
+zapoteco-de-san-bartolo-yautepec,di’izhdë,[diʔizhdæ],extracted
+zapoteco-de-asuncion-tlacolulita,tixh nguizë,[tiʃ ŋgizǝʔ],extracted
+zapoteco-de-la-costa-este,ditsa’,[dit͡saʔ],extracted
+zapoteco-de-valles-oeste,"dixasà (de Valles, oeste)",[diːʒasa˨],extracted
+zapoteco-de-valles-oeste,dizë,[dizæ],extracted
+zapoteco-de-san-felipe-tejalapam,tizá (de San Felipe Tejalápam),[tiza˦],extracted
+zapoteco-de-valles-noroeste,"tizá (de Valles, noroeste)",[tiza˦],extracted
+zapoteco-de-valles-norte,dizdà,[dizda˨],extracted
+zapoteco-de-valles-del-noroeste-medio,dixsà,[diӡsa˨],extracted
+zapoteco-de-valles-del-noroeste-bajo,"dizá (de Valles, del noroeste bajo)",[diːza˦],extracted
+zapoteco-de-valles-del-suroeste-medio,dizé,[dize˦],extracted
+zapoteco-de-valles-del-suroeste-medio,"dizè (de Valles, del suroeste medio)",[diːze˨],extracted
+zapoteco-de-zimatlan-de-alvarez,dixasà (de Zimatlán de Alvarez),[diːʒasa˨],extracted
+zapoteco-de-valles-del-oeste-central,"dizhá (de Valles, del oeste central)",[dizha˦],extracted
+zapoteco-de-valles-del-centro,disá,[disa˦],extracted
+zapoteco-de-valles-de-suroeste-alto,xtizhna,[ʂtizhna],extracted
+zapoteco-de-valles-del-suroeste-central,"dizá (de Valles, del suroeste central)",[diza˦],extracted
+zapoteco-de-valles-del-centro-bajo,"dizhá (de Valles, del centro bajo)",[dizha˦],extracted
+zapoteco-de-valles-del-norte-central,dixzhá,[diӡzha˦],extracted
+zapoteco-de-valles-del-este-central,disàa,[disaa˨],extracted
+zapoteco-de-valles-del-este-central,"dizá (de Valles, del este central)",[diza˦],extracted
+zapoteco-de-san-baltazar-chichicapam,dzhi’iza,[dziʔiza],extracted
+zapoteco-de-valles-del-este-medio,dixdà,[diʒda˨],extracted
+zapoteco-de-valles-del-este-medio,diza,[diza],extracted
+zapoteco-de-sierra-sur-del-noreste-alto,dichsà,[dit͡ʃsa˦],extracted
+zapoteco-de-sierra-sur-del-noreste-alto,"didzá (de Sierra sur, del noreste alto)",[diːdza˦],extracted
+zapoteco-de-sierra-sur-del-noreste-alto,ditsáh,[dit͡sah˦],extracted
+zapoteco-de-valles-del-noreste,dichsah,[dit͡ʃsah],extracted
+zapoteco-de-valles-del-noreste,didxazá,[didʒaza˦],extracted
+zapoteco-de-la-montana-del-istmo-alto,didxsá,[didʒsa˦],extracted
+zapoteco-de-la-montana-del-istmo-alto,ditsá,[dit͡sa˦],extracted
+zapoteco-de-la-montana-del-istmo-bajo,ditsire,,in-review
+zapoteco-de-la-montana-del-istmo-bajo,di’tsiri’e,[diʔtsiɾiʔe],extracted
+zapoteco-de-petapa,didxazé,[didʒaze˦],extracted
+zapoteco-de-petapa,dizazi,[dizazɨ],extracted
+zapoteco-de-la-planicie-costera,dixazà,[diːʒaza˨],extracted
+zapoteco-de-la-planicie-costera,diidxazá,[dḭdʒaza˦],extracted
+zapoteco-de-la-planicie-costera,diixazá,[diːʒaza˦],extracted
+chatino-occidental-alto,cha’ jna’a (occidental alto),[t͡ʃaʔ n̥aʔa],extracted
+chatino-occidental-bajo,cha’ jna’a (occidental bajo),[t͡ʃaʔ n̥aʔa],extracted
+chatino-central,cha’ jna’a (central),[t͡ʃaʔ n̥aʔa],extracted
+chatino-oriental-bajo,cha’ jna’a (oriental bajo),[t͡ʃaʔ n̥aʔa],extracted
+chatino-oriental-alto,cha’ jna’a (oriental alto),[t͡ʃaʔ n̥aʔa],extracted
+chatino-de-zacatepec,cha’ jna’a (de Zacatepec),[t͡ʃaʔ n̥aʔa],extracted
+amuzgo-del-norte,nomndaa,[nomndaː],extracted
+amuzgo-del-norte,nta,[nta],extracted
+amuzgo-del-norte,ñondá,,in-review
+amuzgo-del-sur,nundá’,,in-review
+amuzgo-bajo-del-este,ts’unuma,[t͡sʔunuma],extracted
+amuzgo-bajo-del-este,jñunnda,[hɲunnda],extracted
+amuzgo-alto-del-este,jnòn’ ndá tsjóon nuàn,,in-review
+amuzgo-alto-del-este,jñon’ndaa,[hɲonʔndaː],extracted
+amuzgo-alto-del-este,ñonndaa,[ɲonndaː],extracted
+mixteco-de-guerrero-del-noreste-central,tu’un savi (de Guerrero del noreste central),[tũʔũ saβi],extracted
+mixteco-de-atlamajalcingo,tu’un savi (de Atlamajalcingo),[tũʔũ saβi],extracted
+mixteco-de-chochoapa,tu’un savi (de Chochoapa),[tũʔũ saβi],extracted
+mixteco-de-coapanatoyac,tno’on sawi,[tnõʔõ sawi],extracted
+mixteco-de-coapanatoyac,tu’un savi (de Coapanatoyac),[tũʔũ saβi],extracted
+mixteco-de-igualapa,tu’un Isasi (de Igualapa),[tũʔũ isasi],extracted
+mixteco-de-igualapa,tu’un savi (de Igualapa),[tũʔũ saβi],extracted
+mixteco-central-de-guerrero,tno’on savi (central de Guerrero),[tnõʔõ saβi],extracted
+mixteco-central-de-guerrero,tu’un savi (central de Guerrero),[tũʔũ saβi],extracted
+mixteco-de-guerrero-del-este-medio,tu’un Isasi (de Guerrero del este medio),[tũʔũ isasi],extracted
+mixteco-de-guerrero-del-este-medio,tu’un isavi,[tũʔũ isaβi],extracted
+mixteco-de-guerrero-del-este-medio,tu’un savi (de Guerrero del este medio),[tũʔũ saβi],extracted
+mixteco-de-tlacoachistlahuaca,tu’un savi (de Tlacoachistlahuaca),[tũʔũ saβi],extracted
+mixteco-de-tlalixtaquilla-de-maldonado,tu’un savi de (Tlalixtaquilla de Maldonado),[tũʔũ saβi],extracted
+mixteco-de-guerrero-del-norte,tu’un savi (de Guerrero del norte),[tũʔũ saβi],extracted
+mixteco-de-guerrero-del-norte-central,jnu’un sábi,[hnũʔũ sa˦βi˨],extracted
+mixteco-de-xochistlahuaca,tu’un savi (de Xochistlahuaca),[tũʔũ saβi],extracted
+mixteco-de-tlahuapa,tu’un savi (de Tlahuapa),[tũʔũ saβi],extracted
+mixteco-de-guerrero-central-alto,tno’on sávi,[tnõʔõ saβi˨],extracted
+mixteco-de-xochapa,tu’un savi (de Xochapa),[tũʔũ saβi],extracted
+mixteco-de-zoyatlan-de-juarez,tu’un savi (de Zoyatlán de Juárez),[tũʔũ saβi],extracted
+mixteco-de-xonacatlan,tu’un savi (de Xonacatlán),[tũʔũ saβi],extracted
+mixteco-de-ayutla,tu’un savi (de Ayutla),[tũʔũ saβi],extracted
+mixteco-de-san-luis-acatlan,tu’un savi (de San Luis Acatlán),[tũʔũ saβi],extracted
+mixteco-de-guerrero-de-la-costa-este,tu’un savi (de Guerrero de la costa este),[tũʔũ saβi],extracted
+mixteco-de-guerrero-de-la-costa-occidental,tu’un savi (de Guerrero de la costa occidental),[tũʔũ saβi],extracted
+mixteco-de-guerrero-de-la-costa-central,tu’un savi (de Guerrero de la costa central),[tũʔũ saβi],extracted
+mixteco-de-villa-de-tututepec,tu’un savi (de Villa de Tututepec),[tũʔũ saβi],extracted
+mixteco-de-santa-maria-huazolotitlan,to’on savi (de Santa María Huazolotitlán),[tõʔõ saβi],extracted
+mixteco-de-ixtayutla,tu’un savi (de Ixtayutla),[tũʔũ saβi],extracted
+mixteco-de-oaxaca-de-la-costa-central,tu’un savi (de Oaxaca de la costa central),[tũʔũ saβi],extracted
+mixteco-de-oaxaca-de-la-costa-noroeste,tu’un savi (de Oaxaca de la costa noroeste),[tũʔũ saβi],extracted
+mixteco-de-oaxaca-de-costa-central-baja,tu’un savi (de Oaxaca de costa central baja),[tũʔũ saβi],extracted
+mixteco-de-sierra-sur-oeste,tu’un va’a,[tũʔũ βaʔa],extracted
+mixteco-de-santiago-amoltepec,tnu'u ñuu savi,[tnũʔũ nũʔũ saβi],extracted
+mixteco-de-santa-cruz-itundujia,tu’un savi (de Santa Cruz Itundujia),[tũʔũ saβi],extracted
+mixteco-de-yosondua,sa’an sau (de Yosondúa),[sãʔã sau],extracted
+mixteco-de-santa-lucia-monteverde,sasau,[sasau],extracted
+mixteco-del-sur-bajo,sahin sau,[sahin sau],extracted
+mixteco-de-yosonotu,tu’un savi (de Yosonotú),[tũʔũ saβi],extracted
+mixteco-del-sur-medio,tu’un savi (del sur medio),[tũʔũ saβi],extracted
+mixteco-de-san-pedro-molinos,tu’un savi (de San Pedro Molinos),[tũʔũ saβi],extracted
+mixteco-de-santa-maria-yosoyua,tu’un savi (de Santa María Yosoyúa),[tũʔũ saβi],extracted
+mixteco-de-san-mateo-penasco,tu’un savi (de San Mateo Peñasco),[tũʔũ saβi],extracted
+mixteco-de-san-agustin-tlacotepec,tu’un savi (de San Agustín Tlacotepec),[tũʔũ saβi],extracted
+mixteco-de-san-antonio-sinicahua,tu’un savi (de San Antonio Sinicahua),[tũʔũ saβi],extracted
+mixteco-del-sureste-central,tnu’u savi (del sureste central),[tnuʔu saβi],extracted
+mixteco-central,tu’un savi (central),[tũʔũ saβi],extracted
+mixteco-del-suroeste-central,tu’un savi (del suroeste central),[tũʔũ saβi],extracted
+mixteco-del-suroeste,tu’un savi (del suroeste),[tũʔũ saβi],extracted
+mixteco-de-numi,sa'an savi,[sãʔã saβi],extracted
+mixteco-de-numi,sa'an sau (de Ñumi),[sãʔã sau],extracted
+mixteco-de-oeste-central,sa'an ntavi,[sãʔã ndaβi],extracted
+mixteco-del-oeste,to’on savi (del oeste),[tõʔõ saβi],extracted
+mixteco-del-norte-bajo,tu’un savi (del norte bajo),[tũʔũ saβi],extracted
+mixteco-de-san-miguel-piedras,tu’un savi (de San Miguel Piedras),[tũʔũ saβi],extracted
+mixteco-de-san-antonio-huitepec,tu’un savi (de San Antonio Huitepec),[tũʔũ saβi],extracted
+mixteco-de-santa-maria-penoles,tu’un savi (de Santa María Peñoles),[tũʔũ saβi],extracted
+mixteco-bajo-de-valles,tu’un dau,[tũʔũ ðau],extracted
+mixteco-alto-de-valles,tu’un ñudavi,[tũʔũ ɲudaβi],extracted
+mixteco-del-este,tu’un davi (del este),[tũʔũ ðaβi],extracted
+mixteco-de-santa-ines-de-zaragoza,tnu’un davi (de Santa Inés de Zaragoza),[tnũʔũ ðaβi],extracted
+mixteco-del-este-central,tnu’un dau,[tnũʔũ ðau],extracted
+mixteco-del-noroeste-medio,dedavi,[dedaβi],extracted
+mixteco-del-noroeste-medio,tu’un savi (del noroeste medio),[tũʔũ saβi],extracted
+mixteco-del-oeste-alto,tu’un da’vi,[tũʔũ ðaʔβi],extracted
+mixteco-de-santo-domingo-tonala,to’on nda’vi,[tõʔõ ndaʔβi],extracted
+mixteco-del-noroeste-central-alto,tu’un djavi,[tũʔũ ɵaβi],extracted
+mixteco-del-noroeste-central-bajo,tu’un javi,[tũʔũ xaβi],extracted
+mixteco-de-san-juan-tamazola,tnu’un davi (de San Juan Tamazola),[tnũʔũ ðaβi],extracted
+mixteco-del-noreste,da’an davi (del noreste),[ðãʔã ðaβi],extracted
+mixteco-de-san-pedro-tidaa,tnu’un dawi,[tnũʔũ ðawi],extracted
+mixteco-de-mitlatongo,tu’un lavi,[tũʔũ laβi],extracted
+mixteco-de-coatzospam,tu’un davi (de Coatzóspam),[tũʔũ ðaβi],extracted
+mixteco-de-sierra-sur-noroeste,tu’un savi (de Sierra sur noroeste),[tũʔũ saβi],extracted
+mixteco-de-san-pablo-tijaltepec,tu’un savi (de San Pablo Tijaltepec),[tũʔũ saβi],extracted
+mixteco-del-oeste-de-la-costa,tu’un savi (del oeste de la costa),[tũʔũ saβi],extracted
+mixteco-de-oaxaca-de-la-costa-oeste-central,tu’un savi (de Oaxaca de la costa oeste central),[tũʔũ saβi],extracted
+mixteco-del-noroeste,tu’un savi (del noroeste),[tũʔũ saβi],extracted
+mixteco-de-canada-bajo,tu’un savi (de Cañada bajo),[tũʔũ saβi],extracted
+mixteco-de-canada-central,tu’un savi (de Cañada central),[tũʔũ saβi],extracted
+mixteco-de-yutanduchi-de-guerrero,tu’un savi (de Yutanduchi de Guerrero),[tũʔũ saβi],extracted
+mixteco-del-noreste-bajo,tu’un savi (del noreste bajo),[tũʔũ saβi],extracted
+mixteco-de-san-juan-teita,dañudavi,[daɲudaβi],extracted
+mixteco-de-la-frontera-puebla-oaxaca,da’an davi (de la frontera Puebla-Oaxaca),[ðãʔã ðaβi],extracted
+mixteco-del-suroeste-de-puebla,da’an davi (del suroeste de Puebla),[ðãʔã ðaβi],extracted
+mixteco-del-suroeste-de-puebla,de’e dau (del suroeste de Puebla),[ðẽʔẽ ðau],extracted
+mixteco-de-tlaltempan,da’an davi (de Tlaltempan),[ðãʔã ðaβi],extracted
+mixteco-de-tlaltempan,de’e dau (de Tlaltempan),[ðẽʔẽ ðau],extracted
+mixteco-de-zapotitlan,da’an davi (de Zapotitlán),[ðãʔã ðaβi],extracted
+cuicateco-del-centro,dbaku (del centro),[dbaku],extracted
+cuicateco-del-centro,dibaku,[dibaku],extracted
+cuicateco-del-norte,duaku,[dwaku],extracted
+cuicateco-del-norte,dubaku (del norte),[dubaku],extracted
+cuicateco-del-oriente,dbaku (del oriente),[dbaku],extracted
+cuicateco-del-oriente,dubaku (del oriente),[dubaku],extracted
+triqui-de-san-juan-copala,xnánj nu’ a,[ʃna˦nh nuː˨ʔa],extracted
+triqui-de-la-media,stnáj ni’,[stnah niː˨ʔ],extracted
+triqui-de-la-alta,gui a’mi nánj nï’ïn,[guiː˨ aʔmiː˨ na˦nh nĩʔĩn],extracted
+triqui-de-la-baja,tnanj ni’inj,[tnanh niʔinh],extracted
+huasteco-del-occidente,teenek (del occidente),[teːnek],extracted
+huasteco-del-occidente,tenek (del occidente),[tenek],extracted
+huasteco-del-centro,teenek (del centro),[teːnek],extracted
+huasteco-del-centro,tenek (del centro),[tenek],extracted
+huasteco-de-oriente,teenek (de oriente),[teːnek],extracted
+huasteco-de-oriente,tenek (de oriente),[tenek],extracted
+maya,maaya,[maːja],extracted
+maya,maaya t’aan,[maːja tʔaːn],extracted
+maya,maayáa,[maːjaː˦],extracted
+lacandon,jach-t’aan,[xat͡ʃ tʔaːn],extracted
+ch-ol-del-noroeste,lakty’añ (del noroeste),[laktʲʔaɲ],extracted
+ch-ol-del-sureste,lakty’añ (del sureste),[laktʲʔaɲ],extracted
+chontal-de-tabasco-central,yoko t’an (central),[joko tʔan],extracted
+chontal-de-tabasco-del-este,yoko t’an (del este),[joko tʔan],extracted
+chontal-de-tabasco-del-sureste,yoko t’an (del sureste),[joko tʔan],extracted
+chontal-de-tabasco-del-norte,yoko t’an (del norte),[joko tʔan],extracted
+tseltal-del-occidente,bats’il k’op (del occidente),[bat͡sʔil kʔop],extracted
+tseltal-del-norte,bats’il k’op (del norte),[bat͡sʔil kʔop],extracted
+tseltal-del-oriente,bats’il k’op (del oriente),[bat͡sʔil kʔop],extracted
+tseltal-del-sur,bats’il k’op (del sur),[bat͡sʔil kʔop],extracted
+tsotsil-del-este-alto,bats’i k’op (del este alto),[bat͡sʔi kʔop],extracted
+tsotsil-del-noroeste,bats’i k’op (del noroeste),[bat͡sʔi kʔop],extracted
+tsotsil-del-norte-bajo,bats’i k’op (del norte bajo),[bat͡sʔi kʔop],extracted
+tsotsil-del-centro,bats’i k’op (del centro),[bat͡sʔi kʔop],extracted
+tsotsil-del-este-bajo,bats’i k’op (del este bajo),[bat͡sʔi kʔop],extracted
+tsotsil-del-norte-alto,bats’i k’op (del norte alto),[bat͡sʔi kʔop],extracted
+tsotsil-de-los-altos,bats’i k’op (de los Altos),[bat͡sʔi kʔop],extracted
+q-anjob-al,K’anjob’al,[kʔanxoɓal],extracted
+akateko,Kuti’,[kutiʔ],extracted
+jakalteko,Jakalteko-Popti’,[xakalteko poptiʔ],extracted
+mocho,mocho’,[mot͡ʃoʔ],extracted
+tuzanteco,muchu’,[mut͡ʃuʔ],extracted
+chuj,Koti’,[kotiʔ],extracted
+tojolabal,tojol-ab’al,[toxol aɓal],extracted
+q-eqchi,Q’eqchi’,[qʔɛqt͡ʃiʔ],extracted
+k-iche-oriental,K’iche’ (oriental),[kʔit͡ʃeʔ],extracted
+k-iche-occidental,K’iche’ (occidental),[kʔit͡ʃeʔ],extracted
+k-iche-central,K’iche’ (central),[kʔit͡ʃeʔ],extracted
+kaqchikel,Kaqchikel,[kaqt͡ʃikel],extracted
+teko,Qyool (de Tectitán),[qjoːl],extracted
+teko,B’a’aj,[ɓaʔax],extracted
+mam-de-la-frontera,Qyool (de la frontera),[qjoːl],extracted
+mam-del-norte,Qyool (del norte),[qjoːl],extracted
+mam-del-sur,Qyool (del sur),[qjoːl],extracted
+mam-de-la-sierra,Qyool (de la Sierra),[qjoːl],extracted
+mam-del-soconusco,Qyool Mam,[qjoːl mam],extracted
+mam-del-soconusco,B’anax Mam,[bʔanaʃ mam],extracted
+awakateko,Qyool (de Aguacatán),[qjoːl],extracted
+ixil-chajuleno,Ixil (chajuleño),[iʃil],extracted
+ixil-nebajeno,Ixil (nebajeño),[iʃil],extracted
+totonaco-del-sureste,laakanaachiwíin,[laːkanaːt͡ʃiˈwiːn],extracted
+totonaco-central-del-norte,tachaqawaxti,[tat͡ʃɑqɑwaʃti],extracted
+totonaco-central-del-norte,tutunakuj,[tutunakuh],extracted
+totonaco-central-del-norte,tachiwiin,[tat͡ʃiwiːn],extracted
+totonaco-del-cerro-xinolatepetl,kintachiuinkan,[kintat͡ʃiwiŋkan],extracted
+totonaco-central-alto,tutunáku (central alto),[tutuˈnaku],extracted
+totonaco-de-la-costa,lichiwin tutunaku,[liːt͡ʃiwiːn tutuˈnaku],extracted
+totonaco-del-rio-necaxa,totonaco (del río Necaxa),[totonako],extracted
+totonaco-central-del-sur,tutunáku (central del sur),[tutuˈnaku],extracted
+totonaco-central-del-sur,tutunakú,[tutunaˈku],extracted
+totonaco-central-del-sur,totonaco (central del sur),[totonako],extracted
+tepehua-del-sur,lhiimaqalhqama’,[ɬiːmaqɑɬqɑmaʔ],extracted
+tepehua-del-sur,lhiima’alh’ama’,[ɬiːmaʔaɬʔamaʔ],extracted
+tepehua-del-norte,lhichiwíin,[ɬit͡ʃiˈwiːn],extracted
+tepehua-del-oeste,lhiimaasipijni,[ɬiːmaːsipihni],extracted
+tepehua-del-oeste,liimaasipijni,[liːmaːsipihni],extracted
+purepecha,p’urhepecha,[pʰuɽepet͡ʃa],extracted
+purepecha,p’orhepecha,[pʰoɽepet͡ʃa],extracted
+mixe-alto-del-norte,ayöök,[ʔajɤːkʰ],extracted
+mixe-alto-del-centro,ayuujk (alto del centro),[ʔajuːhkʰ],extracted
+mixe-alto-del-sur,ayuujk,[ʔajuːhkʰ],extracted
+mixe-medio-del-este,ayuuk (medio del este),[ʔajuːkʰ],extracted
+mixe-medio-del-oeste,eyuk,[ʔʌjukʰ],extracted
+mixe-bajo,ayuk,[ʔajukʰ],extracted
+sayulteco,t+kmaya’,[tɨkmajaʔ],extracted
+sayulteco,yámay,[ˈjamaj],extracted
+oluteco,yaakaw+,[jaːkawɨ],extracted
+texistepequeno,wää ‘oot,[wɨː ʔoːt],extracted
+ayapaneco,numte oote,[nnumde oːte],extracted
+popoluca-de-la-sierra,nuntaj+yi’,[nundahɨjiʔ],extracted
+popoluca-de-la-sierra,nunta anh+maatyi,[nunda anhɨmaːtji],extracted
+zoque-del-centro,tsuni (del centro),[t͡suni],extracted
+zoque-del-sur,tsuni (del sur),[t͡suni],extracted
+zoque-del-este,ode (del este),[ʔode],extracted
+zoque-del-norte-alto,ore (del norte alto),[ʔoɾe],extracted
+zoque-del-norte-bajo,ode (del norte bajo),[ʔode],extracted
+zoque-del-noroeste,ote,[ʔote],extracted
+zoque-del-sureste,ore (del sureste),[ʔoɾe],extracted
+zoque-del-oeste,angpø’n,[ʔaŋpǝʔn],extracted
+zoque-del-oeste,angpø’n tsaame,[ʔaŋpǝʔn t͡saːme],extracted
+chontal-de-oaxaca-alto,tsame,[t͡same],extracted
+chontal-de-oaxaca-bajo,tsome,[t͡some],extracted
+chontal-de-oaxaca-de-la-costa,lajltyaygi,[laɬtjajɣi],extracted
+huave-del-oeste,ombeayiüts,[ombeajiɨt͡s],extracted
+huave-del-este,ombeyajts,[ombejaxt͡s],extracted
