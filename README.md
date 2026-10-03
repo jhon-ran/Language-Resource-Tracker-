@@ -315,7 +315,23 @@ rewrites the three CSVs.
 
 ## Status
 
-Seed crosswalk, all five weekly fetchers, the INEGI reference layer and the first snapshot are done. The weekly workflow is written; its first run has not been confirmed yet.
+As of 2026-10-03:
+
+- **Crosswalk:** 68 INALI groups mapped to Glottolog 5.3 (pinned); 65
+  resolved, 3 unresolved (ku'ahl, otomí, zoque).
+- **Weekly indicators:** five fetchers plus the static INEGI 2020 reference
+  layer. The weekly workflow runs; snapshots exist for 2026-10-02 and
+  2026-10-09.
+- **INALI 2008 catalog:** 364 variants and 476 autonym rows with IPA, and
+  43,989 locality rows. 13 autonym rows have IPA still in review and 142
+  locality rows have no municipio code. `review_list.csv` holds 24 rows
+  for a manual pass.
+- **Variant identity:** 136 of 364 variants carry a Glottocode, at group
+  level only. Variant-level matching is shelved.
+- **INALI 2012 risk grade:** all 364 variants graded and joined
+  (`risk_grade.csv`). Grades rest on the 2000 census.
+
+Open points are listed under "Known gaps" and in `CHANGELOG.md`.
 
 ## License
 
