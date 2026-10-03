@@ -1,5 +1,21 @@
 # Changelog
 
+## 2026-10-02 — Correction: a silent guess in the item 8 part 2 commit
+
+- **What was wrong.** In commit `0a79a80`, 62 locality rows of
+  `mixteco-de-oeste-central` whose municipio is printed as plain "San Juan
+  Mixtepec" were given `municipio_code` 209. INEGI has two Oaxaca
+  municipalities with that name (codes 208 and 209; the catalog elsewhere
+  tells them apart as "Distrito 08" and "Distrito 26"). The lookup kept
+  whichever came last in the reference list, so the code was a guess that
+  nothing in the data supported, and it was not flagged.
+- **Fix.** A name shared by more than one municipality in the same state
+  is now never given a code. The 62 rows have a blank `municipio_code`,
+  and the entry is in `review_list.csv` (now 74 rows) with the reason
+  "municipio name shared by more than one INEGI municipality". No other
+  row changed. The only other shared name in the reference list is "San
+  Pedro Mixtepec" (codes 318 and 319), which matched no row.
+
 ## 2026-10-02 — Item 8 part 2: IPA and geography from the catalog body
 
 - `tools/parse_inali_body.py` reads the 364 body entries (PDF pp. 31-212)

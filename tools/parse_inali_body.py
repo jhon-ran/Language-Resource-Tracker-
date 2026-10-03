@@ -388,8 +388,17 @@ def municipios():
             w = csv.writer(f, lineterminator="\n")
             w.writerow(["state_code", "state", "municipio_code", "municipio"])
             w.writerows(rows)
-    return {(r["state_code"], part1.fold(r["municipio"])): (r["municipio_code"], r["municipio"])
-            for r in csv.DictReader(open(MUNICIPIOS, encoding="utf-8"))}
+    table = {}
+    for r in csv.DictReader(open(MUNICIPIOS, encoding="utf-8")):
+        key = (r["state_code"], part1.fold(r["municipio"]))
+        # Two municipalities in one state can share a name (Oaxaca has two
+        # "San Juan Mixtepec" and two "San Pedro Mixtepec"). Such a name
+        # identifies neither: it is marked AMBIGUOUS, never given a code.
+        table[key] = AMBIGUOUS_NAME if key in table else (r["municipio_code"], r["municipio"])
+    return table
+
+
+AMBIGUOUS_NAME = ("", "")
 
 
 def find_municipio(table, state_code, printed):
@@ -463,7 +472,13 @@ def main():
         for state_raw, muni, loc in r["geo"]:
             code, state = STATES.get(state_raw, ("", ""))
             hit = find_municipio(table, code, muni)
-            if not hit and (state_raw, muni) not in seen:
+            if hit == AMBIGUOUS_NAME:
+                hit = None
+                if (state_raw, muni) not in seen:
+                    seen.add((state_raw, muni))
+                    out_review.append([r["page"], vid, r["name"], "municipio name shared by more than one INEGI municipality",
+                                       "%s: %s" % (state_raw, muni)])
+            elif not hit and (state_raw, muni) not in seen:
                 seen.add((state_raw, muni))
                 out_review.append([r["page"], vid, r["name"], "municipio not in INEGI 2020 list", "%s: %s" % (state_raw, muni)])
             loc_rows.append([vid, code, state, state_raw, hit[0] if hit else "", muni, loc])

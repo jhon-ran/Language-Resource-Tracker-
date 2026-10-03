@@ -2,7 +2,7 @@
  "source": "https://www.inali.gob.mx/pdf/CLIN_completo.pdf",
  "source_sha256": "21cef44abf0d896555f26954bf319340ad4814fa8a3f0719b0d068311ff1be7c",
  "poppler_version": "22.02.0",
- "built": "2026-10-03T04:16:16Z",
+ "built": "2026-10-03T04:22:13Z",
  "body_pages": [
   31,
   212
@@ -15,7 +15,7 @@
   "corrected-by-hand": 2
  },
  "locality_rows": 43989,
- "review_rows": 73,
+ "review_rows": 74,
  "glyphs_mapped": [
   "F03F",
   "F04E",
