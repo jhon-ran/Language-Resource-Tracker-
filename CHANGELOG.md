@@ -1,5 +1,65 @@
 # Changelog
 
+## 2026-10-02 — Municipio alias pass (item 8)
+
+- **Method.** `municipio_aliases.csv` maps a municipio name as the catalog
+  prints it to INEGI's 2020 code, keyed on the exact printed name within
+  the state. `variant_localities.csv` keeps the printed name in
+  `municipio`; only `municipio_code` is filled. Every alias was checked
+  against INEGI's 2020 locality file (ITER): the `evidence` column says how
+  many of the localities the catalog lists under that name are in the
+  target municipality. 43 aliases, four kinds:
+  - `spelling` (19): the name differs by a few letters ("La Indepedencia",
+    "Guevea de Humbolt", "Tuxpam").
+  - `name-form` (17): a short or different form of the official name
+    ("Batopilas" for "Batopilas de Manuel Gómez Morín", "Temapache" for
+    "Álamo Temapache", "Allende" for "San Miguel de Allende").
+  - `district` (3): "San Juan Mixtepec Distrito 26" = 209, "San Pedro
+    Mixtepec Distrito 22" = 318, "San Pedro Mixtepec Distrito 26" = 319.
+    The mapping is taken from INEGI's own data, not inferred: in ITER 2020
+    the seat locality of each municipality is named with its district
+    (208 "San Juan Mixtepec Distrito 08", 209 "… Distrito 26", 318 "San
+    Pedro Mixtepec Distrito 22", 319 "… Distrito 26").
+  - `by-localities` (4): a printed name that fits several municipalities,
+    settled by which one contains the listed localities: "Coatlán" = San
+    Jerónimo Coatlán (3 of 3; 0 in the four others), "Mazatlán" = San Juan
+    Mazatlán (24 of 29; 1 in Mazatlán Villa de Flores), "San Vicente
+    Coyotepec" = Coyotepec, Puebla (3 of 3), and plain "San Juan Mixtepec"
+    = 208 (see below).
+  - Two aliases rest on the name alone because their single listed
+    locality is not in ITER 2020: "Villa de Victoria" (Villa Victoria,
+    México) and "Acapulco" (Acapulco de Juárez). Each has only one
+    possible target in its state.
+- **San Juan Mixtepec, corrected again.** The 62 rows printed as plain
+  "San Juan Mixtepec" (mixteco de oeste central) are now coded 208
+  (Distrito 08): 49 of the 62 localities are in 208 and 1 is in 209. The
+  silent guess in commit `0a79a80` had given them 209, so it was not only
+  unflagged but wrong; commit `525aaff` blanked it; this pass assigns 208
+  on evidence.
+- **Left in review on purpose: names printed under the wrong state.** The
+  locality evidence is recorded here, but the state is not reassigned.
+  This project flags disagreement with the source; it does not silently
+  correct it, however strong the evidence.
+
+  | Printed | Localities found in | Evidence |
+  |---|---|---|
+  | PUEBLA: Tehuipango | Tehuipango, Veracruz (30-159) | 36 of 38 |
+  | PUEBLA: Astacinga | Astacinga, Veracruz (30-019) | 26 of 28 |
+  | PUEBLA: Santa Ana Ateixtlahuaca | Santa Ana Ateixtlahuaca, Oaxaca (20-354) | 4 of 5 |
+  | PUEBLA: San Lorenzo Cuaunecuiltitla | name exists only in Oaxaca (20-228) | 0 of 1; the one locality is spelt "Cuanecuiltitla" |
+  | VERACRUZ: Tenampulco | Tenampulco, Puebla (21-158) | 31 of 31 |
+
+- **Capulhuac is a wrong municipio name, not a wrong state.** "GUANAJUATO:
+  Capulhuac" (otomí del noroeste) was first taken for México's Capulhuac
+  printed under the wrong state. 15 of its 17 localities are in Tierra
+  Blanca, Guanajuato (11-040). Left in review as an editorial call.
+- **Also left in review:** "Camotlán" (Oaxaca; 2 of 4 localities in San
+  Lucas Camotlán, not strong enough), "Ocotlán" (Oaxaca; none in any
+  Ocotlán municipality, 3 of 4 in Santiago Apoala), and "Akil Baca"
+  (Yucatán; two municipalities fused in print, needs a manual split).
+- Result: 1,889 → 142 locality rows without a `municipio_code`;
+  `review_list.csv` has 25 rows, 9 of them municipio names.
+
 ## 2026-10-02 — Correction: a silent guess in the item 8 part 2 commit
 
 - **What was wrong.** In commit `0a79a80`, 62 locality rows of

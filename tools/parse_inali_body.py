@@ -395,6 +395,15 @@ def municipios():
         # "San Juan Mixtepec" and two "San Pedro Mixtepec"). Such a name
         # identifies neither: it is marked AMBIGUOUS, never given a code.
         table[key] = AMBIGUOUS_NAME if key in table else (r["municipio_code"], r["municipio"])
+    # municipio_aliases.csv: hand-checked names the catalog prints differently
+    # from INEGI (spelling, short or older forms, Oaxaca districts, and a few
+    # settled by which municipality contains the listed localities). An alias
+    # is keyed on the exact printed name within the state.
+    valid = {(r["state_code"], r["municipio_code"]) for r in csv.DictReader(open(MUNICIPIOS, encoding="utf-8"))}
+    for a in csv.DictReader(open(part1.ROOT / "municipio_aliases.csv", encoding="utf-8")):
+        if (a["state_code"], a["municipio_code"]) not in valid:
+            sys.exit("municipio_aliases.csv: unknown code %s-%s" % (a["state_code"], a["municipio_code"]))
+        table[(a["state_code"], "alias:" + a["municipio_printed"])] = (a["municipio_code"], a["municipio_inegi"])
     return table
 
 
@@ -404,6 +413,8 @@ AMBIGUOUS_NAME = ("", "")
 def find_municipio(table, state_code, printed):
     """Exact name match within the state (ignoring case and accents). A
     bracketed correction such as "Del Nayar [El Nayar]" may match on either form."""
+    if (state_code, "alias:" + printed) in table:
+        return table[(state_code, "alias:" + printed)]
     forms = [printed] + re.findall(r"\[([^\]]+)\]", printed) + [re.sub(r"\s*\[[^\]]*\]", "", printed)]
     for form in forms:
         hit = table.get((state_code, part1.fold(form.strip())))

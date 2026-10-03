@@ -1,0 +1,44 @@
+state_code,municipio_printed,municipio_code,municipio_inegi,kind,evidence
+02,Playas del Rosarito,005,Playas de Rosarito,spelling,2 of 3 listed localities are in this municipality in INEGI 2020
+07,La Indepedencia,041,La Independencia,spelling,14 of 19 listed localities are in this municipality in INEGI 2020
+07,Ocozocuautla,061,Ocozocoautla de Espinosa,name-form,6 of 8 listed localities are in this municipality in INEGI 2020
+08,Batopilas,008,Batopilas de Manuel Gómez Morín,name-form,228 of 308 listed localities are in this municipality in INEGI 2020
+08,Temósachi,063,Temósachic,spelling,16 of 29 listed localities are in this municipality in INEGI 2020
+15,Acambay,001,Acambay de Ruíz Castañeda,name-form,60 of 71 listed localities are in this municipality in INEGI 2020
+15,Amanalco de Becerra,007,Amanalco,name-form,18 of 19 listed localities are in this municipality in INEGI 2020
+15,Tianguistengo,101,Tianguistenco,spelling,1 of 1 listed localities are in this municipality in INEGI 2020
+15,Villa de Victoria,114,Villa Victoria,spelling,0 of 1 listed localities are in this municipality in INEGI 2020
+11,Allende,003,San Miguel de Allende,name-form,50 of 59 listed localities are in this municipality in INEGI 2020
+11,Dolores Hidalgo Cuna de la Independencia,014,Dolores Hidalgo Cuna de la Independencia Nacional,name-form,1 of 2 listed localities are in this municipality in INEGI 2020
+12,Acapulco,001,Acapulco de Juárez,name-form,0 of 1 listed localities are in this municipality in INEGI 2020
+12,Alcozáuza de Guerrero,004,Alcozauca de Guerrero,spelling,1 of 1 listed localities are in this municipality in INEGI 2020
+12,Cuetzalan del Progreso,026,Cuetzala del Progreso,spelling,6 of 7 listed localities are in this municipality in INEGI 2020
+12,Florencio Villareal,030,Florencio Villarreal,spelling,6 of 7 listed localities are in this municipality in INEGI 2020
+13,Santiago Anaya,055,Santiago de Anaya,spelling,25 of 28 listed localities are in this municipality in INEGI 2020
+20,Constancia de Rosario,020,Constancia del Rosario,spelling,5 of 7 listed localities are in this municipality in INEGI 2020
+20,Guevea de Humbolt,036,Guevea de Humboldt,spelling,1 of 1 listed localities are in this municipality in INEGI 2020
+20,Matías Romero,057,Matías Romero Avendaño,name-form,32 of 46 listed localities are in this municipality in INEGI 2020
+20,San Ildelfonso Villa Alta,156,San Ildefonso Villa Alta,spelling,5 of 5 listed localities are in this municipality in INEGI 2020
+20,San Miguel Chimalapas,265,San Miguel Chimalapa,spelling,18 of 19 listed localities are in this municipality in INEGI 2020
+20,San Pedro Totolapa,333,San Pedro Totolápam,spelling,2 of 3 listed localities are in this municipality in INEGI 2020
+20,Santa María Chimalapas,407,Santa María Chimalapa,spelling,14 of 15 listed localities are in this municipality in INEGI 2020
+20,Santiago Chazumba,459,Villa de Santiago Chazumba,name-form,17 of 25 listed localities are in this municipality in INEGI 2020
+20,Tezoatlán de Segura y Luna,549,"Heroica Villa Tezoatlán de Segura y Luna, Cuna de la Independencia de Oaxaca",name-form,19 of 24 listed localities are in this municipality in INEGI 2020
+20,Villa Hidalgo Yalálag,038,Villa Hidalgo,name-form,2 of 3 listed localities are in this municipality in INEGI 2020
+20,Villa de Tututepec de Melchor Ocampo,334,Villa de Tututepec,name-form,81 of 101 listed localities are in this municipality in INEGI 2020
+21,Coyomepan,036,Coyomeapan,spelling,4 of 4 listed localities are in this municipality in INEGI 2020
+21,Huatlatlahuca,070,Huatlatlauca,spelling,22 of 22 listed localities are in this municipality in INEGI 2020
+21,Zapotitlán Salinas,209,Zapotitlán,name-form,3 of 3 listed localities are in this municipality in INEGI 2020
+24,San Martín Chalchicuahutla,029,San Martín Chalchicuautla,spelling,119 of 134 listed localities are in this municipality in INEGI 2020
+24,Tancanhuitz de Santos,012,Tancanhuitz,name-form,196 of 263 listed localities are in this municipality in INEGI 2020
+30,Cazones,033,Cazones de Herrera,name-form,43 of 56 listed localities are in this municipality in INEGI 2020
+30,Cosamaloapan,045,Cosamaloapan de Carpio,name-form,5 of 5 listed localities are in this municipality in INEGI 2020
+30,Temapache,160,Álamo Temapache,name-form,232 of 265 listed localities are in this municipality in INEGI 2020
+30,Tuxpam,189,Tuxpan,spelling,55 of 63 listed localities are in this municipality in INEGI 2020
+20,San Juan Mixtepec Distrito 26,209,San Juan Mixtepec,district,"1 of 1 listed localities are in this municipality in INEGI 2020; district confirmed by the name of its seat locality in INEGI 2020 (""San Juan Mixtepec Distrito 26"")"
+20,San Pedro Mixtepec Distrito 22,318,San Pedro Mixtepec,district,"12 of 18 listed localities are in this municipality in INEGI 2020; district confirmed by the name of its seat locality in INEGI 2020 (""San Pedro Mixtepec Distrito 22"")"
+20,San Pedro Mixtepec Distrito 26,319,San Pedro Mixtepec,district,"2 of 3 listed localities are in this municipality in INEGI 2020; district confirmed by the name of its seat locality in INEGI 2020 (""San Pedro Mixtepec Distrito 26"")"
+20,Coatlán,159,San Jerónimo Coatlán,by-localities,3 of 3 listed localities are in this municipality in INEGI 2020
+20,Mazatlán,207,San Juan Mazatlán,by-localities,24 of 29 listed localities are in this municipality in INEGI 2020
+21,San Vicente Coyotepec,037,Coyotepec,by-localities,3 of 3 listed localities are in this municipality in INEGI 2020
+20,San Juan Mixtepec,208,San Juan Mixtepec,by-localities,"49 of 62 listed localities are in this municipality in INEGI 2020 (Distrito 08); 1 is in 209 (Distrito 26). The catalog prints no district here"

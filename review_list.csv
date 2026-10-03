@@ -1,75 +1,26 @@
 page,variant,spanish_name,reason,detail
-34,pima-del-sur,pima del sur,municipio not in INEGI 2020 list,CHIHUAHUA: Temósachi
-44,tarahumara-del-centro,tarahumara del centro,municipio not in INEGI 2020 list,CHIHUAHUA: Batopilas
-62,nahuatl-de-la-huasteca-veracruzana,náhuatl de la Huasteca veracruzana,municipio not in INEGI 2020 list,VERACRUZ DE IGNACIO DE LA LLAVE: Temapache
-67,nahuatl-de-la-huasteca-potosina,náhuatl de la Huasteca potosina,municipio not in INEGI 2020 list,SAN LUIS POTOSÍ: San Martín Chalchicuahutla
-67,nahuatl-de-la-huasteca-potosina,náhuatl de la Huasteca potosina,municipio not in INEGI 2020 list,SAN LUIS POTOSÍ: Tancanhuitz de Santos
 71,nahuatl-de-la-sierra-negra-norte,"náhuatl de la Sierra negra, norte",municipio not in INEGI 2020 list,PUEBLA: Astacinga
 71,nahuatl-de-la-sierra-negra-norte,"náhuatl de la Sierra negra, norte",municipio not in INEGI 2020 list,PUEBLA: Tehuipango
-76,nahuatl-del-centro-de-puebla,náhuatl del centro de Puebla,municipio not in INEGI 2020 list,PUEBLA: Huatlatlahuca
-78,mexicano-de-guerrero,mexicano de Guerrero,municipio not in INEGI 2020 list,GUERRERO: Cuetzalan del Progreso
-87,kumiai,kumiai,municipio not in INEGI 2020 list,BAJA CALIFORNIA: Playas del Rosarito
-89,otomi-de-la-sierra,otomí de la Sierra,municipio not in INEGI 2020 list,VERACRUZ DE IGNACIO DE LA LLAVE: Temapache
-93,otomi-del-valle-del-mezquital,otomí del Valle del Mezquital,municipio not in INEGI 2020 list,HIDALGO: Santiago Anaya
-96,otomi-de-tilapa-o-del-sur,otomí de Tilapa o del sur,municipio not in INEGI 2020 list,ESTADO DE MÉXICO: Tianguistengo
-96,otomi-del-noroeste,otomí del noroeste,municipio not in INEGI 2020 list,GUANAJUATO: Allende
 96,otomi-del-noroeste,otomí del noroeste,municipio not in INEGI 2020 list,GUANAJUATO: Capulhuac
-96,otomi-del-noroeste,otomí del noroeste,municipio not in INEGI 2020 list,GUANAJUATO: Dolores Hidalgo Cuna de la Independencia
-98,otomi-del-centro,otomí del centro,municipio not in INEGI 2020 list,ESTADO DE MÉXICO: Acambay
-98,otomi-del-centro,otomí del centro,municipio not in INEGI 2020 list,ESTADO DE MÉXICO: Amanalco de Becerra
-104,mazahua-de-occidente,mazahua de occidente,municipio not in INEGI 2020 list,ESTADO DE MÉXICO: Villa de Victoria
-107,chinanteco-del-norte,chinanteco del norte,municipio not in INEGI 2020 list,VERACRUZ DE IGNACIO DE LA LLAVE: Cosamaloapan
 110,tlapaneco-central-bajo,tlapaneco central bajo,IPA has unconfirmed tone-letter glyphs,[meʔphaa ʃkua iʃi ridii]
 110,tlapaneco-del-sur,tlapaneco del sur,IPA has unconfirmed tone-letter glyphs,[meʔphaa t͡sindii]
 111,tlapaneco-del-centro,tlapaneco del centro,IPA has unconfirmed tone-letter glyphs,[miʔphaa miŋuii]
 111,tlapaneco-del-este,tlapaneco del este,IPA has unconfirmed tone-letter glyphs,[meʔphaa bathaa]
-111,tlapaneco-del-este,tlapaneco del este,municipio not in INEGI 2020 list,GUERRERO: Acapulco
 111,tlapaneco-del-noroeste-alto,tlapaneco del noroeste alto,IPA has unconfirmed tone-letter glyphs,[meʔphaa aɡwaa]
 111,tlapaneco-del-noroeste-bajo,tlapaneco del noroeste bajo,IPA has unconfirmed tone-letter glyphs,[meʔphaː ʃmaʔiin]
 111,tlapaneco-del-norte,tlapaneco del norte,IPA has unconfirmed tone-letter glyphs,[meʔphaa xi˨ɾa˦ɡa˦a˦]
 111,tlapaneco-del-suroeste,tlapaneco del suroeste,IPA has unconfirmed tone-letter glyphs,[meʔpaa wiʔiin]
-115,mazateco-de-puebla,mazateco de Puebla,municipio not in INEGI 2020 list,PUEBLA: Coyomepan
 115,mazateco-de-puebla,mazateco de Puebla,municipio not in INEGI 2020 list,PUEBLA: San Lorenzo Cuaunecuiltitla
 115,mazateco-de-puebla,mazateco de Puebla,municipio not in INEGI 2020 list,PUEBLA: Santa Ana Ateixtlahuaca
 116,chocholteco-del-oeste,chocholteco del oeste,IPA differs between two extractions,[ŋg̪ ̪i˦ba˨]
 116,chocholteco-del-oeste,chocholteco del oeste,municipio not in INEGI 2020 list,OAXACA: Ocotlán
-116,popoloca-de-oriente,popoloca de oriente,municipio not in INEGI 2020 list,PUEBLA: San Vicente Coyotepec
-116,popoloca-de-oriente,popoloca de oriente,municipio not in INEGI 2020 list,PUEBLA: Zapotitlán Salinas
-118,zapoteco-serrano-del-noroeste-bajo,"zapoteco serrano, del noroeste bajo",municipio not in INEGI 2020 list,OAXACA: San Ildelfonso Villa Alta
-119,zapoteco-serrano-del-sureste,"zapoteco serrano, del sureste",municipio not in INEGI 2020 list,OAXACA: Villa Hidalgo Yalálag
-122,zapoteco-de-la-sierra-sur-noroeste-dizde,"zapoteco de la Sierra sur, noroeste",municipio not in INEGI 2020 list,OAXACA: San Juan Mixtepec Distrito 26
-122,zapoteco-de-la-sierra-sur-noroeste-dizde,"zapoteco de la Sierra sur, noroeste",municipio not in INEGI 2020 list,OAXACA: San Pedro Mixtepec Distrito 26
 122,zapoteco-de-la-sierra-sur-noroeste-medio,"zapoteco de la Sierra sur, noroeste medio",IPA word gap ambiguous,[ditsæ̰]
-126,zapoteco-de-la-montana-del-istmo-alto,"zapoteco de la montaña del Istmo, alto",municipio not in INEGI 2020 list,OAXACA: Guevea de Humbolt
 126,zapoteco-de-la-montana-del-istmo-bajo,"zapoteco de la montaña del Istmo, bajo",IPA word gap ambiguous,[dits̪̪͡ɨɾeʔ]
-126,zapoteco-de-valles-del-este-medio,"zapoteco de Valles, del este medio",municipio not in INEGI 2020 list,OAXACA: San Pedro Totolapa
-129,chatino-occidental-bajo,chatino occidental bajo,municipio not in INEGI 2020 list,OAXACA: San Pedro Mixtepec Distrito 22
-129,chatino-occidental-bajo,chatino occidental bajo,municipio not in INEGI 2020 list,OAXACA: Villa de Tututepec de Melchor Ocampo
 130,amuzgo-del-norte,amuzgo del norte,IPA has unconfirmed tone-letter glyphs,[nomndaː] [nta] [ɲonda]
 130,amuzgo-del-sur,amuzgo del sur,IPA has unconfirmed tone-letter glyphs,[nundaʔ]
 131,amuzgo-alto-del-este,amuzgo alto del este,IPA has unconfirmed tone-letter glyphs,[hnõʔ nda t͡shõ noã˨] [hɲonʔndaː] [ɲonndaː]
-134,mixteco-de-zoyatlan-de-juarez,mixteco de Zoyatlán de Juárez,municipio not in INEGI 2020 list,GUERRERO: Alcozáuza de Guerrero
-136,mixteco-de-guerrero-de-la-costa-central,mixteco de Guerrero de la costa central,municipio not in INEGI 2020 list,GUERRERO: Florencio Villareal
-136,mixteco-de-villa-de-tututepec,mixteco de Villa de Tututepec,municipio not in INEGI 2020 list,OAXACA: Villa de Tututepec de Melchor Ocampo
-140,mixteco-de-oeste-central,mixteco de oeste central,municipio name shared by more than one INEGI municipality,OAXACA: San Juan Mixtepec
-142,mixteco-del-noroeste-medio,mixteco del noroeste medio,municipio not in INEGI 2020 list,OAXACA: Tezoatlán de Segura y Luna
-143,mixteco-del-noroeste-central-alto,mixteco del noroeste central alto,municipio not in INEGI 2020 list,OAXACA: Tezoatlán de Segura y Luna
-143,mixteco-del-noroeste-central-bajo,mixteco del noroeste central bajo,municipio not in INEGI 2020 list,OAXACA: Tezoatlán de Segura y Luna
-143,mixteco-del-oeste-alto,mixteco del oeste alto,municipio not in INEGI 2020 list,OAXACA: Tezoatlán de Segura y Luna
-145,mixteco-de-sierra-sur-noroeste,mixteco de Sierra sur noroeste,municipio not in INEGI 2020 list,OAXACA: Constancia de Rosario
-147,mixteco-de-la-frontera-puebla-oaxaca,mixteco de la frontera Puebla-Oaxaca,municipio not in INEGI 2020 list,OAXACA: Santiago Chazumba
-151,huasteco-del-occidente,huasteco del occidente,municipio not in INEGI 2020 list,SAN LUIS POTOSÍ: Tancanhuitz de Santos
 156,maya,maya,municipio not in INEGI 2020 list,YUCATÁN: Akil Baca
-181,tseltal-del-oriente,tseltal del oriente,municipio not in INEGI 2020 list,CHIAPAS: La Indepedencia
 190,chuj,Chuj,geography,"text outside a state/municipio: Frontera Comalapa: Las Flores, Los Mangos, Nuevo Tres Laguna"
 194,mam-de-la-frontera,Mam de la frontera,geography,municipio with no localities: La Independencia
-198,totonaco-de-la-costa,totonaco de la costa,municipio not in INEGI 2020 list,VERACRUZ DE IGNACIO DE LA LLAVE: Cazones
 198,totonaco-de-la-costa,totonaco de la costa,municipio not in INEGI 2020 list,VERACRUZ DE IGNACIO DE LA LLAVE: Tenampulco
-198,totonaco-de-la-costa,totonaco de la costa,municipio not in INEGI 2020 list,VERACRUZ DE IGNACIO DE LA LLAVE: Tuxpam
 206,mixe-bajo,mixe bajo,municipio not in INEGI 2020 list,OAXACA: Camotlán
-206,mixe-bajo,mixe bajo,municipio not in INEGI 2020 list,OAXACA: Coatlán
-206,mixe-bajo,mixe bajo,municipio not in INEGI 2020 list,OAXACA: Matías Romero
-206,mixe-bajo,mixe bajo,municipio not in INEGI 2020 list,OAXACA: Mazatlán
-210,zoque-del-sur,zoque del sur,municipio not in INEGI 2020 list,CHIAPAS: Ocozocuautla
-211,zoque-del-oeste,zoque del oeste,municipio not in INEGI 2020 list,OAXACA: San Miguel Chimalapas
-211,zoque-del-oeste,zoque del oeste,municipio not in INEGI 2020 list,OAXACA: Santa María Chimalapas
