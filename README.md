@@ -165,6 +165,64 @@ hand from the Actions tab, with an optional date. INEGI is not part of it.
   requiring pull requests) and workflow permissions not locked to
   read-only. An optional `HF_TOKEN` secret raises the Hugging Face limit.
 
+## INALI catalog data (variants, IPA, geography)
+
+A separate, static dataset parsed from INALI's *Catálogo de las Lenguas
+Indígenas Nacionales* (Diario Oficial, 14 January 2008). It is not part of
+the weekly run.
+
+| File | Rows | What it holds |
+|---|---|---|
+| `variants.csv` | 476 | One row per variant and autonym: `variant` (identifier), `autonym` (as the body prints it), `spanish_name`, `group`, `family`, `autonym_appendix4` (as Appendix 4 prints it). 364 variants, 68 groups, 11 families. |
+| `variant_ipa.csv` | 476 | IPA for each variant and autonym. `ipa_status` is `extracted`, `corrected-by-hand`, or `in-review` (IPA left blank). |
+| `variant_localities.csv` | 43,989 | One row per variant, state, municipio and locality: `state_code` and `state` (INEGI), `state_raw` (as printed), `municipio_code` (INEGI 2020, blank if unresolved), `municipio` and `locality` (as printed). |
+| `review_list.csv` | varies | Everything held for a manual pass, with page, reason and detail. Nothing in it is guessed elsewhere. |
+| `inali_build.json` | n/a | Source URL and checksum, poppler version, build time, counts. |
+
+Hand-maintained inputs, each row with its reason or evidence:
+
+| File | What it holds |
+|---|---|
+| `ipa_corrections.csv` | IPA strings read from the page where the text extraction is wrong. |
+| `municipio_aliases.csv` | Municipio names the catalog prints differently from INEGI, mapped to INEGI 2020 codes. |
+| `autonym_overrides.csv` | Autonyms the body spells differently from Appendix 4 (written by the body parser; the body is the authority). |
+| `reference/inegi_municipios_2020.csv` | INEGI's 2,469 municipalities, taken from the 2020 census locality file. |
+
+`group` in `variants.csv` uses the same spelling as `crosswalk.csv`, so the
+two join at group level. Variants are not yet linked to ISO 639-3 codes or
+Glottocodes.
+
+### Rebuilding
+
+```
+python3 tools/parse_inali_catalog.py    # Appendix 4 -> variants.csv
+python3 tools/parse_inali_body.py       # body -> variant_ipa.csv, variant_localities.csv, review_list.csv
+python3 tools/parse_inali_catalog.py    # again, to apply autonym_overrides.csv to variants.csv
+```
+
+- **Needs poppler** (`pdftotext` and `pdftohtml`), plus Python 3 standard
+  library. The committed data was built with **poppler 22.02.0**. Part of
+  the catalog's IPA uses an old font whose glyphs have no Unicode value, and
+  other poppler versions expose those glyphs differently, so compare a
+  rebuild against the committed files before trusting it.
+- **Pinned inputs.** The catalog PDF
+  (`https://www.inali.gob.mx/pdf/CLIN_completo.pdf`, sha256 `21cef44a…f1be7c`)
+  and INEGI's 2020 locality file (sha256 `9342fdbd…2ab60`, only downloaded
+  if `reference/inegi_municipios_2020.csv` is missing) are checked against
+  checksums in the scripts. A changed file stops the run.
+- **Built-in checks.** `parse_inali_catalog.py` writes nothing unless it
+  finds 476 autonyms, 364 variants, 68 groups and 11 families.
+  `parse_inali_body.py` writes nothing unless all 364 body entries join to
+  364 variants and there are 476 autonym rows.
+- The catalog's known quirks, the glyph mapping and every correction are in
+  `CHANGELOG.md`.
+
+## Known gaps
+
+- INALI risk grade per variant is not in this 2008 catalog — it comes from
+  a separate, later INALI publication. Queued for a future pass once the
+  variant-identity link (item 8b) is closed. Not started.
+
 ## Layout
 
 ```
@@ -173,6 +231,8 @@ tools/               one-off build scripts (crosswalk)
 inali_groups.csv     hand-entered seed: INALI's 68 groups (INALI's exact spelling) and how to find each in Glottolog
 member_overrides.csv hand-entered: single ISO codes taken out of a group, with reasons
 crosswalk.csv        INALI group -> ISO 639-3 -> Glottocode
+variants.csv, variant_ipa.csv, variant_localities.csv, review_list.csv
+                     INALI catalog data (see "INALI catalog data" above)
 crosswalk_members.csv  every ISO code in each group -> its own Glottocode
 unresolved.csv       groups/identifiers that could not be resolved
 snapshots/           one dated folder per run (YYYY-MM-DD/), append-only
