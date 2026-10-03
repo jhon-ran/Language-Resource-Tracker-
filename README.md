@@ -178,12 +178,15 @@ the weekly run.
 | `variant_localities.csv` | 43,989 | One row per variant, state, municipio and locality: `state_code` and `state` (INEGI), `state_raw` (as printed), `municipio_code` (INEGI 2020, blank if unresolved), `municipio` and `locality` (as printed). |
 | `review_list.csv` | varies | Everything held for a manual pass, with page, reason and detail. Nothing in it is guessed elsewhere. |
 | `inali_build.json` | n/a | Source URL and checksum, poppler version, build time, counts. |
+| `risk_grade.csv` | 364 | INALI's risk grade per variant, from its 2012 book: `variant`, `grade` (1-4), `grade_label`, `risk_grade_census_year` (2000), `rank`, the printed speaker and locality figures, the names as printed, and `join` (how the row was matched to a variant). |
+| `risk_grade_build.json` | n/a | Same build metadata for the risk file. |
 
 Hand-maintained inputs, each row with its reason or evidence:
 
 | File | What it holds |
 |---|---|
 | `ipa_corrections.csv` | IPA strings read from the page where the text extraction is wrong. |
+| `risk_grade_aliases.csv` | Variant names the 2012 risk book prints differently from the 2008 catalog. |
 | `municipio_aliases.csv` | Municipio names the catalog prints differently from INEGI, mapped to INEGI 2020 codes. |
 | `autonym_overrides.csv` | Autonyms the body spells differently from Appendix 4 (written by the body parser; the body is the authority). |
 | `reference/inegi_municipios_2020.csv` | INEGI's 2,469 municipalities, taken from the 2020 census locality file. |
@@ -203,6 +206,7 @@ is interpolated. No variant-specific identifier exists yet.
 python3 tools/parse_inali_catalog.py    # Appendix 4 -> variants.csv
 python3 tools/parse_inali_body.py       # body -> variant_ipa.csv, variant_localities.csv, review_list.csv
 python3 tools/parse_inali_catalog.py    # again, to apply autonym_overrides.csv to variants.csv
+python3 tools/parse_inali_risk.py       # 2012 risk book -> risk_grade.csv
 ```
 
 - **Needs poppler** (`pdftotext` and `pdftohtml`), plus Python 3 standard
@@ -219,6 +223,11 @@ python3 tools/parse_inali_catalog.py    # again, to apply autonym_overrides.csv 
   finds 476 autonyms, 364 variants, 68 groups and 11 families.
   `parse_inali_body.py` writes nothing unless all 364 body entries join to
   364 variants and there are 476 autonym rows.
+- **Risk grades are from the 2000 census.** `risk_grade.csv` comes from
+  *México. Lenguas Indígenas Nacionales en Riesgo de Desaparición* (INALI,
+  2012; sha256 `ce44fb95…e9b639`). `parse_inali_risk.py` writes nothing
+  unless it finds 364 rows graded 64 / 43 / 72 / 185 and the book's four
+  copies of the table agree. `grade` is always the published grade.
 - The catalog's known quirks, the glyph mapping and every correction are in
   `CHANGELOG.md`.
 
@@ -228,9 +237,14 @@ python3 tools/parse_inali_catalog.py    # again, to apply autonym_overrides.csv 
   geography-based match are both shelved (reasons in `CHANGELOG.md`, item
   8b). `spikes/candidate_name_matches.csv` holds 51 unverified name matches
   from the spike; it is not identity data.
-- INALI risk grade per variant is not in this 2008 catalog — it comes from
-  a separate, later INALI publication. Queued for a future pass once the
-  variant-identity link (item 8b) is closed. Not started.
+- Three variant names carry a probable noreste/noroeste error in the 2008
+  catalog (or, less likely, in the 2012 risk book): the two sources print
+  different direction words for variants whose locality counts match.
+  `variants.csv` keeps the catalog's printed names; the three are joined to
+  their risk rows in `risk_grade_aliases.csv` as kind `direction-conflict`,
+  and `risk_grade.csv` marks them `alias:direction-conflict`. Details in
+  `CHANGELOG.md`.
+- The risk grades use 2000 census counts; the INEGI speaker layer is 2020.
 
 ## Layout
 

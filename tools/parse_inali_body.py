@@ -509,7 +509,12 @@ def main():
     w = lambda name, header, rows: common_write(root / name, header, rows)
     w("variant_ipa.csv", ["variant", "autonym", "ipa", "ipa_status"], ipa_rows)
     w("variant_localities.csv", ["variant", "state_code", "state", "state_raw", "municipio_code", "municipio", "locality"], loc_rows)
-    w("review_list.csv", ["page", "variant", "spanish_name", "reason", "detail"], sorted(out_review, key=lambda x: (x[0], x[1], x[3])))
+    # Rows written by parse_inali_risk.py are kept as they are.
+    path = root / "review_list.csv"
+    other = [[r["page"], r["variant"], r["spanish_name"], r["reason"], r["detail"]]
+             for r in csv.DictReader(open(path, encoding="utf-8")) if r["reason"].startswith("risk grade: ")] if path.exists() else []
+    w("review_list.csv", ["page", "variant", "spanish_name", "reason", "detail"],
+      sorted(out_review, key=lambda x: (x[0], x[1], x[3])) + other)
     w("autonym_overrides.csv", ["variant", "autonym_appendix4", "autonym_body"], overrides)
     meta = {"source": part1.URL, "source_sha256": part1.SHA256, "poppler_version": poppler_version(),
             "built": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),

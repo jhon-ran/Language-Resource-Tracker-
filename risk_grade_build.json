@@ -1,0 +1,28 @@
+{
+ "source": "https://site.inali.gob.mx/pdf/libro_lenguas_indigenas_nacionales_en_riesgo_de_desaparicion.pdf",
+ "source_sha256": "ce44fb95800e26d145710422ae10bd300350fe4564db6c636bc8fc4d88e9b639",
+ "poppler_version": "22.02.0",
+ "built": "2026-10-03T16:06:47Z",
+ "primary_table": "Cuadro 6, PDF pp. 61-75",
+ "cross_checked": [
+  "Cuadro 7",
+  "Cuadro 8",
+  "Cuadro 9"
+ ],
+ "rows": 364,
+ "grades": {
+  "1": 64,
+  "2": 43,
+  "3": 72,
+  "4": 185
+ },
+ "join": {
+  "alias:spelling": 3,
+  "exact": 354,
+  "corrected-spelling": 3,
+  "alias:by-localities": 1,
+  "alias:direction-conflict": 3
+ },
+ "risk_grade_census_year": 2000,
+ "rows_differing_only_in_apostrophe_style": 9
+}

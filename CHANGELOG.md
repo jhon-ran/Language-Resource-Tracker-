@@ -1,5 +1,114 @@
 # Changelog
 
+## 2026-10-03 — Item 9: risk grade per variant (INALI 2012)
+
+- `tools/parse_inali_risk.py` parses Cuadro 6 (PDF pp. 61-75) into
+  `risk_grade.csv`: 364 rows, one per variant, grades 64 / 43 / 72 / 185.
+  It writes nothing unless those totals hold and Cuadros 7, 8 and 9 agree
+  with Cuadro 6 row by row. They do; 9 rows (3 per table) differ only in
+  apostrophe style. About 20 long variant names that wrap onto the lines
+  above and below their row are rejoined.
+- **Every row carries `risk_grade_census_year` = 2000**, next to the
+  grade. The grades rest on the 2000 census; the speaker counts in the
+  INEGI reference layer are from 2020.
+- All eleven printed columns are kept (rank, family, group, variant,
+  speakers total and in localities with 30% or more speakers, localities
+  total and with 30% or more, speaker proportion, child proportion, grade).
+- Join to `variants.csv`: 364 of 364 (361 before the three
+  direction-conflict joins below). 354 exact; 3 through the corrected
+  spelling behind the variant identifier (Q'eqchi', K'iche' (occidental),
+  zapoteco de San Antonino el Alto: the 2008 catalog's own misprints);
+  3 spelling aliases in `risk_grade_aliases.csv` (ku'al, Akateco,
+  mocho'); 1 locality-based alias (the zapoteco case below); 3
+  direction-conflict aliases (further below).
+- **Zapoteco de la Sierra sur, noroeste.** Two 2008-catalog variants share
+  this name (`-risna`, `-dizde`). The book's row of that name (rank 84) has
+  21 localities; the catalog lists 22 for `-risna` and 16 for `-dizde`.
+  Calibration: among joined variants with 10-40 localities, catalog and
+  book counts are within 1 for 95 of 112 and differ by 5 or more for 7.
+  Rank 84 is assigned to `-risna` on that evidence.
+- **Probable noreste/noroeste error in the 2008 catalog: three names.**
+  These three joins are NOT spelling variants and are recorded separately
+  from the other four aliases, as kind `direction-conflict` (the `join`
+  column of `risk_grade.csv` reads `alias:direction-conflict`). The two
+  sources print a different direction word for what the locality counts
+  show to be the same variant:
+
+  | 2012 book prints | localities | 2008 catalog prints | localities | variant |
+  |---|---|---|---|---|
+  | zapoteco de la Sierra sur, noreste (rank 255) | 16 | zapoteco de la Sierra sur, noroeste | 16 | `zapoteco-de-la-sierra-sur-noroeste-dizde` |
+  | zapoteco de la Sierra sur, noroeste alto (rank 247) | 13 | zapoteco de la Sierra sur, noreste alto | 13 | `zapoteco-de-la-sierra-sur-noreste-alto` |
+  | náhuatl del noroeste central (rank 349) | 398 | náhuatl del noreste central | 400 | `nahuatl-del-noreste-central` |
+
+  Method and threshold are the same as for `-risna`: near-identical
+  locality counts, against the calibration that catalog and book counts
+  are within 1 for 95 of 112 joined variants with 10-40 localities. The
+  error is more likely in the 2008 catalog than in the 2012 book, because
+  the first row also explains the catalog's duplicated name: the entry on
+  PDF p. 122 of the catalog (`-dizde`) would be "noreste", not a second
+  "noroeste". That is a probable reading, not a confirmed one.
+  **`variants.csv` is not edited**: its `spanish_name` stays exactly as
+  extracted from the catalog, and so do the variant identifiers built from
+  it. The correction lives only in `risk_grade_aliases.csv` and in this
+  note. Cross-reference: the catalog-quirks entry below (2026-10-02, "INALI
+  catalog (CLIN 2008): known quirks") carries the same finding.
+- **Inferred, not part of the documented methodology.** A child-speaker
+  threshold around 15% reproduces all 364 published grades under the
+  stated rules for grade 2 vs 3; INALI's text does not state this value
+  explicitly — it's a reverse-engineered inference from the data,
+  confirmed against every known case but not confirmed as the source's
+  actual rule. The parser does not use it: `grade` is always the published
+  grade.
+- With those joins all 364 rows have a variant, and `review_list.csv` is
+  back to 24 rows (none from this item). Both parsers keep each other's
+  rows when they rewrite it.
+
+## 2026-10-03 — Item 9 spike: INALI's 2012 risk-grade publication (nothing parsed yet)
+
+Source: *México. Lenguas Indígenas Nacionales en Riesgo de Desaparición:
+Variantes Lingüísticas por Grado de Riesgo* (INALI, 2012),
+`https://site.inali.gob.mx/pdf/libro_lenguas_indigenas_nacionales_en_riesgo_de_desaparicion.pdf`,
+132 pages, 33.7 MB, sha256
+`ce44fb95800e26d145710422ae10bd300350fe4564db6c636bc8fc4d88e9b639`.
+
+- Real text layer; the size comes from a few full-page divider images,
+  not maps or charts. The grade is in tables with one row per variant
+  (rank, family, group, variant, speakers, speakers in localities with 30%
+  or more speakers, localities, such localities, proportion of speakers,
+  proportion of child speakers aged 5-14, grade). The same 364 rows are
+  printed in Cuadros 2-5 (by grade) and again in Cuadros 6, 7, 8 and 9.
+- Stated totals match what is countable: 64 / 43 / 72 / 185 = 364, in
+  every table.
+- 355 of 364 variant names match `variants.csv` exactly; 9 differ. The
+  book names the two zapoteco variants that share one name in the 2008
+  catalog differently: "zapoteco de la Sierra sur, noroeste" and
+  "zapoteco de la Sierra sur, noroeste alto".
+- **Documented methodology** (conditions table, PDF p. 20; data from the
+  2000 census, over localities where speakers are 30% or more):
+  grade 1 if there is no such locality or fewer than 100 speakers in
+  them; grade 2 if the child proportion is under 25% and there is only one
+  such locality or fewer than 1,000 speakers; grade 3 if under 25% with
+  more than one locality and more than 1,000 speakers, or 25% and over
+  with only one locality or fewer than 1,000; grade 4 if over 25% with
+  more than one locality and more than 1,000 speakers. Applied as stated,
+  these rules reproduce 351 of the 364 published grades. The prose
+  description of grade 2 on p. 19 repeats the grade 3 text by mistake; the
+  p. 20 table is the reliable statement.
+- **Decided for the build (not built yet):** the risk output file will
+  carry a `risk_grade_census_year` column, value `2000`, on every row, so
+  the vintage of the grade sits beside the grade itself and does not depend
+  on anyone reading this file.
+- **Inferred, not part of the documented methodology.** A child-speaker
+  threshold around 15% reproduces all 364 published grades under the
+  stated rules for grade 2 vs 3; INALI's text does not state this value
+  explicitly — it's a reverse-engineered inference from the data,
+  confirmed against every known case but not confirmed as the source's
+  actual rule. Detail: the 13 rows the stated rules get wrong are all
+  printed as grade 2, with child proportions from 6.27% to 14.32%; every
+  grade 3 row in the same situation is at 15.49% or above. Any cut above
+  14.32% and up to 15.49% fits all 364, so the data constrain the value to
+  that interval and "15%" is only the round number inside it.
+
 ## 2026-10-02 — Item 8b: variant-to-identity link (decision)
 
 - **Built: the group-level link only.** `variants.csv` has a new column,
@@ -221,6 +330,20 @@ Layout quirks found in the spike:
 - Municipality names are bold in the PDF and lose that in plain text;
   square brackets appear in the geography as locality corrections, not
   only as IPA.
+
+**Added 2026-10-03: probable direction errors in three variant names**
+(found in item 9, when joining INALI's 2012 risk book). The 2012 book and
+this catalog print a different direction word for three variants whose
+locality counts match: the catalog's second "zapoteco de la Sierra sur,
+noroeste" (PDF p. 122, `-dizde`) is the book's "… noreste"; the catalog's
+"zapoteco de la Sierra sur, noreste alto" is the book's "… noroeste alto";
+the catalog's "náhuatl del noreste central" is the book's "náhuatl del
+noroeste central". This is a newly discovered probable catalog error
+(less likely an error in the 2012 book), and it would also explain why two
+catalog entries share one name. The catalog's printed names are kept
+unchanged in `variants.csv`; see the item 9 entry (2026-10-03) for the
+evidence and `risk_grade_aliases.csv` (kind `direction-conflict`) for the
+joins.
 
 Appendix 4 does not match the totals the catalog states for itself.
 `variants.csv` is built from Appendix 4 by `tools/parse_inali_catalog.py`,

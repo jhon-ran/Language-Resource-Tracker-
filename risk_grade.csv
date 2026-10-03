@@ -1,0 +1,365 @@
+variant,grade,grade_label,risk_grade_census_year,rank,speakers_30pct_localities,localities_30pct,child_proportion,speakers_total,localities_total,speaker_proportion,family_printed,group_printed,variant_printed,join
+ku-ahl,1,muy alto,2000,1,0,0,0,0,0,0,Cochimí-yumana,ku'al,ku'al,alias:spelling
+awakateko,1,muy alto,2000,2,0,0,0,3,2,0.08,Maya,Awakateko,Awakateko,exact
+tuzanteco,1,muy alto,2000,3,0,0,0,5,1,0.24,Maya,qato'k,tuzanteco,exact
+ayapaneco,1,muy alto,2000,4,0,0,0,8,3,0.15,Mixe-zoque,ayapaneco,ayapaneco,exact
+ixil-nebajeno,1,muy alto,2000,5,0,0,8.33,12,1,0.86,Maya,Ixil,Ixil nebajeño,exact
+zapoteco-de-mixtepec,1,muy alto,2000,6,0,0,0,14,1,3.9,Oto-mangue,zapoteco,zapoteco de Mixtepec,exact
+ixcateco,1,muy alto,2000,7,0,0,4.76,21,1,3.93,Oto-mangue,ixcateco,ixcateco,exact
+kiliwa,1,muy alto,2000,8,0,0,6.9,29,6,0.02,Cochimí-yumana,kiliwa,kiliwa,exact
+kaqchikel,1,muy alto,2000,9,0,0,0,35,7,0.5,Maya,Kaqchikel,Kaqchikel,exact
+zapoteco-de-san-felipe-tejalapam,1,muy alto,2000,10,0,0,0,50,14,1.43,Oto-mangue,zapoteco,zapoteco de San Felipe Tejalápam,exact
+ixil-chajuleno,1,muy alto,2000,11,0,0,11.54,52,3,1.76,Maya,Ixil,Ixil chajuleño,exact
+zapoteco-de-asuncion-tlacolulita,1,muy alto,2000,12,0,0,1.89,53,2,16.11,Oto-mangue,zapoteco,zapoteco de Asunción Tlacolulita,exact
+oluteco,1,muy alto,2000,13,0,0,0,60,7,0.56,Mixe-zoque,oluteco,oluteco,exact
+chocholteco-del-oeste,1,muy alto,2000,14,0,0,3.23,62,13,9.79,Oto-mangue,chocholteco,chocholteco del oeste,exact
+k-iche-occidental,1,muy alto,2000,15,0,0,15.38,65,1,2.47,Maya,K'iche',K'iche' (occidental),corrected-spelling
+k-iche-central,1,muy alto,2000,16,0,0,15.38,65,1,2.47,Maya,K'iche',K'iche' (central),exact
+teko,1,muy alto,2000,17,0,0,0,71,8,3.47,Maya,Teko,Teko,exact
+papago,1,muy alto,2000,18,0,0,11.7,94,19,0.16,Yuto-nahua,pápago,pápago,exact
+k-iche-oriental,1,muy alto,2000,19,0,0,15.63,96,5,1.64,Maya,K'iche',K'iche' (oriental),exact
+mexicano-de-occidente,1,muy alto,2000,20,0,0,29.91,107,22,1.77,Yuto-nahua,náhuatl,mexicano de occidente,exact
+mexicano-alto-de-occidente,1,muy alto,2000,21,0,0,8.66,127,26,0.53,Yuto-nahua,náhuatl,mexicano alto de occidente,exact
+mocho,1,muy alto,2000,22,0,0,0,141,1,0.91,Maya,qato'k,mocho',alias:spelling
+zapoteco-de-valles-oeste,1,muy alto,2000,23,0,0,5.69,211,23,1.81,Oto-mangue,zapoteco,"zapoteco de Valles, oeste",exact
+mixteco-de-guerrero-de-la-costa-central,1,muy alto,2000,24,0,0,26.67,255,26,0.95,Oto-mangue,mixteco,mixteco de Guerrero de la costa central,exact
+zapoteco-de-valles-del-centro,1,muy alto,2000,25,0,0,1.56,257,3,13.79,Oto-mangue,zapoteco,"zapoteco de Valles, del centro",exact
+otomi-de-tilapa-o-del-sur,1,muy alto,2000,26,0,0,1.37,292,1,4,Oto-mangue,otomí,otomí de Tilapa o del sur,exact
+tlahuica,1,muy alto,2000,27,0,0,2.47,405,10,6.32,Oto-mangue,tlahuica,tlahuica,exact
+otomi-del-oeste,1,muy alto,2000,28,0,0,4.1,415,38,0.44,Oto-mangue,otomí,otomí del oeste,exact
+texistepequeno,1,muy alto,2000,29,0,0,0.23,426,4,4.75,Mixe-zoque,texistepequeño,texistepequeño,exact
+mexicano-del-oriente,1,muy alto,2000,30,0,0,6.22,434,29,0.27,Yuto-nahua,náhuatl,mexicano del oriente,exact
+otomi-de-ixtenco,1,muy alto,2000,31,0,0,1.95,461,1,8.85,Oto-mangue,otomí,otomí de Ixtenco,exact
+totonaco-del-sureste,1,muy alto,2000,32,0,0,3.7,487,61,0.74,Totonaco-tepehua,totonaco,totonaco del sureste,exact
+popoloca-del-poniente,1,muy alto,2000,33,0,0,2.18,504,6,15.09,Oto-mangue,popoloca,popoloca del poniente,exact
+tlapaneco-del-sur,1,muy alto,2000,34,0,0,5.91,592,11,6.9,Oto-mangue,tlapaneco,tlapaneco del sur,exact
+chontal-de-oaxaca-de-la-costa,1,muy alto,2000,35,0,0,2.92,1060,22,8.55,Chontal de Oaxaca,chontal de Oaxaca,chontal de Oaxaca de la costa,exact
+zapoteco-de-valles-del-noroeste-bajo,1,muy alto,2000,36,0,0,14.72,1128,15,4.94,Oto-mangue,zapoteco,"zapoteco de Valles, del noroeste bajo",exact
+mam-del-sur,1,muy alto,2000,37,0,0,24.98,1289,4,20.51,Maya,Mam,Mam del sur,exact
+zapoteco-de-valles-norte,1,muy alto,2000,38,0,0,2,1303,27,13.54,Oto-mangue,zapoteco,"zapoteco de Valles, norte",exact
+mexicano-del-centro,1,muy alto,2000,39,0,0,3.95,1696,58,0.59,Yuto-nahua,náhuatl,mexicano del centro,exact
+mam-del-norte,1,muy alto,2000,40,0,0,24.16,1755,9,18.71,Maya,Mam,Mam del norte,exact
+mam-de-la-sierra,1,muy alto,2000,41,0,0,2.74,1788,256,2.49,Maya,Mam,Mam de la Sierra,exact
+mexicano-de-puente-de-ixtla,1,muy alto,2000,42,0,0,5.79,2990,26,2.28,Yuto-nahua,náhuatl,mexicano de Puente de Ixtla,exact
+mexicano-del-centro-alto,1,muy alto,2000,43,0,0,3.69,6824,115,1.02,Yuto-nahua,náhuatl,mexicano del centro alto,exact
+zoque-del-sur,1,muy alto,2000,44,28,1,42.86,84,11,93.33,Mixe-zoque,zoque,zoque del sur,exact
+kickapoo,1,muy alto,2000,45,95,1,22.11,105,2,94.06,Álgica,Kickapoo,Kickapoo,exact
+cucapa,1,muy alto,2000,46,74,2,8.11,119,16,45.12,Cochimí-yumana,cucapá,cucapá,exact
+pima-del-norte,1,muy alto,2000,47,57,2,29.82,155,29,38.78,Yuto-nahua,pima,pima del norte,exact
+pima-del-sur,1,muy alto,2000,48,27,1,29.63,159,33,51.92,Yuto-nahua,pima,pima del sur,exact
+paipai,1,muy alto,2000,49,57,1,14.04,162,32,54.29,Cochimí-yumana,paipai,paipai,exact
+zapoteco-de-la-sierra-sur-noroeste-bajo,1,muy alto,2000,50,14,1,0,164,28,43.75,Oto-mangue,zapoteco,"zapoteco de la Sierra sur, noroeste bajo",exact
+chocholteco-del-sur,1,muy alto,2000,51,79,2,10.13,200,10,37.62,Oto-mangue,chocholteco,chocholteco del sur,exact
+mixteco-del-noreste-bajo,1,muy alto,2000,52,86,3,0,220,24,34.26,Oto-mangue,mixteco,mixteco del noreste bajo,exact
+kumiai,1,muy alto,2000,53,92,2,23.91,221,31,46.23,Cochimí-yumana,kumiai,kumiai,exact
+chontal-de-oaxaca-bajo,1,muy alto,2000,54,99,1,9.09,223,4,31.43,Chontal de Oaxaca,chontal de Oaxaca,chontal de Oaxaca bajo,exact
+mixteco-de-san-miguel-piedras,1,muy alto,2000,55,19,1,0,243,7,38.78,Oto-mangue,mixteco,mixteco de San Miguel Piedras,exact
+huichol-del-oeste,1,muy alto,2000,56,81,1,49.38,303,3,69.23,Yuto-nahua,huichol,huichol del oeste,exact
+pame-del-norte,1,muy alto,2000,57,78,1,19.23,337,43,49.37,Oto-mangue,pame,pame del norte,exact
+zapoteco-de-la-sierra-sur-del-este-bajo,1,muy alto,2000,58,11,1,45.45,420,45,57.89,Oto-mangue,zapoteco,"zapoteco de la Sierra sur, del este bajo",exact
+jakalteko,1,muy alto,2000,59,42,1,9.52,504,36,57.53,Maya,Jakalteko,Jakalteko,exact
+mixteco-de-guerrero-de-la-costa-occidental,1,muy alto,2000,60,16,1,43.75,506,54,100,Oto-mangue,mixteco,mixteco de Guerrero de la costa occidental,exact
+mexicano-bajo-de-occidente,1,muy alto,2000,61,37,1,2.7,907,52,36.27,Yuto-nahua,náhuatl,mexicano bajo de occidente,exact
+otomi-del-oeste-del-valle-del-mezquital,1,muy alto,2000,62,19,1,0,2140,92,32.76,Oto-mangue,otomí,otomí del oeste del Valle del Mezquital,exact
+chontal-de-tabasco-del-sureste,1,muy alto,2000,63,51,1,5.88,4976,85,33.33,Maya,chontal de Tabasco,chontal de Tabasco del sureste,exact
+zapoteco-de-valles-del-noroeste-medio,1,muy alto,2000,64,53,2,16.98,20448,61,32.12,Oto-mangue,zapoteco,"zapoteco de Valles, del noroeste medio",exact
+zapoteco-de-zimatlan-de-alvarez,2,alto,2000,65,105,1,2.86,562,9,35.23,Oto-mangue,zapoteco,zapoteco de Zimatlán de Álvarez,exact
+chocholteco-del-este,2,alto,2000,66,127,3,6.3,180,6,41.64,Oto-mangue,chocholteco,chocholteco del este,exact
+mixteco-de-zapotitlan,2,alto,2000,67,147,2,4.76,396,12,36.57,Oto-mangue,mixteco,mixteco de Zapotitlán,exact
+mixteco-de-santa-cruz-itundujia,2,alto,2000,68,225,5,12.89,851,75,38.46,Oto-mangue,mixteco,mixteco de Santa Cruz Itundujia,exact
+zapoteco-de-san-bartolo-yautepec,2,alto,2000,69,241,1,0.83,246,3,36.74,Oto-mangue,zapoteco,zapoteco de San Bartolo Yautepec,exact
+mexicano-del-centro-bajo,2,alto,2000,70,251,1,8.76,492,11,33.38,Yuto-nahua,náhuatl,mexicano del centro bajo,exact
+chontal-de-tabasco-del-norte,2,alto,2000,71,295,2,10.17,3894,95,39.02,Maya,chontal de Tabasco,chontal de Tabasco del norte,exact
+nahuatl-alto-del-norte-de-puebla,2,alto,2000,72,335,1,6.27,1350,63,54.74,Yuto-nahua,náhuatl,náhuatl alto del norte de Puebla,exact
+mixteco-de-villa-de-tututepec,2,alto,2000,73,349,2,11.75,1019,48,31.93,Oto-mangue,mixteco,mixteco de Villa de Tututepec,exact
+seri,2,alto,2000,74,356,2,23.31,356,2,64.73,Seri,Seri,seri,exact
+mixteco-de-san-juan-teita,2,alto,2000,75,363,2,17.08,368,4,70.21,Oto-mangue,mixteco,mixteco de San Juan Teita,exact
+mixteco-de-san-pedro-tidaa,2,alto,2000,76,381,1,2.1,384,2,49.93,Oto-mangue,mixteco,mixteco de San Pedro Tidaá,exact
+chinanteco-central-bajo,2,alto,2000,77,389,2,16.97,442,5,49.05,Oto-mangue,chinanteco,chinanteco central bajo,exact
+mam-del-soconusco,2,alto,2000,78,412,3,11.65,2196,149,33.88,Maya,Mam,Mam del Soconusco,exact
+chatino-de-zacatepec,2,alto,2000,79,453,1,8.17,453,1,42.94,Oto-mangue,chatino,chatino de Zacatepec,exact
+mixteco-de-san-pedro-molinos,2,alto,2000,80,454,4,20.93,464,7,80.78,Oto-mangue,mixteco,mixteco de San Pedro Molinos,exact
+zapoteco-de-san-antonino-el-alto,2,alto,2000,81,462,6,11.04,504,11,46.39,Oto-mangue,zapoteco,zapoteco de San Antonino el Alto,corrected-spelling
+mixteco-alto-de-valles,2,alto,2000,82,516,14,7.17,711,34,46.15,Oto-mangue,mixteco,mixteco alto de Valles,exact
+mixteco-de-tlaltempan,2,alto,2000,83,523,1,8.41,523,1,76.57,Oto-mangue,mixteco,mixteco de Tlaltempan,exact
+zapoteco-de-la-sierra-sur-noroeste-risna,2,alto,2000,84,545,5,11.19,849,21,38.85,Oto-mangue,zapoteco,"zapoteco de la Sierra sur, noroeste",alias:by-localities
+mixteco-de-san-agustin-tlacotepec,2,alto,2000,85,548,9,12.41,555,11,83.41,Oto-mangue,mixteco,mixteco de San Agustín Tlacotepec,exact
+popoloca-del-centro,2,alto,2000,86,637,2,2.2,641,3,40.06,Oto-mangue,popoloca,popoloca del centro,exact
+matlatzinca,2,alto,2000,87,645,1,9.77,645,1,56.63,Oto-mangue,matlatzinca,matlatzinca,exact
+mixteco-del-sureste-central,2,alto,2000,88,711,8,24.05,711,8,83.45,Oto-mangue,mixteco,mixteco del sureste central,exact
+mixteco-de-santa-ines-de-zaragoza,2,alto,2000,89,733,23,3.14,775,32,45.9,Oto-mangue,mixteco,mixteco de Santa Inés de Zaragoza,exact
+mixteco-del-suroeste-de-puebla,2,alto,2000,90,860,1,10.93,1074,20,84.07,Oto-mangue,mixteco,mixteco del suroeste de Puebla,exact
+zapoteco-de-la-sierra-sur-del-sureste-bajo,2,alto,2000,91,979,13,23.39,1087,31,68.18,Oto-mangue,zapoteco,"zapoteco de la Sierra sur, del sureste bajo",exact
+zapoteco-de-valles-noroeste,2,alto,2000,92,1113,1,16.8,2641,30,64.04,Oto-mangue,zapoteco,"zapoteco de Valles, noroeste",exact
+chontal-de-oaxaca-alto,2,alto,2000,93,1367,10,12.07,2197,53,47.71,Chontal de Oaxaca,chontal de Oaxaca,chontal de Oaxaca alto,exact
+mixteco-de-canada-central,2,alto,2000,94,1392,27,10.99,1878,55,49.26,Oto-mangue,mixteco,mixteco de Cañada central,exact
+mazateco-del-sur,2,alto,2000,95,1469,1,16.61,1502,8,82.39,Oto-mangue,mazateco,mazateco del sur,exact
+tepehua-del-sur,2,alto,2000,96,1594,4,14.12,1794,39,47.94,Totonaco-tepehua,tepehua,tepehua del sur,exact
+mexicano-de-tetela-del-volcan,2,alto,2000,97,1897,4,6.27,1953,14,37.2,Yuto-nahua,náhuatl,mexicano de Tetela del Volcán,exact
+mexicano-del-oriente-de-puebla,2,alto,2000,98,2064,16,12.94,4795,76,40.09,Yuto-nahua,náhuatl,mexicano del oriente de Puebla,exact
+zapoteco-de-san-baltazar-chichicapam,2,alto,2000,99,2582,1,23.35,2585,2,96.52,Oto-mangue,zapoteco,zapoteco de San Baltazar Chichicapam,exact
+huasteco-de-oriente,2,alto,2000,100,2807,15,6.56,5964,166,41.63,Maya,huasteco,huasteco de oriente,exact
+zapoteco-serrano-del-oeste,2,alto,2000,101,2998,11,13.98,3164,35,65.24,Oto-mangue,zapoteco,"zapoteco serrano, del oeste",exact
+zoque-del-oeste,2,alto,2000,102,3002,14,14.02,3432,34,53.51,Mixe-zoque,zoque,zoque del oeste,exact
+zapoteco-de-la-montana-del-istmo-alto,2,alto,2000,103,3233,26,14.32,3441,41,67.37,Oto-mangue,zapoteco,"zapoteco de la montaña del Istmo, alto",exact
+mixteco-de-la-frontera-puebla-oaxaca,2,alto,2000,104,3338,29,8.75,3791,74,55.26,Oto-mangue,mixteco,mixteco de la frontera Puebla-Oaxaca,exact
+zapoteco-de-petapa,2,alto,2000,105,3957,19,6.82,4613,35,44.48,Oto-mangue,zapoteco,zapoteco de Petapa,exact
+mayo,2,alto,2000,106,11975,112,7.02,32869,871,42.51,Yuto-nahua,mayo,mayo,exact
+otomi-del-centro,2,alto,2000,107,40605,75,12.11,84652,886,46.71,Oto-mangue,otomí,otomí del centro,exact
+cora-de-rosarito,3,mediano,2000,108,102,1,33.33,102,1,56.67,Yuto-nahua,cora,cora de Rosarito,exact
+mam-de-la-frontera,3,mediano,2000,109,171,6,35.67,949,151,58.76,Maya,Mam,Mam de la frontera,exact
+sayulteco,3,mediano,2000,110,177,9,31.64,3211,52,61.03,Mixe-zoque,sayulteco,sayulteco,exact
+pima-del-este,3,mediano,2000,111,197,10,25.38,337,22,63.55,Yuto-nahua,pima,pima del este,exact
+cora-francisqueno,3,mediano,2000,112,211,1,35.07,211,1,51.84,Yuto-nahua,cora,cora francisqueño,exact
+cora-de-dolores,3,mediano,2000,113,241,1,32.78,241,1,93.41,Yuto-nahua,cora,cora de Dolores,exact
+mixteco-de-guerrero-de-la-costa-este,3,mediano,2000,114,260,9,32.69,2439,122,43.99,Oto-mangue,mixteco,mixteco de Guerrero de la costa este,exact
+akateko,3,mediano,2000,115,291,1,33.68,528,8,60.25,Maya,Akateko,Akateco,alias:spelling
+q-eqchi,3,mediano,2000,116,422,2,46.68,545,7,36.82,Maya,Q'eqchi',Q'eqchi',corrected-spelling
+mexicano-del-noroeste,3,mediano,2000,117,471,15,44.59,592,45,66.34,Yuto-nahua,náhuatl,mexicano del noroeste,exact
+guarijio-del-norte,3,mediano,2000,118,496,15,30.85,696,70,79.11,Yuto-nahua,guarijío,guarijío del norte,exact
+mexicano-central-bajo,3,mediano,2000,119,496,5,32.26,1803,47,68.23,Yuto-nahua,náhuatl,mexicano central bajo,exact
+tlapaneco-del-oeste,3,mediano,2000,120,514,3,36.58,549,6,71.19,Oto-mangue,tlapaneco,tlapaneco del oeste,exact
+guarijio-del-sur,3,mediano,2000,121,515,6,29.32,617,22,80.59,Yuto-nahua,guarijío,guarijío del sur,exact
+tepehuano-del-sur-central,3,mediano,2000,122,534,7,39.51,534,7,89.60,Yuto-nahua,tepehuano del sur,tepehuano del sur central,exact
+tarahumara-de-cumbres,3,mediano,2000,123,540,1,37.59,544,2,70.13,Yuto-nahua,tarahumara,tarahumara de Cumbres,exact
+lacandon,3,mediano,2000,124,556,5,36.15,563,8,94.88,Maya,lacandón,lacandón,exact
+mixteco-de-mitlatongo,3,mediano,2000,125,600,1,35.83,600,1,94.94,Oto-mangue,mixteco,mixteco de Mitlatongo,exact
+zapoteco-de-quiavicuzas,3,mediano,2000,126,623,1,37.72,623,1,97.34,Oto-mangue,zapoteco,zapoteco de Quiavicuzas,exact
+cora-corapeno,3,mediano,2000,127,657,4,34.7,993,44,68.87,Yuto-nahua,cora,cora corapeño,exact
+mixteco-de-xonacatlan,3,mediano,2000,128,666,1,40.99,666,1,99.25,Oto-mangue,mixteco,mixteco de Xonacatlán,exact
+zapoteco-serrano-bajo,3,mediano,2000,129,696,10,25.43,1823,39,49.22,Oto-mangue,zapoteco,"zapoteco serrano, bajo",exact
+mixteco-del-noroeste-medio,3,mediano,2000,130,735,9,28.57,3547,39,74.32,Oto-mangue,mixteco,mixteco del noroeste medio,exact
+mazateco-de-ocopetatillo,3,mediano,2000,131,757,1,29.59,757,1,98.57,Oto-mangue,mazateco,mazateco de Ocopetatillo,exact
+cora-presideno,3,mediano,2000,132,777,12,39.77,1047,47,85.29,Yuto-nahua,cora,cora presideño,exact
+zapoteco-de-santa-maria-temaxcalapa,3,mediano,2000,133,843,1,26.57,843,1,98.48,Oto-mangue,zapoteco,zapoteco de Santa María Temaxcalapa,exact
+mixteco-de-chochoapa,3,mediano,2000,134,856,1,36.8,856,1,98.39,Oto-mangue,mixteco,mixteco de Chochoapa,exact
+mixteco-de-tlahuapa,3,mediano,2000,135,871,1,40.64,871,1,99.54,Oto-mangue,mixteco,mixteco de Tlahuapa,exact
+amuzgo-bajo-del-este,3,mediano,2000,136,885,3,28.59,897,6,52.49,Oto-mangue,amuzgo,amuzgo bajo del este,exact
+cora-de-jesus-maria,3,mediano,2000,137,893,1,33.59,898,2,59.93,Yuto-nahua,cora,cora de Jesús María,exact
+mixteco-de-tlalixtaquilla-de-maldonado,3,mediano,2000,138,902,1,40.8,1046,8,99.12,Oto-mangue,mixteco,mixteco de Tlalixtaquilla de Maldonado,exact
+zapoteco-de-santiago-yaveo,3,mediano,2000,139,912,1,28.62,1170,20,78.96,Oto-mangue,zapoteco,zapoteco de Santiago Yaveo,exact
+mixteco-de-xochistlahuaca,3,mediano,2000,140,944,9,37.39,1026,18,93.74,Oto-mangue,mixteco,mixteco de Xochistlahuaca,exact
+totonaco-del-cerro-xinolatepetl,3,mediano,2000,141,956,2,37.76,999,3,92.28,Totonaco-tepehua,totonaco,totonaco del cerro Xinolatépetl,exact
+mixteco-de-yutanduchi-de-guerrero,3,mediano,2000,142,963,2,27.83,963,2,87.23,Oto-mangue,mixteco,mixteco de Yutanduchi de Guerrero,exact
+mixteco-de-sierra-sur-oeste,3,mediano,2000,143,977,9,44.01,1442,24,71.26,Oto-mangue,mixteco,mixteco de Sierra sur oeste,exact
+mixteco-de-santa-maria-yosoyua,3,mediano,2000,144,996,5,39.96,1005,6,96.70,Oto-mangue,mixteco,mixteco de Santa María Yosoyúa,exact
+mixteco-de-zoyatlan-de-juarez,3,mediano,2000,145,1038,1,39.79,1038,1,99.71,Oto-mangue,mixteco,mixteco de Zoyatlán de Juárez,exact
+cuicateco-del-oriente,3,mediano,2000,146,1050,9,22.67,1641,31,63.48,Oto-mangue,cuicateco,cuicateco del oriente,exact
+chatino-occidental-bajo,3,mediano,2000,147,1067,5,20.81,2640,79,39.49,Oto-mangue,chatino,chatino occidental bajo,exact
+mixteco-de-xochapa,3,mediano,2000,148,1183,1,39.31,1183,1,98.91,Oto-mangue,mixteco,mixteco de Xochapa,exact
+zapoteco-de-la-montana-del-istmo-bajo,3,mediano,2000,149,1285,5,22.18,1757,32,67.67,Oto-mangue,zapoteco,"zapoteco de la montaña del Istmo, bajo",exact
+cuicateco-del-norte,3,mediano,2000,150,1329,8,24.83,1503,25,70.92,Oto-mangue,cuicateco,cuicateco del norte,exact
+mixteco-del-noroeste-central-bajo,3,mediano,2000,151,1393,4,17.37,1393,4,64.88,Oto-mangue,mixteco,mixteco del noroeste central bajo,exact
+mixteco-de-san-juan-tamazola,3,mediano,2000,152,1453,33,18.58,1553,54,51.23,Oto-mangue,mixteco,mixteco de San Juan Tamazola,exact
+zapoteco-de-valles-del-noreste,3,mediano,2000,153,1560,4,24.17,1579,7,77.00,Oto-mangue,zapoteco,"zapoteco de Valles, del noreste",exact
+mixteco-de-yosondua,3,mediano,2000,154,1575,14,15.49,2235,27,53.25,Oto-mangue,mixteco,mixteco de Yosondúa,exact
+zapoteco-serrano-del-oeste-medio,3,mediano,2000,155,2050,4,21.9,2060,7,80.68,Oto-mangue,zapoteco,"zapoteco serrano, del oeste medio",exact
+zapoteco-de-valles-del-oeste-central,3,mediano,2000,156,2059,2,19.96,2067,6,61.55,Oto-mangue,zapoteco,"zapoteco de Valles, del oeste central",exact
+mixteco-del-este,3,mediano,2000,157,2478,66,19.69,3340,93,66.90,Oto-mangue,mixteco,mixteco del este,exact
+huave-del-este,3,mediano,2000,158,2544,3,18.55,2795,14,59.07,Huave,Huave,huave del este,exact
+zapoteco-serrano-del-sureste-medio,3,mediano,2000,159,2555,11,21.14,2557,12,90.25,Oto-mangue,zapoteco,"zapoteco serrano, del sureste medio",exact
+mexicano-de-temixco,3,mediano,2000,160,2595,1,34.45,5139,30,98.07,Yuto-nahua,náhuatl,mexicano de Temixco,exact
+zapoteco-serrano-del-sureste-bajo,3,mediano,2000,161,2670,8,23.63,2673,9,91.78,Oto-mangue,zapoteco,"zapoteco serrano, del sureste bajo",exact
+tepehua-del-norte,3,mediano,2000,162,2715,4,24.01,2786,24,70.26,Totonaco-tepehua,tepehua,tepehua del norte,exact
+totonaco-del-rio-necaxa,3,mediano,2000,163,3060,3,22.58,3273,4,62.35,Totonaco-tepehua,totonaco,totonaco del río Necaxa,exact
+zapoteco-de-san-vicente-coatlan,3,mediano,2000,164,3075,1,35.9,3075,1,95.59,Oto-mangue,zapoteco,zapoteco de San Vicente Coatlán,exact
+mixteco-del-este-central,3,mediano,2000,165,3236,25,20.33,3414,35,66.07,Oto-mangue,mixteco,mixteco del este central,exact
+zapoteco-serrano-del-sureste,3,mediano,2000,166,4507,9,22.72,4509,11,91.33,Oto-mangue,zapoteco,"zapoteco serrano, del sureste",exact
+mixteco-del-sur-bajo,3,mediano,2000,167,5075,34,16.02,5500,44,60.73,Oto-mangue,mixteco,mixteco del sur bajo,exact
+yaqui,3,mediano,2000,168,10044,38,23.6,11805,174,53.19,Yuto-nahua,yaqui,yaqui,exact
+zapoteco-de-valles-del-este-medio,3,mediano,2000,169,10431,13,19.59,10508,22,70.51,Oto-mangue,zapoteco,"zapoteco de Valles, del este medio",exact
+chontal-de-tabasco-del-este,3,mediano,2000,170,12342,17,22.05,13206,71,72.14,Maya,chontal de Tabasco,chontal de Tabasco del este,exact
+chontal-de-tabasco-central,3,mediano,2000,171,12772,20,24.69,14438,80,76.63,Maya,chontal de Tabasco,chontal de Tabasco central,exact
+mazahua-de-occidente,3,mediano,2000,172,21793,37,19.74,26592,81,59.42,Oto-mangue,mazahua,mazahua de occidente,exact
+zapoteco-de-valles-del-norte-central,3,mediano,2000,173,22928,27,20.57,25868,58,77.95,Oto-mangue,zapoteco,"zapoteco de Valles, del norte central",exact
+nahuatl-de-la-sierra-negra-sur,3,mediano,2000,174,32181,14,17.84,32952,25,71.09,Yuto-nahua,náhuatl,"náhuatl de la Sierra negra, sur",exact
+totonaco-de-la-costa,3,mediano,2000,175,34594,159,21.14,58205,801,58.11,Totonaco-tepehua,totonaco,totonaco de la costa,exact
+mazahua-de-oriente,3,mediano,2000,176,48382,91,18.26,74006,427,49.87,Oto-mangue,mazahua,mazahua de oriente,exact
+otomi-del-valle-del-mezquital,3,mediano,2000,177,69998,368,19.94,88537,1106,63.07,Oto-mangue,otomí,otomí del Valle del Mezquital,exact
+zapoteco-de-la-planicie-costera,3,mediano,2000,178,85026,58,18.47,101593,343,71.55,Oto-mangue,zapoteco,zapoteco de la planicie costera,exact
+maya,3,mediano,2000,179,530951,1157,19.42,734611,4083,63.95,Maya,maya,maya,exact
+mazateco-de-acatepec,4,no inmediato,2000,180,1038,4,31.21,1038,4,95.40,Oto-mangue,mazateco,mazateco de Acatepec,exact
+zapoteco-de-santa-maria-quiegolani,4,no inmediato,2000,181,1077,3,35.47,1081,4,97.91,Oto-mangue,zapoteco,zapoteco de Santa María Quiegolani,exact
+mixteco-de-guerrero-del-norte-central,4,no inmediato,2000,182,1098,4,39.44,1280,9,99.46,Oto-mangue,mixteco,mixteco de Guerrero del norte central,exact
+mazateco-de-huehuetlan,4,no inmediato,2000,183,1169,5,28.40,1169,5,93.30,Oto-mangue,mazateco,mazateco de Huehuetlán,exact
+mixteco-de-san-antonio-sinicahua,4,no inmediato,2000,184,1176,10,34.61,1176,10,99.32,Oto-mangue,mixteco,mixteco de San Antonio Sinicahua,exact
+zapoteco-de-la-costa-este,4,no inmediato,2000,185,1218,3,31.12,1590,25,64.79,Oto-mangue,zapoteco,zapoteco de la costa este,exact
+zapoteco-de-santiago-laxopa,4,no inmediato,2000,186,1222,4,30.85,1231,6,97.06,Oto-mangue,zapoteco,zapoteco de Santiago Laxopa,exact
+chuj,4,no inmediato,2000,187,1235,23,39.51,1771,63,65.07,Maya,Chuj,Chuj,exact
+zapoteco-serrano-del-este,4,no inmediato,2000,188,1284,4,28.19,1519,5,98.39,Oto-mangue,zapoteco,"zapoteco serrano, del este",exact
+chichimeco-jonaz,4,no inmediato,2000,189,1287,2,31.55,1362,39,42.45,Oto-mangue,chichimeco jonaz,chichimeco jonaz,exact
+mazateco-de-tecoatl,4,no inmediato,2000,190,1298,6,26.35,1300,7,87.29,Oto-mangue,mazateco,mazateco de Tecóatl,exact
+triqui-de-la-baja,4,no inmediato,2000,191,1329,7,35.59,1412,15,96.23,Oto-mangue,triqui,triqui de la baja,exact
+mixteco-central-de-guerrero,4,no inmediato,2000,192,1465,2,40.89,1513,18,99.39,Oto-mangue,mixteco,mixteco central de Guerrero,exact
+mixteco-de-yosonotu,4,no inmediato,2000,193,1510,16,28.15,1510,16,90.47,Oto-mangue,mixteco,mixteco de Yosonotú,exact
+mixteco-de-san-mateo-penasco,4,no inmediato,2000,194,1522,5,34.03,1522,5,94.83,Oto-mangue,mixteco,mixteco de San Mateo Peñasco,exact
+zapoteco-serrano-del-noroeste,4,no inmediato,2000,195,1583,3,28.74,1587,4,85.11,Oto-mangue,zapoteco,"zapoteco serrano, del noroeste",exact
+zapoteco-serrano-del-sureste-alto,4,no inmediato,2000,196,1597,3,30.81,1597,3,98.52,Oto-mangue,zapoteco,"zapoteco serrano, del sureste alto",exact
+chinanteco-del-noroeste,4,no inmediato,2000,197,1670,5,34.31,1715,10,94.89,Oto-mangue,chinanteco,chinanteco del noroeste,exact
+chatino-oriental-alto,4,no inmediato,2000,198,1742,14,32.66,1796,31,67.23,Oto-mangue,chatino,chatino oriental alto,exact
+tepehuano-del-sur-alto,4,no inmediato,2000,199,1759,60,33.48,2756,212,73.81,Yuto-nahua,tepehuano del sur,tepehuano del sur alto,exact
+chinanteco-del-oeste-central-bajo,4,no inmediato,2000,200,1848,7,36.58,1853,8,97.99,Oto-mangue,chinanteco,chianateco del oeste central bajo,exact
+zoque-del-sureste,4,no inmediato,2000,201,1884,13,39.60,2070,26,92.22,Mixe-zoque,zoque,zoque del sureste,exact
+mixteco-de-san-pablo-tijaltepec,4,no inmediato,2000,202,1917,14,30.46,1926,17,90.55,Oto-mangue,mixteco,mixteco de San Pablo Tijaltepec,exact
+huichol-del-sur,4,no inmediato,2000,203,1938,56,42.47,2130,85,95.05,Yuto-nahua,huichol,huichol del sur,exact
+mixteco-de-igualapa,4,no inmediato,2000,204,1943,5,29.03,2154,14,64.62,Oto-mangue,mixteco,mixteco de Igualapa,exact
+zapoteco-del-oeste-de-tuxtepec,4,no inmediato,2000,205,1983,7,30.81,2675,43,80.71,Oto-mangue,zapoteco,zapoteco del oeste de Tuxtepec,exact
+mexicano-central-de-occidente,4,no inmediato,2000,206,2056,29,35.94,2809,131,71.81,Yuto-nahua,náhuatl,mexicano central de occidente,exact
+mixteco-de-coatzospam,4,no inmediato,2000,207,2091,8,30.08,2091,8,95.18,Oto-mangue,mixteco,mixteco de Coatzóspam,exact
+triqui-de-la-media,4,no inmediato,2000,208,2102,5,41.67,2102,5,95.24,Oto-mangue,triqui,triqui de la media,exact
+tlapaneco-del-noroeste-alto,4,no inmediato,2000,209,2138,5,34.33,2138,5,99.03,Oto-mangue,tlapaneco,tlapaneco del noroeste alto,exact
+mixteco-de-san-antonio-huitepec,4,no inmediato,2000,210,2172,23,25.41,2395,57,75.47,Oto-mangue,mixteco,mixteco de San Antonio Huitepec,exact
+zapoteco-de-la-sierra-sur-oeste-bajo,4,no inmediato,2000,211,2201,14,34.58,2282,20,94.14,Oto-mangue,zapoteco,"zapoteco de la Sierra sur, oeste bajo",exact
+mixteco-de-santo-domingo-tonala,4,no inmediato,2000,212,2224,5,33.63,2279,11,91.52,Oto-mangue,mixteco,mixteco de Santo Domingo Tonalá,exact
+zapoteco-de-san-miguel-aloapam,4,no inmediato,2000,213,2242,3,37.91,2246,4,99.07,Oto-mangue,zapoteco,zapoteco de San Miguel Aloápam,exact
+zapoteco-de-la-sierra-sur-del-sureste-alto,4,no inmediato,2000,214,2259,4,35.28,2259,4,88.69,Oto-mangue,zapoteco,"zapoteco de la Sierra sur, del sureste alto",exact
+zapoteco-de-la-sierra-sur-del-norte,4,no inmediato,2000,215,2266,11,32.39,2273,17,93.21,Oto-mangue,zapoteco,"zapoteco de la Sierra sur, del norte",exact
+zapoteco-de-la-sierra-sur-noroeste-medio,4,no inmediato,2000,216,2356,6,29.80,2443,9,92.00,Oto-mangue,zapoteco,"zapoteco de la Sierra sur, noroeste medio",exact
+mixteco-de-atlamajalcingo,4,no inmediato,2000,217,2359,6,38.07,2396,10,94.89,Oto-mangue,mixteco,mixteco de Atlamajalcingo,exact
+mixteco-de-canada-bajo,4,no inmediato,2000,218,2474,13,27.08,2814,35,84.06,Oto-mangue,mixteco,mixteco de Cañada bajo,exact
+zapoteco-de-valles-del-centro-bajo,4,no inmediato,2000,219,2605,3,33.17,2605,3,97.06,Oto-mangue,zapoteco,"zapoteco de Valles, del centro bajo",exact
+triqui-de-la-alta,4,no inmediato,2000,220,2632,18,32.83,2957,32,95.95,Oto-mangue,triqui,triqui de la alta,exact
+mixteco-del-noroeste-central-alto,4,no inmediato,2000,221,2651,4,41.95,2651,4,95.95,Oto-mangue,mixteco,mixteco del noroeste central alto,exact
+mixteco-de-guerrero-del-norte,4,no inmediato,2000,222,2743,11,33.47,10377,44,89.73,Oto-mangue,mixteco,mixteco de Guerrero del norte,exact
+tsotsil-del-norte-bajo,4,no inmediato,2000,223,2838,30,34.21,6921,63,63.55,Maya,tsotsil,tsotsil del norte bajo,exact
+zapoteco-de-valles-del-suroeste-central,4,no inmediato,2000,224,2844,3,26.41,4438,30,88.32,Oto-mangue,zapoteco,"zapoteco de Valles, del suroeste central",exact
+tepehua-del-oeste,4,no inmediato,2000,225,2855,13,33.52,2931,28,88.14,Totonaco-tepehua,tepehua,tepehua del oeste,exact
+mixteco-de-santa-maria-huazolotitlan,4,no inmediato,2000,226,2899,5,25.22,3052,13,70.21,Oto-mangue,mixteco,mixteco de Santa María Huazolotitlán,exact
+mixteco-del-suroeste-central,4,no inmediato,2000,227,2900,23,35.41,2900,23,92.09,Oto-mangue,mixteco,mixteco del suroeste central,exact
+mixteco-del-noroeste,4,no inmediato,2000,228,2916,17,40.47,3106,33,98.45,Oto-mangue,mixteco,mixteco del noroeste,exact
+zoque-del-noroeste,4,no inmediato,2000,229,3022,24,37.13,3137,38,83.80,Mixe-zoque,zoque,zoque del noroeste,exact
+zapoteco-de-valles-del-sur,4,no inmediato,2000,230,3069,5,29.10,3209,21,70.54,Oto-mangue,zapoteco,zapoteco de Valles del sur,exact
+mixteco-del-sur-medio,4,no inmediato,2000,231,3129,36,30.97,3374,53,86.99,Oto-mangue,mixteco,mixteco del sur medio,exact
+chinanteco-del-sureste-alto,4,no inmediato,2000,232,3132,5,29.89,3136,6,65.77,Oto-mangue,chinanteco,chinanteco del sureste alto,exact
+mazateco-del-sureste,4,no inmediato,2000,233,3182,9,32.72,3192,11,96.95,Oto-mangue,mazateco,mazateco del sureste,exact
+popoloca-de-oriente,4,no inmediato,2000,234,3200,2,32.13,3694,10,90.32,Oto-mangue,popoloca,popoloca de oriente,exact
+tlapaneco-del-este,4,no inmediato,2000,235,3224,14,35.61,3248,19,95.61,Oto-mangue,tlapaneco,tlapaneco del este,exact
+mixe-medio-del-oeste,4,no inmediato,2000,236,3292,12,30.50,3301,14,99.01,Mixe-zoque,mixe,mixe medio del oeste,exact
+tepehuano-del-norte,4,no inmediato,2000,237,3304,110,37.41,4955,317,75.94,Yuto-nahua,tepehuano del norte,tepehuano del norte,exact
+tseltal-del-sur,4,no inmediato,2000,238,3376,32,37.62,5853,341,84.68,Maya,tseltal,tseltal del sur,exact
+mazateco-de-eloxochitlan,4,no inmediato,2000,239,3384,25,32.06,3384,25,95.08,Oto-mangue,mazateco,mazateco de Eloxochitlán,exact
+amuzgo-alto-del-este,4,no inmediato,2000,240,3429,6,36.83,3482,8,79.61,Oto-mangue,amuzgo,amuzgo alto del este,exact
+zoque-del-centro,4,no inmediato,2000,241,3496,19,31.18,6161,212,72.49,Mixe-zoque,zoque,zoque del centro,exact
+mixteco-de-santa-lucia-monteverde,4,no inmediato,2000,242,3568,25,30.16,3816,30,74.26,Oto-mangue,mixteco,mixteco de Santa Lucía Monteverde,exact
+chinanteco-del-oeste,4,no inmediato,2000,243,3586,6,37.12,3586,6,95.37,Oto-mangue,chinanteco,chinanteco del oeste,exact
+cora-tereseno,4,no inmediato,2000,244,3603,74,33.53,3878,137,92.03,Yuto-nahua,cora,cora tereseño,exact
+mixteco-central,4,no inmediato,2000,245,3614,27,33.12,3765,39,94.51,Oto-mangue,mixteco,mixteco central,exact
+zapoteco-de-valles-de-suroeste-alto,4,no inmediato,2000,246,3635,3,26.00,3640,5,87.30,Oto-mangue,zapoteco,"zapoteco de Valles, de suroeste alto",exact
+zapoteco-de-la-sierra-sur-noreste-alto,4,no inmediato,2000,247,3648,9,37.83,3675,13,98.09,Oto-mangue,zapoteco,"zapoteco de la Sierra sur, noroeste alto",alias:direction-conflict
+tarahumara-del-sur,4,no inmediato,2000,248,3818,107,33.55,5409,386,69.56,Yuto-nahua,tarahumara,tarahumara del sur,exact
+zapoteco-de-valles-del-suroeste-medio,4,no inmediato,2000,249,4091,2,25.05,4283,9,81.95,Oto-mangue,zapoteco,"zapoteco de Valles, del suroeste medio",exact
+mixteco-bajo-de-valles,4,no inmediato,2000,250,4331,59,35.88,6028,103,93.42,Oto-mangue,mixteco,mixteco bajo de Valles,exact
+mazateco-de-puebla,4,no inmediato,2000,251,4602,28,32.29,4658,44,88.98,Oto-mangue,mazateco,mazateco de Puebla,exact
+zapoteco-de-texmelucan,4,no inmediato,2000,252,4627,28,35.08,4627,28,98.38,Oto-mangue,zapoteco,zapoteco de Texmelucan,exact
+mixteco-de-guerrero-central-alto,4,no inmediato,2000,253,4630,8,39.76,4630,8,98.83,Oto-mangue,mixteco,mixteco de Guerrero central alto,exact
+tlapaneco-del-norte,4,no inmediato,2000,254,4646,20,35.15,4771,23,90.00,Oto-mangue,tlapaneco,tlapaneco del norte,exact
+zapoteco-de-la-sierra-sur-noroeste-dizde,4,no inmediato,2000,255,5035,13,28.84,5060,16,91.11,Oto-mangue,zapoteco,"zapoteco de la Sierra sur, noreste",alias:direction-conflict
+tarahumara-del-oeste,4,no inmediato,2000,256,5101,244,31.43,9226,1022,85.80,Yuto-nahua,tarahumara,tarahumara del oeste,exact
+mixteco-del-oeste-de-la-costa,4,no inmediato,2000,257,5131,17,34.15,10259,81,75.81,Oto-mangue,mixteco,mixteco del oeste de la costa,exact
+mixteco-del-noreste,4,no inmediato,2000,258,5201,59,31.88,5433,77,84.31,Oto-mangue,mixteco,mixteco del noreste,exact
+mixteco-de-oaxaca-de-la-costa-noroeste,4,no inmediato,2000,259,5305,5,36.17,5578,14,90.99,Oto-mangue,mixteco,mixteco de Oaxaca de la costa noroeste,exact
+mixe-alto-del-norte,4,no inmediato,2000,260,5444,15,32.46,5468,20,93.75,Mixe-zoque,mixe,mixe alto del norte,exact
+mixteco-de-santa-maria-penoles,4,no inmediato,2000,261,5503,30,36.09,5503,30,95.14,Oto-mangue,mixteco,mixteco de Santa María Peñoles,exact
+mixteco-de-santiago-amoltepec,4,no inmediato,2000,262,5524,39,33.87,5627,42,77.55,Oto-mangue,mixteco,mixteco de Santiago Amoltepec,exact
+mixteco-de-tlacoachistlahuaca,4,no inmediato,2000,263,5628,25,37.14,6101,39,95.55,Oto-mangue,mixteco,mixteco de Tlacoachistlahuaca,exact
+cora-meseno,4,no inmediato,2000,264,5731,107,37.06,5984,149,92.87,Yuto-nahua,cora,cora meseño,exact
+mixteco-de-numi,4,no inmediato,2000,265,5790,23,37.51,5790,23,96.92,Oto-mangue,mixteco,mixteco de Ñumi,exact
+mixteco-de-sierra-sur-noroeste,4,no inmediato,2000,266,5814,31,36.76,6172,49,90.99,Oto-mangue,mixteco,mixteco de Sierra sur noroeste,exact
+huichol-del-este,4,no inmediato,2000,267,5816,171,42.04,6340,245,98.98,Yuto-nahua,huichol,huichol del este,exact
+mixteco-del-norte-bajo,4,no inmediato,2000,268,5909,18,31.63,6165,52,85.82,Oto-mangue,mixteco,mixteco del norte bajo,exact
+zoque-del-norte-alto,4,no inmediato,2000,269,5961,32,33.23,7513,93,78.05,Mixe-zoque,zoque,zoque del norte alto,exact
+mixteco-de-coapanatoyac,4,no inmediato,2000,270,6038,27,38.32,6442,35,95.72,Oto-mangue,mixteco,mixteco de Coapanatoyac,exact
+chinanteco-de-la-sierra,4,no inmediato,2000,271,6128,23,34.74,6298,38,88.95,Oto-mangue,chinanteco,chinanteco de la Sierra,exact
+mixteco-de-oaxaca-de-la-costa-oeste-central,4,no inmediato,2000,272,6140,16,33.21,6163,20,90.11,Oto-mangue,mixteco,mixteco de Oaxaca de la costa oeste central,exact
+tlapaneco-del-centro,4,no inmediato,2000,273,6181,34,36.30,6191,36,87.76,Oto-mangue,tlapaneco,tlapaneco del centro,exact
+tlapaneco-del-noroeste-bajo,4,no inmediato,2000,274,6267,19,39.03,6271,20,99.04,Oto-mangue,tlapaneco,tlapaneco del noroeste bajo,exact
+mixteco-de-ixtayutla,4,no inmediato,2000,275,6339,20,37.91,6375,25,94.99,Oto-mangue,mixteco,mixteco de Ixtayutla,exact
+mixteco-de-oaxaca-de-costa-central-baja,4,no inmediato,2000,276,6398,9,28.12,6709,32,53.40,Oto-mangue,mixteco,mixteco de Oaxaca de costa central baja,exact
+nahuatl-del-istmo-bajo,4,no inmediato,2000,277,6450,10,32.54,6800,47,87.95,Yuto-nahua,náhuatl,náhuatl del Istmo bajo,exact
+tarahumara-del-norte,4,no inmediato,2000,278,6453,213,30.62,10032,679,85.47,Yuto-nahua,tarahumara,tarahumara del norte,exact
+mazateco-del-oeste,4,no inmediato,2000,279,6556,32,32.73,6639,38,96.80,Oto-mangue,mazateco,mazateco del oeste,exact
+huichol-del-norte,4,no inmediato,2000,280,6689,113,39.50,8743,314,86.52,Yuto-nahua,huichol,huichol del norte,exact
+pame-del-centro,4,no inmediato,2000,281,6720,67,31.96,7373,147,80.03,Oto-mangue,pame,pame del centro,exact
+q-anjob-al,4,no inmediato,2000,282,6979,38,38.23,8343,134,56.23,Maya,Q'anjob'al,Q'anjob'al,exact
+mexicano-del-oriente-central,4,no inmediato,2000,283,7024,8,25.65,18909,65,70.07,Yuto-nahua,náhuatl,mexicano del oriente central,exact
+mixteco-del-suroeste,4,no inmediato,2000,284,7080,55,31.65,7268,59,93.87,Oto-mangue,mixteco,mixteco del suroeste,exact
+triqui-de-san-juan-copala,4,no inmediato,2000,285,7255,36,41.71,7628,48,96.37,Oto-mangue,triqui,triqui de San Juan Copala,exact
+chatino-oriental-bajo,4,no inmediato,2000,286,7355,31,34.33,8941,76,96.36,Oto-mangue,chatino,chatino oriental bajo,exact
+chinanteco-del-oeste-central-alto,4,no inmediato,2000,287,7398,18,35.35,7411,20,97.92,Oto-mangue,chinanteco,chinanteco del oeste central alto,exact
+nahuatl-de-oaxaca,4,no inmediato,2000,288,7476,45,35.91,8130,62,89.51,Yuto-nahua,náhuatl,náhuatl de Oaxaca,exact
+cuicateco-del-centro,4,no inmediato,2000,289,7509,28,25.30,8675,67,79.18,Oto-mangue,cuicateco,cuicateco del centro,exact
+zapoteco-de-la-costa-noreste,4,no inmediato,2000,290,7614,85,30.72,8482,170,78.68,Oto-mangue,zapoteco,zapoteco de la costa noreste,exact
+otomi-del-noroeste,4,no inmediato,2000,291,7709,32,32.03,12935,382,75.89,Oto-mangue,otomí,otomí del noroeste,exact
+otomi-bajo-del-noroeste,4,no inmediato,2000,292,7738,15,37.05,8528,44,91.43,Oto-mangue,otomí,otomí bajo del noroeste,exact
+mixteco-de-guerrero-del-noreste-central,4,no inmediato,2000,293,7754,23,41.02,7761,24,86.85,Oto-mangue,mixteco,mixteco de Guerrero del noreste central,exact
+zapoteco-de-la-sierra-sur-central,4,no inmediato,2000,294,7936,32,30.15,9975,64,85.36,Oto-mangue,zapoteco,"zapoteco de la Sierra sur, central",exact
+mixe-alto-del-sur,4,no inmediato,2000,295,8070,41,35.89,8088,44,99.35,Mixe-zoque,mixe,mixe alto del sur,exact
+chatino-occidental-alto,4,no inmediato,2000,296,8367,44,34.62,8491,71,89.65,Oto-mangue,chatino,chatino occidental alto,exact
+popoloca-del-norte,4,no inmediato,2000,297,8396,12,36.08,8437,16,84.97,Oto-mangue,popoloca,popoloca del norte,exact
+zoque-del-este,4,no inmediato,2000,298,8425,38,33.54,9003,75,90.81,Mixe-zoque,zoque,zoque del este,exact
+mazateco-de-la-presa-bajo,4,no inmediato,2000,299,8574,21,35.75,8593,24,92.63,Oto-mangue,mazateco,mazateco de la presa bajo,exact
+totonaco-central-alto,4,no inmediato,2000,300,8731,9,33.02,8732,10,98.68,Totonaco-tepehua,totonaco,totonaco central alto,exact
+huave-del-oeste,4,no inmediato,2000,301,9099,9,32.05,9371,19,98.58,Huave,Huave,huave del oeste,exact
+mixteco-de-oeste-central,4,no inmediato,2000,302,9141,76,33.88,9166,80,96.67,Oto-mangue,mixteco,mixteco de oeste central,exact
+tsotsil-del-este-alto,4,no inmediato,2000,303,9142,27,33.52,9526,32,90.70,Maya,tsotsil,tsotsil del este alto,exact
+zapoteco-de-sierra-sur-del-noreste-alto,4,no inmediato,2000,304,9248,53,33.20,9692,70,98.02,Oto-mangue,zapoteco,"zapoteco de Sierra sur, del noreste alto",exact
+zapoteco-de-la-costa-oeste,4,no inmediato,2000,305,9264,44,37.06,9742,69,77.28,Oto-mangue,zapoteco,zapoteco de la costa oeste,exact
+mixteco-de-ayutla,4,no inmediato,2000,306,9744,37,35.05,11574,79,94.23,Oto-mangue,mixteco,mixteco de Ayutla,exact
+mixteco-de-san-luis-acatlan,4,no inmediato,2000,307,9858,27,35.84,10573,51,93.73,Oto-mangue,mixteco,mixteco de San Luis Acatlán,exact
+zapoteco-de-valles-del-este-central,4,no inmediato,2000,308,9912,25,33.80,9942,30,97.73,Oto-mangue,zapoteco,"zapoteco de Valles, del este central",exact
+totonaco-central-del-norte,4,no inmediato,2000,309,10197,50,28.86,15052,352,69.39,Totonaco-tepehua,totonaco,totonaco central del norte,exact
+chinanteco-del-sureste-bajo,4,no inmediato,2000,310,10608,48,34.25,10670,53,86.21,Oto-mangue,chinanteco,chinanteco del sureste bajo,exact
+amuzgo-del-sur,4,no inmediato,2000,311,10671,33,35.63,12703,160,82.24,Oto-mangue,amuzgo,amuzgo del sur,exact
+chinanteco-del-sureste-medio,4,no inmediato,2000,312,10865,42,36.93,11840,85,87.02,Oto-mangue,chinanteco,chinanteco del sureste medio,exact
+mazateco-del-suroeste,4,no inmediato,2000,313,11757,99,33.21,12033,103,92.13,Oto-mangue,mazateco,mazateco del suroeste,exact
+tepehuano-del-sur-bajo,4,no inmediato,2000,314,11763,328,38.28,13003,525,93.66,Yuto-nahua,tepehuano del sur,tepehuano del sur bajo,exact
+tsotsil-de-los-altos,4,no inmediato,2000,315,12562,61,35.38,12909,74,87.11,Maya,tsotsil,tsotsil de los Altos,exact
+mixteco-del-oeste,4,no inmediato,2000,316,13827,54,37.81,14213,83,95.15,Oto-mangue,mixteco,mixteco del oeste,exact
+zapoteco-serrano-del-noroeste-bajo,4,no inmediato,2000,317,14514,42,27.48,14780,49,90.53,Oto-mangue,zapoteco,"zapoteco serrano, del noroeste bajo",exact
+chatino-central,4,no inmediato,2000,318,15433,39,37.81,16047,82,96.28,Oto-mangue,chatino,chatino central,exact
+zoque-del-norte-bajo,4,no inmediato,2000,319,15689,72,31.84,15952,102,79.38,Mixe-zoque,zoque,zoque del norte bajo,exact
+mixe-alto-del-centro,4,no inmediato,2000,320,16782,80,33.67,16810,84,97.07,Mixe-zoque,mixe,mixe alto del centro,exact
+nahuatl-de-la-sierra-oeste-de-puebla,4,no inmediato,2000,321,17154,51,33.74,19482,148,88.40,Yuto-nahua,náhuatl,náhuatl de la Sierra oeste de Puebla,exact
+mixteco-del-oeste-alto,4,no inmediato,2000,322,17313,59,27.55,20941,140,77.96,Oto-mangue,mixteco,mixteco del oeste alto,exact
+mazateco-del-este-bajo,4,no inmediato,2000,323,17406,33,32.99,17520,44,90.94,Oto-mangue,mazateco,mazateco del este bajo,exact
+chinanteco-central,4,no inmediato,2000,324,17995,88,33.57,21144,145,85.28,Oto-mangue,chinanteco,chinanteco central,exact
+mixteco-de-oaxaca-de-la-costa-central,4,no inmediato,2000,325,19694,38,33.99,20058,72,78.18,Oto-mangue,mixteco,mixteco de Oaxaca de la costa central,exact
+amuzgo-del-norte,4,no inmediato,2000,326,19789,84,32.61,19903,115,91.45,Oto-mangue,amuzgo,amuzgo del norte,exact
+mazateco-del-norte,4,no inmediato,2000,327,20006,102,32.46,20243,129,94.03,Oto-mangue,mazateco,mazateco del norte,exact
+mazateco-de-la-presa-alto,4,no inmediato,2000,328,20493,144,34.52,20502,145,97.86,Oto-mangue,mazateco,mazateco de la presa alto,exact
+mixteco-de-guerrero-del-este-medio,4,no inmediato,2000,329,21838,145,37.02,21873,151,99.28,Oto-mangue,mixteco,mixteco de Guerrero del este medio,exact
+mixe-medio-del-este,4,no inmediato,2000,330,22135,70,31.57,22489,110,96.33,Mixe-zoque,mixe,mixe medio del este,exact
+tlapaneco-del-suroeste,4,no inmediato,2000,331,23613,100,39.70,23772,111,97.95,Oto-mangue,tlapaneco,tlapaneco del suroeste,exact
+tarahumara-del-centro,4,no inmediato,2000,332,23749,733,33.32,29717,1547,86.14,Yuto-nahua,tarahumara,tarahumara del centro,exact
+nahuatl-del-istmo,4,no inmediato,2000,333,24378,44,27.44,26636,165,70.17,Yuto-nahua,náhuatl,náhuatl del Istmo,exact
+ch-ol-del-sureste,4,no inmediato,2000,334,24590,101,34.10,27199,316,92.31,Maya,ch'ol,ch'ol del sureste,exact
+popoluca-de-la-sierra,4,no inmediato,2000,335,24900,60,34.34,26017,85,85.19,Mixe-zoque,popoluca de la Sierra,popoluca de la Sierra,exact
+mazateco-del-noreste,4,no inmediato,2000,336,26428,53,31.17,27514,108,77.75,Oto-mangue,mazateco,mazateco del noreste,exact
+tsotsil-del-este-bajo,4,no inmediato,2000,337,27981,65,35.53,29404,111,96.94,Maya,tsotsil,tsotsil del este bajo,exact
+zapoteco-de-la-costa-central,4,no inmediato,2000,338,28769,166,33.67,32704,411,83.23,Oto-mangue,zapoteco,zapoteco de la costa central,exact
+tojolabal,4,no inmediato,2000,339,28785,128,34.76,34315,322,91.38,Maya,tojolabal,tojolabal,exact
+tlapaneco-central-bajo,4,no inmediato,2000,340,28878,117,37.82,29671,146,92.74,Oto-mangue,tlapaneco,tlapaneco central bajo,exact
+mixe-bajo,4,no inmediato,2000,341,31182,74,31.11,35043,157,88.27,Mixe-zoque,mixe,mixe bajo,exact
+mazateco-del-centro,4,no inmediato,2000,342,33797,121,30.41,33813,123,94.50,Oto-mangue,mazateco,mazateco del centro,exact
+chinanteco-del-norte,4,no inmediato,2000,343,36204,121,28.73,37900,169,73.58,Oto-mangue,chinanteco,chinanteco del norte,exact
+otomi-de-la-sierra,4,no inmediato,2000,344,38328,136,31.24,43460,694,79.85,Oto-mangue,otomí,otomí de la Sierra,exact
+huasteco-del-centro,4,no inmediato,2000,345,38677,175,31.89,41888,343,87.72,Maya,huasteco,huasteco del centro,exact
+tsotsil-del-noroeste,4,no inmediato,2000,346,41201,179,37.14,41289,182,93.99,Maya,tsotsil,tsotsil del noroeste,exact
+nahuatl-del-centro-de-puebla,4,no inmediato,2000,347,41386,78,26.54,72534,371,72.98,Yuto-nahua,náhuatl,náhuatl del centro de Puebla,exact
+tsotsil-del-centro,4,no inmediato,2000,348,56670,149,35.55,57107,170,97.01,Maya,tsotsil,tsotsil del centro,exact
+nahuatl-del-noreste-central,4,no inmediato,2000,349,58486,125,30.83,71040,398,81.31,Yuto-nahua,náhuatl,náhuatl del noroeste central,alias:direction-conflict
+tseltal-del-oriente,4,no inmediato,2000,350,65279,346,36.54,70313,731,77.92,Maya,tseltal,tseltal del oriente,exact
+tsotsil-del-norte-alto,4,no inmediato,2000,351,70961,369,36.53,77699,665,83.41,Maya,tsotsil,tsotsil del norte alto,exact
+huasteco-del-occidente,4,no inmediato,2000,352,74219,354,33.44,84092,952,87.85,Maya,huasteco,huasteco del occidente,exact
+tseltal-del-norte,4,no inmediato,2000,353,76567,588,36.86,84198,1011,91.46,Maya,tseltal,tseltal del norte,exact
+purepecha,4,no inmediato,2000,354,87280,75,29.93,102988,354,84.44,Tarasca,Tarasca,purépecha,exact
+nahuatl-de-la-sierra-negra-norte,4,no inmediato,2000,355,90538,304,33.69,109215,449,92.07,Yuto-nahua,náhuatl,"náhuatl de la Sierra negra, norte",exact
+tseltal-del-occidente,4,no inmediato,2000,356,95965,294,36.11,112753,612,95.92,Maya,tseltal,tseltal del occidente,exact
+ch-ol-del-noroeste,4,no inmediato,2000,357,107204,477,34.88,117379,925,88.33,Maya,ch'ol,ch'ol del noroeste,exact
+nahuatl-central-de-veracruz,4,no inmediato,2000,358,109244,460,29.99,118427,685,84.04,Yuto-nahua,náhuatl,náhuatl central de Veracruz,exact
+mexicano-de-guerrero,4,no inmediato,2000,359,110766,363,34.04,124762,871,87.57,Yuto-nahua,náhuatl,mexicano de Guerrero,exact
+totonaco-central-del-sur,4,no inmediato,2000,360,112854,230,29.62,114913,338,87.75,Totonaco-tepehua,totonaco,totonaco central del sur,exact
+nahuatl-de-la-sierra-noreste-de-puebla,4,no inmediato,2000,361,115852,407,28.12,134737,916,73.27,Yuto-nahua,náhuatl,"náhuatl de la Sierra, noreste de Puebla",exact
+nahuatl-de-la-huasteca-potosina,4,no inmediato,2000,362,117775,592,30.72,133234,1340,81.92,Yuto-nahua,náhuatl,náhuatl de la Huasteca potosina,exact
+nahuatl-de-la-huasteca-veracruzana,4,no inmediato,2000,363,118123,634,28.98,135841,1514,78.46,Yuto-nahua,náhuatl,náhuatl de la Huasteca veracruzana,exact
+mexicano-de-la-huasteca-hidalguense,4,no inmediato,2000,364,180407,559,31.31,195770,863,86.60,Yuto-nahua,náhuatl,mexicano de la Huasteca Hidalguense,exact
