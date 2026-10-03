@@ -1,5 +1,43 @@
 # Changelog
 
+## 2026-10-02 — Item 8b: variant-to-identity link (decision)
+
+- **Built: the group-level link only.** `variants.csv` has a new column,
+  `variant_glottocode`: the Glottocode of the variant's group, filled only
+  where `crosswalk.csv` resolves that group directly (`exact` or
+  `macrolanguage`). It is filled for 136 of 364 variants (184 of 476 rows),
+  in 44 groups: the 43 exact groups (74 variants) and zapoteco, the one
+  macrolanguage group (62 variants, all carrying the subgroup node
+  `zapo1437`). It is blank for the 21 many-to-one groups (210 variants) and
+  the 3 unresolved groups (18 variants). Nothing is interpolated.
+  **It is the group's code, not a variant-specific one**: in 30 groups the
+  group has a single variant, so the two coincide; in the other 14 the
+  variants of a group all share one code.
+- **Shelved, not abandoned: a variant-level match.** The spike matched each
+  variant against Glottolog 5.3's language and dialect nodes inside its own
+  group, by Spanish name, by the place name in it, and by autonym. Result:
+  51 of 364 matched a single node by name; 30 more resolve trivially (one
+  variant, one language); 93 matched several nodes; 190 matched none.
+  Reasons for not building on it:
+  - **The two systems classify at non-corresponding granularities.** INALI
+    names most variants by direction ("mixteco del noroeste medio");
+    Glottolog names languages and dialects by town. 156 variant names have
+    nothing to match on. Counts do not line up either (mixteco: 81 variants,
+    52 Glottolog languages, 34 dialects), so the relation is many-to-many.
+  - **22% resolution (81 of 364), none of it verified, is not a usable
+    base.** Twelve of the 51 name matches are several variants landing on
+    one language. 89 INALI names do appear verbatim among Glottolog's
+    alternative names, but that source repeats a cluster's whole list of
+    INALI names on every language in the cluster (up to 14 nodes for one
+    name), so a hit is not evidence.
+  - Glottolog does have finer-than-ISO nodes for Mexico (204 dialect nodes
+    under 72 of the 281 member languages), but only 8 variants matched one.
+- **Also shelved: a geography-based link** (variant localities against
+  Glottolog coordinates). Not started and not tested.
+- The 51 single-node name matches are kept in
+  `spikes/candidate_name_matches.csv`, every row marked UNVERIFIED. They are
+  not identity data and nothing reads them.
+
 ## 2026-10-02 — Municipio alias pass (item 8)
 
 - **Method.** `municipio_aliases.csv` maps a municipio name as the catalog

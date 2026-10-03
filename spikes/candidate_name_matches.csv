@@ -1,0 +1,52 @@
+variant,spanish_name,group,candidate_glottocode,glottolog_name,glottolog_level,iso639_3,matched_on,node_shared_with_other_variants,status
+amuzgo-del-norte,amuzgo del norte,amuzgo,guer1243,Guerrero Amuzgo,language,amu,autonym,,UNVERIFIED
+chatino-occidental-alto,chatino occidental alto,chatino,zenz1235,Zenzontepec Chatino,language,czn,spanish-name,,UNVERIFIED
+chinanteco-central-bajo,chinanteco central bajo,chinanteco,vall1253,Valle Nacional Chinantec,language,cvn,spanish-name,,UNVERIFIED
+chinanteco-del-noroeste,chinanteco del noroeste,chinanteco,tlac1239,Tlacoatzintepec Chinantec,language,ctl,spanish-name,,UNVERIFIED
+chinanteco-del-norte,chinanteco del norte,chinanteco,ojit1237,Ojitlán Chinantec,language,chj,spanish-name,,UNVERIFIED
+chinanteco-del-oeste,chinanteco del oeste,chinanteco,soch1239,Sochiapam Chinantec,language,cso,spanish-name,,UNVERIFIED
+chinanteco-del-oeste-central-alto,chinanteco del oeste central alto,chinanteco,usil1237,Usila Chinantec,language,cuc,spanish-name,,UNVERIFIED
+chinanteco-del-oeste-central-bajo,chianateco del oeste central bajo,chinanteco,tepe1279,Tepetotutla Chinantec,language,cnt,autonym,,UNVERIFIED
+chinanteco-del-sureste-alto,chinanteco del sureste alto,chinanteco,ozum1235,Ozumacín Chinantec,language,chz,spanish-name,,UNVERIFIED
+chinanteco-del-sureste-bajo,chinanteco del sureste bajo,chinanteco,lala1270,Lalana Chinantec,language,cnl,spanish-name,,UNVERIFIED
+chinanteco-del-sureste-medio,chinanteco del sureste medio,chinanteco,tepi1241,Tepinapa Chinantec,language,cte,spanish-name,,UNVERIFIED
+cora-de-dolores,cora de Dolores,cora,dolo1238,Dolores Cora,dialect,,place-name,,UNVERIFIED
+cora-de-jesus-maria,cora de Jesús María,cora,jesu1238,Jesús María Cora,dialect,,place-name,,UNVERIFIED
+cora-de-rosarito,cora de Rosarito,cora,rosa1238,Rosarito Cora,dialect,,place-name,,UNVERIFIED
+guarijio-del-norte,guarijío del norte,guarijío,huar1255,Huarijio,language,var,spanish-name,,UNVERIFIED
+huasteco-de-oriente,huasteco de oriente,huasteco,huas1242,Huastec,language,hus,autonym,yes,UNVERIFIED
+huasteco-del-centro,huasteco del centro,huasteco,huas1242,Huastec,language,hus,autonym,yes,UNVERIFIED
+huasteco-del-occidente,huasteco del occidente,huasteco,huas1242,Huastec,language,hus,autonym,yes,UNVERIFIED
+ixil-chajuleno,Ixil chajuleño,Ixil,ixil1251,Ixil,language,ixl,autonym,yes,UNVERIFIED
+ixil-nebajeno,Ixil nebajeño,Ixil,ixil1251,Ixil,language,ixl,autonym,yes,UNVERIFIED
+k-iche-central,K’iche’ (central),K'iche',kich1262,K'iche',language,quc,spanish-name,yes,UNVERIFIED
+k-iche-occidental,K’iche’ (occidental,K'iche',kich1262,K'iche',language,quc,autonym,yes,UNVERIFIED
+k-iche-oriental,K’iche’ (oriental),K'iche',kich1262,K'iche',language,quc,autonym,yes,UNVERIFIED
+mazateco-de-ocopetatillo,mazateco de Ocopetatillo,mazateco,sant1455,Santa Cruz Ocopetatillo Mazatec,dialect,,place-name,,UNVERIFIED
+mazateco-de-puebla,mazateco de Puebla,mazateco,pueb1234,Puebla and Northeastern Mazatec,language,pbm,place-name,,UNVERIFIED
+mazateco-del-este-bajo,mazateco del este bajo,mazateco,jala1237,Jalapa De Díaz Mazatec,language,maj,spanish-name,,UNVERIFIED
+mexicano-de-guerrero,mexicano de Guerrero,náhuatl,guer1241,Central Guerrero Nahuatl,language,ngu,place-name,,UNVERIFIED
+mixe-bajo,mixe bajo,mixe,toto1305,Totontepec Mixe,language,mto,autonym,,UNVERIFIED
+mixteco-de-atlamajalcingo,mixteco de Atlamajalcingo,mixteco,atla1271,Atlamajalcingo del Monte,dialect,,place-name,,UNVERIFIED
+mixteco-de-ixtayutla,mixteco de Ixtayutla,mixteco,ixta1235,Ixtayutla Mixtec,language,vmj,place-name,,UNVERIFIED
+mixteco-de-oeste-central,mixteco de oeste central,mixteco,mixt1425,Mixtepec Mixtec,language,mix,spanish-name,,UNVERIFIED
+mixteco-de-san-agustin-tlacotepec,mixteco de San Agustín Tlacotepec,mixteco,sana1284,San Agustín Tlacotepec,dialect,,place-name,,UNVERIFIED
+mixteco-de-san-mateo-penasco,mixteco de San Mateo Peñasco,mixteco,sanm1293,San Mateo Peñasco Mixtec,dialect,,place-name,,UNVERIFIED
+nahuatl-de-la-sierra-negra-norte,"náhuatl de la Sierra negra, norte",náhuatl,sier1248,Sierra Negra Nahuatl,language,nsu,place-name,yes,UNVERIFIED
+nahuatl-de-la-sierra-negra-sur,"náhuatl de la Sierra negra, sur",náhuatl,sier1248,Sierra Negra Nahuatl,language,nsu,place-name,yes,UNVERIFIED
+nahuatl-de-oaxaca,náhuatl de Oaxaca,náhuatl,nort2958,Northern Oaxaca Nahuatl,language,nhy,place-name,,UNVERIFIED
+otomi-del-centro,otomí del centro,otomí,mezq1235,Mezquital Otomi,language,ote,autonym,yes,UNVERIFIED
+otomi-del-valle-del-mezquital,otomí del Valle del Mezquital,otomí,mezq1235,Mezquital Otomi,language,ote,spanish-name,yes,UNVERIFIED
+pame-del-centro,pame del centro,pame,cent2145,Central Pame,language,pbs,spanish-name,,UNVERIFIED
+pame-del-norte,pame del norte,pame,nort2984,Northern Pame,language,pmq,spanish-name,,UNVERIFIED
+popoloca-del-poniente,popoloca del poniente,popoloca,sanf1264,San Felipe Otlaltepec Popoloca,language,pow,spanish-name,,UNVERIFIED
+tarahumara-del-centro,tarahumara del centro,tarahumara,cent2131,Central Tarahumara,language,tar,spanish-name,,UNVERIFIED
+tarahumara-del-norte,tarahumara del norte,tarahumara,nort2956,Northern Tarahumara,language,thh,spanish-name,,UNVERIFIED
+totonaco-del-rio-necaxa,totonaco del río Necaxa,totonaco,uppe1275,Upper Necaxa Totonac,language,tku,place-name,,UNVERIFIED
+totonaco-del-sureste,totonaco del sureste,totonaco,yecu1235,Yecuatla Totonac,language,tlc,autonym,,UNVERIFIED
+triqui-de-san-juan-copala,triqui de San Juan Copala,triqui,copa1237,Copala Triqui,language,trc,spanish-name,,UNVERIFIED
+tuzanteco,tuzanteco,qato'k,tuza1238,Tuzanteco,dialect,,spanish-name,,UNVERIFIED
+zapoteco-de-quiavicuzas,zapoteco de Quiavicuzas,zapoteco,quia1235,Quiavicuzas Zapotec,language,zpj,spanish-name,,UNVERIFIED
+zapoteco-de-san-vicente-coatlan,zapoteco de San Vicente Coatlán,zapoteco,sanv1242,San Vicente Coatlán Zapotec,language,zpt,spanish-name,,UNVERIFIED
+zapoteco-de-santa-maria-quiegolani,zapoteco de Santa María Quiegolani,zapoteco,sant1451,Santa María Quiegolani Zapotec,language,zpi,spanish-name,,UNVERIFIED
+zapoteco-de-texmelucan,zapoteco de Texmelucan,zapoteco,texm1235,Texmelucan Zapotec,language,zpz,place-name,,UNVERIFIED

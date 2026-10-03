@@ -8,6 +8,9 @@ Part 1: Appendix 4 -> variants.csv, one row per (variant, autonym) pair:
 Appendix 4, misprints included. `autonym` is the body's spelling where the
 two differ (autonym_overrides.csv), otherwise the same. `variant` is an identifier (lower case, no accents, hyphens) made
 from the Spanish name after correcting known misprints (CORRECTIONS).
+`variant_glottocode` is the Glottocode of the variant's group, filled only
+where crosswalk.csv resolves that group directly (exact or macrolanguage)
+and blank otherwise. It is not a variant-specific code.
 `group` uses the spelling in inali_groups.csv so it joins to crosswalk.csv;
 Appendix 4 prints four group names slightly differently (see CHANGELOG.md).
 
@@ -168,6 +171,18 @@ def main():
         if set(body) - hit:
             problems.append("autonym overrides that match nothing: %s" % sorted(set(body) - hit))
 
+    # Group-level identity link. A variant gets its group's Glottocode only
+    # where crosswalk.csv resolves the group to a single code directly
+    # (match_type exact or macrolanguage). For many-to-one and unresolved
+    # groups the column is left blank: the group's code there is an inferred
+    # common ancestor, or missing, and nothing is interpolated.
+    # This is the code of the variant's GROUP, not of the variant itself.
+    link = {c["inali_name"]: c["canonical_glottocode"]
+            for c in csv.DictReader(open(ROOT / "crosswalk.csv", encoding="utf-8"))
+            if c["match_type"] in ("exact", "macrolanguage")}
+    for r in rows:
+        r.append(link.get(r[3], ""))
+
     found = {"variants": len({r[0] for r in rows}), "autonyms": len(rows),
              "groups": len({r[3] for r in rows}), "families": len({r[4] for r in rows})}
     problems += ["%s: expected %d, found %d" % (k, EXPECTED[k], found[k]) for k in EXPECTED if found[k] != EXPECTED[k]]
@@ -181,15 +196,18 @@ def main():
     multi = {k: v for k, v in split.items() if len(v) > 1}
     if multi:
         problems.append("variants assigned to more than one group: %s" % multi)
-    if any(not all(r) for r in rows):
-        problems.append("rows with an empty cell: %s" % [r for r in rows if not all(r)])
+    # Every column must be filled except variant_glottocode (the last), which
+    # is blank on purpose where the group has no direct code.
+    if any(not all(r[:6]) for r in rows):
+        problems.append("rows with an empty cell: %s" % [r for r in rows if not all(r[:6])][:5])
     print("found:", found)
     if problems:
         sys.exit("CHECKS FAILED, nothing written:\n  " + "\n  ".join(problems))
     order = list(seed.values())
     with open(ROOT / "variants.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f, lineterminator="\n")
-        w.writerow(["variant", "autonym", "spanish_name", "group", "family", "autonym_appendix4"])
+        w.writerow(["variant", "autonym", "spanish_name", "group", "family", "autonym_appendix4",
+                    "variant_glottocode"])
         w.writerows(sorted(rows, key=lambda r: (order.index(r[3]), r[0], r[1])))
     print("all checks passed; wrote variants.csv: %d rows" % len(rows))
     print("group names respelled to match inali_groups.csv:", respelled)

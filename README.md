@@ -173,7 +173,7 @@ the weekly run.
 
 | File | Rows | What it holds |
 |---|---|---|
-| `variants.csv` | 476 | One row per variant and autonym: `variant` (identifier), `autonym` (as the body prints it), `spanish_name`, `group`, `family`, `autonym_appendix4` (as Appendix 4 prints it). 364 variants, 68 groups, 11 families. |
+| `variants.csv` | 476 | One row per variant and autonym: `variant` (identifier), `autonym` (as the body prints it), `spanish_name`, `group`, `family`, `autonym_appendix4` (as Appendix 4 prints it), `variant_glottocode` (see below). 364 variants, 68 groups, 11 families. |
 | `variant_ipa.csv` | 476 | IPA for each variant and autonym. `ipa_status` is `extracted`, `corrected-by-hand`, or `in-review` (IPA left blank). |
 | `variant_localities.csv` | 43,989 | One row per variant, state, municipio and locality: `state_code` and `state` (INEGI), `state_raw` (as printed), `municipio_code` (INEGI 2020, blank if unresolved), `municipio` and `locality` (as printed). |
 | `review_list.csv` | varies | Everything held for a manual pass, with page, reason and detail. Nothing in it is guessed elsewhere. |
@@ -189,8 +189,13 @@ Hand-maintained inputs, each row with its reason or evidence:
 | `reference/inegi_municipios_2020.csv` | INEGI's 2,469 municipalities, taken from the 2020 census locality file. |
 
 `group` in `variants.csv` uses the same spelling as `crosswalk.csv`, so the
-two join at group level. Variants are not yet linked to ISO 639-3 codes or
-Glottocodes.
+two join at group level.
+
+`variant_glottocode` is the Glottocode of the variant's **group**, not of
+the variant. It is filled only where `crosswalk.csv` resolves the group
+directly (`exact` or `macrolanguage`): 136 of 364 variants, in 44 groups. It
+is blank for the 21 many-to-one groups and the 3 unresolved groups; nothing
+is interpolated. No variant-specific identifier exists yet.
 
 ### Rebuilding
 
@@ -219,6 +224,10 @@ python3 tools/parse_inali_catalog.py    # again, to apply autonym_overrides.csv 
 
 ## Known gaps
 
+- No variant-level link to Glottolog or ISO 639-3. A name-based match and a
+  geography-based match are both shelved (reasons in `CHANGELOG.md`, item
+  8b). `spikes/candidate_name_matches.csv` holds 51 unverified name matches
+  from the spike; it is not identity data.
 - INALI risk grade per variant is not in this 2008 catalog — it comes from
   a separate, later INALI publication. Queued for a future pass once the
   variant-identity link (item 8b) is closed. Not started.
