@@ -7,7 +7,8 @@ deployed to GitHub Pages by `.github/workflows/deploy-site.yml`.
 cd site
 npm ci
 npm run dev      # local preview
-npm run build    # writes site/dist
+npm run check    # type check only
+npm run build    # type check, then writes site/dist
 ```
 
 ## Languages and links

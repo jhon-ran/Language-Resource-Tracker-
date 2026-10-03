@@ -43,7 +43,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build
+      # `npm run build` is `astro check && astro build`: a type error,
+      # including a key missing from one locale's dictionary, fails the
+      # job before anything is deployed.
+      - name: Type-check and build
         run: npm run build
 
       - name: Upload Pages artifact
