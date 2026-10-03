@@ -1,5 +1,65 @@
 # Changelog
 
+## 2026-10-02 — INALI catalog (CLIN 2008): known quirks, for the methods write-up
+
+Source: `https://www.inali.gob.mx/pdf/CLIN_completo.pdf` (Diario Oficial,
+14 January 2008; 256 pages; sha256
+`21cef44abf0d896555f26954bf319340ad4814fa8a3f0719b0d068311ff1be7c`). The
+`http://` address is not reachable from the build environment; `https://` is.
+
+Layout quirks found in the spike:
+
+- **Rotated-page artifacts.** The table pages are landscape. The Diario
+  Oficial running heads ("DIARIO OFICIAL", "(Primera Sección)", "Lunes 14
+  de enero de 2008", page numbers) come out as stray text in the middle of
+  the extracted lines and must be stripped.
+- **Cross-page continuation notes.** Entries run across pages, with notes
+  such as "(Viene de la página 78 de la Primera Sección)" and "(Viene de
+  la Segunda Sección)" inside the tables.
+- **Three misprinted table headers.** "REFERECIA GEOESTADÍSTICA" twice
+  (amuzgo, triqui) and "REGIÓN GEOESTADÍSTICA" once (chatino), instead of
+  "REFERENCIA GEOESTADÍSTICA".
+- **ixcateco state name.** Its geography reads "OAXACA de JUÁREZ"; every
+  other Oaxaca entry reads "OAXACA".
+- Municipality names are bold in the PDF and lose that in plain text;
+  square brackets appear in the geography as locality corrections, not
+  only as IPA.
+
+Appendix 4 does not match the totals the catalog states for itself.
+`variants.csv` is built from Appendix 4 by `tools/parse_inali_catalog.py`,
+which checks 476 autonyms, 364 variants, 68 groups and 11 families before
+writing anything.
+
+- **476 autonym rows, not the stated 475: the catalog's own figure is off
+  by one.** Evidence, two independent counts of Appendix 4 (PDF pages
+  244-256):
+  1. `pdftotext -layout`: 476 lines carry a family name in the last
+     column; per page 33, 32, 30, 34, 41, 41, 40, 39, 40, 41, 36, 36, 33.
+  2. `pdftotext -raw` (a different extraction mode, no column layout):
+     476 lines end in a family name.
+  No row is duplicated and all 476 autonym strings are distinct. The
+  script asserts 476.
+- **363 distinct Spanish names for 364 variants.** Two separate zapoteco
+  entries in the body share the name "zapoteco de la Sierra sur,
+  noroeste": PDF p. 117 (autonyms risna, rixhna) and PDF p. 122 (autonyms
+  ditsë, dizde (de la Sierra sur, noroeste)). All four autonyms were
+  confirmed against the page text and the rendered page, not inferred.
+  Appendix 4 lists the four under the one name. `variants.csv` splits them
+  into `zapoteco-de-la-sierra-sur-noroeste-risna` and
+  `zapoteco-de-la-sierra-sur-noroeste-dizde`; `spanish_name` is the same
+  for both, as printed.
+- **Group names.** The `group` column uses the spelling in
+  `inali_groups.csv` so it joins to `crosswalk.csv`. Appendix 4 prints
+  four of them differently: "K’iche’" and "Q’anjob’al" (curly
+  apostrophes), "Q’eqchi’" (curly apostrophes, no accent; INALI's current
+  list has Q'eqchí'), and "popoluca de la sierra" (lower-case s).
+- **Misprints in variant names.** `spanish_name` keeps them exactly as
+  printed. The `variant` identifier is built from a corrected form:
+  "chianateco del oeste central bajo" (chinanteco), "K’iche’ (occidental"
+  (missing bracket), "Q’eqchi" (missing apostrophe), "zapoteco de San
+  Antonio el Alto" (the body and the municipality are "San Antonino el
+  Alto").
+
 ## 2026-10-02 — Weekly workflow
 
 - Added `.github/workflows/snapshot.yml`: Mondays 06:17 UTC plus manual

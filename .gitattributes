@@ -1,0 +1,9 @@
+# Data and code are stored and checked out with Unix (LF) line endings on
+# every platform, so a Windows checkout does not show committed files as
+# modified. Scripts write LF explicitly.
+*.csv   text eol=lf
+*.json  text eol=lf
+*.py    text eol=lf
+*.yml   text eol=lf
+*.md    text eol=lf
+.gitattributes text eol=lf
