@@ -19,7 +19,7 @@ export default {
   'footer.sources': 'Fuentes',
 
   'home.eyebrow': 'Datos abiertos · actualización semanal',
-  'home.title': '¿Qué lenguas tienen datos, modelos y corpus, y cuáles no?',
+  'home.title': '¿Qué lenguas tienen datos, modelos y corpus, y *cuáles no*?',
   'home.lede': 'Cada semana registramos qué conjuntos de datos, modelos, corpus de voz, treebanks y herramientas existen para las 68 agrupaciones lingüísticas de México, junto a su grado de riesgo y su número de hablantes.',
   'home.stats.title': 'Última instantánea',
   'home.stats.groups': 'Agrupaciones lingüísticas',
@@ -32,7 +32,7 @@ export default {
   'home.stats.date.note': 'Semanal, solo se agrega',
   'home.stats.principle': 'Cada valor se guarda con la fecha en que se midió. Los indicadores nunca se mezclan en un solo puntaje.',
 
-  'scatter.title': 'Más hablantes no siempre significa más recursos',
+  'scatter.title': 'Más hablantes *no siempre* significa más recursos',
   'scatter.lede': 'Cada punto es una agrupación lingüística. A la derecha, más hablantes; hacia arriba, más tipos de recursos digitales. El color indica el grado de riesgo del INALI.',
   'scatter.x': 'Hablantes de 3 años y más (Censo 2020, escala logarítmica)',
   'scatter.y': 'Tipos de recursos con al menos un registro (de 5)',

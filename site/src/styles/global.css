@@ -33,6 +33,25 @@
   --font-stat: var(--font-display);
   --stat-size: 34px;
   --stat-weight: 600;
+  /* The snapshot date tile; the dark theme sets it in serif italic. */
+  --stat-date-font: var(--font-stat);
+  --stat-date-style: normal;
+
+  --display-weight: 600;
+
+  /* Headlines with an emphasized phrase are written twice (see
+     Emphasis.astro): once as plain text, once with <em>. This theme shows
+     the plain copy, so its text is laid out exactly as if no emphasis
+     existed; the dark theme shows the marked copy, in italic. */
+  --emph-plain: inline;
+  --emph-marked: none;
+
+  /* Third bar of the header mark. */
+  --mark-third: var(--risk-2);
+
+  /* Indicator cards get a colored left border in the dark theme only. */
+  --cat-border: 0px;
+  --cat-pad: 0px;
 
   --gutter: clamp(16px, 4vw, 48px);
   --content: 1312px;
@@ -80,11 +99,37 @@
   --risk-3: #cd5760;
   --risk-4: #873740;
 
-  /* No serif in this theme: condensed Plex for headlines, mono for figures. */
-  --font-display: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif;
+  /* Heavy serif headlines with italic emphasis; mono for figures. */
+  --display-weight: 800;
+  --emph-plain: none;
+  --emph-marked: inline;
+  /* The mark's third bar is the text color here, not a risk color.
+     Accent against --ink: protan 19.7, deutan 22.9, normal 24.7.
+     OPEN COLOR-SYSTEM ISSUE: the verdigris accent and the "alto" risk
+     step are indistinguishable for red-blind viewers (4.5, target 8).
+     Keeping them apart is not the fix. If a page puts them near each
+     other, stop and raise it: the likely fix is a different accent hue,
+     not a layout workaround. */
+  --mark-third: var(--ink);
   --font-stat: var(--font-mono);
-  --stat-size: 30px;
-  --stat-weight: 500;
+  --stat-size: 36px;
+  --stat-weight: 600;
+  --stat-date-font: var(--font-display);
+  --stat-date-style: italic;
+
+  /* Categorical colors, one per resource indicator. Fixed assignment:
+     a color always means the same indicator. No red or pink (the risk
+     ramp) and none near the verdigris accent. Dataviz palette validator
+     on #161b22, all pairs: colorblind 8.9 (target 8), normal vision 15.5
+     (floor 15), contrast 3:1 or better; also separate from the accent.
+     Margins are thin: re-run the validator before changing any of them. */
+  --cat-datasets: #1269d8;   /* Hugging Face datasets */
+  --cat-models: #868ad3;     /* Hugging Face models */
+  --cat-speech: #8a4ca5;     /* Common Voice */
+  --cat-treebanks: #427135;  /* Universal Dependencies */
+  --cat-asr: #a78e17;        /* Omnilingual ASR */
+  --cat-border: 4px;
+  --cat-pad: 12px;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
@@ -107,11 +152,37 @@
     --risk-3: #cd5760;
     --risk-4: #873740;
 
-    /* No serif in this theme: condensed Plex for headlines, mono for figures. */
-    --font-display: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif;
+    /* Heavy serif headlines with italic emphasis; mono for figures. */
+    --display-weight: 800;
+    --emph-plain: none;
+    --emph-marked: inline;
+    /* The mark's third bar is the text color here, not a risk color.
+       Accent against --ink: protan 19.7, deutan 22.9, normal 24.7.
+       OPEN COLOR-SYSTEM ISSUE: the verdigris accent and the "alto" risk
+       step are indistinguishable for red-blind viewers (4.5, target 8).
+       Keeping them apart is not the fix. If a page puts them near each
+       other, stop and raise it: the likely fix is a different accent hue,
+       not a layout workaround. */
+    --mark-third: var(--ink);
     --font-stat: var(--font-mono);
-    --stat-size: 30px;
-    --stat-weight: 500;
+    --stat-size: 36px;
+    --stat-weight: 600;
+    --stat-date-font: var(--font-display);
+    --stat-date-style: italic;
+
+    /* Categorical colors, one per resource indicator. Fixed assignment:
+       a color always means the same indicator. No red or pink (the risk
+       ramp) and none near the verdigris accent. Dataviz palette validator
+       on #161b22, all pairs: colorblind 8.9 (target 8), normal vision 15.5
+       (floor 15), contrast 3:1 or better; also separate from the accent.
+       Margins are thin: re-run the validator before changing any of them. */
+    --cat-datasets: #1269d8;   /* Hugging Face datasets */
+    --cat-models: #868ad3;     /* Hugging Face models */
+    --cat-speech: #8a4ca5;     /* Common Voice */
+    --cat-treebanks: #427135;  /* Universal Dependencies */
+    --cat-asr: #a78e17;        /* Omnilingual ASR */
+    --cat-border: 4px;
+    --cat-pad: 12px;
   }
 }
 
@@ -149,8 +220,18 @@ h1,
 h2,
 h3 {
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: var(--display-weight);
   margin: 0;
+}
+
+.emph-plain {
+  display: var(--emph-plain);
+}
+.emph-marked {
+  display: var(--emph-marked);
+}
+.emph-marked em {
+  font-style: italic;
 }
 
 .wrap {

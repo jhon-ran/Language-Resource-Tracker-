@@ -1,0 +1,16 @@
+---
+// A headline string with *asterisk-marked* emphasis, written twice: a
+// plain copy and a copy with <em>. CSS shows one per theme (see the
+// --emph-* tokens in global.css); the hidden copy is display: none, so
+// it is not read out, searched or copied.
+import { emphasize } from '../i18n/ui';
+
+interface Props {
+  text: string;
+}
+
+const { text } = Astro.props;
+const plain = text.replace(/\*/g, '');
+---
+
+<!-- Deliberate, not a leftover: two copies of this text, one shown per theme (plain in light, italic emphasis in dark). --><span class="emph-plain">{plain}</span><span class="emph-marked" set:html={emphasize(text)} />

@@ -34,3 +34,12 @@ export function localePath(locale: Locale, path = ''): string {
 export function otherLocale(locale: Locale): Locale {
   return locale === 'es' ? 'en' : 'es';
 }
+
+/**
+ * Turns *asterisk-marked* words in a UI string into <em>, for headlines.
+ * The text is HTML-escaped first, so the result is safe for set:html.
+ */
+export function emphasize(text: string): string {
+  const escaped = text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  return escaped.replace(/\*([^*]+)\*/g, '<em>$1</em>');
+}

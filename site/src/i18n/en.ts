@@ -20,7 +20,7 @@ const en: Record<keyof typeof es, string> = {
   'footer.sources': 'Sources',
 
   'home.eyebrow': 'Open data · updated weekly',
-  'home.title': 'Which languages have data, models and corpora, and which do not?',
+  'home.title': 'Which languages have data, models and corpora, and *which do not*?',
   'home.lede': "Every week we record which datasets, models, speech corpora, treebanks and tools exist for Mexico's 68 language groups, set beside their risk grade and number of speakers.",
   'home.stats.title': 'Latest snapshot',
   'home.stats.groups': 'Language groups',
@@ -33,7 +33,7 @@ const en: Record<keyof typeof es, string> = {
   'home.stats.date.note': 'Weekly, append-only',
   'home.stats.principle': 'Every value is stored with the date it was measured. Indicators are never blended into a single score.',
 
-  'scatter.title': 'More speakers does not always mean more resources',
+  'scatter.title': 'More speakers does *not always* mean more resources',
   'scatter.lede': "Each dot is a language group. Further right, more speakers; further up, more kinds of digital resource. Color shows INALI's risk grade.",
   'scatter.x': 'Speakers aged 3 and over (2020 Census, log scale)',
   'scatter.y': 'Kinds of resource with at least one record (of 5)',

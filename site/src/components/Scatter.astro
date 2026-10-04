@@ -4,6 +4,7 @@
 // scripts/build-data.mjs); this component only shapes it for the chart
 // and hands it to the browser, where Observable Plot draws it.
 import home from '../data/home.json';
+import Emphasis from './Emphasis.astro';
 import { useTranslations, type Locale } from '../i18n/ui';
 
 interface Props {
@@ -55,7 +56,7 @@ const config = {
 ---
 
 <section class="wrap scatter" aria-labelledby="scatter-title">
-  <h2 id="scatter-title">{t('scatter.title')}</h2>
+  <h2 id="scatter-title"><Emphasis text={t('scatter.title')} /></h2>
   <p class="lede">{t('scatter.lede')}</p>
 
   <div class="card panel">

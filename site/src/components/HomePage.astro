@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Scatter from './Scatter.astro';
 import home from '../data/home.json';
+import Emphasis from './Emphasis.astro';
 import { useTranslations, type Locale } from '../i18n/ui';
 
 interface Props {
@@ -37,7 +38,7 @@ const stats = [
   <section class="wrap hero">
     <div class="intro">
       <div class="eyebrow">{t('home.eyebrow')}</div>
-      <h1>{t('home.title')}</h1>
+      <h1><Emphasis text={t('home.title')} /></h1>
       <p class="lede">{t('home.lede')}</p>
     </div>
 
@@ -112,6 +113,8 @@ const stats = [
     line-height: 1.1;
   }
   dd.small {
+    font-family: var(--stat-date-font);
+    font-style: var(--stat-date-style);
     font-size: clamp(19px, 5vw, 24px);
     line-height: 1.55;
     white-space: nowrap;
