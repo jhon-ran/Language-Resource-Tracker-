@@ -1,5 +1,5 @@
 ---
-import '@fontsource-variable/fraunces';
+import '@fontsource-variable/source-serif-4';
 import '@fontsource/ibm-plex-sans/400.css';
 import '@fontsource/ibm-plex-sans/500.css';
 import '@fontsource/ibm-plex-sans/600.css';
@@ -47,9 +47,9 @@ const sources = ['Glottolog', 'Hugging Face', 'Common Voice', 'Universal Depende
       <div class="wrap bar">
         <a class="brand" href={localePath(locale)}>
           <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
-            <rect x="2" y="3" width="10" height="4" fill="var(--teal)"></rect>
-            <rect x="2" y="11" width="18" height="4" fill="var(--teal)"></rect>
-            <rect x="2" y="19" width="14" height="4" fill="var(--terracotta)"></rect>
+            <rect x="2" y="3" width="10" height="4" fill="var(--accent)"></rect>
+            <rect x="2" y="11" width="18" height="4" fill="var(--accent)"></rect>
+            <rect x="2" y="19" width="14" height="4" fill="var(--risk-2)"></rect>
           </svg>
           <span>{SITE_NAME}</span>
         </a>
@@ -128,14 +128,14 @@ const sources = ['Glottolog', 'Hugging Face', 'Common Voice', 'Universal Depende
     border-bottom: 1px solid var(--line);
   }
   .bar {
-    min-height: 76px;
+    min-height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 12px 32px;
     flex-wrap: wrap;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
   .brand {
     display: flex;
@@ -144,7 +144,7 @@ const sources = ['Glottolog', 'Hugging Face', 'Common Voice', 'Universal Depende
     text-decoration: none;
     color: var(--ink);
     font-family: var(--font-display);
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 600;
   }
   nav ul {
@@ -163,10 +163,10 @@ const sources = ['Glottolog', 'Hugging Face', 'Common Voice', 'Universal Depende
     display: inline-block;
   }
   nav a:hover {
-    color: var(--teal-dark);
+    color: var(--accent-dark);
   }
   nav a[aria-current='page'] {
-    border-bottom: 2px solid var(--teal);
+    border-bottom: 2px solid var(--accent);
   }
   .planned {
     color: var(--ink-muted);
@@ -179,11 +179,11 @@ const sources = ['Glottolog', 'Hugging Face', 'Common Voice', 'Universal Depende
     font-family: var(--font-mono);
     font-size: 13px;
     border: 1px solid var(--line);
-    border-radius: 6px;
+    border-radius: 4px;
     overflow: hidden;
   }
   .lang a {
-    padding: 8px 12px;
+    padding: 6px 10px;
     color: var(--ink);
     text-decoration: none;
   }
@@ -199,9 +199,9 @@ const sources = ['Glottolog', 'Hugging Face', 'Common Voice', 'Universal Depende
   }
 
   .site-footer {
-    margin-top: 72px;
+    margin-top: 44px;
     border-top: 1px solid var(--line);
-    padding: 48px 0 40px;
+    padding: 28px 0 24px;
     font-size: 14px;
     color: var(--ink-muted);
   }
@@ -221,8 +221,8 @@ const sources = ['Glottolog', 'Hugging Face', 'Common Voice', 'Universal Depende
     color: var(--ink);
   }
   .sources {
-    margin: 28px 0 0;
-    padding-top: 16px;
+    margin: 20px 0 0;
+    padding-top: 12px;
     border-top: 1px solid var(--line);
     font-family: var(--font-mono);
     font-size: 12px;

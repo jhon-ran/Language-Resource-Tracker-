@@ -148,7 +148,7 @@ const config = {
       const narrow = width < 560;
       const chart = Plot.plot({
         width,
-        height: narrow ? 380 : 460,
+        height: narrow ? 360 : 420,
         marginTop: 16,
         marginRight: narrow ? 12 : 28,
         marginBottom: 28,
@@ -241,20 +241,20 @@ const config = {
 
 <style>
   .scatter {
-    margin-top: 16px;
+    margin-top: 4px;
   }
   h2 {
-    font-size: clamp(26px, 3.2vw, 34px);
+    font-size: clamp(23px, 2.6vw, 28px);
     line-height: 1.15;
     letter-spacing: -0.005em;
   }
   .lede {
-    margin: 8px 0 24px;
+    margin: 4px 0 14px;
     color: var(--ink-muted);
     max-width: 72ch;
   }
   .panel {
-    padding: clamp(16px, 2.5vw, 28px);
+    padding: clamp(12px, 1.8vw, 20px);
   }
   .legend {
     display: flex;
@@ -262,7 +262,7 @@ const config = {
     align-items: center;
     gap: 8px 24px;
     font-size: 14px;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
   }
   .legend-title,
   .axis-title {
@@ -301,12 +301,12 @@ const config = {
     border: 1px solid color-mix(in srgb, var(--ink) 60%, transparent);
   }
   .plot {
-    min-height: 380px;
+    min-height: 360px;
   }
   .notes {
     border-top: 1px solid var(--line-soft);
-    margin-top: 12px;
-    padding-top: 12px;
+    margin-top: 10px;
+    padding-top: 10px;
     font-size: 13px;
     color: var(--ink-muted);
   }

@@ -1,36 +1,36 @@
-/* Design tokens, adapted from the UI mock. */
+/* Design tokens. */
 :root {
-  --bg: #f5f1e8;          /* cream page ground */
-  --surface: #fcfaf5;     /* cards and chart ground */
-  --band: #efe8d8;        /* tinted full-width band */
-  --ink: #1e2622;
-  --ink-muted: #566058;
-  --line: #d9d2c3;
-  --line-soft: #e6dfd0;
+  --bg: #eae7e0;          /* cool stone page ground */
+  --surface: #f4f2ec;     /* cards and chart ground */
+  --band: #e0dcd3;        /* tinted full-width band */
+  --ink: #161b22;         /* deep navy-black */
+  --ink-muted: #4f5764;
+  --line: #cbc7be;
+  --line-soft: #ddd9d1;
 
-  /* Teal: resources, links, primary actions. */
-  --teal: #1f6f6b;
-  --teal-dark: #14504d;
+  /* Indigo: links, resources, UI. */
+  --accent: #2b3f6b;
+  --accent-dark: #1d2c4d;
 
-  /* Terracotta: endangerment and risk. */
-  --terracotta: #b4562e;  /* the brand terracotta, for marks and accents */
+  /* Risk ramp: one red hue, dark = higher risk. Every pair separates for
+     normal and colorblind vision (dataviz palette validator, all pairs).
+     The palest step fails contrast on --surface when drawn alone (1.39:1,
+     floor 2:1); it is only acceptable with a dark outline around the mark.
+     PERMANENT RULE: every mark filled from this ramp carries the outline,
+     on every step and in every chart. Never remove it or make it
+     conditional. Re-run the validator before changing a step. */
+  --risk-1: #6e1f2a;
+  --risk-2: #a8545e;
+  --risk-3: #c98e95;
+  --risk-4: #e3c9cb;
 
-  /* Risk ramp: one hue, dark = higher risk. Stepped so that every pair is
-     told apart with normal and colorblind vision, and the palest step
-     still shows on --surface. Checked with the dataviz palette validator
-     (ordinal mode, surface #fcfaf5); re-run it before changing a step. */
-  --risk-1: #4e1c0c;
-  --risk-2: #8f370f;
-  --risk-3: #bf683d;
-  --risk-4: #dba681;
-
-  --font-display: 'Fraunces Variable', Georgia, serif;
+  --font-display: 'Source Serif 4 Variable', Georgia, serif;
   --font-sans: 'IBM Plex Sans', system-ui, sans-serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
 
-  --gutter: clamp(16px, 4.5vw, 64px);
+  --gutter: clamp(16px, 4vw, 48px);
   --content: 1312px;
-  --radius: 8px;
+  --radius: 4px;
 }
 
 *,
@@ -49,17 +49,17 @@ body {
   color: var(--ink);
   font-family: var(--font-sans);
   font-size: 16px;
-  line-height: 1.55;
+  line-height: 1.5;
 }
 
 a {
-  color: var(--teal);
+  color: var(--accent);
 }
 a:hover {
-  color: var(--teal-dark);
+  color: var(--accent-dark);
 }
 :focus-visible {
-  outline: 2px solid var(--teal);
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
@@ -67,7 +67,7 @@ h1,
 h2,
 h3 {
   font-family: var(--font-display);
-  font-weight: 500;
+  font-weight: 600;
   margin: 0;
 }
 
