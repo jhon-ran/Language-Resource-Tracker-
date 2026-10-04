@@ -12,6 +12,8 @@
    OKLCH (5 degrees of hue, 0.02 in lightness and chroma), with red and
    pink excluded. The grid is not exhaustive: better margins may exist
    between grid points. Tritan separation is not part of the bar.
+   Hover colors (--accent-hover) are held to the same bar against the
+   risk steps and indicators; they are part of the system.
    RULE: changing any one of the ten means re-running the joint check
    for that theme, not a single-color check. */
 
@@ -27,7 +29,10 @@
 
   /* Indigo: links, resources, UI. */
   --accent: #2b3f6b;
-  --accent-hover: #1d2c4d;
+  /* Hover is a color decision too, checked against the same nine colors
+     as the accent (risk steps and indicators). The first value, #1d2c4d,
+     failed against "muy alto" (7.4). This one: worst pair 12.7. */
+  --accent-hover: #182469;
 
   /* Risk ramp: one red hue, dark = higher risk. Every pair separates for
      normal and colorblind vision (dataviz palette validator, all pairs).
@@ -127,7 +132,12 @@
      Joint check: accent against risk 9.1 (muy alto) and 9.4 (alto),
      both THIN; against the indicators 10.4 (models). */
   --accent: #42c2cc;
-  --accent-hover: #74d5dc;
+  /* Hover, checked against the same nine colors as the accent. The
+     first value, #74d5dc (a lighter accent), failed against "muy alto"
+     (3.6): lightening the accent walks it into the pale end of the
+     risk ramp. This one shifts toward blue instead. Worst colorblind
+     pair 10.9 (muy alto and models); worst normal vision 17.9. */
+  --accent-hover: #2dc5f9;
 
   --risk-1: #ffcfd2;
   --risk-2: #f68f96;
@@ -179,7 +189,12 @@
        Joint check: accent against risk 9.1 (muy alto) and 9.4 (alto),
        both THIN; against the indicators 10.4 (models). */
     --accent: #42c2cc;
-    --accent-hover: #74d5dc;
+    /* Hover, checked against the same nine colors as the accent. The
+       first value, #74d5dc (a lighter accent), failed against "muy alto"
+       (3.6): lightening the accent walks it into the pale end of the
+       risk ramp. This one shifts toward blue instead. Worst colorblind
+       pair 10.9 (muy alto and models); worst normal vision 17.9. */
+    --accent-hover: #2dc5f9;
 
     --risk-1: #ffcfd2;
     --risk-2: #f68f96;
