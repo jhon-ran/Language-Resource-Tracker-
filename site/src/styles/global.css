@@ -1,5 +1,6 @@
 /* Design tokens. */
 :root {
+  color-scheme: light;
   --bg: #eae7e0;          /* cool stone page ground */
   --surface: #f4f2ec;     /* cards and chart ground */
   --band: #e0dcd3;        /* tinted full-width band */
@@ -10,7 +11,7 @@
 
   /* Indigo: links, resources, UI. */
   --accent: #2b3f6b;
-  --accent-dark: #1d2c4d;
+  --accent-hover: #1d2c4d;
 
   /* Risk ramp: one red hue, dark = higher risk. Every pair separates for
      normal and colorblind vision (dataviz palette validator, all pairs).
@@ -28,9 +29,69 @@
   --font-sans: 'IBM Plex Sans', system-ui, sans-serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
 
+  /* Figures in stat tiles: display serif here, mono in the dark theme. */
+  --font-stat: var(--font-display);
+  --stat-size: 34px;
+  --stat-weight: 600;
+
   --gutter: clamp(16px, 4vw, 48px);
   --content: 1312px;
   --radius: 4px;
+}
+
+/* Dark theme (prototype, home page only). The light tokens above are
+   the base; this block only overrides them. It applies when the visitor
+   picks dark with the header toggle (data-theme="dark"), or when their
+   system asks for dark and they have not picked light.
+
+   The two rule sets below must stay identical: CSS has no way to share
+   one declaration list between an attribute selector and a media query.
+
+   NOT YET THEMED: the --risk-* ramp. It is the light ramp, unvalidated
+   on these surfaces, and needs its own design and validator pass. */
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #0d1117;      /* near-black, slight cool undertone */
+  --surface: #161b22;   /* one step lighter: cards and chart ground */
+  --band: #11161d;
+  --ink: #e6edf3;     /* off-white, not pure white */
+  --ink-muted: #8b949e;
+  --line: #30363d;
+  --line-soft: #21262d;
+
+  /* One accent. Verdigris: distinct from the red risk ramp and from the
+     blue/violet accents this register usually carries. */
+  --accent: #4fb8a5;
+  --accent-hover: #74cdbc;
+
+  /* No serif in this theme: condensed Plex for headlines, mono for figures. */
+  --font-display: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif;
+  --font-stat: var(--font-mono);
+  --stat-size: 30px;
+  --stat-weight: 500;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+    --bg: #0d1117;          /* near-black, slight cool undertone */
+    --surface: #161b22;     /* one step lighter: cards and chart ground */
+    --band: #11161d;
+    --ink: #e6edf3;         /* off-white, not pure white */
+    --ink-muted: #8b949e;
+    --line: #30363d;
+    --line-soft: #21262d;
+
+    /* One accent. Verdigris: distinct from the red risk ramp and from the
+       blue/violet accents this register usually carries. */
+    --accent: #4fb8a5;
+    --accent-hover: #74cdbc;
+
+    /* No serif in this theme: condensed Plex for headlines, mono for figures. */
+    --font-display: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif;
+    --font-stat: var(--font-mono);
+    --stat-size: 30px;
+    --stat-weight: 500;
+  }
 }
 
 *,
@@ -56,7 +117,7 @@ a {
   color: var(--accent);
 }
 a:hover {
-  color: var(--accent-dark);
+  color: var(--accent-hover);
 }
 :focus-visible {
   outline: 2px solid var(--accent);

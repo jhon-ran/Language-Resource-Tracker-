@@ -229,6 +229,7 @@ const config = {
     };
 
     draw();
+    document.addEventListener('themechange', draw);
     let lastWidth = host.clientWidth;
     new ResizeObserver(() => {
       if (host.clientWidth !== lastWidth) {

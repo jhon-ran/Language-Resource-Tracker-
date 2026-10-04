@@ -5,6 +5,7 @@ import type es from './es';
 const en: Record<keyof typeof es, string> = {
   'site.tagline': 'digital resources for the languages of Mexico',
   'lang.switch.label': 'Language',
+  'theme.toggle': 'Switch between light and dark theme',
   'nav.label': 'Main',
   'nav.home': 'Home',
   'nav.languages': 'Languages',

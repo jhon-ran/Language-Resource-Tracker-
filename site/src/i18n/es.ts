@@ -4,6 +4,7 @@
 export default {
   'site.tagline': 'recursos digitales de las lenguas de México',
   'lang.switch.label': 'Idioma',
+  'theme.toggle': 'Cambiar entre tema claro y oscuro',
   'nav.label': 'Principal',
   'nav.home': 'Inicio',
   'nav.languages': 'Lenguas',
