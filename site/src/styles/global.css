@@ -1,4 +1,20 @@
 /* Design tokens. */
+/* HOW THE COLOR SYSTEM WAS VALIDATED (both themes)
+   Ten colors per theme are checked together, not one at a time: the
+   accent, the four risk steps and the five indicator colors, for every
+   pairing that occurs on a page (link next to risk swatch, indicator
+   border next to risk, indicator next to indicator, link next to
+   indicator border, risk step next to risk step).
+   Pass bar per pair: colorblind separation >= 8 (worse of protan and
+   deutan, OKLab delta E x100), normal vision >= 15, and each indicator
+   color >= 3:1 on --surface. Tool: the dataviz palette validator.
+   The indicator and dark-accent values came from a grid search over
+   OKLCH (5 degrees of hue, 0.02 in lightness and chroma), with red and
+   pink excluded. The grid is not exhaustive: better margins may exist
+   between grid points. Tritan separation is not part of the bar.
+   RULE: changing any one of the ten means re-running the joint check
+   for that theme, not a single-color check. */
+
 :root {
   color-scheme: light;
   --bg: #eae7e0;          /* cool stone page ground */
@@ -49,9 +65,25 @@
   /* Third bar of the header mark. */
   --mark-third: var(--risk-2);
 
-  /* Indicator cards get a colored left border in the dark theme only. */
-  --cat-border: 0px;
-  --cat-pad: 0px;
+  /* Indicator colors, one per resource indicator. Fixed assignment: a
+     color always means the same indicator. Shown as a 4px border on the
+     indicator's card or column.
+     Joint check, light theme (see the note at the top of this file):
+     no failing pair. Worst colorblind separation by pairing:
+       indicator next to risk       9.7  (asr / alto)        THIN
+       link next to indicator      10.7  (accent / speech)
+       indicator next to indicator 11.3  (datasets / speech)
+       link next to risk           11.5  (accent / muy alto)
+     Worst normal-vision pair: 16.0 (accent / muy alto; floor 15) THIN.
+     Datasets and asr sit at the edge of the displayable range, with
+     chroma just at the validator's floor of 0.10. */
+  --cat-datasets: #007b9c;   /* Hugging Face datasets */
+  --cat-models: #7960fb;     /* Hugging Face models */
+  --cat-speech: #830ba9;     /* Common Voice */
+  --cat-treebanks: #659815;  /* Universal Dependencies */
+  --cat-asr: #5c5c00;        /* Omnilingual ASR */
+  --cat-border: 4px;
+  --cat-pad: 12px;
 
   --gutter: clamp(16px, 4vw, 48px);
   --content: 1312px;
@@ -89,10 +121,13 @@
   --line: #30363d;
   --line-soft: #21262d;
 
-  /* One accent. Verdigris: distinct from the red risk ramp and from the
-     blue/violet accents this register usually carries. */
-  --accent: #4fb8a5;
-  --accent-hover: #74cdbc;
+  /* One accent: teal-cyan. It replaced verdigris (#4fb8a5), which was
+     indistinguishable from the "alto" risk step for red-blind viewers
+     (4.5); no teal clears the risk ramp, so the hue moved toward cyan.
+     Joint check: accent against risk 9.1 (muy alto) and 9.4 (alto),
+     both THIN; against the indicators 10.4 (models). */
+  --accent: #42c2cc;
+  --accent-hover: #74d5dc;
 
   --risk-1: #ffcfd2;
   --risk-2: #f68f96;
@@ -103,13 +138,7 @@
   --display-weight: 800;
   --emph-plain: none;
   --emph-marked: inline;
-  /* The mark's third bar is the text color here, not a risk color.
-     Accent against --ink: protan 19.7, deutan 22.9, normal 24.7.
-     OPEN COLOR-SYSTEM ISSUE: the verdigris accent and the "alto" risk
-     step are indistinguishable for red-blind viewers (4.5, target 8).
-     Keeping them apart is not the fix. If a page puts them near each
-     other, stop and raise it: the likely fix is a different accent hue,
-     not a layout workaround. */
+  /* The mark's third bar is the text color here, not a risk color. */
   --mark-third: var(--ink);
   --font-stat: var(--font-mono);
   --stat-size: 36px;
@@ -117,19 +146,21 @@
   --stat-date-font: var(--font-display);
   --stat-date-style: italic;
 
-  /* Categorical colors, one per resource indicator. Fixed assignment:
-     a color always means the same indicator. No red or pink (the risk
-     ramp) and none near the verdigris accent. Dataviz palette validator
-     on #161b22, all pairs: colorblind 8.9 (target 8), normal vision 15.5
-     (floor 15), contrast 3:1 or better; also separate from the accent.
-     Margins are thin: re-run the validator before changing any of them. */
-  --cat-datasets: #1269d8;   /* Hugging Face datasets */
-  --cat-models: #868ad3;     /* Hugging Face models */
-  --cat-speech: #8a4ca5;     /* Common Voice */
-  --cat-treebanks: #427135;  /* Universal Dependencies */
-  --cat-asr: #a78e17;        /* Omnilingual ASR */
-  --cat-border: 4px;
-  --cat-pad: 12px;
+  /* Indicator colors for this theme (same assignment as the light set).
+     Joint check, dark theme (see the note at the top of this file):
+     no failing pair. Worst colorblind separation by pairing:
+       indicator next to risk       8.7  (treebanks / no inmediato) THIN
+       link next to risk            9.1  (accent / muy alto)        THIN
+       indicator next to indicator 10.1  (datasets / speech)
+       link next to indicator      10.4  (accent / models)
+     Other pairs under 10: treebanks / mediano 9.0, asr / mediano 8.9,
+     datasets / mediano 9.5, accent / alto 9.4.
+     Worst normal-vision pair: 15.2 (models / speech; floor 15) THIN. */
+  --cat-datasets: #1c719a;   /* Hugging Face datasets */
+  --cat-models: #9684cd;     /* Hugging Face models */
+  --cat-speech: #9442d9;     /* Common Voice */
+  --cat-treebanks: #427a17;  /* Universal Dependencies */
+  --cat-asr: #a09600;        /* Omnilingual ASR */
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
@@ -142,10 +173,13 @@
     --line: #30363d;
     --line-soft: #21262d;
 
-    /* One accent. Verdigris: distinct from the red risk ramp and from the
-       blue/violet accents this register usually carries. */
-    --accent: #4fb8a5;
-    --accent-hover: #74cdbc;
+    /* One accent: teal-cyan. It replaced verdigris (#4fb8a5), which was
+       indistinguishable from the "alto" risk step for red-blind viewers
+       (4.5); no teal clears the risk ramp, so the hue moved toward cyan.
+       Joint check: accent against risk 9.1 (muy alto) and 9.4 (alto),
+       both THIN; against the indicators 10.4 (models). */
+    --accent: #42c2cc;
+    --accent-hover: #74d5dc;
 
     --risk-1: #ffcfd2;
     --risk-2: #f68f96;
@@ -156,13 +190,7 @@
     --display-weight: 800;
     --emph-plain: none;
     --emph-marked: inline;
-    /* The mark's third bar is the text color here, not a risk color.
-       Accent against --ink: protan 19.7, deutan 22.9, normal 24.7.
-       OPEN COLOR-SYSTEM ISSUE: the verdigris accent and the "alto" risk
-       step are indistinguishable for red-blind viewers (4.5, target 8).
-       Keeping them apart is not the fix. If a page puts them near each
-       other, stop and raise it: the likely fix is a different accent hue,
-       not a layout workaround. */
+    /* The mark's third bar is the text color here, not a risk color. */
     --mark-third: var(--ink);
     --font-stat: var(--font-mono);
     --stat-size: 36px;
@@ -170,19 +198,21 @@
     --stat-date-font: var(--font-display);
     --stat-date-style: italic;
 
-    /* Categorical colors, one per resource indicator. Fixed assignment:
-       a color always means the same indicator. No red or pink (the risk
-       ramp) and none near the verdigris accent. Dataviz palette validator
-       on #161b22, all pairs: colorblind 8.9 (target 8), normal vision 15.5
-       (floor 15), contrast 3:1 or better; also separate from the accent.
-       Margins are thin: re-run the validator before changing any of them. */
-    --cat-datasets: #1269d8;   /* Hugging Face datasets */
-    --cat-models: #868ad3;     /* Hugging Face models */
-    --cat-speech: #8a4ca5;     /* Common Voice */
-    --cat-treebanks: #427135;  /* Universal Dependencies */
-    --cat-asr: #a78e17;        /* Omnilingual ASR */
-    --cat-border: 4px;
-    --cat-pad: 12px;
+    /* Indicator colors for this theme (same assignment as the light set).
+       Joint check, dark theme (see the note at the top of this file):
+       no failing pair. Worst colorblind separation by pairing:
+         indicator next to risk       8.7  (treebanks / no inmediato) THIN
+         link next to risk            9.1  (accent / muy alto)        THIN
+         indicator next to indicator 10.1  (datasets / speech)
+         link next to indicator      10.4  (accent / models)
+       Other pairs under 10: treebanks / mediano 9.0, asr / mediano 8.9,
+       datasets / mediano 9.5, accent / alto 9.4.
+       Worst normal-vision pair: 15.2 (models / speech; floor 15) THIN. */
+    --cat-datasets: #1c719a;   /* Hugging Face datasets */
+    --cat-models: #9684cd;     /* Hugging Face models */
+    --cat-speech: #9442d9;     /* Common Voice */
+    --cat-treebanks: #427a17;  /* Universal Dependencies */
+    --cat-asr: #a09600;        /* Omnilingual ASR */
   }
 }
 
@@ -256,6 +286,25 @@ h3 {
 }
 
 .muted {
+  color: var(--ink-muted);
+}
+
+/* A dot filled from the risk ramp. The outline is the permanent rule
+   recorded at the --risk-* tokens: never remove it. */
+.risk-swatch {
+  display: inline-block;
+  flex: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--ink) 60%, transparent);
+  vertical-align: -1px;
+}
+
+/* The four states of a value. A number is "measured"; "0" is checked
+   and empty; the two symbols below are not numbers and never read as 0. */
+.state-not-covered,
+.state-unresolved {
   color: var(--ink-muted);
 }
 
