@@ -1,0 +1,317 @@
+---
+// Home page scatter plot: speakers against kinds of resource, colored by
+// risk grade. The data comes from src/data/home.json (built by
+// scripts/build-data.mjs); this component only shapes it for the chart
+// and hands it to the browser, where Observable Plot draws it.
+import home from '../data/home.json';
+import { useTranslations, type Locale } from '../i18n/ui';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+
+const GRADES = [1, 2, 3, 4] as const;
+type Grade = (typeof GRADES)[number];
+const gradeLabel = (g: number) => t(`scatter.grade.${g as Grade}`);
+
+// A group can only be drawn if both of its coordinates are numbers. The
+// rest are named under the chart with the reason, never drawn at zero.
+const missing: string[] = [];
+const rows = [];
+for (const r of home.scatter) {
+  if (r.speakers === null || r.resource_count === null) {
+    const reasons = [];
+    if (r.speakers === null) reasons.push(t('scatter.missing.speakers'));
+    if (r.resource_count === null) reasons.push(t('scatter.missing.resources'));
+    missing.push(`${r.group} (${reasons.join('; ')})`);
+    continue;
+  }
+  rows.push({
+    group: r.group,
+    speakers: r.speakers,
+    resources: r.resource_count,
+    grade: r.risk_grade,
+    gradeLabel: gradeLabel(r.risk_grade),
+    variants: r.variants,
+    atGrade: r.variants_by_grade[String(r.risk_grade) as `${Grade}`],
+  });
+}
+
+const config = {
+  locale: locale === 'es' ? 'es-MX' : 'en-US',
+  rows,
+  text: {
+    speakers: t('scatter.tip.speakers'),
+    resources: t('scatter.tip.resources'),
+    risk: t('scatter.tip.risk'),
+    variants: t('scatter.tip.variants'),
+    of: t('scatter.of'),
+    aria: t('scatter.aria'),
+  },
+};
+---
+
+<section class="wrap scatter" aria-labelledby="scatter-title">
+  <h2 id="scatter-title">{t('scatter.title')}</h2>
+  <p class="lede">{t('scatter.lede')}</p>
+
+  <div class="card panel">
+    <div class="legend">
+      <span class="legend-title">{t('scatter.legend')}</span>
+      <ul>
+        {
+          GRADES.map((g) => (
+            <li>
+              <span class="swatch" style={`background: var(--risk-${g})`} />
+              {gradeLabel(g)}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <p class="axis-title">{t('scatter.y')}</p>
+    <div id="scatter-plot" class="plot"></div>
+    <p class="axis-title x">{t('scatter.x')}</p>
+    <script type="application/json" id="scatter-data" set:html={JSON.stringify(config)} />
+
+    <div class="notes">
+      <p>{t('scatter.note.resources')}</p>
+      <p>{t('scatter.note.spread')}</p>
+      {missing.length > 0 && <p>{t('scatter.note.missing')}: {missing.join(', ')}.</p>}
+    </div>
+  </div>
+</section>
+
+<script>
+  import * as Plot from '@observablehq/plot';
+
+  type Row = {
+    group: string;
+    speakers: number;
+    resources: number;
+    grade: number;
+    gradeLabel: string;
+    variants: number;
+    atGrade: number;
+    y?: number;
+  };
+
+  const host = document.getElementById('scatter-plot');
+  const source = document.getElementById('scatter-data');
+
+  if (host && source) {
+    const config = JSON.parse(source.textContent ?? '{}') as {
+      locale: string;
+      rows: Row[];
+      text: Record<string, string>;
+    };
+    const css = getComputedStyle(document.documentElement);
+    const token = (name: string) => css.getPropertyValue(name).trim();
+    const number = new Intl.NumberFormat(config.locale);
+    const compact = new Intl.NumberFormat(config.locale, { notation: 'compact' });
+
+    // Resource counts are whole numbers, so many groups share a row. Spread
+    // each row's dots over three small vertical offsets, in speaker order,
+    // so neighbours do not sit on top of each other. The row is still read
+    // from the gridline; the true count is in the tooltip.
+    const offsets = [0, 0.18, -0.18];
+    const byRow = new Map<number, Row[]>();
+    for (const row of config.rows) {
+      if (!byRow.has(row.resources)) byRow.set(row.resources, []);
+      byRow.get(row.resources)!.push(row);
+    }
+    for (const rows of byRow.values()) {
+      rows.sort((a, b) => a.speakers - b.speakers);
+      rows.forEach((row, i) => (row.y = row.resources + offsets[i % offsets.length]));
+    }
+
+    // Direct labels only for the groups with the most kinds of resource
+    // (fewer on a narrow screen). A dot nudged down gets its label below,
+    // so neighbouring labels in one row do not collide.
+    const labelsFor = (narrow: boolean) => config.rows.filter((r) => r.resources >= (narrow ? 5 : 4));
+    const below = (r: Row) => (r.y ?? r.resources) < r.resources;
+
+    const title = (r: Row) =>
+      [
+        r.group,
+        `${config.text.speakers}: ${number.format(r.speakers)}`,
+        `${config.text.resources}: ${r.resources} ${config.text.of} 5`,
+        `${config.text.risk}: ${r.gradeLabel} (${r.atGrade} ${config.text.of} ${r.variants} ${config.text.variants})`,
+      ].join('\n');
+
+    const draw = () => {
+      const width = host.clientWidth;
+      const narrow = width < 560;
+      const chart = Plot.plot({
+        width,
+        height: narrow ? 380 : 460,
+        marginTop: 16,
+        marginRight: narrow ? 12 : 28,
+        marginBottom: 28,
+        marginLeft: 20,
+        ariaLabel: config.text.aria,
+        style: {
+          fontFamily: token('--font-mono'),
+          fontSize: '12px',
+          color: token('--ink-muted'),
+          background: 'transparent',
+          overflow: 'visible',
+        },
+        x: {
+          type: 'log',
+          label: null,
+          domain: [10, 3_000_000],
+          ticks: [10, 100, 1_000, 10_000, 100_000, 1_000_000],
+          tickSize: 0,
+          tickFormat: (d: number) => compact.format(d),
+          grid: true,
+        },
+        y: {
+          domain: [-0.5, 5.5],
+          ticks: [0, 1, 2, 3, 4, 5],
+          tickSize: 0,
+          tickFormat: (d: number) => String(d),
+          label: null,
+          grid: true,
+        },
+        color: {
+          type: 'ordinal',
+          domain: [1, 2, 3, 4],
+          range: [token('--risk-1'), token('--risk-2'), token('--risk-3'), token('--risk-4')],
+        },
+        marks: [
+          Plot.dot(config.rows, {
+            x: 'speakers',
+            y: 'y',
+            r: narrow ? 5 : 6.5,
+            fill: 'grade',
+            stroke: token('--ink'),
+            strokeWidth: 0.75,
+            strokeOpacity: 0.6,
+          }),
+          ...[false, true].map((isBelow) =>
+            Plot.text(
+              labelsFor(narrow).filter((r) => below(r) === isBelow),
+              {
+                x: 'speakers',
+                y: 'y',
+                text: 'group',
+                dy: isBelow ? 15 : -14,
+                fontFamily: token('--font-sans'),
+                fontSize: 13,
+                fill: token('--ink'),
+                stroke: token('--surface'),
+                strokeWidth: 4,
+              },
+            ),
+          ),
+          Plot.tip(
+            config.rows,
+            Plot.pointer({
+              x: 'speakers',
+              y: 'y',
+              title,
+              fill: token('--surface'),
+              stroke: token('--line'),
+              fontFamily: token('--font-sans'),
+              fontSize: 13,
+              textPadding: 10,
+              lineHeight: 1.35,
+            }),
+          ),
+        ],
+      });
+      host.replaceChildren(chart);
+    };
+
+    draw();
+    let lastWidth = host.clientWidth;
+    new ResizeObserver(() => {
+      if (host.clientWidth !== lastWidth) {
+        lastWidth = host.clientWidth;
+        draw();
+      }
+    }).observe(host);
+  }
+</script>
+
+<style>
+  .scatter {
+    margin-top: 16px;
+  }
+  h2 {
+    font-size: clamp(26px, 3.2vw, 34px);
+    line-height: 1.15;
+    letter-spacing: -0.005em;
+  }
+  .lede {
+    margin: 8px 0 24px;
+    color: var(--ink-muted);
+    max-width: 72ch;
+  }
+  .panel {
+    padding: clamp(16px, 2.5vw, 28px);
+  }
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 24px;
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+  .legend-title,
+  .axis-title {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .axis-title {
+    margin: 0;
+    letter-spacing: 0;
+    text-transform: none;
+    font-size: 12px;
+  }
+  .axis-title.x {
+    text-align: center;
+  }
+  .legend ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 20px;
+  }
+  .legend li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .swatch {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border: 1px solid color-mix(in srgb, var(--ink) 60%, transparent);
+  }
+  .plot {
+    min-height: 380px;
+  }
+  .notes {
+    border-top: 1px solid var(--line-soft);
+    margin-top: 12px;
+    padding-top: 12px;
+    font-size: 13px;
+    color: var(--ink-muted);
+  }
+  .notes p {
+    margin: 0 0 4px;
+    max-width: 90ch;
+  }
+</style>

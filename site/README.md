@@ -23,6 +23,10 @@ git-ignored; pages import from it and never read a CSV.
 Every indicator is written as `{ value, state }`, with `state` one of
 measured, measured-zero, not-covered or unresolved.
 
+A change to the root CSVs (`variants.csv`, `risk_grade.csv`,
+`crosswalk.csv`) or `reference/` does not trigger an automatic redeploy —
+run the deploy workflow manually (`workflow_dispatch`) after editing those.
+
 ## Languages and links
 
 Spanish is the default locale and is served at the site root; English is
