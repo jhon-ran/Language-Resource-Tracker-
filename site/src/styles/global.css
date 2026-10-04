@@ -47,8 +47,19 @@
    The two rule sets below must stay identical: CSS has no way to share
    one declaration list between an attribute selector and a media query.
 
-   NOT YET THEMED: the --risk-* ramp. It is the light ramp, unvalidated
-   on these surfaces, and needs its own design and validator pass. */
+   Risk ramp in this theme: same red hue, direction flipped. On a dark
+   ground the step furthest from the surface reads as "most", so the
+   highest risk is the lightest step and the lowest risk the dimmest.
+   Validated on --surface #161b22 with the dataviz palette validator:
+   every pair separates for normal and colorblind vision, and the dimmest
+   step clears the surface (2.18:1, floor 2:1). The outline rule from the
+   light ramp applies here too, permanently: every mark filled from the
+   ramp carries the outline, legend swatches included.
+
+   THIN MARGIN: normal-vision separation is 15.3 against a floor of 15
+   (worst pair: the two lightest steps). The light ramp's first version
+   failed this same check. Re-run the validator before any token change
+   that touches this ramp or --surface, even one that looks unrelated. */
 :root[data-theme='dark'] {
   color-scheme: dark;
   --bg: #0d1117;      /* near-black, slight cool undertone */
@@ -63,6 +74,11 @@
      blue/violet accents this register usually carries. */
   --accent: #4fb8a5;
   --accent-hover: #74cdbc;
+
+  --risk-1: #ffcfd2;
+  --risk-2: #f68f96;
+  --risk-3: #cd5760;
+  --risk-4: #873740;
 
   /* No serif in this theme: condensed Plex for headlines, mono for figures. */
   --font-display: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif;
@@ -85,6 +101,11 @@
        blue/violet accents this register usually carries. */
     --accent: #4fb8a5;
     --accent-hover: #74cdbc;
+
+    --risk-1: #ffcfd2;
+    --risk-2: #f68f96;
+    --risk-3: #cd5760;
+    --risk-4: #873740;
 
     /* No serif in this theme: condensed Plex for headlines, mono for figures. */
     --font-display: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif;
