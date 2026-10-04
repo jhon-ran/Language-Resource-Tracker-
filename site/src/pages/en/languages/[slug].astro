@@ -1,0 +1,12 @@
+---
+import GroupPage from '../../../components/GroupPage.astro';
+import data from '../../../data/groups.json';
+
+export function getStaticPaths() {
+  return data.groups.map((g) => ({ params: { slug: g.slug } }));
+}
+
+const { slug } = Astro.params;
+---
+
+<GroupPage locale="en" slug={slug} />

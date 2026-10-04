@@ -1,0 +1,38 @@
+---
+// One value in one of the four states. A measured value prints as a
+// number; "checked, nothing found" prints 0; the other two states print a
+// symbol, never a number, with the state spelled out for hover and for
+// screen readers.
+import { useTranslations, type Locale, type UiKey } from '../i18n/ui';
+import { intlLocale, type Measured } from '../lib/indicators';
+
+interface Props {
+  locale: Locale;
+  data: Measured;
+}
+
+const { locale, data } = Astro.props;
+const t = useTranslations(locale);
+const label = t(`state.${data.state}` as UiKey);
+const number = new Intl.NumberFormat(intlLocale(locale));
+const shown =
+  data.state === 'measured' || data.state === 'measured-zero'
+    ? typeof data.value === 'number'
+      ? number.format(data.value)
+      : String(data.value)
+    : data.state === 'not-covered'
+      ? '—'
+      : '?';
+const numeric = data.state === 'measured' || data.state === 'measured-zero';
+---
+
+{
+  numeric ? (
+    <span class={`state-${data.state}`} title={label}>{shown}</span>
+  ) : (
+    <span class={`state-${data.state}`} title={label}>
+      <span aria-hidden="true">{shown}</span>
+      <span class="visually-hidden">{label}</span>
+    </span>
+  )
+}

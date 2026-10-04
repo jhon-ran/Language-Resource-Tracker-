@@ -1,0 +1,209 @@
+---
+// The Languages listing: one row per INALI group, from src/data/groups.json.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import StateValue from './StateValue.astro';
+import data from '../data/groups.json';
+import { useTranslations, localePath, type Locale, type UiKey } from '../i18n/ui';
+import { INDICATORS, formatDate } from '../lib/indicators';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+const gradeLabel = (g: number) => t(`scatter.grade.${g}` as UiKey);
+
+const collator = new Intl.Collator('es', { sensitivity: 'base' });
+const groups = [...data.groups].sort((a, b) => collator.compare(a.name, b.name));
+const note = t('langs.speakers.note').replace('{date}', formatDate(data.latest_snapshot, locale));
+const states = ['measured', 'measured-zero', 'not-covered', 'unresolved'] as const;
+const sample = { measured: '12', 'measured-zero': '0', 'not-covered': '—', unresolved: '?' };
+---
+
+<BaseLayout locale={locale} path="languages" title={t('langs.title')}>
+  <section class="wrap head">
+    <h1>{t('langs.title')}</h1>
+    <p class="lede">{t('langs.lede')}</p>
+  </section>
+
+  <section class="wrap">
+    <div class="card scroller" tabindex="0" role="region" aria-label={t('langs.title')}>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col" class="name">{t('langs.col.group')}</th>
+            <th scope="col">{t('langs.col.family')}</th>
+            <th scope="col" class="num">{t('langs.col.speakers')}</th>
+            <th scope="col">{t('langs.col.risk')}</th>
+            <th scope="col" class="num">{t('langs.col.variants')}</th>
+            <th scope="col" class="num">{t('langs.col.resources')}</th>
+            {
+              INDICATORS.map((ind) => (
+                <th scope="col" class="num ind" style={`--cat: var(--cat-${ind.id})`}>
+                  {t(ind.label)}
+                  <span class="src">{ind.source}</span>
+                </th>
+              ))
+            }
+          </tr>
+        </thead>
+        <tbody>
+          {
+            groups.map((g) => (
+              <tr>
+                <th scope="row" class="name">
+                  <a href={localePath(locale, `languages/${g.slug}`)}>{g.name}</a>
+                </th>
+                <td>{g.family}</td>
+                <td class="num">
+                  <StateValue locale={locale} data={g.speakers} />
+                </td>
+                <td>
+                  <span class="risk">
+                    <span class="risk-swatch" style={`background: var(--risk-${g.risk_grade.grade})`} />
+                    {gradeLabel(g.risk_grade.grade)}
+                  </span>
+                </td>
+                <td class="num">{g.risk_grade.variants}</td>
+                <td class="num">
+                  <StateValue locale={locale} data={g.resource_count} />
+                </td>
+                {INDICATORS.map((ind) => (
+                  <td class="num">
+                    <StateValue locale={locale} data={g.indicators[ind.main]} />
+                  </td>
+                ))}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+
+    <div class="below">
+      <p>{note}</p>
+      <dl class="legend">
+        <dt>{t('state.legend')}</dt>
+        {
+          states.map((s) => (
+            <dd>
+              <span class={`mono state-${s}`}>{sample[s]}</span> {t(`state.${s}` as UiKey)}
+            </dd>
+          ))
+        }
+      </dl>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .head {
+    padding-top: clamp(24px, 3.5vw, 40px);
+    padding-bottom: 16px;
+  }
+  h1 {
+    font-size: clamp(30px, 4vw, 44px);
+    line-height: 1.1;
+  }
+  .lede {
+    margin: 10px 0 0;
+    font-size: 17px;
+    color: var(--ink-muted);
+    max-width: 44em;
+  }
+  /* position: relative keeps the table's visually-hidden labels inside
+     the scroll box; without it they widen the whole page. */
+  .scroller {
+    position: relative;
+    overflow-x: auto;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14px;
+  }
+  th,
+  td {
+    padding: 7px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--line-soft);
+    white-space: nowrap;
+  }
+  tbody tr:last-child th,
+  tbody tr:last-child td {
+    border-bottom: 0;
+  }
+  thead th {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    vertical-align: bottom;
+    border-bottom: 1px solid var(--line);
+    white-space: normal;
+  }
+  /* Indicator columns carry their color as a bar above the header. */
+  thead th.ind {
+    border-top: var(--cat-border) solid var(--cat);
+    min-width: 96px;
+  }
+  .src {
+    display: block;
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+  .num {
+    text-align: right;
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+  tbody th {
+    font-weight: 500;
+    font-size: 15px;
+  }
+  /* The group name stays in view while the table scrolls sideways. */
+  .name {
+    position: sticky;
+    left: 0;
+    background: var(--surface);
+  }
+  .risk {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  tbody tr:hover > * {
+    background: var(--band);
+  }
+  .below {
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--ink-muted);
+  }
+  .below p {
+    margin: 0 0 8px;
+  }
+  .legend {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 20px;
+  }
+  .legend dt {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .legend dd {
+    margin: 0;
+  }
+  .mono {
+    font-family: var(--font-mono);
+    color: var(--ink);
+  }
+</style>

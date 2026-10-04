@@ -25,7 +25,7 @@ const fullTitle = title ? `${title} · ${SITE_NAME}` : `${SITE_NAME} — ${t('si
 // Pages that exist get a link; the rest are shown as planned.
 const nav = [
   { key: 'nav.home', path: '' },
-  { key: 'nav.languages', path: null },
+  { key: 'nav.languages', path: 'languages' },
   { key: 'nav.data', path: null },
   { key: 'nav.method', path: null },
 ] as const;
@@ -75,7 +75,7 @@ const sources = ['Glottolog', 'Hugging Face', 'Common Voice', 'Universal Depende
                       <span class="visually-hidden"> ({t('nav.soon')})</span>
                     </span>
                   ) : (
-                    <a href={localePath(locale, item.path)} aria-current={item.path === path ? 'page' : undefined}>
+                    <a href={localePath(locale, item.path)} aria-current={item.path === path || (item.path !== '' && path.startsWith(item.path + '/')) ? 'page' : undefined}>
                       {t(item.key)}
                     </a>
                   )}
