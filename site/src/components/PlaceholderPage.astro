@@ -1,5 +1,5 @@
 ---
-import { useTranslations, localePath, otherLocale, type Locale } from '../i18n/ui';
+import { SITE_NAME, useTranslations, localePath, otherLocale, type Locale } from '../i18n/ui';
 
 interface Props {
   locale: Locale;
@@ -14,12 +14,12 @@ const other = otherLocale(locale);
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>{t('site.title')}</title>
+    <title>{SITE_NAME}</title>
     <link rel="alternate" hreflang={other} href={localePath(other)} />
   </head>
   <body>
-    <h1>{t('site.title')}</h1>
-    <p>{t('placeholder.text')}</p>
+    <h1>{SITE_NAME}</h1>
+    <p>{SITE_NAME} — {t('site.tagline')}</p>
     <p><a href={localePath(other)} hreflang={other} lang={other}>{t('lang.switch')}</a></p>
   </body>
 </html>
