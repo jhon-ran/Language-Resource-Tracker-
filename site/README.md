@@ -11,6 +11,18 @@ npm run check    # type check only
 npm run build    # type check, then writes site/dist
 ```
 
+## Data
+
+`npm run build:data` (`scripts/build-data.mjs`) reads the CSVs committed
+in the repo root, `reference/` and the newest `snapshots/<date>/`, and
+writes JSON into `src/data/`: `home.json`, `groups.json`, one file per
+group in `groups/` and one per variant in `variants/`. It runs before
+`npm run build` and `npm run dev`. The folder is generated and
+git-ignored; pages import from it and never read a CSV.
+
+Every indicator is written as `{ value, state }`, with `state` one of
+measured, measured-zero, not-covered or unresolved.
+
 ## Languages and links
 
 Spanish is the default locale and is served at the site root; English is

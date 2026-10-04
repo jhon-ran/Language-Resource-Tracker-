@@ -9,7 +9,18 @@ on:
     branches: [main]
     paths:
       - "site/**"
+      - "snapshots/**"
       - ".github/workflows/deploy-site.yml"
+  # The weekly snapshot is pushed by snapshot.yml with GITHUB_TOKEN, and
+  # GitHub does not start `push` workflows for commits made with that
+  # token. So the `snapshots/**` path above only covers snapshots pushed
+  # by a person; this trigger covers the automated ones. It fires when
+  # the snapshot workflow finishes, whether it succeeded or not, because
+  # a run with one failed fetcher still commits the others.
+  workflow_run:
+    workflows: ["Weekly snapshot"]
+    types: [completed]
+    branches: [main]
   workflow_dispatch:
 
 # Least privilege: read the repo, publish to Pages, and mint the OIDC
@@ -32,6 +43,8 @@ jobs:
       run:
         working-directory: site
     steps:
+      # On a workflow_run event this checks out the tip of main, which
+      # already includes the snapshot commit.
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4

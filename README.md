@@ -245,6 +245,10 @@ python3 tools/parse_inali_risk.py       # 2012 risk book -> risk_grade.csv
   and `risk_grade.csv` marks them `alias:direction-conflict`. Details in
   `CHANGELOG.md`.
 - The risk grades use 2000 census counts; the INEGI speaker layer is 2020.
+- `tool_support_mt` indicator: Google Translate (and possibly Microsoft
+  Translator) published supported-language lists, same four-state pattern
+  as `tool_support_asr`. Candidates already confirmed relevant to this
+  project: Náhuatl, Zapoteco, Q'eqchi', Maya Yucateco. Not started.
 
 ## Layout
 
