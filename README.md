@@ -343,4 +343,12 @@ Open points are listed under "Known gaps" and in `CHANGELOG.md`.
 
 ## License
 
-TBD — see `LICENSE`. Code likely MIT; data likely CC BY or CC0.
+- **Code:** MIT. See `LICENSE`.
+- **Data produced by this project** (crosswalk, weekly snapshots, derived
+  files): CC BY 4.0. See `LICENSE-DATA`.
+- **Third-party source data** (INALI, INEGI, Glottolog and the platforms
+  counted) keeps its own terms; this project cannot relicense it.
+- **Charis SIL**, used on the site for IPA: SIL Open Font License. See
+  `site/public/licenses/charis-sil-OFL.txt`.
+
+Copyright (c) 2026 Jhonnatan Rangel.

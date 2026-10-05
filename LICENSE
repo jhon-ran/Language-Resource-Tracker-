@@ -1,11 +1,37 @@
-LICENSE: TBD
+MIT License
 
-No license has been chosen yet. Until one is, all rights are reserved by
-the author and no reuse permission is granted.
+Copyright (c) 2026 Jhonnatan Rangel
 
-Likely direction (not yet decided):
-  - Code: MIT
-  - Data (crosswalk, snapshots): CC BY 4.0 or CC0
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
 
-Upstream data keeps its own license (Glottolog, INEGI, Hugging Face,
-Common Voice, UD, OLAC); those terms apply regardless of what is chosen here.
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+---
+
+Scope of this license
+
+This license covers the code in this repository: the fetchers in sources/,
+the build tools in tools/, the workflows in .github/, and the site in site/
+(its source code, not the data it displays).
+
+It does not cover:
+
+- The data this project produces. See LICENSE-DATA (CC BY 4.0).
+- Data from third-party sources, which keeps its own terms. See LICENSE-DATA.
+- The Charis SIL font used on the site, which is under the SIL Open Font
+  License. See site/public/licenses/charis-sil-OFL.txt.

@@ -1,0 +1,48 @@
+Data license: Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Copyright (c) 2026 Jhonnatan Rangel
+
+The data produced by this project is licensed under the Creative Commons
+Attribution 4.0 International License. You may share and adapt it for any
+purpose, including commercially, as long as you give appropriate credit,
+link to the license, and indicate if changes were made.
+
+Full legal text: https://creativecommons.org/licenses/by/4.0/legalcode
+Summary:         https://creativecommons.org/licenses/by/4.0/
+
+How to give credit: see "Cómo citar" / "How to cite" on the site's Method
+page, or cite: Rangel, J. Glototeca.
+https://jhon-ran.github.io/Language-Resource-Tracker-/
+
+What this license covers
+
+The work this project adds:
+
+- The crosswalk between INALI groups, ISO 639-3 codes and Glottocodes
+  (inali_groups.csv, crosswalk.csv, crosswalk_members.csv,
+  member_overrides.csv, unresolved.csv).
+- The weekly snapshots in snapshots/: the counts and states this project
+  measured, and how they were measured.
+- The structured files this project derived from published documents, as
+  a compilation: variants.csv, variant_ipa.csv, variant_localities.csv,
+  risk_grade.csv, and the hand-maintained alias, correction and review
+  files beside them.
+- The files in reference/ in the form this project gives them.
+
+What this license does not cover
+
+The underlying facts and source materials belong to their authors and keep
+their own terms. This project cannot relicense them, and CC BY 4.0 on this
+compilation does not change them:
+
+- INALI: Catálogo de las Lenguas Indígenas Nacionales (2008) and Lenguas
+  indígenas nacionales en riesgo de desaparición (2012).
+- INEGI: Censo de Población y Vivienda 2020.
+- Glottolog (identifiers, classification, endangerment status).
+- Hugging Face, Common Voice, Universal Dependencies and Omnilingual ASR:
+  the listings this project counts.
+
+If you reuse figures that originate in one of these sources, consult that
+source's own terms and cite it as well.
+
+The code is licensed separately. See LICENSE (MIT).
