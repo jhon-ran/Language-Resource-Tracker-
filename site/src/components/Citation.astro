@@ -1,0 +1,154 @@
+---
+// "How to cite" cards for the Method page: APA and MLA, each with a copy
+// button. The citations are written at build time with the build date as
+// the access date; in the browser a small script replaces that with the
+// reader's own date, since the access date is the day they read the site.
+import home from '../data/home.json';
+import { apa, mla, longDate, type CiteInput, type CiteLocale } from '../lib/cite';
+import { SITE_NAME } from '../i18n/ui';
+
+interface Props {
+  locale: CiteLocale;
+  text: {
+    intro: string;
+    subtitle: string;
+    datasetLabel: string;
+    copy: string;
+    copied: string;
+    failed: string;
+    snapshotLine: string;
+    accessLine: string;
+    doiNote: string;
+  };
+}
+
+const { locale, text } = Astro.props;
+// Citation URLs use the GitHub Pages address
+// (jhon-ran.github.io/Language-Resource-Tracker-/) until a custom domain is
+// set up. The address is built from `site` and `base` in astro.config.mjs.
+// MIGRATION TASK, not a one-line fix: when the domain changes, update those
+// two values (the templates follow), the address written by hand in
+// LICENSE-DATA, and any page that prints the URL, and set up a redirect from
+// the old GitHub Pages URL so citations already in the wild keep resolving.
+// Steps are in the root CHANGELOG.md, entry of 2026-10-05.
+const url = new URL(import.meta.env.BASE_URL.replace(/\/?$/, '/'), Astro.site).href;
+const input: CiteInput = {
+  locale,
+  snapshot: home.latest_snapshot,
+  access: home.built_on,
+  url,
+  title: SITE_NAME,
+  subtitle: text.subtitle,
+  datasetLabel: text.datasetLabel,
+};
+const cards = [
+  { id: 'apa', label: 'APA 7', value: apa(input) },
+  { id: 'mla', label: 'MLA 9', value: mla(input) },
+];
+---
+
+<div class="cite" data-cite={JSON.stringify(input)} data-copied={text.copied} data-failed={text.failed} data-copy={text.copy}>
+  <p>{text.intro}</p>
+  {
+    cards.map((c) => (
+      <div class="card cite-card">
+        <div class="cite-head">
+          <span class="eyebrow">{c.label}</span>
+          <button type="button" data-copy-for={c.id}>{text.copy}</button>
+        </div>
+        <p class="cite-text" data-cite-style={c.id}>{c.value}</p>
+      </div>
+    ))
+  }
+  <p class="dates">
+    <span>{text.snapshotLine.replace('{date}', longDate(home.latest_snapshot, locale))}</span>
+    <span>
+      {text.accessLine} <span data-cite-access>{longDate(home.built_on, locale)}</span>
+    </span>
+  </p>
+  <p class="small">{text.doiNote}</p>
+  <span class="visually-hidden" aria-live="polite" data-cite-status></span>
+</div>
+
+<script>
+  import { apa, mla, longDate, localIsoDate, type CiteInput } from '../lib/cite';
+
+  for (const root of document.querySelectorAll<HTMLElement>('[data-cite]')) {
+    // The access date is the day the reader is here, not the build day.
+    const input: CiteInput = { ...JSON.parse(root.dataset.cite ?? '{}'), access: localIsoDate(new Date()) };
+    const styles = { apa, mla };
+    for (const el of root.querySelectorAll<HTMLElement>('[data-cite-style]')) {
+      el.textContent = styles[el.dataset.citeStyle as 'apa' | 'mla'](input);
+    }
+    const access = root.querySelector('[data-cite-access]');
+    if (access) access.textContent = longDate(input.access, input.locale);
+
+    const status = root.querySelector('[data-cite-status]');
+    for (const button of root.querySelectorAll<HTMLButtonElement>('[data-copy-for]')) {
+      button.addEventListener('click', async () => {
+        const text = root.querySelector(`[data-cite-style="${button.dataset.copyFor}"]`)?.textContent ?? '';
+        let label = root.dataset.copied ?? '';
+        try {
+          await navigator.clipboard.writeText(text);
+        } catch {
+          label = root.dataset.failed ?? '';
+        }
+        button.textContent = label;
+        if (status) status.textContent = label;
+        window.setTimeout(() => (button.textContent = root.dataset.copy ?? ''), 2000);
+      });
+    }
+  }
+</script>
+
+<style>
+  .cite > p {
+    margin: 0 0 14px;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  .cite-card {
+    padding: 12px 16px 14px;
+    margin-bottom: 12px;
+  }
+  .cite-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  button {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    padding: 5px 10px;
+    min-width: 6.5em;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background: transparent;
+    color: var(--ink);
+    cursor: pointer;
+  }
+  button:hover {
+    border-color: var(--ink-muted);
+  }
+  .cite-text {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 13.5px;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+    user-select: all;
+  }
+  .cite > p.dates {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 24px;
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+  .cite > p.small {
+    font-size: 14px;
+    color: var(--ink-muted);
+  }
+</style>

@@ -1,0 +1,450 @@
+---
+// The Method page.
+// NOTE: its "How to cite" section publishes the site's address. Changing
+// the domain later is a migration (redirects for existing citations), not
+// an edit; see Citation.astro and the root CHANGELOG.md, 2026-10-05.
+// Prose comes from src/i18n/method.<locale>.ts; every
+// number in it comes from src/data/method.json.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import StateValue from './StateValue.astro';
+import Citation from './Citation.astro';
+import { localePath, type Locale } from '../i18n/ui';
+import { getMethod } from '../i18n/method';
+import { formatDate, intlLocale, type GroupDetail, type IndicatorKey } from '../lib/indicators';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const number = new Intl.NumberFormat(intlLocale(locale));
+const groups = import.meta.glob<{ default: GroupDetail }>('../data/groups/*.json', { eager: true });
+const group = (slug: string) => {
+  const file = groups[`../data/groups/${slug}.json`];
+  if (!file) throw new Error(`Method page: no data for group ${slug}`);
+  return file.default;
+};
+const snapshot = group('ayapaneco').latest_snapshot;
+const { data, text } = getMethod(locale, { n: (v) => number.format(v), date: formatDate(snapshot, locale) });
+
+// One live example per state. If the data stops showing that state for
+// the example, the build fails, so the page can never describe a state
+// with a value that is no longer in it.
+const examples = (
+  [
+    ['measured', 'ayapaneco', 'datasets_raw'],
+    ['measured-zero', 'ayapaneco', 'treebanks'],
+    ['not-covered', 'ayapaneco', 'speech_corpus'],
+    ['unresolved', 'ku-ahl', 'datasets_raw'],
+  ] as const
+).map(([state, slug, key]) => {
+  const g = group(slug);
+  const value = g.indicators[key as IndicatorKey];
+  if (value.state !== state) {
+    throw new Error(`Method page: ${slug} ${key} is "${value.state}", expected "${state}"; pick another example`);
+  }
+  return { state, slug, value, copy: text.measures.states[state] };
+});
+
+const doi = /doi:(10\.[^\s)]+)/.exec(data.sources.glottolog)?.[1];
+const sourceRows = (
+  [
+    ['glottolog', true],
+    ['huggingface', true],
+    ['common_voice', true],
+    ['universal_dependencies', true],
+    ['omnilingual_asr', true],
+    ['inegi', false],
+    ['inali_catalog', false],
+    ['inali_risk', false],
+  ] as const
+).map(([id, weekly]) => ({ id, weekly, copy: text.sources.rows[id], recorded: data.sources[id] }));
+
+const sections = [
+  ['measures', text.measures.title],
+  ['sources', text.sources.title],
+  ['identity', text.identity.title],
+  ['error', text.error.title],
+  ['limits', text.limits.title],
+  ['license', text.license.title],
+  ['cite', text.cite.title],
+  ['indigenous', text.indigenous.title],
+] as const;
+
+const REPO = 'https://github.com/jhon-ran/Language-Resource-Tracker-';
+---
+
+<BaseLayout locale={locale} path="method" title={text.title}>
+  <section class="wrap head">
+    <h1>{text.title}</h1>
+    <p class="lede">{text.lede}</p>
+    <nav class="toc" aria-label={text.contents}>
+      <span class="eyebrow">{text.contents}</span>
+      <ol>
+        {
+          sections.map(([id, title]) => (
+            <li>
+              <a href={`#${id}`}>{title}</a>
+            </li>
+          ))
+        }
+      </ol>
+    </nav>
+  </section>
+
+  <section class="wrap block" id="measures">
+    <div class="prose">
+      <h2>{text.measures.title}</h2>
+      {text.measures.paragraphs.map((p) => <p>{p}</p>)}
+      <h3>{text.measures.statesTitle}</h3>
+    </div>
+    <div class="states">
+      {
+        examples.map((e) => (
+          <div class="card state">
+            <div class="symbol">
+              <StateValue locale={locale} data={e.value} />
+            </div>
+            <div>
+              <div class="state-name">{e.copy.name}</div>
+              <p>
+                {e.copy.example.replace('{value}', String(e.value.value))}{' '}
+                <a href={localePath(locale, `languages/${e.slug}`)} aria-label={e.slug}>→</a>
+              </p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+    <div class="prose">
+      <h3>{text.measures.noScoreTitle}</h3>
+      <p>{text.measures.noScore}</p>
+      <p>{text.measures.scope}</p>
+    </div>
+  </section>
+
+  <section class="wrap block" id="sources">
+    <div class="prose">
+      <h2>{text.sources.title}</h2>
+      <p>{text.sources.lede}</p>
+    </div>
+    <div class="card scroller">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">{text.sources.columns.source}</th>
+            <th scope="col">{text.sources.columns.provides}</th>
+            <th scope="col">{text.sources.columns.access}</th>
+            <th scope="col">{text.sources.columns.cadence}</th>
+            <th scope="col">{text.sources.columns.version}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            sourceRows.map((s) => (
+              <tr>
+                <th scope="row">{s.copy.name}</th>
+                <td>{s.copy.provides}</td>
+                <td>{s.copy.access}</td>
+                <td class="cadence">{s.weekly ? text.sources.weekly : text.sources.fixed}</td>
+                <td class="recorded">
+                  {s.recorded.startsWith('http') ? (
+                    <a href={s.recorded}>PDF</a>
+                  ) : s.id === 'glottolog' && doi ? (
+                    <a href={`https://doi.org/${doi}`}>{s.recorded}</a>
+                  ) : s.id === 'huggingface' ? (
+                    formatDate(snapshot, locale)
+                  ) : (
+                    s.recorded
+                  )}
+                </td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <div class="prose">
+      <p class="small">{text.sources.note}</p>
+    </div>
+  </section>
+
+  <section class="wrap block" id="identity">
+    <div class="prose">
+      <h2>{text.identity.title}</h2>
+      {text.identity.paragraphs.map((p) => <p>{p}</p>)}
+      <aside class="story">
+        <h3>{text.identity.storyTitle}</h3>
+        {text.identity.story.map((p) => <p>{p}</p>)}
+      </aside>
+    </div>
+  </section>
+
+  <section class="wrap block" id="error">
+    <div class="prose">
+      <h2>{text.error.title}</h2>
+      {text.error.paragraphs.map((p) => <p>{p}</p>)}
+    </div>
+    <div class="card scroller">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">{text.error.columns.catalog}</th>
+            <th scope="col">{text.error.columns.book}</th>
+            <th scope="col" class="num">{text.error.columns.catalogLocalities}</th>
+            <th scope="col" class="num">{text.error.columns.bookLocalities}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            data.risk.direction_conflicts.map((c) => (
+              <tr>
+                <th scope="row">
+                  <a href={localePath(locale, `languages/${c.group.slug}/${c.variant}`)}>{c.catalog_name}</a>
+                </th>
+                <td>{c.risk_book_name}</td>
+                <td class="num">{number.format(c.catalog_localities)}</td>
+                <td class="num">{number.format(c.risk_book_localities)}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <div class="prose">
+      {text.error.after.map((p) => <p>{p}</p>)}
+    </div>
+  </section>
+
+  <section class="wrap block" id="limits">
+    <div class="prose">
+      <h2>{text.limits.title}</h2>
+      <p>{text.limits.lede}</p>
+      <dl class="limits">
+        {
+          text.limits.items.map((item) => (
+            <>
+              <dt>{item.title}</dt>
+              <dd>{item.text}</dd>
+            </>
+          ))
+        }
+      </dl>
+    </div>
+  </section>
+
+  <section class="wrap block" id="license">
+    <div class="prose">
+      <h2>{text.license.title}</h2>
+      {text.license.paragraphs.map((p) => <p>{p}</p>)}
+      <p class="links">
+        <a href={`${REPO}/blob/main/LICENSE`}>LICENSE</a>
+        <a href={`${REPO}/blob/main/LICENSE-DATA`}>LICENSE-DATA</a>
+        <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+      </p>
+      <p class="small">{text.license.files}</p>
+    </div>
+  </section>
+
+  <section class="wrap block" id="cite">
+    <div class="prose">
+      <h2>{text.cite.title}</h2>
+      <Citation locale={locale} text={text.cite} />
+    </div>
+  </section>
+
+  <section class="wrap block" id="indigenous">
+    <div class="prose">
+      <h2>{text.indigenous.title}</h2>
+      {text.indigenous.paragraphs.map((p) => <p>{p}</p>)}
+      <dl class="care">
+        {
+          text.indigenous.care.map((c) => (
+            <>
+              <dt>{c.name}</dt>
+              <dd>{c.text}</dd>
+            </>
+          ))
+        }
+      </dl>
+      <p>{text.indigenous.contact}</p>
+      <p class="links">
+        <a href="https://www.gida-global.org/care">CARE</a>
+        <a href={REPO}>GitHub</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .head {
+    padding-top: clamp(24px, 3.5vw, 40px);
+  }
+  h1 {
+    font-size: clamp(30px, 4vw, 44px);
+    line-height: 1.1;
+  }
+  .lede {
+    margin: 10px 0 0;
+    font-size: 18px;
+    color: var(--ink-muted);
+    max-width: 40em;
+  }
+  .toc {
+    margin-top: 20px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+  }
+  .toc ol {
+    margin: 6px 0 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 20px;
+    font-size: 14px;
+  }
+  .block {
+    margin-top: 40px;
+    scroll-margin-top: 16px;
+  }
+  .prose {
+    max-width: 70ch;
+  }
+  .prose p {
+    margin: 0 0 14px;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  h2 {
+    font-size: clamp(24px, 2.8vw, 30px);
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+  h3 {
+    font-size: 19px;
+    margin: 22px 0 8px;
+  }
+  .small,
+  .prose p.small {
+    font-size: 14px;
+    color: var(--ink-muted);
+  }
+  .states {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: 12px;
+    margin: 4px 0 8px;
+    max-width: 1000px;
+  }
+  .state {
+    display: grid;
+    grid-template-columns: 56px minmax(0, 1fr);
+    gap: 12px;
+    padding: 14px 16px;
+    align-items: start;
+  }
+  .symbol {
+    font-family: var(--font-mono);
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.1;
+    text-align: center;
+  }
+  .state-name {
+    font-weight: 600;
+  }
+  .state p {
+    margin: 4px 0 0;
+    font-size: 15px;
+    color: var(--ink-muted);
+  }
+  .state a {
+    text-decoration: none;
+  }
+  .scroller {
+    position: relative;
+    overflow-x: auto;
+    max-width: 1100px;
+    margin: 8px 0 12px;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14px;
+  }
+  th,
+  td {
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--line-soft);
+    vertical-align: top;
+  }
+  tbody tr:last-child > * {
+    border-bottom: 0;
+  }
+  thead th {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    border-bottom: 1px solid var(--line);
+  }
+  tbody th {
+    font-weight: 600;
+    min-width: 12em;
+  }
+  .cadence {
+    white-space: nowrap;
+  }
+  .recorded {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--ink-muted);
+    min-width: 14em;
+    overflow-wrap: anywhere;
+  }
+  .num {
+    text-align: right;
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+  .story {
+    margin: 18px 0 0;
+    padding: 4px 18px 6px;
+    background: var(--band);
+    border-left: 3px solid var(--ink-muted);
+  }
+  .story h3 {
+    margin-top: 12px;
+  }
+  .story p {
+    font-size: 16px;
+  }
+  .limits,
+  .care {
+    margin: 8px 0 14px;
+  }
+  .limits dt,
+  .care dt {
+    font-weight: 600;
+    font-size: 17px;
+    margin-top: 14px;
+  }
+  .limits dd,
+  .care dd {
+    margin: 4px 0 0;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--ink-muted);
+  }
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    font-family: var(--font-mono);
+    font-size: 13px !important;
+  }
+</style>
