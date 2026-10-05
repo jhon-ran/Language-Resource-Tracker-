@@ -72,7 +72,11 @@ const sources = ['Glottolog', 'Hugging Face', 'Common Voice', 'Universal Depende
     <link rel="icon" href={`${base}/favicon.svg`} type="image/svg+xml" />
     <link rel="icon" href={`${base}/favicon-32.png`} type="image/png" sizes="32x32" />
     <link rel="apple-touch-icon" href={`${base}/apple-touch-icon.png`} />
-    {locales.map((l) => <link rel="alternate" hreflang={l} href={localePath(l, path)} />)}
+    <!-- Absolute, on the site's own domain: unambiguous to crawlers whatever
+         address served the request (the old GitHub Pages one redirects here). -->
+    <link rel="canonical" href={canonical} />
+    {locales.map((l) => <link rel="alternate" hreflang={l} href={new URL(localePath(l, path), Astro.site).href} />)}
+    <link rel="alternate" hreflang="x-default" href={new URL(localePath('es', path), Astro.site).href} />
     <!-- Apply a stored theme choice before first paint. With no stored
          choice the attribute stays unset and CSS follows the system. -->
     <script is:inline>

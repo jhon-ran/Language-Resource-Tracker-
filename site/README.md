@@ -45,7 +45,7 @@ UI strings live in `src/i18n/`: `es.ts` is the reference dictionary,
 `en.ts` must have the same keys, and `ui.ts` exports `useTranslations()`
 and `localePath()`.
 
-The site is served under `/Language-Resource-Tracker-/` (see `base` in
-`astro.config.mjs`). Build every internal link with
-`localePath(locale, path)`, which adds both the base path and the locale
-prefix; never write a leading `/`.
+The site is served from the root of `glototeca.com` (`site` in
+`astro.config.mjs`; `public/CNAME` tells GitHub Pages the domain), with no
+base path. Still build every internal link with `localePath(locale, path)`,
+which adds the locale prefix and any base path; never write a leading `/`.

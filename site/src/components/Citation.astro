@@ -23,14 +23,12 @@ interface Props {
 }
 
 const { locale, text } = Astro.props;
-// Citation URLs use the GitHub Pages address
-// (jhon-ran.github.io/Language-Resource-Tracker-/) until a custom domain is
-// set up. The address is built from `site` and `base` in astro.config.mjs.
-// MIGRATION TASK, not a one-line fix: when the domain changes, update those
-// two values (the templates follow), the address written by hand in
-// LICENSE-DATA, and any page that prints the URL, and set up a redirect from
-// the old GitHub Pages URL so citations already in the wild keep resolving.
-// Steps are in the root CHANGELOG.md, entry of 2026-10-05.
+// Citation URLs use https://glototeca.com/, built from `site` (and `base`)
+// in astro.config.mjs. Until 2026-10-05 they used the GitHub Pages project address;
+// citations made then rely on GitHub's redirect from that address, which
+// lasts only while the custom domain stays set on this Pages site.
+// Any future change of address is again a MIGRATION, not a one-line fix:
+// see the root CHANGELOG.md, entries of 2026-10-05 and 2026-10-05.
 const url = new URL(import.meta.env.BASE_URL.replace(/\/?$/, '/'), Astro.site).href;
 const input: CiteInput = {
   locale,

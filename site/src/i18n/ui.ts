@@ -22,8 +22,8 @@ export function useTranslations(locale: Locale) {
 
 /**
  * Internal link for a locale: base path + locale prefix + path.
- * localePath('es', 'about') -> /Language-Resource-Tracker-/about/
- * localePath('en', 'about') -> /Language-Resource-Tracker-/en/about/
+ * localePath('es', 'about') -> /about/
+ * localePath('en', 'about') -> /en/about/
  * Every internal link goes through this; never write a leading "/".
  */
 export function localePath(locale: Locale, path = ''): string {

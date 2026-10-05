@@ -1,13 +1,14 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 
-// GitHub Pages serves a project site under /<repo-name>/, so every
-// internal link and asset has to be prefixed with `base`, and with the
-// locale for non-default locales. Build links with localePath() from
-// src/i18n/ui.ts rather than writing a leading "/".
+// Served from the root of the custom domain (GitHub Pages, with
+// public/CNAME), so there is no base path. Internal links still go through
+// localePath() from src/i18n/ui.ts, which adds the locale prefix and would
+// add a base path again if one were ever set; don't hand-write a leading "/".
+// `site` is what citation URLs, canonical/og:url and og:image are built from.
 export default defineConfig({
-  site: 'https://jhon-ran.github.io',
-  base: '/Language-Resource-Tracker-',
+  site: 'https://glototeca.com',
+  base: '/',
   output: 'static',
   i18n: {
     locales: ['es', 'en'],

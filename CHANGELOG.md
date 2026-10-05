@@ -1,5 +1,38 @@
 # Changelog
 
+## 2026-10-05 — Site: moved to glototeca.com
+
+- **New address: `https://glototeca.com/`.** Before, the site was the
+  GitHub Pages project site at `jhon-ran.github.io/Language-Resource-Tracker-/`.
+  It is still hosted on GitHub Pages; only the address changed. This closes
+  the migration task logged on 2026-10-05.
+- What changed in the code, following that entry's checklist:
+  1. `site/astro.config.mjs`: `site` is `https://glototeca.com`, `base` is
+     `/` (no repo-name prefix). Citation URLs (APA, MLA), canonical `og:url`
+     and `og:image` are built from these and followed without edits.
+  2. `site/public/CNAME` added, containing `glototeca.com`. GitHub Pages
+     reads it from the build output root.
+  3. The address written by hand in `LICENSE-DATA` updated. `README.md` had
+     none; `site/README.md`'s note on the base path rewritten.
+  4. Comments that named the old address updated (`Citation.astro`,
+     `MethodPage.astro`, `src/i18n/ui.ts`).
+- **Canonical and hreflang are now absolute.** Every page carries
+  `<link rel="canonical">` pointing to its own URL on `glototeca.com`, and
+  its `hreflang` alternates (es, en, and x-default = Spanish) are full
+  URLs, where before they were relative paths and there was no canonical.
+- **Left as they are, on purpose:** links to the GitHub repository
+  (`github.com/jhon-ran/Language-Resource-Tracker-`), which did not move,
+  and the old address where this changelog records history.
+- **Old citations depend on GitHub's redirect.** With the custom domain set
+  on the same Pages site, GitHub redirects the old project address,
+  including deep links, to the new domain. That lasts only as long as the
+  custom domain stays configured there. DNS, the Pages setting and the
+  manual check of the old URL (home, one group page, one variant page) are
+  done by the maintainer outside the codebase.
+- Verified locally before deploy: clean build, every internal link and
+  asset reference in the built pages resolves to a file, no remaining
+  reference to the old address in the output.
+
 ## 2026-10-05 — Source terms recorded; the risk grades' licence status is open
 
 - **Each source's published terms are now recorded**, with where they were
@@ -70,6 +103,9 @@
 
 ## 2026-10-05 — Site: citation address, and the migration it implies
 
+- **DONE 2026-10-05: the site moved to `glototeca.com`.** See the entry of that
+  date for what was changed and what was verified. The text below is kept
+  as written; its checklist is the one that was followed.
 - Citation URLs use the GitHub Pages address
   (`jhon-ran.github.io/Language-Resource-Tracker-/`) until a custom domain
   is set up.
