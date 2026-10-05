@@ -1,0 +1,17 @@
+snapshot_date,inali_name,iso639_3,locale,release_kind,release_version,clips,users,validated_hours,state
+2026-10-05,cuicateco,cut,cut,scripted,27.0,5616,15,10.09,measured
+2026-10-05,cuicateco,cux,cux,scripted,27.0,9350,11,10.26,measured
+2026-10-05,guarijío,var,var,scripted,27.0,8006,12,10.09,measured
+2026-10-05,huichol,hch,hch,spontaneous,5.0,1553,10,10.12,measured
+2026-10-05,mazahua,mmc,mmc,spontaneous,5.0,871,12,11.23,measured
+2026-10-05,mazateco,mau,mau,scripted,27.0,6269,7,10.42,measured
+2026-10-05,mixteco,meh,meh,spontaneous,5.0,1057,16,10.05,measured
+2026-10-05,náhuatl,ncx,ncx,scripted,27.0,9509,41,10.7,measured
+2026-10-05,náhuatl,nhi,nhi,scripted,27.0,427,6,0.05,measured
+2026-10-05,náhuatl,nlv,nlv,scripted,27.0,6844,16,11.61,measured
+2026-10-05,seri,sei,sei,scripted,27.0,8310,17,10.08,measured
+2026-10-05,tarahumara,tar,tar,scripted,27.0,7922,17,9.97,measured
+2026-10-05,tarasco,pua,pua,scripted,27.0,8176,9,10.22,measured
+2026-10-05,totonaco,top,top,spontaneous,5.0,387,10,9.94,measured
+2026-10-05,yaqui,yaq,yaq,scripted,27.0,7771,5,10.21,measured
+2026-10-05,zoque,zoc,zoc,scripted,27.0,8948,12,10.07,measured
