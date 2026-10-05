@@ -5,7 +5,7 @@
 // and hands it to the browser, where Observable Plot draws it.
 import home from '../data/home.json';
 import Emphasis from './Emphasis.astro';
-import { useTranslations, type Locale } from '../i18n/ui';
+import { useTranslations, type Locale, localePath } from '../i18n/ui';
 
 interface Props {
   locale: Locale;
@@ -58,6 +58,10 @@ const config = {
 <section class="wrap scatter" aria-labelledby="scatter-title">
   <h2 id="scatter-title"><Emphasis text={t('scatter.title')} /></h2>
   <p class="lede">{t('scatter.lede')}</p>
+  <p class="lede scope">
+    {t('resources.scope')}{' '}
+    <a href={`${localePath(locale, 'method')}#measures`}>{t('resources.scope.link')}</a>
+  </p>
 
   <div class="card panel">
     <div class="legend">
@@ -249,6 +253,9 @@ const config = {
     font-size: clamp(23px, 2.6vw, 28px);
     line-height: 1.15;
     letter-spacing: -0.005em;
+  }
+  .lede:has(+ .scope) {
+    margin-bottom: 6px;
   }
   .lede {
     margin: 4px 0 14px;

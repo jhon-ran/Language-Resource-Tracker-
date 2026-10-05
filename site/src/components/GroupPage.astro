@@ -91,6 +91,10 @@ const hasValue = (state: string) => state === 'measured' || state === 'measured-
   <section class="wrap block" aria-labelledby="ind-title">
     <h2 id="ind-title">{t('group.indicators')}</h2>
     <p class="lede">{t('group.indicators.lede').replace('{date}', snapshot)}</p>
+    <p class="lede scope">
+      {t('resources.scope')}{' '}
+      <a href={`${localePath(locale, 'method')}#measures`}>{t('resources.scope.link')}</a>
+    </p>
     <div class="cards">
       {
         INDICATORS.map((ind) => {
@@ -187,6 +191,9 @@ const hasValue = (state: string) => state === 'measured' || state === 'measured-
 </BaseLayout>
 
 <style>
+  .lede:has(+ .scope) {
+    margin-bottom: 6px;
+  }
   .head {
     padding-top: clamp(20px, 3vw, 32px);
     padding-bottom: 16px;

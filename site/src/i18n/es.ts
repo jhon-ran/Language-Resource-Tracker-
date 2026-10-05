@@ -2,7 +2,10 @@
 // what every other locale must provide. The site name is not here: it is
 // the same in every locale (SITE_NAME in ui.ts).
 export default {
-  'site.tagline': 'recursos digitales de las lenguas de México',
+  'site.description': 'Glototeca mapea los recursos digitales de las lenguas indígenas de México — y, con el tiempo, de las cerca de 7,000 lenguas del mundo.',
+  'resources.scope': 'Nos referimos a los elementos técnicos necesarios para construir herramientas de lenguaje — traductores, reconocimiento de voz, correctores — no a contenido cultural como libros o música.',
+  'resources.scope.link': 'Qué medimos y cómo',
+  'footer.roadmap': 'Empezamos con las 68 agrupaciones de México. El objetivo: cubrir las cerca de 7,000 lenguas del mundo.',
   'lang.switch.label': 'Idioma',
   'theme.toggle': 'Cambiar entre tema claro y oscuro',
   'nav.label': 'Principal',

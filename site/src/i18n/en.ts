@@ -3,7 +3,10 @@ import type es from './es';
 // English UI strings. The type forces the same keys as es.ts, so a
 // missing or extra key fails the type check.
 const en: Record<keyof typeof es, string> = {
-  'site.tagline': 'digital resources for the languages of Mexico',
+  'site.description': "Glototeca maps the digital resources of Mexico's indigenous languages — and, over time, the world's roughly 7,000 languages.",
+  'resources.scope': 'This means the technical building blocks for language tools — translators, speech recognition, spell-checkers — not cultural content like books or music.',
+  'resources.scope.link': 'What we measure and how',
+  'footer.roadmap': "Starting with Mexico's 68 language groups. The goal: cover the world's roughly 7,000 languages.",
   'lang.switch.label': 'Language',
   'theme.toggle': 'Switch between light and dark theme',
   'nav.label': 'Main',
