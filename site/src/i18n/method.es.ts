@@ -117,7 +117,6 @@ export default function es(d: MethodData, f: Formatters): MethodContent {
         'Esa licencia cubre nuestro trabajo, no el de otros. Las cifras del INEGI, los catálogos del INALI y la clasificación de Glottolog pertenecen a sus autores y conservan sus propias condiciones; Glototeca no puede volver a licenciarlos. Quien reutilice esos datos debe consultar y citar la fuente original.',
         'Un caso sigue abierto: los grados de riesgo se extrajeron de un libro del INALI de 2012 que reserva todos los derechos. No se publican bajo CC BY 4.0; su redistribución depende de la respuesta del INALI, y el estado actual está en la página de Datos.',
       ],
-      files: 'Los textos completos están en el repositorio: LICENSE (código) y LICENSE-DATA (datos).',
     },
     cite: {
       title: 'Cómo citar',

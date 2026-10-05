@@ -72,7 +72,6 @@ const sections = [
   ['indigenous', text.indigenous.title],
 ] as const;
 
-const REPO = 'https://github.com/jhon-ran/Language-Resource-Tracker-';
 ---
 
 <BaseLayout locale={locale} path="method" title={text.title}>
@@ -239,11 +238,8 @@ const REPO = 'https://github.com/jhon-ran/Language-Resource-Tracker-';
       <h2>{text.license.title}</h2>
       {text.license.paragraphs.map((p) => <p>{p}</p>)}
       <p class="links">
-        <a href={`${REPO}/blob/main/LICENSE`}>LICENSE</a>
-        <a href={`${REPO}/blob/main/LICENSE-DATA`}>LICENSE-DATA</a>
         <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
       </p>
-      <p class="small">{text.license.files}</p>
     </div>
   </section>
 

@@ -50,7 +50,7 @@ export interface MethodContent {
     after: string[];
   };
   limits: { title: string; lede: string; items: { title: string; text: string }[] };
-  license: { title: string; paragraphs: string[]; files: string };
+  license: { title: string; paragraphs: string[] };
   cite: {
     title: string;
     intro: string;
