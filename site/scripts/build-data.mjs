@@ -134,10 +134,77 @@ const localities = readCsv('variant_localities.csv');
 const riskRows = readCsv('risk_grade.csv');
 const census = readCsv('reference/inegi_census_2020.csv');
 const glottologReference = readCsv('reference/glottolog_reference.csv');
+const reviewList = readCsv('review_list.csv');
+const riskAliases = readCsv('risk_grade_aliases.csv');
+const readJson = (relPath) => {
+  const path = join(REPO, relPath);
+  check(existsSync(path), `missing input ${relPath}`);
+  return JSON.parse(readFileSync(path, 'utf8'));
+};
+const catalogBuild = readJson('inali_build.json');
+const riskBuild = readJson('risk_grade_build.json');
 
-const snapshotDates = readdirSync(join(REPO, 'snapshots')).filter((d) => /^\d{4}-\d{2}-\d{2}$/.test(d)).sort();
-check(snapshotDates.length > 0, 'no snapshot folders');
-const snapshotDate = snapshotDates[snapshotDates.length - 1];
+// Which snapshot is the latest is decided by when its measurements were
+// taken (the measured_at column), never by the folder's name. A folder
+// name is a label: a manual run can be given any date, including one in
+// the future, and snapshots/2026-10-09 is exactly that (measured on
+// 2026-10-02). measured_at is the authoritative timestamp for anything
+// date-sensitive.
+//
+// A folder that lacks one of the five source files (a run where a fetcher
+// failed) is not eligible, so the site falls back to the newest complete
+// snapshot instead of failing to build.
+const ISO_INSTANT = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$/;
+const snapshotFolders = readdirSync(join(REPO, 'snapshots')).filter((d) => /^\d{4}-\d{2}-\d{2}$/.test(d)).sort();
+check(snapshotFolders.length > 0, 'no snapshot folders');
+const snapshotCandidates = [];
+const skippedFolders = [];
+for (const folder of snapshotFolders) {
+  const missing = WEEKLY.filter((source) => !existsSync(join(REPO, 'snapshots', folder, source.file)));
+  if (missing.length > 0) {
+    console.warn(`build-data: snapshots/${folder} skipped, missing ${missing.map((m) => m.file).join(', ')}`);
+    // Newest measured_at among the files that are there, so we can tell
+    // below whether this folder would have been the latest.
+    let partial = '';
+    for (const source of WEEKLY) {
+      if (!existsSync(join(REPO, 'snapshots', folder, source.file))) continue;
+      for (const r of readCsv(`snapshots/${folder}/${source.file}`)) {
+        if (ISO_INSTANT.test(r.measured_at) && r.measured_at > partial) partial = r.measured_at;
+      }
+    }
+    skippedFolders.push({ folder, missing: missing.map((m) => m.file), measured_at: partial || null });
+    continue;
+  }
+  let measuredAt = '';
+  for (const source of WEEKLY) {
+    for (const r of readCsv(`snapshots/${folder}/${source.file}`)) {
+      check(ISO_INSTANT.test(r.measured_at), `snapshots/${folder}/${source.file}: bad measured_at "${r.measured_at}"`);
+      if (r.measured_at > measuredAt) measuredAt = r.measured_at;
+    }
+  }
+  snapshotCandidates.push({ folder, measuredAt });
+}
+check(snapshotCandidates.length > 0, 'no complete snapshot folder');
+// Latest measurement wins; on an exact tie, the later folder name.
+snapshotCandidates.sort((a, b) => a.measuredAt.localeCompare(b.measuredAt) || a.folder.localeCompare(b.folder));
+const latestSnapshot = snapshotCandidates[snapshotCandidates.length - 1];
+// A fallback is a skipped folder that would have been the latest had it
+// been complete: its measurements are newer than the snapshot in use (or,
+// with no readable timestamp, its name sorts after the folder in use).
+// The build stays lenient and carries on; deploy-site.yml reads
+// `snapshot_fallback` from home.json and fails the run so someone is told.
+const snapshotFallback = skippedFolders.filter((s) =>
+  s.measured_at ? s.measured_at > latestSnapshot.measuredAt : s.folder > latestSnapshot.folder,
+);
+for (const s of snapshotFallback) {
+  console.warn(
+    `build-data: FALLBACK - snapshots/${s.folder} is newer than snapshots/${latestSnapshot.folder} but incomplete (missing ${s.missing.join(', ')}); the site is built from the older snapshot`,
+  );
+}
+/** The folder the data is read from. A label, not a date to show. */
+const snapshotFolder = latestSnapshot.folder;
+/** The day (UTC) the latest measurements were taken. This is the date the site shows and cites. */
+const snapshotDate = latestSnapshot.measuredAt.slice(0, 10);
 
 // ----------------------------------------------------------------- groups
 
@@ -149,16 +216,17 @@ check(new Set(groupSlug.values()).size === groupNames.length, 'two groups share 
 // Weekly indicators: group -> indicator -> { value, state, ... }
 const indicators = new Map(groupNames.map((n) => [n, {}]));
 for (const source of WEEKLY) {
-  const rows = readCsv(`snapshots/${snapshotDate}/${source.file}`);
+  const rows = readCsv(`snapshots/${snapshotFolder}/${source.file}`);
   for (const r of rows) {
     check(indicators.has(r.inali_name), `${source.file}: unknown group ${r.inali_name}`);
     check(source.indicators.includes(r.indicator), `${source.file}: unexpected indicator ${r.indicator}`);
     check(STATES.includes(r.state), `${source.file}: unknown state ${r.state}`);
-    check(r.snapshot_date === snapshotDate, `${source.file}: row dated ${r.snapshot_date}`);
+    check(r.snapshot_date === snapshotFolder, `${source.file}: row labelled ${r.snapshot_date} in snapshots/${snapshotFolder}`);
     indicators.get(r.inali_name)[r.indicator] = {
       value: parseValue(r.value),
       state: r.state,
       source: r.source,
+      // snapshot_date is the folder label carried in the CSV, not a date to display.
       snapshot_date: r.snapshot_date,
       measured_at: r.measured_at,
       detail: r.detail,
@@ -166,7 +234,7 @@ for (const source of WEEKLY) {
   }
 }
 for (const n of groupNames) {
-  for (const i of INDICATORS) check(indicators.get(n)[i], `no ${i} row for ${n} in snapshot ${snapshotDate}`);
+  for (const i of INDICATORS) check(indicators.get(n)[i], `no ${i} row for ${n} in snapshots/${snapshotFolder}`);
 }
 
 // Census speakers (static reference layer).
@@ -367,7 +435,15 @@ const spokenL1 = glottologReference.find((r) => r.category === 'Spoken_L1_Langua
 check(spokenL1 && /^\d+$/.test(spokenL1.languoids), 'reference/glottolog_reference.csv has no Spoken_L1_Language count');
 
 writeJson('home.json', {
+  // The day the latest measurements were taken (from measured_at).
   latest_snapshot: snapshotDate,
+  // The folder they were read from: a label only, never shown as a date.
+  snapshot_folder: snapshotFolder,
+  snapshot_measured_at: latestSnapshot.measuredAt,
+  // Empty unless a newer but incomplete snapshot folder was passed over.
+  snapshot_fallback: snapshotFallback,
+  // The day this build ran (UTC). Used as the default access date in citations.
+  built_on: new Date().toISOString().slice(0, 10),
   totals: { groups: groups.length, variants: variantRecords.size },
   glottolog_reference_languages: {
     value: Number(spokenL1.languoids),
@@ -398,6 +474,92 @@ writeJson('home.json', {
       ...AES_ORDER.map((status) => ({ status, state: 'measured', groups: aesCounts.get(status) ?? 0 })),
       { status: null, state: 'unresolved', groups: aesUnresolved },
     ],
+  },
+});
+
+// 1b. method.json: every number the Method page quotes, so none is typed
+// into the page by hand.
+const countBy = (rows, key) => {
+  const out = {};
+  for (const r of rows) {
+    const k = typeof key === 'function' ? key(r) : r[key];
+    out[k] = (out[k] ?? 0) + 1;
+  }
+  return out;
+};
+const matchTypes = countBy(crosswalk, 'match_type');
+const allVariants = [...variantRecords.values()];
+const allAutonyms = allVariants.flatMap((v) => v.autonyms);
+
+// INALI's stated rules for the four grades (2012 book, conditions table),
+// applied as written, to count how many published grades they reproduce.
+function statedGrade(r) {
+  const many = r.localities_30pct > 1 && r.speakers_30pct_localities > 1000;
+  if (r.localities_30pct === 0 || r.speakers_30pct_localities < 100) return 1;
+  if (r.child_proportion < 25) return many ? 3 : 2;
+  return many ? 4 : 3;
+}
+const ruleMisses = allVariants.filter((v) => statedGrade(v.risk) !== v.risk.grade);
+
+const firstGroup = groups[0];
+writeJson('method.json', {
+  latest_snapshot: snapshotDate,
+  totals: { groups: groups.length, variants: allVariants.length },
+  glottolog_reference_languages: Number(spokenL1.languoids),
+  crosswalk: {
+    exact: matchTypes.exact ?? 0,
+    many_to_one: matchTypes['many-to-one'] ?? 0,
+    macrolanguage: matchTypes.macrolanguage ?? 0,
+    unresolved: matchTypes.unresolved ?? 0,
+    resolved: crosswalk.length - (matchTypes.unresolved ?? 0),
+    unresolved_groups: groups.filter((g) => g.identity.match_type === 'unresolved').map((g) => ({ name: g.name, slug: g.slug })),
+  },
+  // The source string each fetcher recorded in the latest snapshot.
+  sources: {
+    glottolog: firstGroup.indicators.endangerment_status.source,
+    huggingface: firstGroup.indicators.datasets_raw.source,
+    common_voice: firstGroup.indicators.speech_corpus.source,
+    universal_dependencies: firstGroup.indicators.treebanks.source,
+    omnilingual_asr: firstGroup.indicators.tool_support_asr.source,
+    inegi: firstGroup.speakers.source,
+    inali_catalog: catalogBuild.source,
+    inali_risk: riskBuild.source,
+  },
+  variants: {
+    with_glottocode: allVariants.filter((v) => v.glottocode.value !== null).length,
+    without_glottocode: allVariants.filter((v) => v.glottocode.value === null).length,
+    autonym_rows: allAutonyms.length,
+    ipa_status: countBy(allAutonyms, 'ipa_status'),
+  },
+  review_list: { total: reviewList.length, by_reason: countBy(reviewList, 'reason') },
+  risk: {
+    census_year: allVariants[0].risk.census_year,
+    by_grade: countBy(allVariants, (v) => v.risk.grade),
+    joins: countBy(allVariants, (v) => v.risk.join),
+    stated_rules: {
+      reproduced: allVariants.length - ruleMisses.length,
+      of: allVariants.length,
+      // The misses, to show what the unstated cutoff would have to be.
+      missed_published_grades: countBy(ruleMisses, (v) => v.risk.grade),
+      missed_child_proportion_max: ruleMisses.length ? Math.max(...ruleMisses.map((v) => v.risk.child_proportion)) : null,
+    },
+    // Names where the 2008 catalog and the 2012 risk book print different
+    // direction words for what the locality counts show is one variant.
+    direction_conflicts: riskAliases
+      .filter((a) => a.kind === 'direction-conflict')
+      .map((a) => {
+        const v = variantRecords.get(a.variant);
+        check(v, `risk_grade_aliases.csv: unknown variant ${a.variant}`);
+        return {
+          variant: v.variant,
+          group: v.group,
+          catalog_name: v.spanish_name,
+          risk_book_name: a.risk_name,
+          catalog_localities: v.localities.localities,
+          risk_book_localities: v.risk.localities_total,
+          risk_book_rank: v.risk.rank,
+        };
+      }),
   },
 });
 
@@ -443,4 +605,4 @@ for (const g of groups) {
 // 4. variants/<variant-id>.json
 for (const v of variantRecords.values()) writeJson(`variants/${v.variant}.json`, v);
 
-console.log(`build-data: snapshot ${snapshotDate}, ${groups.length} groups, ${variantRecords.size} variants, ${written} files -> src/data/`);
+console.log(`build-data: snapshot measured ${snapshotDate} (folder snapshots/${snapshotFolder}), ${groups.length} groups, ${variantRecords.size} variants, ${written} files -> src/data/`);

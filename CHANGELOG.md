@@ -1,5 +1,62 @@
 # Changelog
 
+## 2026-10-04 — Site: "latest snapshot" is chosen by measured_at, not folder name
+
+- **What was wrong.** `site/scripts/build-data.mjs` took the snapshot folder
+  with the highest date in its name as the latest. `snapshots/2026-10-09`
+  was written on 2 October 2026 (a manual run labelled with a future date),
+  so the site showed, and would have cited, a snapshot dated 9 October
+  before that day had happened.
+- **The fix.** The build now reads `measured_at` from every fetcher file in
+  every snapshot folder and picks the folder whose newest `measured_at` is
+  the most recent. The date the site shows and cites (`latest_snapshot`) is
+  the date part of that timestamp, not the folder name. `home.json` also
+  records `snapshot_folder` and `snapshot_measured_at` so the two can be
+  told apart.
+- **Rule going forward.** `measured_at` is the authoritative timestamp for
+  any date-sensitive logic; folder names are organizational labels only.
+- **Why `snapshots/2026-10-09` stays.** Snapshots are append-only. Its
+  measurements are real, taken 2026-10-02 23:36–23:44 UTC, about two hours
+  after those in `snapshots/2026-10-02` (21:50–21:57 UTC). Only the label is
+  misleading. Until a newer run lands it is the snapshot the site reads,
+  shown as 2 October 2026. The `snapshot_date` column inside its files still
+  says 2026-10-09 and is not edited.
+- **Incomplete folders.** A snapshot folder missing any fetcher file is
+  skipped with a warning and the build falls back to the newest complete
+  one. Before, the build failed. The data build stays lenient, but the
+  deploy is strict about saying so: when the skipped folder is newer than
+  the snapshot in use, `home.json` lists it under `snapshot_fallback`, and
+  the `snapshot-freshness` job in `deploy-site.yml` fails the run after the
+  deploy. The site still publishes from the older snapshot, and GitHub
+  sends its failed-run notification. An old incomplete folder that would
+  not have been the latest anyway does not fail the run.
+- Checked: on today's repo the build reports measured date 2026-10-02
+  (folder `snapshots/2026-10-09`); with a simulated 2026-10-05 run added it
+  switches to that folder and date with no other change.
+
+## 2026-10-05 — Site: citation address, and the migration it implies
+
+- Citation URLs use the GitHub Pages address
+  (`jhon-ran.github.io/Language-Resource-Tracker-/`) until a custom domain
+  is set up.
+- **Moving to a custom domain is a migration task, not a one-line fix.**
+  Once the Method page's "How to cite" section is public, people will cite
+  the GitHub Pages address, and those citations have to keep resolving.
+  When the domain changes:
+  1. Change `site` and `base` in `site/astro.config.mjs`. The citation
+     templates build their URL from those two values, so they follow.
+  2. Update the address written out by hand in `LICENSE-DATA`, and check
+     `README.md` and `site/README.md`.
+  3. Check any page that prints the site address. Today only the citation
+     section does; the home page scatter's source line does not.
+  4. Set up a redirect from the old GitHub Pages URL, and keep it in place
+     for as long as old citations may be followed. Setting a custom domain
+     on the same Pages site makes GitHub redirect the old address; a move
+     to another host needs its own redirect, and the old Pages site must
+     stay up to serve it.
+  5. Verify that an old deep link (a group page and a variant page)
+     still lands on the right page, not just the home page.
+
 ## 2026-10-05 — Site: Charis SIL for IPA transcriptions, licence provenance
 
 - The variant pages set IPA transcriptions in a subset of Charis SIL,

@@ -39,6 +39,10 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      stale: ${{ steps.fallback.outputs.stale }}
+      detail: ${{ steps.fallback.outputs.detail }}
+      used: ${{ steps.fallback.outputs.used }}
     defaults:
       run:
         working-directory: site
@@ -62,6 +66,23 @@ jobs:
       - name: Type-check and build
         run: npm run build
 
+      # The data build is lenient: if the newest snapshot folder is missing
+      # a fetcher file it warns, falls back to the newest complete one and
+      # lists what it passed over in home.json. Pick that up here so the
+      # `snapshot-freshness` job below can fail the run.
+      - name: Check for snapshot fallback
+        id: fallback
+        run: |
+          node -e '
+            const h = JSON.parse(require("fs").readFileSync("src/data/home.json", "utf8"));
+            const f = h.snapshot_fallback;
+            if (!Array.isArray(f)) { console.error("home.json has no snapshot_fallback list"); process.exit(1); }
+            const msg = f.map((s) => `snapshots/${s.folder} (missing ${s.missing.join(", ")})`).join("; ");
+            console.log(`stale=${f.length > 0}`);
+            console.log(`detail=${msg}`);
+            console.log(`used=snapshots/${h.snapshot_folder}, measured ${h.snapshot_measured_at}`);
+          ' >> "$GITHUB_OUTPUT"
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -77,3 +98,27 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  # Runs after the deploy, so the site still gets the fallback build (and
+  # any site changes in the same push), but the run as a whole fails and
+  # GitHub sends its failed-workflow notification. A stale site should
+  # never be a silent one.
+  snapshot-freshness:
+    needs: [build, deploy]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fail if the build fell back to an older snapshot
+        env:
+          STALE: ${{ needs.build.outputs.stale }}
+          DETAIL: ${{ needs.build.outputs.detail }}
+          USED: ${{ needs.build.outputs.used }}
+        run: |
+          if [ "$STALE" = "true" ]; then
+            echo "::error title=Site deployed from an older snapshot::Newer snapshot incomplete: $DETAIL. Site was built from $USED."
+            exit 1
+          fi
+          if [ "$STALE" != "false" ]; then
+            echo "::error::Snapshot fallback status missing from the build job."
+            exit 1
+          fi
+          echo "Latest snapshot is complete: $USED"
