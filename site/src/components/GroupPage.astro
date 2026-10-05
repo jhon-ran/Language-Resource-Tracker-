@@ -166,7 +166,9 @@ const hasValue = (state: string) => state === 'measured' || state === 'measured-
             {
               g.variants.map((v) => (
                 <tr>
-                  <th scope="row">{v.spanish_name}</th>
+                  <th scope="row">
+                    <a href={localePath(locale, `languages/${g.slug}/${v.variant}`)}>{v.spanish_name}</a>
+                  </th>
                   <td>{v.autonyms.join(' · ')}</td>
                   <td>
                     <span class="risk">

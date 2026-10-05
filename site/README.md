@@ -20,6 +20,14 @@ group in `groups/` and one per variant in `variants/`. It runs before
 `npm run build` and `npm run dev`. The folder is generated and
 git-ignored; pages import from it and never read a CSV.
 
+`npm run build:fonts` (`scripts/build-fonts.mjs`) then builds the IPA font
+for the variant pages: a subset of Charis SIL written to
+`src/assets/fonts/` (also generated and git-ignored). It fails the build
+if any transcription in the data uses a character the subset lacks.
+The font is Charis SIL (SIL International, SIL Open Font License); the
+licence text is published from `public/licenses/`, and its provenance is
+recorded in the root `CHANGELOG.md`.
+
 Every indicator is written as `{ value, state }`, with `state` one of
 measured, measured-zero, not-covered or unresolved.
 

@@ -1,5 +1,37 @@
 # Changelog
 
+## 2026-10-05 — Site: Charis SIL for IPA transcriptions, licence provenance
+
+- The variant pages set IPA transcriptions in a subset of Charis SIL,
+  built by `site/scripts/build-fonts.mjs` from the npm package
+  `@openfonts/charis-sil_all` 1.0.0 (file `charis-sil-all-400.woff2`).
+- **The npm package and the font carry different licences.**
+  - The package's `package.json` says `MIT`, and its `LICENSE.md` is an
+    MIT text, copyright 2019 Jan Bednar. That covers the packaging only.
+  - The font itself is Charis SIL version 6.101, "Copyright (c) 1997-2022
+    SIL International", and its own metadata points to the SIL Open Font
+    License (`http://scripts.sil.org/OFL`). The OFL is the licence that
+    governs the font. The package does not ship the OFL text.
+- **The OFL text ships with the site.** `site/public/licenses/charis-sil-OFL.txt`
+  is the licence file from the `@fontsource/charis-sil` package (the Google
+  Fonts distribution of the same font): the copyright notice followed by
+  the SIL Open Font License 1.1. It is published at `/licenses/` and
+  every variant page links to it under the transcription table.
+- **Reserved Font Name: evidence both ways, left open.** The subset is a
+  modified version of the font, and the OFL does not let a modified
+  version keep a Reserved Font Name; SIL's web-font guidance says that
+  when a font is modified "the font name must be changed". Against that,
+  the licence copy that travels with this distribution names no Reserved
+  Font Name after its copyright line, and neither does the font's own
+  metadata. Whether SIL's own distribution of Charis SIL declares one,
+  and which copy governs, was not verified. The subset keeps the internal
+  family name "Charis SIL" and is declared in CSS as "Charis SIL IPA".
+- **Decision (Jo, 2026-10-05):** ship the subset as built, with the OFL
+  text and notice. If the reserved-name point is ever raised, the fix is
+  to rename the subset; nothing else in the build depends on its name.
+- The subsetting step drops the licence fields from the font file's own
+  metadata, which is why the licence travels as a separate file.
+
 ## 2026-10-03 — Item 9: risk grade per variant (INALI 2012)
 
 - `tools/parse_inali_risk.py` parses Cuadro 6 (PDF pp. 61-75) into

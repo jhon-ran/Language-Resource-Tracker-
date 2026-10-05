@@ -1,0 +1,13 @@
+---
+import VariantPage from '../../../../components/VariantPage.astro';
+import type { VariantDetail } from '../../../../lib/indicators';
+
+export function getStaticPaths() {
+  const files = import.meta.glob<{ default: VariantDetail }>('../../../../data/variants/*.json', { eager: true });
+  return Object.values(files).map((f) => ({ params: { group: f.default.group.slug, variant: f.default.variant } }));
+}
+
+const { variant } = Astro.params;
+---
+
+<VariantPage locale="en" variant={variant} />

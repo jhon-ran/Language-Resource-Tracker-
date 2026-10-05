@@ -73,6 +73,40 @@ export interface GroupDetail {
   variants: { variant: string; spanish_name: string; autonyms: string[]; risk_grade: number; risk_grade_label: string }[];
 }
 
+/** Shape of src/data/variants/<variant-id>.json. */
+export interface VariantDetail {
+  variant: string;
+  spanish_name: string;
+  family: string;
+  group: { name: string; slug: string };
+  glottocode: { value: string | null; level: string | null };
+  autonyms: { autonym: string; autonym_appendix4: string; ipa: string | null; ipa_status: string }[];
+  risk: {
+    grade: number;
+    grade_label: string;
+    census_year: number;
+    rank: number;
+    speakers_30pct_localities: number | null;
+    localities_30pct: number | null;
+    child_proportion: number | null;
+    speakers_total: number | null;
+    localities_total: number | null;
+    speaker_proportion: number | null;
+    family_printed: string;
+    group_printed: string;
+    variant_printed: string;
+    join: string;
+  };
+  localities: {
+    source: string;
+    states: number;
+    municipios: number;
+    localities: number;
+    localities_without_municipio_code: number;
+    by_state: { state_code: string; state: string; municipios: number; localities: number }[];
+  };
+}
+
 export const intlLocale = (locale: string) => (locale === 'es' ? 'es-MX' : 'en-US');
 
 /** "2026-10-09" -> a date in the page's language. */
