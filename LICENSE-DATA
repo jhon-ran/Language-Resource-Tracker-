@@ -1,9 +1,12 @@
-Data license: Creative Commons Attribution 4.0 International (CC BY 4.0)
+Data license: Creative Commons Attribution 4.0 International (CC BY 4.0),
+with one exception: data derived from INALI's 2012 risk book, whose status
+is pending confirmation from INALI (see "Exception" below)
 
 Copyright (c) 2026 Jhonnatan Rangel
 
-The data produced by this project is licensed under the Creative Commons
-Attribution 4.0 International License. You may share and adapt it for any
+The data produced by this project, EXCEPT the data listed under
+"Exception" below, is licensed under the Creative Commons Attribution 4.0
+International License. You may share and adapt it for any
 purpose, including commercially, as long as you give appropriate credit,
 link to the license, and indicate if changes were made.
 
@@ -25,9 +28,50 @@ The work this project adds:
   measured, and how they were measured.
 - The structured files this project derived from published documents, as
   a compilation: variants.csv, variant_ipa.csv, variant_localities.csv,
-  risk_grade.csv, and the hand-maintained alias, correction and review
-  files beside them.
+  and the hand-maintained alias, correction and review files beside them.
+  (Not risk_grade.csv: see "Exception" below.)
 - The files in reference/ in the form this project gives them.
+
+Exception: data derived from INALI's 2012 risk book
+Status: pending confirmation from INALI. Not CC BY 4.0.
+
+The following is NOT licensed under CC BY 4.0 by this file:
+
+- risk_grade.csv, in full: the grade of each variant and the figures
+  printed beside it (speakers, localities, proportions, rank, and the
+  family, group and variant names as printed).
+- The same values wherever else this project republishes them: the risk
+  grade shown for each variant and group on the site, and the per-grade
+  counts built from them.
+
+They were extracted from a copyrighted publication, "México. Lenguas
+indígenas nacionales en riesgo de desaparición: Variantes lingüísticas por
+grado de riesgo. 2000" (INALI, 2012, ISBN 978-607-7538-57-8), whose notice
+reads "D.R. (c) 2012 Instituto Nacional de Lenguas Indígenas. Todos los
+derechos reservados" and prohibits reproduction without written
+permission.
+
+Whether republishing the per-variant grades as open data, with full
+attribution, is permitted has not been settled either way: it is not
+granted here, and it is not declared blocked. The question is being put to
+INALI and the answer is pending. The current status and its date are
+recorded in reference/source_terms.csv (permission_status for inali_risk)
+and shown on the site's Data page. Until INALI answers, anyone reusing the
+risk grades should go to INALI's publication and its terms.
+
+What stays under CC BY 4.0 around it: this project's own work on that
+book, which is analysis and not the book's data. That is the join between
+the book's entries and the 2008 catalog's variants, risk_grade_aliases.csv,
+and the findings on direction conflicts in variant names.
+
+Why the 2008 catalog is treated differently: the files derived from the
+"Catálogo de las Lenguas Indígenas Nacionales" (variants.csv,
+variant_ipa.csv, variant_localities.csv) remain under CC BY 4.0 as a
+compilation. That catalog was published in the Diario Oficial de la
+Federación and carries no copyright or rights-reserved notice (none was
+found in a search of all 256 pages), which is a different situation from a
+book that reserves all rights. The catalog itself still belongs to INALI,
+as stated below.
 
 What this license does not cover
 

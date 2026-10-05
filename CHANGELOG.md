@@ -1,5 +1,39 @@
 # Changelog
 
+## 2026-10-05 — Source terms recorded; the risk grades' licence status is open
+
+- **Each source's published terms are now recorded**, with where they were
+  found and the date checked, in `reference/source_terms.csv`, and shown
+  on the site's new Data page. Checked 2026-10-05: Glottolog 5.3 CC BY 4.0
+  (Zenodo record); Hugging Face per repository, plus the platform Terms of
+  Service; Common Voice CC0-1.0 on Scripted Speech 27.0 listings
+  (Spontaneous Speech not confirmed; the metadata repository is MPL-2.0);
+  Universal Dependencies per treebank; Omnilingual ASR Apache 2.0; INEGI
+  "Términos de libre uso".
+- **INALI catalog (2008): no license stated.** A keyword search of all 256
+  pages of the cached PDF found no copyright, licence or reproduction
+  notice. It is the text as published in the Diario Oficial de la
+  Federación. Recorded as a finding, not as a blank.
+- **INALI risk book (2012): all rights reserved.** Page 6 reads "D.R. ©
+  2012 Instituto Nacional de Lenguas Indígenas [...] Todos los derechos
+  reservados. Queda prohibida la reproducción total o parcial de esta obra
+  [...] sin la autorización por escrito de los titulares de los derechos
+  de esta edición."
+- **Consequence: `risk_grade.csv` is no longer listed under CC BY 4.0.**
+  `LICENSE-DATA` had it among the derived files the licence covers. Whether
+  republishing the per-variant grades as open data with attribution is
+  permitted is not settled either way, so it is now stated as pending in
+  `LICENSE-DATA`, the README, the Method page and the Data page: neither
+  "CC BY" nor "blocked". The question goes to INALI.
+- **The status is one field.** `permission_status` for `inali_risk` in
+  `reference/source_terms.csv`: `to-request` (not yet asked), `requested`,
+  `granted` or `denied`, the last three with `permission_date`. The Data
+  page words itself from that field, so it cannot say "requested" before
+  the request has been sent.
+- Not verified: the UD 2.18 licence page on LINDAT could not be read, and
+  the risk book was read from the project's cached copy because the live
+  URL's certificate has expired.
+
 ## 2026-10-04 — Site: "latest snapshot" is chosen by measured_at, not folder name
 
 - **What was wrong.** `site/scripts/build-data.mjs` took the snapshot folder

@@ -115,6 +115,7 @@ export default function en(d: MethodData, f: Formatters): MethodContent {
       paragraphs: [
         'The code is free to use under the MIT license. The data Glototeca produces (the table of correspondences, the weekly snapshots and the files derived from them) is published under Creative Commons Attribution 4.0 (CC BY 4.0): it may be used and adapted with attribution.',
         "That license covers our work, not anyone else's. INEGI's figures, INALI's catalogs and Glottolog's classification belong to their authors and keep their own terms; Glototeca cannot relicense them. Anyone reusing that data should consult and cite the original source.",
+        'One case is still open: the risk grades were extracted from a 2012 INALI book that reserves all rights. They are not published under CC BY 4.0; redistributing them depends on INALI\'s answer, and the current status is on the Data page.',
       ],
       files: 'The full texts are in the repository: LICENSE (code) and LICENSE-DATA (data).',
     },

@@ -347,7 +347,13 @@ Open points are listed under "Known gaps" and in `CHANGELOG.md`.
 - **Data produced by this project** (crosswalk, weekly snapshots, derived
   files): CC BY 4.0. See `LICENSE-DATA`.
 - **Third-party source data** (INALI, INEGI, Glottolog and the platforms
-  counted) keeps its own terms; this project cannot relicense it.
+  counted) keeps its own terms; this project cannot relicense it. Each
+  source's published terms, with the date checked, are in
+  `reference/source_terms.csv` and on the site's Data page.
+- **Risk grades (`risk_grade.csv`): status pending.** They were extracted
+  from INALI's 2012 book, which reserves all rights. They are not under
+  CC BY 4.0 and not declared blocked: permission to redistribute is being
+  put to INALI and is unconfirmed. See `LICENSE-DATA`.
 - **Charis SIL**, used on the site for IPA: SIL Open Font License. See
   `site/public/licenses/charis-sil-OFL.txt`.
 

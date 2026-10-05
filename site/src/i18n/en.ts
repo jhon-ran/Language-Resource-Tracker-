@@ -5,7 +5,7 @@ import type es from './es';
 const en: Record<keyof typeof es, string> = {
   'site.description': "Glototeca maps the digital resources of Mexico's indigenous languages — and, over time, the world's roughly 7,000 languages.",
   'resources.scope': 'This means the technical building blocks for language tools — translators, speech recognition, spell-checkers — not cultural content like books or music.',
-  'resources.scope.link': 'What we measure and how',
+  'resources.scope.link': 'What we count and where it comes from',
   'footer.roadmap': "Starting with Mexico's 68 language groups. The goal: cover the world's roughly 7,000 languages.",
   'lang.switch.label': 'Language',
   'theme.toggle': 'Switch between light and dark theme',
@@ -14,7 +14,6 @@ const en: Record<keyof typeof es, string> = {
   'nav.languages': 'Languages',
   'nav.data': 'Data',
   'nav.method': 'Method',
-  'nav.soon': 'coming soon',
   'skip': 'Skip to content',
 
   'footer.about': "Open, weekly snapshots of the digital resources that exist for Mexico's indigenous languages.",

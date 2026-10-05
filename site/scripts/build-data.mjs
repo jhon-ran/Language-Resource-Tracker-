@@ -564,6 +564,68 @@ writeJson('method.json', {
 });
 
 // 2. groups.json
+// ---- data.json: the Data page's source register ---------------------------
+// One entry per source. Cadence, version and last measurement come from the
+// pipeline; the weekly schedule is read from the snapshot workflow itself;
+// licence terms come from reference/source_terms.csv, where a blank stays a
+// blank (the page then says the terms are not recorded yet, it never guesses).
+const cronMatch = /cron:\s*"(\d+) (\d+) \* \* (\d)"/.exec(readFileSync(join(REPO, '.github/workflows/snapshot.yml'), 'utf8'));
+check(cronMatch, 'snapshot.yml: weekly cron line not found');
+const sourceTerms = new Map(readCsv('reference/source_terms.csv').map((r) => [r.source, r]));
+// Where a researcher can get the authoritative version. Addresses the
+// fetchers already use, or the publisher's own landing page.
+const SOURCE_REGISTER = [
+  { id: 'glottolog', file: 'glottolog.csv', access: 'release', url: 'https://doi.org/10.5281/zenodo.18840967' },
+  { id: 'huggingface', file: 'huggingface.csv', access: 'api', url: 'https://huggingface.co/docs/hub/api' },
+  { id: 'common_voice', file: 'common_voice.csv', access: 'repository', url: 'https://github.com/common-voice/cv-dataset' },
+  { id: 'universal_dependencies', file: 'universal_dependencies.csv', access: 'repository', url: 'https://universaldependencies.org/' },
+  { id: 'omnilingual_asr', file: 'omnilingual_asr.csv', access: 'repository', url: 'https://github.com/facebookresearch/omnilingual-asr' },
+  { id: 'inegi', file: null, access: 'file', url: 'https://www.inegi.org.mx/programas/ccpv/2020/#tabulados' },
+  { id: 'inali_catalog', file: null, access: 'document', url: 'https://www.inali.gob.mx/pdf/CLIN_completo.pdf' },
+  { id: 'inali_risk', file: null, access: 'document', url: 'https://site.inali.gob.mx/pdf/libro_lenguas_indigenas_nacionales_en_riesgo_de_desaparicion.pdf' },
+];
+const recordedSource = {
+  glottolog: firstGroup.indicators.endangerment_status.source,
+  huggingface: firstGroup.indicators.datasets_raw.source,
+  common_voice: firstGroup.indicators.speech_corpus.source,
+  universal_dependencies: firstGroup.indicators.treebanks.source,
+  omnilingual_asr: firstGroup.indicators.tool_support_asr.source,
+  inegi: firstGroup.speakers.source,
+  inali_catalog: catalogBuild.source,
+  inali_risk: riskBuild.source,
+};
+writeJson('data.json', {
+  latest_snapshot: snapshotDate,
+  totals: { groups: groups.length, variants: allVariants.length },
+  schedule: { weekday: Number(cronMatch[3]), hour_utc: Number(cronMatch[2]), minute_utc: Number(cronMatch[1]) },
+  sources: SOURCE_REGISTER.map((src) => {
+    const terms = sourceTerms.get(src.id);
+    check(terms, `reference/source_terms.csv: no row for ${src.id}`);
+    check(['', 'to-request', 'requested', 'granted', 'denied'].includes(terms.permission_status), `source_terms.csv: unknown permission_status for ${src.id}`);
+    check(!['requested', 'granted', 'denied'].includes(terms.permission_status) || /^\d{4}-\d{2}-\d{2}$/.test(terms.permission_date), `source_terms.csv: ${src.id} needs permission_date`);
+    let measuredAt = null;
+    if (src.file) {
+      for (const r of readCsv(`snapshots/${snapshotFolder}/${src.file}`)) {
+        if (measuredAt === null || r.measured_at > measuredAt) measuredAt = r.measured_at;
+      }
+    }
+    return {
+      id: src.id,
+      cadence: src.file ? 'weekly' : 'fixed',
+      access: src.access,
+      url: src.url,
+      recorded_source: recordedSource[src.id],
+      measured_at: measuredAt,
+      license: terms.license || null,
+      terms_url: terms.terms_url || null,
+      terms_recorded_on: terms.recorded_on || null,
+      // Only set where reuse depends on an answer from the publisher.
+      permission_status: terms.permission_status || null,
+      permission_date: terms.permission_date || null,
+    };
+  }),
+});
+
 writeJson('groups.json', {
   latest_snapshot: snapshotDate,
   groups: groups.map((g) => ({

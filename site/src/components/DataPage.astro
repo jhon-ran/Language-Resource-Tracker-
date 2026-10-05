@@ -1,0 +1,302 @@
+---
+// The Data page: what is measured, and one documented card per source.
+// Not a download hub yet: every "processed version" row is an honest
+// placeholder (text, not a link).
+//
+// Prose comes from src/i18n/data.ts. Everything the pipeline knows comes
+// from src/data/data.json (written by scripts/build-data.mjs): cadence,
+// the weekly schedule (read from snapshot.yml), the version each fetcher
+// recorded, the last measurement, and the source's licence terms from
+// reference/source_terms.csv. A blank there renders as "not yet recorded".
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { localePath, type Locale } from '../i18n/ui';
+import { getData, type SourceId, type AccessKind } from '../i18n/data';
+import { formatDate, intlLocale } from '../lib/indicators';
+import data from '../data/data.json';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const text = getData(locale);
+const number = new Intl.NumberFormat(intlLocale(locale));
+const fill = (s: string) => s.replace('{groups}', number.format(data.totals.groups)).replace('{variants}', number.format(data.totals.variants));
+
+// 2023-01-01 was a Sunday, so day 1 + weekday is that weekday (cron: 0 = Sunday).
+const day = new Intl.DateTimeFormat(intlLocale(locale), { weekday: 'long', timeZone: 'UTC' }).format(
+  new Date(Date.UTC(2023, 0, 1 + data.schedule.weekday)),
+);
+const time = `${String(data.schedule.hour_utc).padStart(2, '0')}:${String(data.schedule.minute_utc).padStart(2, '0')}`;
+const weekly = text.sources.weekly.replace('{day}', day).replace('{time}', time);
+
+const sources = data.sources.map((s) => ({ ...s, copy: text.sources.rows[s.id as SourceId] }));
+const L = text.sources.labels;
+---
+
+<BaseLayout locale={locale} path="data" title={text.title}>
+  <section class="wrap head">
+    <h1>{text.title}</h1>
+    <p class="lede">{text.lede}</p>
+  </section>
+
+  <section class="wrap block" id="resources">
+    <div class="prose">
+      <h2>{text.intro.title}</h2>
+      {text.intro.paragraphs.map((p) => <p>{p}</p>)}
+      <h3>{text.intro.kindsTitle}</h3>
+    </div>
+    <dl class="kinds">
+      {
+        text.intro.kinds.map((k) => (
+          <div>
+            <dt>{k.name}</dt>
+            <dd>{k.text}</dd>
+          </div>
+        ))
+      }
+    </dl>
+    <p class="small"><a href={`${localePath(locale, 'method')}#measures`}>{text.intro.method}</a></p>
+  </section>
+
+  <section class="wrap block" id="sources">
+    <div class="prose">
+      <h2>{text.sources.title}</h2>
+      <p>{text.sources.lede}</p>
+    </div>
+    <div class="sources">
+      {
+        sources.map((s) => (
+          <article class="card source" id={s.id}>
+            <header>
+              <h3>{s.copy.name}</h3>
+              <span class:list={['tag', s.cadence]}>{s.cadence === 'weekly' ? weekly.split(':')[0] : text.sources.fixed.split(':')[0]}</span>
+            </header>
+            <p class="measures">{fill(s.copy.measures)}</p>
+            <dl class="facts">
+              <dt>{L.access}</dt>
+              <dd>{text.sources.access[s.access as AccessKind]}</dd>
+              <dt>{L.cadence}</dt>
+              <dd>{s.cadence === 'weekly' ? weekly : text.sources.fixed}</dd>
+              <dt>{L.version}</dt>
+              <dd class="mono">{s.recorded_source}</dd>
+              {
+                s.measured_at && (
+                  <>
+                    <dt>{L.measured}</dt>
+                    <dd>
+                      <time datetime={s.measured_at}>{formatDate(s.measured_at.slice(0, 10), locale)}</time>
+                    </dd>
+                  </>
+                )
+              }
+              <dt>{L.terms}</dt>
+              <dd>
+                {s.license ? (
+                  <>
+                    {s.terms_url ? <a href={s.terms_url}>{text.sources.terms[s.id as SourceId].label}</a> : text.sources.terms[s.id as SourceId].label}
+                    {s.terms_recorded_on && (
+                      <span class="muted"> ({text.sources.termsRecorded.replace('{date}', formatDate(s.terms_recorded_on, locale))})</span>
+                    )}
+                    {text.sources.terms[s.id as SourceId].note && <p class="terms-note">{text.sources.terms[s.id as SourceId].note}</p>}
+                  </>
+                ) : (
+                  <span class="missing">{text.sources.termsMissing}</span>
+                )}
+                {s.permission_status && (
+                  <p class="permission">
+                    {text.sources.permission[s.permission_status as 'requested'].replace('{date}', s.permission_date ? formatDate(s.permission_date, locale) : '')}
+                  </p>
+                )}
+              </dd>
+              <dt>{L.original}</dt>
+              <dd>
+                <a href={s.url} rel="external">{text.sources.originalLink}</a>
+                <span class="mono url">{s.url.replace(/^https?:\/\//, '')}</span>
+              </dd>
+              <dt>{L.derived}</dt>
+              <dd>
+                <span class="soon">{text.sources.soon}</span>
+                <span class="muted"> {text.sources.soonNote}</span>
+              </dd>
+            </dl>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="wrap block" id="licensing">
+    <div class="prose">
+      <h2>{text.licensing.title}</h2>
+      {text.licensing.paragraphs.map((p) => <p>{p}</p>)}
+      <p><a href={`${localePath(locale, 'method')}#license`}>{text.licensing.link}</a></p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .head {
+    padding-top: clamp(24px, 3.5vw, 40px);
+  }
+  h1 {
+    font-size: clamp(30px, 4vw, 44px);
+    line-height: 1.1;
+  }
+  .lede {
+    margin: 10px 0 0;
+    font-size: 18px;
+    color: var(--ink-muted);
+    max-width: 40em;
+  }
+  .block {
+    margin-top: 40px;
+    scroll-margin-top: 16px;
+  }
+  .prose {
+    max-width: 70ch;
+  }
+  .prose p {
+    margin: 0 0 14px;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  h2 {
+    font-size: clamp(24px, 2.8vw, 30px);
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+  .prose h3 {
+    font-size: 19px;
+    margin: 22px 0 8px;
+  }
+  .small {
+    font-size: 14px;
+    color: var(--ink-muted);
+  }
+  .kinds {
+    margin: 4px 0 14px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+    gap: 12px 24px;
+    max-width: 1100px;
+  }
+  .kinds dt {
+    font-weight: 600;
+  }
+  .kinds dd {
+    margin: 2px 0 0;
+    font-size: 15px;
+    color: var(--ink-muted);
+  }
+  .sources {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr));
+    gap: 16px;
+    margin-top: 8px;
+  }
+  .source {
+    padding: 18px 20px;
+    scroll-margin-top: 16px;
+    min-width: 0;
+  }
+  .source header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px 16px;
+    flex-wrap: wrap;
+  }
+  .source h3 {
+    font-size: 20px;
+    line-height: 1.25;
+    margin: 0;
+  }
+  .tag {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    padding: 2px 6px;
+    white-space: nowrap;
+  }
+  .measures {
+    margin: 8px 0 14px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .facts {
+    margin: 0;
+    display: grid;
+    grid-template-columns: minmax(120px, 11em) minmax(0, 1fr);
+    gap: 0;
+    font-size: 14px;
+  }
+  .facts dt,
+  .facts dd {
+    margin: 0;
+    padding: 8px 0;
+    border-top: 1px solid var(--line-soft);
+  }
+  .facts dt {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    padding-right: 12px;
+    padding-top: 10px;
+  }
+  .facts dd {
+    overflow-wrap: anywhere;
+    min-width: 0;
+  }
+  .mono {
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+  }
+  .url {
+    display: block;
+    color: var(--ink-muted);
+    margin-top: 2px;
+  }
+  .muted,
+  .missing {
+    color: var(--ink-muted);
+  }
+  .missing {
+    font-style: italic;
+  }
+  .terms-note {
+    margin: 4px 0 0;
+    color: var(--ink-muted);
+  }
+  .permission {
+    margin: 8px 0 0;
+    padding: 8px 10px;
+    border-left: 3px solid var(--ink-muted);
+    background: var(--bg);
+  }
+  /* A placeholder, deliberately not a link and not styled like one. */
+  .soon {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border: 1px dashed var(--ink-muted);
+    border-radius: 3px;
+    padding: 2px 6px;
+  }
+  @media (max-width: 520px) {
+    .facts {
+      grid-template-columns: 1fr;
+    }
+    .facts dd {
+      border-top: 0;
+      padding-top: 0;
+    }
+  }
+</style>

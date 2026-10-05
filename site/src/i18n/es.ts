@@ -4,7 +4,7 @@
 export default {
   'site.description': 'Glototeca mapea los recursos digitales de las lenguas indígenas de México — y, con el tiempo, de las cerca de 7,000 lenguas del mundo.',
   'resources.scope': 'Nos referimos a los elementos técnicos necesarios para construir herramientas de lenguaje — traductores, reconocimiento de voz, correctores — no a contenido cultural como libros o música.',
-  'resources.scope.link': 'Qué medimos y cómo',
+  'resources.scope.link': 'Qué contamos y de dónde viene',
   'footer.roadmap': 'Empezamos con las 68 agrupaciones de México. El objetivo: cubrir las cerca de 7,000 lenguas del mundo.',
   'lang.switch.label': 'Idioma',
   'theme.toggle': 'Cambiar entre tema claro y oscuro',
@@ -13,7 +13,6 @@ export default {
   'nav.languages': 'Lenguas',
   'nav.data': 'Datos',
   'nav.method': 'Método',
-  'nav.soon': 'próximamente',
   'skip': 'Saltar al contenido',
 
   'footer.about': 'Instantáneas abiertas y semanales de los recursos digitales que existen para las lenguas indígenas de México.',
