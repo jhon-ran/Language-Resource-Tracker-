@@ -1,0 +1,7 @@
+snapshot_date,inali_name,iso639_3,treebank,released,release_version,sentences,tokens
+2026-10-05,cuicateco,cux,UD_Cuicatec-MesoTree,no,2.18,,
+2026-10-05,huave,huv,UD_Huave-MesoTree,no,2.18,,
+2026-10-05,K'iche',quc,UD_Kiche-IU,yes,2.18,1435,9396
+2026-10-05,náhuatl,azz,UD_Highland_Puebla_Nahuatl-ITML,yes,2.18,1260,10018
+2026-10-05,náhuatl,nhi,UD_Western_Sierra_Puebla_Nahuatl-MesoTree,yes,2.18,3024,19191
+2026-10-05,seri,sei,UD_Seri-MesoTree,no,2.18,,

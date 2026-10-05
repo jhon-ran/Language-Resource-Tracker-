@@ -1,0 +1,273 @@
+snapshot_date,measured_at,inali_name,canonical_glottocode,match_type,source,indicator,value,state,detail
+2026-10-05,2026-10-05T14:39:49Z,Akateko,west2635,exact,huggingface,datasets_raw,22,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,Akateko,west2635,exact,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,Akateko,west2635,exact,huggingface,models_raw,106,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,Akateko,west2635,exact,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,amuzgo,amuz1254,many-to-one,huggingface,datasets_raw,36,measured,3 codes queried
+2026-10-05,2026-10-05T14:39:49Z,amuzgo,amuz1254,many-to-one,huggingface,datasets_focused,1,measured,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,amuzgo,amuz1254,many-to-one,huggingface,models_raw,189,measured,3 codes queried
+2026-10-05,2026-10-05T14:39:49Z,amuzgo,amuz1254,many-to-one,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,Awakateko,agua1252,exact,huggingface,datasets_raw,24,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,Awakateko,agua1252,exact,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,Awakateko,agua1252,exact,huggingface,models_raw,22,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,Awakateko,agua1252,exact,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,ayapaneco,taba1264,exact,huggingface,datasets_raw,3,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,ayapaneco,taba1264,exact,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,ayapaneco,taba1264,exact,huggingface,models_raw,0,measured-zero,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,ayapaneco,taba1264,exact,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,cora,cora1260,many-to-one,huggingface,datasets_raw,24,measured,2 codes queried
+2026-10-05,2026-10-05T14:39:49Z,cora,cora1260,many-to-one,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,cora,cora1260,many-to-one,huggingface,models_raw,23,measured,2 codes queried
+2026-10-05,2026-10-05T14:39:49Z,cora,cora1260,many-to-one,huggingface,models_focused,1,measured,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,cucapá,coco1261,exact,huggingface,datasets_raw,8,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,cucapá,coco1261,exact,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,cucapá,coco1261,exact,huggingface,models_raw,3,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,cucapá,coco1261,exact,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,cuicateco,cuic1234,many-to-one,huggingface,datasets_raw,25,measured,2 codes queried
+2026-10-05,2026-10-05T14:39:49Z,cuicateco,cuic1234,many-to-one,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,cuicateco,cuic1234,many-to-one,huggingface,models_raw,100,measured,2 codes queried
+2026-10-05,2026-10-05T14:39:49Z,cuicateco,cuic1234,many-to-one,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,chatino,core1263,many-to-one,huggingface,datasets_raw,29,measured,6 codes queried
+2026-10-05,2026-10-05T14:39:49Z,chatino,core1263,many-to-one,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,chatino,core1263,many-to-one,huggingface,models_raw,23,measured,6 codes queried
+2026-10-05,2026-10-05T14:39:49Z,chatino,core1263,many-to-one,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,chichimeco jonaz,chic1272,exact,huggingface,datasets_raw,8,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,chichimeco jonaz,chic1272,exact,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,chichimeco jonaz,chic1272,exact,huggingface,models_raw,3,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,chichimeco jonaz,chic1272,exact,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,chinanteco,chin1484,many-to-one,huggingface,datasets_raw,30,measured,14 codes queried
+2026-10-05,2026-10-05T14:39:49Z,chinanteco,chin1484,many-to-one,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,chinanteco,chin1484,many-to-one,huggingface,models_raw,103,measured,14 codes queried
+2026-10-05,2026-10-05T14:39:49Z,chinanteco,chin1484,many-to-one,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,chocholteco,choc1279,exact,huggingface,datasets_raw,6,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,chocholteco,choc1279,exact,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,chocholteco,choc1279,exact,huggingface,models_raw,3,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,chocholteco,choc1279,exact,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,chontal de Oaxaca,tequ1244,many-to-one,huggingface,datasets_raw,29,measured,2 codes queried
+2026-10-05,2026-10-05T14:39:49Z,chontal de Oaxaca,tequ1244,many-to-one,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,chontal de Oaxaca,tequ1244,many-to-one,huggingface,models_raw,16,measured,2 codes queried
+2026-10-05,2026-10-05T14:39:49Z,chontal de Oaxaca,tequ1244,many-to-one,huggingface,models_focused,1,measured,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,chontal de Tabasco,taba1266,exact,huggingface,datasets_raw,23,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,chontal de Tabasco,taba1266,exact,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,chontal de Tabasco,taba1266,exact,huggingface,models_raw,22,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,chontal de Tabasco,taba1266,exact,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,Chuj,chuj1250,exact,huggingface,datasets_raw,24,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,Chuj,chuj1250,exact,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,Chuj,chuj1250,exact,huggingface,models_raw,107,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,Chuj,chuj1250,exact,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,ch'ol,chol1282,exact,huggingface,datasets_raw,27,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,ch'ol,chol1282,exact,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,ch'ol,chol1282,exact,huggingface,models_raw,106,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,ch'ol,chol1282,exact,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,guarijío,huar1255,exact,huggingface,datasets_raw,13,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,guarijío,huar1255,exact,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,guarijío,huar1255,exact,huggingface,models_raw,93,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,guarijío,huar1255,exact,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,huasteco,huas1242,exact,huggingface,datasets_raw,30,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,huasteco,huas1242,exact,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,huasteco,huas1242,exact,huggingface,models_raw,109,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,huasteco,huas1242,exact,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,huave,huav1256,many-to-one,huggingface,datasets_raw,28,measured,4 codes queried
+2026-10-05,2026-10-05T14:39:49Z,huave,huav1256,many-to-one,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,huave,huav1256,many-to-one,huggingface,models_raw,93,measured,4 codes queried
+2026-10-05,2026-10-05T14:39:49Z,huave,huav1256,many-to-one,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,huichol,huic1243,exact,huggingface,datasets_raw,30,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,huichol,huic1243,exact,huggingface,datasets_focused,3,measured,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,huichol,huic1243,exact,huggingface,models_raw,41,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,huichol,huic1243,exact,huggingface,models_focused,18,measured,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,ixcateco,ixca1245,exact,huggingface,datasets_raw,3,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,ixcateco,ixca1245,exact,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,ixcateco,ixca1245,exact,huggingface,models_raw,0,measured-zero,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,ixcateco,ixca1245,exact,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,Ixil,ixil1251,exact,huggingface,datasets_raw,26,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,Ixil,ixil1251,exact,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,Ixil,ixil1251,exact,huggingface,models_raw,24,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,Ixil,ixil1251,exact,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,Jakalteko,popt1235,exact,huggingface,datasets_raw,24,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,Jakalteko,popt1235,exact,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,Jakalteko,popt1235,exact,huggingface,models_raw,106,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,Jakalteko,popt1235,exact,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,Kaqchikel,kaqc1270,exact,huggingface,datasets_raw,36,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,Kaqchikel,kaqc1270,exact,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,Kaqchikel,kaqc1270,exact,huggingface,models_raw,114,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,Kaqchikel,kaqc1270,exact,huggingface,models_focused,4,measured,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,Kickapoo,kick1244,exact,huggingface,datasets_raw,7,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,Kickapoo,kick1244,exact,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,Kickapoo,kick1244,exact,huggingface,models_raw,3,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,Kickapoo,kick1244,exact,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,kiliwa,kili1268,exact,huggingface,datasets_raw,10,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,kiliwa,kili1268,exact,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,kiliwa,kili1268,exact,huggingface,models_raw,3,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,kiliwa,kili1268,exact,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,kumiai,kumi1248,exact,huggingface,datasets_raw,7,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,kumiai,kumi1248,exact,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,kumiai,kumi1248,exact,huggingface,models_raw,3,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,kumiai,kumi1248,exact,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,ku'ahl,,unresolved,huggingface,datasets_raw,,unresolved,no code to query with
+2026-10-05,2026-10-05T14:39:49Z,ku'ahl,,unresolved,huggingface,datasets_focused,,unresolved,no code to query with
+2026-10-05,2026-10-05T14:39:49Z,ku'ahl,,unresolved,huggingface,models_raw,,unresolved,no code to query with
+2026-10-05,2026-10-05T14:39:49Z,ku'ahl,,unresolved,huggingface,models_focused,,unresolved,no code to query with
+2026-10-05,2026-10-05T14:39:49Z,K'iche',kich1262,exact,huggingface,datasets_raw,50,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,K'iche',kich1262,exact,huggingface,datasets_focused,6,measured,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,K'iche',kich1262,exact,huggingface,models_raw,118,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,K'iche',kich1262,exact,huggingface,models_focused,2,measured,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,lacandón,laca1243,exact,huggingface,datasets_raw,24,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,lacandón,laca1243,exact,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,lacandón,laca1243,exact,huggingface,models_raw,22,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,lacandón,laca1243,exact,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,Mam,mamm1241,exact,huggingface,datasets_raw,41,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,Mam,mamm1241,exact,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,Mam,mamm1241,exact,huggingface,models_raw,114,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,Mam,mamm1241,exact,huggingface,models_focused,4,measured,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,matlatzinca,sanf1262,exact,huggingface,datasets_raw,8,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,matlatzinca,sanf1262,exact,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,matlatzinca,sanf1262,exact,huggingface,models_raw,3,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,matlatzinca,sanf1262,exact,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,maya,yuca1254,exact,huggingface,datasets_raw,35,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,maya,yuca1254,exact,huggingface,datasets_focused,3,measured,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,maya,yuca1254,exact,huggingface,models_raw,135,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,maya,yuca1254,exact,huggingface,models_focused,21,measured,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,mayo,mayo1264,exact,huggingface,datasets_raw,21,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,mayo,mayo1264,exact,huggingface,datasets_focused,1,measured,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,mayo,mayo1264,exact,huggingface,models_raw,28,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,mayo,mayo1264,exact,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,mazahua,maza1293,many-to-one,huggingface,datasets_raw,31,measured,2 codes queried
+2026-10-05,2026-10-05T14:39:49Z,mazahua,maza1293,many-to-one,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,mazahua,maza1293,many-to-one,huggingface,models_raw,113,measured,2 codes queried
+2026-10-05,2026-10-05T14:39:49Z,mazahua,maza1293,many-to-one,huggingface,models_focused,6,measured,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,mazateco,maza1295,many-to-one,huggingface,datasets_raw,32,measured,9 codes queried
+2026-10-05,2026-10-05T14:39:49Z,mazateco,maza1295,many-to-one,huggingface,datasets_focused,1,measured,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,mazateco,maza1295,many-to-one,huggingface,models_raw,101,measured,9 codes queried
+2026-10-05,2026-10-05T14:39:49Z,mazateco,maza1295,many-to-one,huggingface,models_focused,1,measured,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,mixe,oaxa1241,many-to-one,huggingface,datasets_raw,30,measured,7 codes queried
+2026-10-05,2026-10-05T14:39:49Z,mixe,oaxa1241,many-to-one,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,mixe,oaxa1241,many-to-one,huggingface,models_raw,93,measured,7 codes queried
+2026-10-05,2026-10-05T14:39:49Z,mixe,oaxa1241,many-to-one,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,mixteco,mixt1427,many-to-one,huggingface,datasets_raw,46,measured,52 codes queried
+2026-10-05,2026-10-05T14:39:49Z,mixteco,mixt1427,many-to-one,huggingface,datasets_focused,1,measured,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,mixteco,mixt1427,many-to-one,huggingface,models_raw,117,measured,52 codes queried
+2026-10-05,2026-10-05T14:39:49Z,mixteco,mixt1427,many-to-one,huggingface,models_focused,8,measured,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,náhuatl,azte1234,many-to-one,huggingface,datasets_raw,125,measured,29 codes queried
+2026-10-05,2026-10-05T14:39:49Z,náhuatl,azte1234,many-to-one,huggingface,datasets_focused,74,measured,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,náhuatl,azte1234,many-to-one,huggingface,models_raw,226,measured,29 codes queried
+2026-10-05,2026-10-05T14:39:49Z,náhuatl,azte1234,many-to-one,huggingface,models_focused,31,measured,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,oluteco,olut1240,exact,huggingface,datasets_raw,3,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,oluteco,olut1240,exact,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,oluteco,olut1240,exact,huggingface,models_raw,0,measured-zero,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,oluteco,olut1240,exact,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,otomí,,unresolved,huggingface,datasets_raw,32,measured,9 codes queried
+2026-10-05,2026-10-05T14:39:49Z,otomí,,unresolved,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,otomí,,unresolved,huggingface,models_raw,111,measured,9 codes queried
+2026-10-05,2026-10-05T14:39:49Z,otomí,,unresolved,huggingface,models_focused,5,measured,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,paipai,paip1241,exact,huggingface,datasets_raw,7,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,paipai,paip1241,exact,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,paipai,paip1241,exact,huggingface,models_raw,3,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,paipai,paip1241,exact,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,pame,pame1260,many-to-one,huggingface,datasets_raw,21,measured,2 codes queried
+2026-10-05,2026-10-05T14:39:49Z,pame,pame1260,many-to-one,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,pame,pame1260,many-to-one,huggingface,models_raw,99,measured,2 codes queried
+2026-10-05,2026-10-05T14:39:49Z,pame,pame1260,many-to-one,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,pápago,toho1245,exact,huggingface,datasets_raw,25,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,pápago,toho1245,exact,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,pápago,toho1245,exact,huggingface,models_raw,25,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,pápago,toho1245,exact,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,pima,pima1248,exact,huggingface,datasets_raw,8,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,pima,pima1248,exact,huggingface,datasets_focused,1,measured,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,pima,pima1248,exact,huggingface,models_raw,3,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,pima,pima1248,exact,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,popoloca,popo1294,many-to-one,huggingface,datasets_raw,33,measured,7 codes queried
+2026-10-05,2026-10-05T14:39:49Z,popoloca,popo1294,many-to-one,huggingface,datasets_focused,1,measured,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,popoloca,popo1294,many-to-one,huggingface,models_raw,106,measured,7 codes queried
+2026-10-05,2026-10-05T14:39:49Z,popoloca,popo1294,many-to-one,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,popoluca de la Sierra,high1276,exact,huggingface,datasets_raw,27,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,popoluca de la Sierra,high1276,exact,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,popoluca de la Sierra,high1276,exact,huggingface,models_raw,15,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,popoluca de la Sierra,high1276,exact,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,qato'k,moch1257,exact,huggingface,datasets_raw,7,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,qato'k,moch1257,exact,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,qato'k,moch1257,exact,huggingface,models_raw,3,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,qato'k,moch1257,exact,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,Q'anjob'al,qanj1241,exact,huggingface,datasets_raw,23,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,Q'anjob'al,qanj1241,exact,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,Q'anjob'al,qanj1241,exact,huggingface,models_raw,30,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,Q'anjob'al,qanj1241,exact,huggingface,models_focused,1,measured,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,Q'eqchí',kekc1242,exact,huggingface,datasets_raw,43,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,Q'eqchí',kekc1242,exact,huggingface,datasets_focused,2,measured,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,Q'eqchí',kekc1242,exact,huggingface,models_raw,113,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,Q'eqchí',kekc1242,exact,huggingface,models_focused,3,measured,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,sayulteco,sayu1241,exact,huggingface,datasets_raw,12,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,sayulteco,sayu1241,exact,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,sayulteco,sayu1241,exact,huggingface,models_raw,15,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,sayulteco,sayu1241,exact,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,seri,seri1257,exact,huggingface,datasets_raw,12,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,seri,seri1257,exact,huggingface,datasets_focused,2,measured,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,seri,seri1257,exact,huggingface,models_raw,81,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,seri,seri1257,exact,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,tarahumara,tara1321,many-to-one,huggingface,datasets_raw,30,measured,5 codes queried
+2026-10-05,2026-10-05T14:39:49Z,tarahumara,tara1321,many-to-one,huggingface,datasets_focused,4,measured,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,tarahumara,tara1321,many-to-one,huggingface,models_raw,101,measured,5 codes queried
+2026-10-05,2026-10-05T14:39:49Z,tarahumara,tara1321,many-to-one,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,tarasco,tara1323,many-to-one,huggingface,datasets_raw,24,measured,2 codes queried
+2026-10-05,2026-10-05T14:39:49Z,tarasco,tara1323,many-to-one,huggingface,datasets_focused,1,measured,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,tarasco,tara1323,many-to-one,huggingface,models_raw,93,measured,2 codes queried
+2026-10-05,2026-10-05T14:39:49Z,tarasco,tara1323,many-to-one,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,Teko,tekt1235,exact,huggingface,datasets_raw,25,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,Teko,tekt1235,exact,huggingface,datasets_focused,1,measured,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,Teko,tekt1235,exact,huggingface,models_raw,23,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,Teko,tekt1235,exact,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,tepehua,tepe1243,many-to-one,huggingface,datasets_raw,22,measured,3 codes queried
+2026-10-05,2026-10-05T14:39:49Z,tepehua,tepe1243,many-to-one,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,tepehua,tepe1243,many-to-one,huggingface,models_raw,15,measured,3 codes queried
+2026-10-05,2026-10-05T14:39:49Z,tepehua,tepe1243,many-to-one,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,tepehuano del norte,nort2959,exact,huggingface,datasets_raw,24,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,tepehuano del norte,nort2959,exact,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,tepehuano del norte,nort2959,exact,huggingface,models_raw,22,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,tepehuano del norte,nort2959,exact,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,tepehuano del sur,sout2975,many-to-one,huggingface,datasets_raw,21,measured,2 codes queried
+2026-10-05,2026-10-05T14:39:49Z,tepehuano del sur,sout2975,many-to-one,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,tepehuano del sur,sout2975,many-to-one,huggingface,models_raw,22,measured,2 codes queried
+2026-10-05,2026-10-05T14:39:49Z,tepehuano del sur,sout2975,many-to-one,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,texistepequeño,texi1237,exact,huggingface,datasets_raw,2,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,texistepequeño,texi1237,exact,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,texistepequeño,texi1237,exact,huggingface,models_raw,0,measured-zero,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,texistepequeño,texi1237,exact,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,tlahuica,atzi1235,exact,huggingface,datasets_raw,8,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,tlahuica,atzi1235,exact,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,tlahuica,atzi1235,exact,huggingface,models_raw,3,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,tlahuica,atzi1235,exact,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,tlapaneco,meph1234,many-to-one,huggingface,datasets_raw,22,measured,4 codes queried
+2026-10-05,2026-10-05T14:39:49Z,tlapaneco,meph1234,many-to-one,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,tlapaneco,meph1234,many-to-one,huggingface,models_raw,93,measured,4 codes queried
+2026-10-05,2026-10-05T14:39:49Z,tlapaneco,meph1234,many-to-one,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,tojolabal,tojo1241,exact,huggingface,datasets_raw,27,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,tojolabal,tojo1241,exact,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,tojolabal,tojo1241,exact,huggingface,models_raw,106,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,tojolabal,tojo1241,exact,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,totonaco,toto1252,many-to-one,huggingface,datasets_raw,37,measured,9 codes queried
+2026-10-05,2026-10-05T14:39:49Z,totonaco,toto1252,many-to-one,huggingface,datasets_focused,1,measured,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,totonaco,toto1252,many-to-one,huggingface,models_raw,102,measured,9 codes queried
+2026-10-05,2026-10-05T14:39:49Z,totonaco,toto1252,many-to-one,huggingface,models_focused,8,measured,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,triqui,triq1251,many-to-one,huggingface,datasets_raw,33,measured,3 codes queried
+2026-10-05,2026-10-05T14:39:49Z,triqui,triq1251,many-to-one,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,triqui,triq1251,many-to-one,huggingface,models_raw,109,measured,3 codes queried
+2026-10-05,2026-10-05T14:39:49Z,triqui,triq1251,many-to-one,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,tseltal,tzel1254,exact,huggingface,datasets_raw,19,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,tseltal,tzel1254,exact,huggingface,datasets_focused,1,measured,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,tseltal,tzel1254,exact,huggingface,models_raw,106,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,tseltal,tzel1254,exact,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,tsotsil,tzot1259,exact,huggingface,datasets_raw,32,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,tsotsil,tzot1259,exact,huggingface,datasets_focused,1,measured,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,tsotsil,tzot1259,exact,huggingface,models_raw,113,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,tsotsil,tzot1259,exact,huggingface,models_focused,7,measured,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,yaqui,yaqu1251,exact,huggingface,datasets_raw,26,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,yaqui,yaqu1251,exact,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,yaqui,yaqu1251,exact,huggingface,models_raw,101,measured,1 codes queried
+2026-10-05,2026-10-05T14:39:49Z,yaqui,yaqu1251,exact,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,zapoteco,zapo1437,macrolanguage,huggingface,datasets_raw,48,measured,57 codes queried
+2026-10-05,2026-10-05T14:39:49Z,zapoteco,zapo1437,macrolanguage,huggingface,datasets_focused,2,measured,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,zapoteco,zapo1437,macrolanguage,huggingface,models_raw,197,measured,57 codes queried
+2026-10-05,2026-10-05T14:39:49Z,zapoteco,zapo1437,macrolanguage,huggingface,models_focused,9,measured,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,zoque,,unresolved,huggingface,datasets_raw,31,measured,4 codes queried
+2026-10-05,2026-10-05T14:39:49Z,zoque,,unresolved,huggingface,datasets_focused,0,measured-zero,repos tagged for <=3 of the 68 groups
+2026-10-05,2026-10-05T14:39:49Z,zoque,,unresolved,huggingface,models_raw,93,measured,4 codes queried
+2026-10-05,2026-10-05T14:39:49Z,zoque,,unresolved,huggingface,models_focused,0,measured-zero,repos tagged for <=3 of the 68 groups

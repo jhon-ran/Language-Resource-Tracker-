@@ -1,0 +1,281 @@
+snapshot_date,inali_name,iso639_3,glottocode,glottolog_name,endangerment_status,state
+2026-10-05,Akateko,knj,west2635,Akateko,shifting,measured
+2026-10-05,amuzgo,amu,guer1243,Guerrero Amuzgo,threatened,measured
+2026-10-05,amuzgo,azm,ipal1235,Ipalapa Amuzgo,threatened,measured
+2026-10-05,amuzgo,azg,sanp1260,San Pedro Amuzgos Amuzgo,not endangered,measured
+2026-10-05,Awakateko,agu,agua1252,Aguacateco,threatened,measured
+2026-10-05,ayapaneco,zoq,taba1264,Tabasco Zoque,nearly extinct,measured
+2026-10-05,cora,crn,elna1235,El Nayar Cora,shifting,measured
+2026-10-05,cora,cok,sant1424,Santa Teresa Cora,shifting,measured
+2026-10-05,cucapá,coc,coco1261,Cocopa,shifting,measured
+2026-10-05,cuicateco,cux,tepe1280,Tepeuxila Cuicatec,shifting,measured
+2026-10-05,cuicateco,cut,teut1235,Teutila Cuicatec,shifting,measured
+2026-10-05,chatino,cly,east2558,Eastern Highland Chatino,not endangered,measured
+2026-10-05,chatino,cya,nopa1235,Nopala Chatino,not endangered,measured
+2026-10-05,chatino,cta,tata1258,Tataltepec Chatino,threatened,measured
+2026-10-05,chatino,ctp,west2644,Western Highland Chatino,threatened,measured
+2026-10-05,chatino,ctz,zaca1242,Zacatepec Chatino,shifting,measured
+2026-10-05,chatino,czn,zenz1235,Zenzontepec Chatino,not endangered,measured
+2026-10-05,chichimeco jonaz,pei,chic1272,Chichimeca-Jonaz,shifting,measured
+2026-10-05,chinanteco,csa,chil1282,Chiltepec Chinantec,threatened,measured
+2026-10-05,chinanteco,cco,coma1246,Comaltepec Chinantec,threatened,measured
+2026-10-05,chinanteco,cnl,lala1270,Lalana Chinantec,threatened,measured
+2026-10-05,chinanteco,cle,leal1235,Lealao Chinantec,threatened,measured
+2026-10-05,chinanteco,chj,ojit1237,Ojitlán Chinantec,threatened,measured
+2026-10-05,chinanteco,chz,ozum1235,Ozumacín Chinantec,shifting,measured
+2026-10-05,chinanteco,cpa,pala1351,Palantla Chinantec,threatened,measured
+2026-10-05,chinanteco,chq,quio1240,Quiotepec Chinantec,threatened,measured
+2026-10-05,chinanteco,cso,soch1239,Sochiapam Chinantec,shifting,measured
+2026-10-05,chinanteco,cnt,tepe1279,Tepetotutla Chinantec,shifting,measured
+2026-10-05,chinanteco,cte,tepi1241,Tepinapa Chinantec,threatened,measured
+2026-10-05,chinanteco,ctl,tlac1239,Tlacoatzintepec Chinantec,shifting,measured
+2026-10-05,chinanteco,cuc,usil1237,Usila Chinantec,shifting,measured
+2026-10-05,chinanteco,cvn,vall1253,Valle Nacional Chinantec,shifting,measured
+2026-10-05,chocholteco,coz,choc1279,Chochotec,shifting,measured
+2026-10-05,chontal de Oaxaca,chd,high1242,Highland Oaxaca Chontal,shifting,measured
+2026-10-05,chontal de Oaxaca,clo,lowl1260,Lowland Oaxaca Chontal,moribund,measured
+2026-10-05,chontal de Tabasco,chf,taba1266,Tabasco Chontal,threatened,measured
+2026-10-05,Chuj,cac,chuj1250,Chuj,threatened,measured
+2026-10-05,ch'ol,ctu,chol1282,Chol,not endangered,measured
+2026-10-05,guarijío,var,huar1255,Huarijio,shifting,measured
+2026-10-05,huasteco,hus,huas1242,Huastec,shifting,measured
+2026-10-05,huave,hve,sand1278,San Dionisio del Mar Huave,threatened,measured
+2026-10-05,huave,hue,sanf1258,San Francisco del Mar Huave,threatened,measured
+2026-10-05,huave,huv,sanm1287,San Mateo del Mar Huave,threatened,measured
+2026-10-05,huave,hvv,sant1422,Santa María del Mar Huave,threatened,measured
+2026-10-05,huichol,hch,huic1243,Huichol,threatened,measured
+2026-10-05,ixcateco,ixc,ixca1245,Ixcatec,nearly extinct,measured
+2026-10-05,Ixil,ixl,ixil1251,Ixil,threatened,measured
+2026-10-05,Jakalteko,jac,popt1235,Popti',threatened,measured
+2026-10-05,Kaqchikel,cak,kaqc1270,Kaqchikel,threatened,measured
+2026-10-05,Kickapoo,kic,kick1244,Kickapoo,shifting,measured
+2026-10-05,kiliwa,klb,kili1268,Kiliwa,nearly extinct,measured
+2026-10-05,kumiai,dih,kumi1248,Tipai-Kumeyaay-Huerteno,shifting,measured
+2026-10-05,K'iche',quc,kich1262,K'iche',threatened,measured
+2026-10-05,lacandón,lac,laca1243,Lacandon,shifting,measured
+2026-10-05,Mam,mam,mamm1241,Mam,threatened,measured
+2026-10-05,matlatzinca,mat,sanf1262,San Francisco Matlatzinca,shifting,measured
+2026-10-05,maya,yua,yuca1254,Yucatec Maya,not endangered,measured
+2026-10-05,mayo,mfy,mayo1264,Mayo,threatened,measured
+2026-10-05,mazahua,maz,cent2144,Central Mazahua,shifting,measured
+2026-10-05,mazahua,mmc,mich1246,Michoacán Mazahua,shifting,measured
+2026-10-05,mazateco,vmy,ayau1235,Ayautla Mazatec,threatened,measured
+2026-10-05,mazateco,maq,chiq1250,Chiquihuitlán Mazatec,shifting,measured
+2026-10-05,mazateco,mau,huau1238,Huautla Mazatec,threatened,measured
+2026-10-05,mazateco,mzi,ixca1246,Ixcatlán Mazatec,threatened,measured
+2026-10-05,mazateco,maj,jala1237,Jalapa De Díaz Mazatec,threatened,measured
+2026-10-05,mazateco,vmz,maza1296,Mazatlán Mazatec,threatened,measured
+2026-10-05,mazateco,pbm,pueb1234,Puebla and Northeastern Mazatec,not endangered,measured
+2026-10-05,mazateco,maa,sanj1286,San Jerónimo Tecóatl Mazatec,threatened,measured
+2026-10-05,mazateco,vmp,soya1237,Soyaltepec Mazatec,threatened,measured
+2026-10-05,mixe,mco,coat1238,Coatlán Mixe,threatened,measured
+2026-10-05,mixe,mir,isth1238,Isthmus Mixe,threatened,measured
+2026-10-05,mixe,mxq,juqu1238,Juquila Mixe,shifting,measured
+2026-10-05,mixe,mzl,maza1292,Mazatlán Mixe,threatened,measured
+2026-10-05,mixe,neq,nort2939,North Central Mixe,shifting,measured
+2026-10-05,mixe,mxp,tlah1239,Tlahuitoltepec Mixe,shifting,measured
+2026-10-05,mixe,mto,toto1305,Totontepec Mixe,shifting,measured
+2026-10-05,mixteco,mim,alac1244,Alacatlatzala Mixtec,threatened,measured
+2026-10-05,mixteco,xta,alco1235,Alcozauca Mixtec,threatened,measured
+2026-10-05,mixteco,mbz,amol1236,Amoltepec Mixtec,threatened,measured
+2026-10-05,mixteco,mip,apas1235,Apasco-Apoala Mixtec,shifting,measured
+2026-10-05,mixteco,mib,atat1238,Atatláhuca Mixtec,threatened,measured
+2026-10-05,mixteco,miy,ayut1236,Ayutla Mixtec,threatened,measured
+2026-10-05,mixteco,miu,caca1250,Cacaloxtepec Mixtec,shifting,measured
+2026-10-05,mixteco,mih,chay1249,Chayuco Mixtec,threatened,measured
+2026-10-05,mixteco,xtb,chaz1235,Chazumba Mixtec,shifting,measured
+2026-10-05,mixteco,mii,chig1239,Chigmecatitlán Mixtec,shifting,measured
+2026-10-05,mixteco,miz,coat1241,Coatzospan Mixtec,shifting,measured
+2026-10-05,mixteco,xtu,cuya1240,Cuyamecalco Mixtec,shifting,measured
+2026-10-05,mixteco,xtd,diux1235,Diuxi-Tilantongo Mixtec,threatened,measured
+2026-10-05,mixteco,mxs,huit1252,Huitepec Mixtec,threatened,measured
+2026-10-05,mixteco,mce,itun1239,Itundujia Mixtec,threatened,measured
+2026-10-05,mixteco,vmj,ixta1235,Ixtayutla Mixtec,threatened,measured
+2026-10-05,mixteco,mxt,jami1235,Jamiltepec Mixtec,threatened,measured
+2026-10-05,mixteco,vmc,juxt1235,Juxtlahuaca Mixtec,threatened,measured
+2026-10-05,mixteco,xtm,magd1235,Magdalena Peñasco Mixtec,threatened,measured
+2026-10-05,mixteco,mxv,metl1238,Metlatónoc Mixtec,threatened,measured
+2026-10-05,mixteco,vmm,mitl1235,Mitlatongo Mixtec,threatened,measured
+2026-10-05,mixteco,mix,mixt1425,Mixtepec Mixtec,shifting,measured
+2026-10-05,mixteco,xtn,nort2985,Northern Tlaxiaco Mixtec,threatened,measured
+2026-10-05,mixteco,mxa,nort2986,Northwest Oaxaca Mixtec,threatened,measured
+2026-10-05,mixteco,mie,ocot1243,Ocotepec Mixtec,threatened,measured
+2026-10-05,mixteco,mil,peno1244,Peñoles Mixtec,threatened,measured
+2026-10-05,mixteco,mio,pino1237,Pinotepa Nacional Mixtec,threatened,measured
+2026-10-05,mixteco,mjc,sanj1281,San Juan Colorado Mixtec,threatened,measured
+2026-10-05,mixteco,mig,sanm1295,San Miguel El Grande Mixtec,threatened,measured
+2026-10-05,mixteco,xtp,sanm1294,San Miguel Piedras Mixtec,threatened,measured
+2026-10-05,mixteco,mdv,sant1439,Santa Lucía Monteverde Mixtec,threatened,measured
+2026-10-05,mixteco,mza,sant1436,Santa María Zacatepec Mixtec,threatened,measured
+2026-10-05,mixteco,mks,sila1250,Silacayoapan Mixtec,threatened,measured
+2026-10-05,mixteco,xts,sind1277,Sindihui Mixtec,threatened,measured
+2026-10-05,mixteco,xti,sini1243,Sinicahua Mixtec,threatened,measured
+2026-10-05,mixteco,mxy,sout3002,Southeastern Nochixtlán Mixtec,threatened,measured
+2026-10-05,mixteco,mit,sout3001,Southern Puebla Mixtec,shifting,measured
+2026-10-05,mixteco,meh,sout3000,Southwestern Tlaxiaco Mixtec,threatened,measured
+2026-10-05,mixteco,vmq,soya1236,Soyaltepec Mixtec,shifting,measured
+2026-10-05,mixteco,xtt,taca1257,Tacahua-Yolotepec Mixtec,threatened,measured
+2026-10-05,mixteco,vmx,tama1339,Tamazola Mixtec,threatened,measured
+2026-10-05,mixteco,xtj,sanj1282,Teita-Tataltepec Mixtec,threatened,measured
+2026-10-05,mixteco,mxb,tezo1238,Tezoatlán Mixtec,shifting,measured
+2026-10-05,mixteco,mtx,tida1235,Tidaá Mixtec,threatened,measured
+2026-10-05,mixteco,xtl,tija1235,Tijaltepec Mixtec,threatened,measured
+2026-10-05,mixteco,mqh,tlaz1235,Tlazoyaltepec Mixtec,threatened,measured
+2026-10-05,mixteco,mtu,tutu1243,Tututepec Mixtec,threatened,measured
+2026-10-05,mixteco,jmx,west2643,Western Juxtlahuaca Mixtec,threatened,measured
+2026-10-05,mixteco,xty,yolo1241,Yoloxochitl Mixtec,threatened,measured
+2026-10-05,mixteco,mpm,yoso1239,Yosondúa Mixtec,threatened,measured
+2026-10-05,mixteco,mvg,yucu1250,Yucuañe Mixtec,threatened,measured
+2026-10-05,mixteco,mab,yuta1240,Yutanduchi Mixtec,threatened,measured
+2026-10-05,náhuatl,ngu,guer1241,Central Guerrero Nahuatl,not endangered,measured
+2026-10-05,náhuatl,nch,cent2134,Central Huasteca Nahuatl,threatened,measured
+2026-10-05,náhuatl,ncx,cent2133,Central Puebla Nahuatl,threatened,measured
+2026-10-05,náhuatl,naz,coat1240,Coatepec Nahuatl,shifting,measured
+2026-10-05,náhuatl,azd,east2695,Eastern Durango Nahuatl,threatened,measured
+2026-10-05,náhuatl,nhe,east2538,Eastern Huasteca Nahuatl,threatened,measured
+2026-10-05,náhuatl,azz,high1278,Highland Puebla Nahuatl,not endangered,measured
+2026-10-05,náhuatl,nhq,huax1236,Huaxcaleca Nahuatl,shifting,measured
+2026-10-05,náhuatl,nhk,isth1240,Isthmus-Cosoleacaque Nahuatl,threatened,measured
+2026-10-05,náhuatl,nhx,isth1242,Isthmus-Mecayapan Nahuatl,not endangered,measured
+2026-10-05,náhuatl,nhp,isth1241,Isthmus-Pajapan Nahuatl,threatened,measured
+2026-10-05,náhuatl,ncl,mich1245,Michoacán Nahuatl,threatened,measured
+2026-10-05,náhuatl,nhm,more1259,Morelos Nahuatl,not endangered,measured
+2026-10-05,náhuatl,nhy,nort2958,Northern Oaxaca Nahuatl,not endangered,measured
+2026-10-05,náhuatl,ncj,nort2957,Northern Puebla Nahuatl,not endangered,measured
+2026-10-05,náhuatl,nht,omet1237,Ometepec Nahuatl,shifting,measured
+2026-10-05,náhuatl,nlv,oriz1235,Orizaba Nahuatl,not endangered,measured
+2026-10-05,náhuatl,nhz,sant1423,Santa María La Alta Nahuatl,shifting,measured
+2026-10-05,náhuatl,nsu,sier1248,Sierra Negra Nahuatl,not endangered,measured
+2026-10-05,náhuatl,npl,sout2973,Southeastern Puebla Nahuatl,not endangered,measured
+2026-10-05,náhuatl,nhc,taba1265,Tabasco Nahuatl,nearly extinct,measured
+2026-10-05,náhuatl,nhv,tema1239,Temascaltepec Nahuatl,shifting,measured
+2026-10-05,náhuatl,nhg,tete1251,Tetelcingo Nahuatl,threatened,measured
+2026-10-05,náhuatl,nuz,tlam1239,Tlamacazapa Nahuatl,threatened,measured
+2026-10-05,náhuatl,nhn,cent2132,Tlaxcala-Puebla-Central Nahuatl,threatened,measured
+2026-10-05,náhuatl,azn,west2778,Western Durango Nahuatl,moribund,measured
+2026-10-05,náhuatl,nhw,west2624,Western Huasteca Nahuatl,not endangered,measured
+2026-10-05,náhuatl,nhi,zaca1241,Zacatlán-Ahuacatlán-Tepetzintla Nahuatl,not endangered,measured
+2026-10-05,oluteco,plo,olut1240,Oluta Popoluca,moribund,measured
+2026-10-05,otomí,otm,east2556,Eastern Highland Otomi,threatened,measured
+2026-10-05,otomí,ots,esta1236,Estado de México Otomi,shifting,measured
+2026-10-05,otomí,otz,ixte1237,Ixtenco Otomi,shifting,measured
+2026-10-05,otomí,ote,mezq1235,Mezquital Otomi,not endangered,measured
+2026-10-05,otomí,otq,quer1236,Querétaro Otomi,threatened,measured
+2026-10-05,otomí,ott,temo1245,Temoaya Otomi,shifting,measured
+2026-10-05,otomí,otn,tena1241,Tenango Otomi,not endangered,measured
+2026-10-05,otomí,otx,texc1235,Texcatepec Otomi,not endangered,measured
+2026-10-05,otomí,otl,tila1239,Tilapa Otomi,shifting,measured
+2026-10-05,paipai,ppi,paip1241,Paipai,nearly extinct,measured
+2026-10-05,pame,pbs,cent2145,Central Pame,threatened,measured
+2026-10-05,pame,pmq,nort2984,Northern Pame,shifting,measured
+2026-10-05,pápago,ood,toho1245,Tohono O'odham,threatened,measured
+2026-10-05,pima,pia,pima1248,Pima Bajo,shifting,measured
+2026-10-05,popoloca,pbf,coyo1236,Coyotepec Popoloca,threatened,measured
+2026-10-05,popoloca,pbe,mezo1235,Mezontla Popoloca,threatened,measured
+2026-10-05,popoloca,pow,sanf1264,San Felipe Otlaltepec Popoloca,threatened,measured
+2026-10-05,popoloca,poe,sanj1285,San Juan Atzingo Popoloca,threatened,measured
+2026-10-05,popoloca,pps,sanl1248,San Luís Temalacayuca Popoloca,threatened,measured
+2026-10-05,popoloca,pls,sanm1301,San Marcos Tlalcoyalco Popoloca,threatened,measured
+2026-10-05,popoloca,pca,sant1454,Santa Inés Ahuatempan Popoloca,threatened,measured
+2026-10-05,popoluca de la Sierra,poi,high1276,Highland Popoluca,threatened,measured
+2026-10-05,qato'k,mhc,moch1257,Mocho,nearly extinct,measured
+2026-10-05,Q'anjob'al,kjb,qanj1241,Q'anjob'al,threatened,measured
+2026-10-05,Q'eqchí',kek,kekc1242,Q'eqchi',threatened,measured
+2026-10-05,sayulteco,pos,sayu1241,Sayula Popoluca,shifting,measured
+2026-10-05,seri,sei,seri1257,Seri,shifting,measured
+2026-10-05,tarahumara,tar,cent2131,Central Tarahumara,threatened,measured
+2026-10-05,tarahumara,thh,nort2956,Northern Tarahumara,extinct,measured
+2026-10-05,tarahumara,tcu,sout2972,Southeastern Tarahumara,threatened,measured
+2026-10-05,tarahumara,twr,sout2971,Southwestern Tarahumara,threatened,measured
+2026-10-05,tarahumara,tac,lowl1265,Western Tarahumara,threatened,measured
+2026-10-05,tarasco,tsz,pure1242,Purepecha,shifting,measured
+2026-10-05,tarasco,pua,west2631,Western Highland Purepecha,shifting,measured
+2026-10-05,Teko,ttc,tekt1235,Tektiteko,shifting,measured
+2026-10-05,tepehua,tee,hueh1236,Huehuetla Tepehua,shifting,measured
+2026-10-05,tepehua,tpp,pisa1237,Pisaflores Tepehua,shifting,measured
+2026-10-05,tepehua,tpt,tlac1235,Tlachichilco Tepehua,shifting,measured
+2026-10-05,tepehuano del norte,ntp,nort2959,Northern Tepehuan,shifting,measured
+2026-10-05,tepehuano del sur,stp,sout2976,Southeastern Tepehuan,shifting,measured
+2026-10-05,tepehuano del sur,tla,sout2977,Southwestern Tepehuan,shifting,measured
+2026-10-05,texistepequeño,poq,texi1237,Texistepec Popoluca,nearly extinct,measured
+2026-10-05,tlahuica,ocu,atzi1235,Atzingo Matlatzinca,shifting,measured
+2026-10-05,tlapaneco,tpx,acat1239,Acatepec Me'phaa,not endangered,measured
+2026-10-05,tlapaneco,tpc,azoy1236,Azoyú Me'phaa,not endangered,measured
+2026-10-05,tlapaneco,tcf,mali1285,Malinaltepec Me'phaa,not endangered,measured
+2026-10-05,tlapaneco,tpl,tlac1237,Tlacoapa Me'phaa,not endangered,measured
+2026-10-05,tojolabal,toj,tojo1241,Tojolabal,shifting,measured
+2026-10-05,totonaco,toc,coyu1235,Coyutla Totonac,not endangered,measured
+2026-10-05,totonaco,tlp,filo1235,Filomeno Mata Totonac,not endangered,measured
+2026-10-05,totonaco,tos,high1243,Highland Totonac,not endangered,measured
+2026-10-05,totonaco,tqt,west1511,Ozumatlán Totonac,not endangered,measured
+2026-10-05,totonaco,top,papa1238,Papantla Totonac,threatened,measured
+2026-10-05,totonaco,tcw,tecp1235,Tecpatlán Totonac,not endangered,measured
+2026-10-05,totonaco,tku,uppe1275,Upper Necaxa Totonac,not endangered,measured
+2026-10-05,totonaco,too,xico1235,Xicotepec De Juárez Totonac,shifting,measured
+2026-10-05,totonaco,tlc,yecu1235,Yecuatla Totonac,shifting,measured
+2026-10-05,triqui,trs,chic1273,Chicahuaxtla Triqui,threatened,measured
+2026-10-05,triqui,trc,copa1237,Copala Triqui,threatened,measured
+2026-10-05,triqui,trq,sanm1298,San Martín Itunyoso Triqui,threatened,measured
+2026-10-05,tseltal,tzh,tzel1254,Tzeltal,not endangered,measured
+2026-10-05,tsotsil,tzo,tzot1259,Tzotzil,not endangered,measured
+2026-10-05,yaqui,yaq,yaqu1251,Yaqui,threatened,measured
+2026-10-05,zapoteco,zaq,aloa1235,Aloápam Zapotec,not endangered,measured
+2026-10-05,zapoteco,zpo,amat1238,Amatlán Zapotec,,not-covered
+2026-10-05,zapoteco,zoo,asun1236,Asunción Mixtepec Zapotec,moribund,measured
+2026-10-05,zapoteco,zaf,ayoq1235,Ayoquesco Zapotec,shifting,measured
+2026-10-05,zapoteco,zad,cajo1238,Cajonos Zapotec,not endangered,measured
+2026-10-05,zapoteco,zpv,chic1274,Chichicapan Zapotec,,not-covered
+2026-10-05,zapoteco,zpc,choa1237,Choapan Zapotec,shifting,measured
+2026-10-05,zapoteco,zca,coat1244,Coatecas Altas Zapotec,not endangered,measured
+2026-10-05,zapoteco,zps,coat1243,Coatlán Zapotec,moribund,measured
+2026-10-05,zapoteco,zam,miah1235,Cuixtla-Xitla Zapotec,threatened,measured
+2026-10-05,zapoteco,zpp,elal1235,El Alto Zapotec,not endangered,measured
+2026-10-05,zapoteco,zte,elot1235,Elotepec Zapotec,shifting,measured
+2026-10-05,zapoteco,zpg,guev1238,Guevea De Humboldt Zapotec,not endangered,measured
+2026-10-05,zapoteco,ztu,guil1236,Güilá Zapotec,not endangered,measured
+2026-10-05,zapoteco,zai,isth1244,Isthmus Zapotec,threatened,measured
+2026-10-05,zapoteco,zpa,lach1250,Lachiguiri Zapotec,not endangered,measured
+2026-10-05,zapoteco,zpl,lach1249,Lachixío Zapotec,not endangered,measured
+2026-10-05,zapoteco,ztl,lapa1249,Lapaguía-Guivini Zapotec,threatened,measured
+2026-10-05,zapoteco,ztp,loxi1235,Loxicha Zapotec,threatened,measured
+2026-10-05,zapoteco,zpy,maza1294,Mazaltepec Zapotec,shifting,measured
+2026-10-05,zapoteco,zaw,mitl1236,Mitla Zapotec,not endangered,measured
+2026-10-05,zapoteco,zpm,mixt1426,Mixtepec Zapotec,shifting,measured
+2026-10-05,zapoteco,zac,ocot1244,Ocotlán Zapotec,threatened,measured
+2026-10-05,zapoteco,zao,ozol1235,Ozolotepec Zapotec,threatened,measured
+2026-10-05,zapoteco,zpe,peta1247,Petapa Zapotec,shifting,measured
+2026-10-05,zapoteco,zpj,quia1235,Quiavicuzas Zapotec,not endangered,measured
+2026-10-05,zapoteco,ztq,quio1241,Quioquitani-Quieri Zapotec,not endangered,measured
+2026-10-05,zapoteco,zar,rinc1236,Rincón Zapotec,shifting,measured
+2026-10-05,zapoteco,ztm,sana1286,San Agustín Mixtepec Zapotec,moribund,measured
+2026-10-05,zapoteco,zpx,sanb1241,San Baltazar Loxicha Zapotec,shifting,measured
+2026-10-05,zapoteco,zpf,sanp1261,San Pedro Quiatoni Zapotec,not endangered,measured
+2026-10-05,zapoteco,zpt,sanv1242,San Vicente Coatlán Zapotec,threatened,measured
+2026-10-05,zapoteco,ztn,sant1448,Santa Catarina Albarradas Zapotec,threatened,measured
+2026-10-05,zapoteco,zpn,sant1447,Santa Inés Yatzechi Zapotec,threatened,measured
+2026-10-05,zapoteco,zpi,sant1451,Santa María Quiegolani Zapotec,threatened,measured
+2026-10-05,zapoteco,zpr,sant1452,Santiago Xanica Zapotec,threatened,measured
+2026-10-05,zapoteco,zas,sant1450,Santo Domingo Albarradas Zapotec,shifting,measured
+2026-10-05,zapoteco,zaa,sier1250,Sierra de Juárez Zapotec,threatened,measured
+2026-10-05,zapoteco,zpd,sout3005,Southeastern Ixtlán Zapotec,threatened,measured
+2026-10-05,zapoteco,zat,taba1268,Tabaa Zapotec,threatened,measured
+2026-10-05,zapoteco,ztt,teja1235,Tejalapan Zapotec,shifting,measured
+2026-10-05,zapoteco,zpz,texm1235,Texmelucan Zapotec,,not-covered
+2026-10-05,zapoteco,zts,tilq1235,Tilquiapan Zapotec,not endangered,measured
+2026-10-05,zapoteco,zpk,tlac1240,Tlacolulita Zapotec,shifting,measured
+2026-10-05,zapoteco,zph,toto1308,Totomachapan Zapotec,moribund,measured
+2026-10-05,zapoteco,zab,sanj1284,Western Tlacolula Valley Zapotec,shifting,measured
+2026-10-05,zapoteco,zax,xada1235,Xadani Zapotec,shifting,measured
+2026-10-05,zapoteco,ztg,xana1235,Xanaguía Zapotec,threatened,measured
+2026-10-05,zapoteco,zpu,yala1267,Yalálag Zapotec,not endangered,measured
+2026-10-05,zapoteco,zae,yare1249,Yareni Zapotec,threatened,measured
+2026-10-05,zapoteco,zty,yate1242,Yatee Zapotec,not endangered,measured
+2026-10-05,zapoteco,zav,yatz1235,Yatzachi Zapotec,threatened,measured
+2026-10-05,zapoteco,zpb,yaut1235,Yautepec Zapotec,shifting,measured
+2026-10-05,zapoteco,ztx,zaac1239,Zaachila Zapotec,shifting,measured
+2026-10-05,zapoteco,zpw,zani1235,Zaniza Zapotec,,not-covered
+2026-10-05,zapoteco,zpq,zoog1238,Zoogocho Zapotec,threatened,measured
+2026-10-05,zoque,zoc,copa1236,Central-South Chiapas Zoque,shifting,measured
+2026-10-05,zoque,zoh,chim1300,Chimalapa Zoque,shifting,measured
+2026-10-05,zoque,zor,rayo1235,Northeast Chiapas Zoque,shifting,measured
+2026-10-05,zoque,zos,fran1266,Northern Chiapas Zoque,not endangered,measured
