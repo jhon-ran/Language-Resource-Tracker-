@@ -64,7 +64,7 @@ export interface MethodContent {
     accessLine: string;
     doiNote: string;
   };
-  indigenous: { title: string; paragraphs: string[]; care: { name: string; text: string }[]; contact: string };
+  indigenous: { title: string; paragraphs: string[]; care: { name: string; text: string }[] };
 }
 
 const content = { es, en } satisfies Record<Locale, (d: MethodData, f: Formatters) => MethodContent>;

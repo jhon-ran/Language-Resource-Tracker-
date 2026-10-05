@@ -144,7 +144,6 @@ export default function en(d: MethodData, f: Formatters): MethodContent {
         { name: 'Responsibility', text: 'Every figure carries its source and date, and the errors we find are flagged, not hidden.' },
         { name: 'Ethics', text: 'We do not rate languages or communities with a score, and we do not present missing data as a deficiency.' },
       ],
-      contact: "If a community considers that something shown here should not be here, or is wrong, it can say so in the project's repository and it will be addressed.",
     },
   };
 }

@@ -144,7 +144,6 @@ export default function es(d: MethodData, f: Formatters): MethodContent {
         { name: 'Responsabilidad', text: 'Cada cifra lleva su fuente y su fecha, y los errores que encontramos se marcan en lugar de ocultarse.' },
         { name: 'Ética', text: 'No calificamos lenguas ni comunidades con un puntaje, y no presentamos la ausencia de datos como carencia.' },
       ],
-      contact: 'Si una comunidad considera que algo de lo que mostramos no debería estar aquí, o está mal, puede decirlo en el repositorio del proyecto y se atenderá.',
     },
   };
 }
