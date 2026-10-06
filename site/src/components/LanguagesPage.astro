@@ -25,6 +25,10 @@ const sample = { measured: '12', 'measured-zero': '0', 'not-covered': '—', unr
   <section class="wrap head">
     <h1>{t('langs.title')}</h1>
     <p class="lede">{t('langs.lede')}</p>
+    <p class="note-term">
+      {t('langs.calibration')}{' '}
+      <a href={`${localePath(locale, 'method')}#identity`}>{t('langs.calibration.link')}</a>
+    </p>
   </section>
 
   <section class="wrap">
@@ -98,6 +102,12 @@ const sample = { measured: '12', 'measured-zero': '0', 'not-covered': '—', unr
 </BaseLayout>
 
 <style>
+  .note-term {
+    margin: 8px 0 0;
+    font-size: 15px;
+    color: var(--ink-muted);
+    max-width: 46em;
+  }
   .head {
     padding-top: clamp(24px, 3.5vw, 40px);
     padding-bottom: 16px;

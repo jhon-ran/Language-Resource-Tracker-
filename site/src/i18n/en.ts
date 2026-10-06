@@ -58,6 +58,8 @@ const en: Record<keyof typeof es, string> = {
 
   // Languages listing and group pages.
   'langs.title': 'Languages',
+  'langs.calibration': 'We use “language” the way INALI itself does, for its 68 linguistic groupings. Each one can include several languages in the strict linguistic sense.',
+  'langs.calibration.link': 'See Method',
   'langs.lede': "The 68 language groups in INALI's catalog, with their speakers, risk grade and what each source records for them.",
   'langs.col.group': 'Group',
   'langs.col.family': 'Family',

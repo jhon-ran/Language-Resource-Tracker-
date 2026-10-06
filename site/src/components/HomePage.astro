@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Scatter from './Scatter.astro';
 import home from '../data/home.json';
 import Emphasis from './Emphasis.astro';
-import { useTranslations, type Locale } from '../i18n/ui';
+import { useTranslations, type Locale, localePath } from '../i18n/ui';
 
 interface Props {
   locale: Locale;
@@ -40,6 +40,10 @@ const stats = [
       <div class="eyebrow">{t('home.eyebrow')}</div>
       <h1><Emphasis text={t('home.title')} /></h1>
       <p class="lede">{t('home.lede')}</p>
+      <p class="note-term">
+        {t('langs.calibration')}{' '}
+        <a href={`${localePath(locale, 'method')}#identity`}>{t('langs.calibration.link')}</a>
+      </p>
     </div>
 
     <div class="card stats">
@@ -82,6 +86,12 @@ const stats = [
     line-height: 1.1;
     letter-spacing: -0.01em;
     max-width: 16em;
+  }
+  .note-term {
+    margin: 10px 0 0;
+    font-size: 15px;
+    color: var(--ink-muted);
+    max-width: 40em;
   }
   .lede {
     margin: 0;

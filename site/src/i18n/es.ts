@@ -57,6 +57,8 @@ export default {
 
   // Languages listing and group pages.
   'langs.title': 'Lenguas',
+  'langs.calibration': 'Usamos «lengua» como lo hace el propio INALI, para referirnos a sus 68 agrupaciones lingüísticas. Cada una puede incluir varias lenguas en el sentido estrictamente lingüístico.',
+  'langs.calibration.link': 'Ver Método',
   'langs.lede': 'Las 68 agrupaciones lingüísticas del catálogo del INALI, con sus hablantes, su grado de riesgo y lo que cada fuente registra sobre ellas.',
   'langs.col.group': 'Agrupación',
   'langs.col.family': 'Familia',
