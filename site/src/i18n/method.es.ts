@@ -108,6 +108,10 @@ export default function es(d: MethodData, f: Formatters): MethodContent {
           title: 'Dedicado a la lengua es un criterio nuestro',
           text: 'Muchos repositorios de Hugging Face etiquetan cientos de lenguas a la vez. Para distinguirlos, contamos aparte los que están etiquetados para tres agrupaciones o menos. Ese corte lo elegimos nosotros; con otro corte las cifras cambiarían.',
         },
+        {
+          title: 'Una agrupación puede ocultar lo que pasa en sus variantes',
+          text: 'Los recursos de una agrupación suman lo que hay para todos sus códigos, mientras que su grado de riesgo es el de su variante en mayor riesgo. Las dos cifras pueden describir variantes distintas: una agrupación puede verse bien provista por una de sus lenguas y tener otra en riesgo muy alto y sin nada. Las fuentes no etiquetan por variante del INALI, así que hoy no podemos señalar cuándo ocurre; está anotado como pendiente.',
+        },
       ],
     },
     license: {

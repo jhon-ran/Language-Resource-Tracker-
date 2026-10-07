@@ -249,6 +249,14 @@ python3 tools/parse_inali_risk.py       # 2012 risk book -> risk_grade.csv
   denominator is unconfirmed against INALI's own methodology. The variant
   pages label it as published, without saying what it is a percentage of.
   To be resolved on the site's Método page once that is built; not urgent.
+- Group-level units may obscure variant-level reality. A group's resource
+  count sums the indicators across all of its codes, while its risk grade
+  is that of its single highest-risk variant, so the two figures on a
+  group's scatter point can describe different variants with no flag that
+  they do. The sources tag by ISO 639-3 code, not by INALI variant, so the
+  group is the finest reliable unit today. Candidate fix (flag the
+  mismatch on the group page or tooltip) and when to revisit are in
+  `CHANGELOG.md`, 2026-10-07. Not started.
 - `tool_support_mt` indicator: Google Translate (and possibly Microsoft
   Translator) published supported-language lists, same four-state pattern
   as `tool_support_asr`. Candidates already confirmed relevant to this

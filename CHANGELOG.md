@@ -1,5 +1,88 @@
 # Changelog
 
+## 2026-10-07 — Known gap: group-level units may obscure variant-level reality
+
+Not started, queued. A log entry only; nothing was built. Raised by
+external feedback, October 2026.
+
+- **The gap.** Treating INALI's 68 agrupaciones as the measurement unit has
+  a real documentary-linguistics risk: a group's apparent resource coverage
+  can be driven by a different constituent language than its highest-risk
+  variant, invisibly flattening exactly the kind of endangerment-specific
+  gap this project exists to surface.
+- **Why the unit is the group.** No upstream source (Hugging Face, Common
+  Voice, Universal Dependencies, Omnilingual ASR) tags data by INALI
+  variant. They tag by ISO 639-3 code, and those codes cannot be tied to
+  individual INALI variants (see item 8b: 228 of 364 variants have no
+  Glottocode, and the name and geography matchers are shelved). The group
+  is the finest unit at which the sources and the INALI catalog can be
+  joined reliably.
+- **Concretely.** A group's `resource_count` and its risk grade are rolled
+  up independently: `resource_count` aggregates the indicators across every
+  code in the group, while the risk grade shown is that of the single
+  highest-risk variant. The two numbers shown side by side on a group's
+  scatter point can therefore describe two different variants entirely,
+  with no visible flag that they do.
+- **Candidate fix, for a future iteration.** Surface the mismatch
+  explicitly, not only implicitly through the group-to-variant drill-down:
+  for example a visible note on a group page (or in the scatter tooltip)
+  when the variant driving the group's resource count differs from the
+  variant driving its risk grade. This needs resources attributed below
+  the group level first, which is the unresolved variant-identity problem
+  above.
+- **When to revisit.** When the project starts incorporating language
+  lists beyond INALI's. Those will likely use different grouping criteria
+  and force a broader rethink of the group/variant unit anyway, so that is
+  the natural moment to address both at once, not to patch the group-level
+  display twice.
+- **Worked example (Oct 2026, from public feedback thread).** náhuatl (30
+  variants) shows grade "muy alto" because 7 of 30 variants hit that grade,
+  but 15 of 30, half the group, are "no inmediato" (lowest risk).
+  Glottolog's independent AES assessment shows only 1 of 28 members as
+  "nearly extinct", the rest mostly not endangered, threatened or shifting.
+  Huave (2 variants) shows grade "mediano" because neither of its two
+  variants individually crosses into "alto" or "muy alto", yet Glottolog
+  marks all 4 of its members as "threatened", uniformly, with no healthy
+  outliers. Visually and by INALI's own scale, huave reads as lower-risk
+  than náhuatl; by Glottolog's independent method, huave is more uniformly
+  at risk and náhuatl has far more healthy variants dragging its true
+  center down.
+- **Root cause identified.** This is not a data error or a
+  pipeline-maturity issue. Taking the maximum (worst-case) value across a
+  group means the group's label can be driven by a single outlier,
+  independent of the group's actual average risk: one variant in 30 is
+  enough. (Group size alone does not predict the label in the current
+  data: about half the groups show "muy alto" whether they have one
+  variant, 16 of 32, or five or more, 8 of 15. What the rule hides is the
+  spread inside a group.) This is a structural property of the
+  "highest-risk variant" aggregation rule itself, and will persist however
+  complete or stable the pipeline becomes. It cannot be fixed by more data
+  collection or time.
+- **Second candidate fix.** The example strengthens the case for the
+  candidate fix logged above (surfacing when a group's displayed number is
+  driven by an outlier variant), and suggests a second one worth scoping
+  alongside it: showing the full distribution (e.g. 7/4/4/15 for náhuatl)
+  or a variant-count-adjusted summary measure, so that the worst-case label
+  is not the sole number shown on the scatter plot and group header.
+  náhuatl and huave are good permanent test cases for validating any fix,
+  since they show the distortion clearly and in opposite directions (one
+  group's worst case overstates risk, the other's understates it relative
+  to Glottolog's independent read).
+- **Checked against the data when this was logged (snapshot 2026-10-05).**
+  The example's figures match: náhuatl 7/4/4/15 over 30 variants, AES over
+  28 members not endangered 11, threatened 10, shifting 5, moribund 1,
+  nearly extinct 1; huave 0/0/1/1 over 2 variants, AES threatened 4 of 4.
+  Two notes for whoever scopes the fix:
+  1. The site applies the same worst-case rule to Glottolog's status
+     ("most endangered member"), so náhuatl is also shown as "nearly
+     extinct" on the strength of 1 member in 28. Any fix has to cover both
+     labels, not only INALI's grade.
+  2. Calling huave "understated" compares two different scales: INALI's
+     four grades on the 2000 census against AES's levels, where
+     "threatened" is the second-lowest level of endangerment. The two may
+     not disagree as much as the labels suggest. That needs checking
+     before either is treated as the reference.
+
 ## 2026-10-05 — Site: moved to glototeca.com
 
 - **New address: `https://glototeca.com/`.** Before, the site was the

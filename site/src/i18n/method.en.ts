@@ -108,6 +108,10 @@ export default function en(d: MethodData, f: Formatters): MethodContent {
           title: '"Focused on the language" is our own criterion',
           text: 'Many Hugging Face repositories tag hundreds of languages at once. To set those apart, we count separately the ones tagged for three groups or fewer. We chose that cutoff; a different one would change the figures.',
         },
+        {
+          title: 'A group can hide what happens in its variants',
+          text: "A group's resources add up what exists for all of its codes, while its risk grade is that of its highest-risk variant. The two figures can describe different variants: a group can look well supplied because of one of its languages and have another at very high risk with nothing. The sources do not tag by INALI variant, so today we cannot flag when this happens; it is logged as pending.",
+        },
       ],
     },
     license: {
